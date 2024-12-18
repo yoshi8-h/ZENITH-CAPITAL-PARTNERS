@@ -46,3 +46,11 @@ add_action("after_setup_theme", "my_setup");
 
 
 
+
+
+
+// 管理バーを非表示に (今だけ)
+add_filter('show_admin_bar', '__return_false');
+
+
+

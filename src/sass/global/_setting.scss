@@ -46,7 +46,7 @@ $color-background-base-1: #f4f6fa;
 $color-white: #fff;
 $color-accent1: #1d61af;  // headerやfooterの色
 $color-accent2: #569adf;  // headerのお問い合わせボタンの背景色
-// $color-accent3: #2c81d8;
+$color-accent3: #2c81d8;  // headerのメニューのhover時のカラー
 
 // ====================================
 body {
@@ -59,5 +59,5 @@ body {
 
 /* 構築時のみ、管理バーを非表示にする */
 #wpadminbar {
-  // display: none !important;
+  display: none !important;
 }
