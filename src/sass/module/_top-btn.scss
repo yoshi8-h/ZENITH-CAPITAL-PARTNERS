@@ -1,0 +1,55 @@
+@use "global" as *;
+
+
+.top-btn {
+  aspect-ratio: 1 / 1;
+  width: rem(63);
+  height: rem(63);
+  border-radius: 50%;
+  background: #5d6775;
+  transition: opacity 0.2s ease-out;
+
+  position: fixed;
+  bottom: rem(40);
+  right: rem(35);
+  z-index: 1000;
+  opacity: 0;    // 通常は透明に。(スクロールしたら現れる)
+  visibility: hidden;  // かつ、通常は押せないように。
+
+  display: grid;
+  place-items: center;
+
+  @include mq(md) {
+    bottom: rem(30);
+    right: rem(8);
+  }
+}
+
+.top-btn.is-show {  // 画面をスクロールした際にボタンを表示する為のクラス
+  opacity: 1;
+  visibility: visible;
+}
+
+.top-btn:hover {  // hover
+  opacity: 0.7;
+}
+
+.top-btn__wrap {
+  display: grid;
+  place-items: center;
+}
+
+.top-btn__arrow {
+  display: inline-block;
+  width: rem(14);
+  height: rem(14);
+  border-top: 2px solid $color-white;;
+  border-left: 2px solid $color-white;
+  border-radius: 1px;
+  transform: rotate(45deg);
+}
+
+.top-btn__text {
+  font-size: rem(12.6);
+  color: $color-white;
+}

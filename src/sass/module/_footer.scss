@@ -1,0 +1,87 @@
+@use "global" as *;
+
+
+.footer {
+  background: $color-accent1;
+  padding-top: rem(50);
+  padding-bottom: rem(80);
+
+  @include mq(md) {
+    padding-top: rem(35);
+    padding-bottom: rem(50);
+  }
+}
+
+.footer__inner {
+  padding-inline: rem(40);
+}
+
+.footer__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem(44);
+
+  @include mq(md) {
+    flex-wrap: wrap;
+    row-gap: rem(12);
+    column-gap: rem(40);
+    max-width: rem(295);
+    margin-inline: auto;
+  }
+}
+
+.footer__nav-link {
+  font-family: $font-family-en-2;
+  font-size: rem(16);
+  font-weight: $normal;
+  color: $color-white;
+  position: relative;
+
+  @include mq(md) {
+    font-size: rem(14);
+  }
+}
+
+.footer__nav-link:nth-of-type(n + 2)::before {  // 仕切り線
+  content: "";
+  width: 2px;
+  height: rem(15);
+  background: #aebfdc;
+  position: absolute;
+  top: 50%;
+  left: rem(-22);
+  transform: translateY(-50%);
+
+  @include mq(md) {
+    left: rem(-20);
+  }
+}
+
+.footer__nav-link.no-bar::before {
+  @include mq(md) {
+    display: none;
+  }
+}
+
+// .footer__nav-link:nth-of-type(n + 3)::before,
+// .footer__nav-link:nth-of-type(n + 5)::before {
+//   @include mq(md) {
+//     display: none;
+//   }
+// }
+
+.footer__copyright {
+  display: block;
+  margin-top: rem(40);
+  width: fit-content;
+  margin-inline: auto;
+  font-family: $font-family-en-1;
+  font-size: rem(14);
+  font-weight: $semiBold;
+  color: #eaf0f7;
+
+  @include mq(md) {
+    font-weight: $normal;
+  }
+}

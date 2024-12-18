@@ -1,20 +1,23 @@
   <!-- TOPへ戻るボタン -->
   <a href="#" class="top-btn js-top-btn">
     <div class="top-btn__wrap">
-      <div class="top-btn__arrow">
-        <svg class="top-btn__arrow-sp" xmlns="http://www.w3.org/2000/svg" width="8" height="30" viewBox="0 0 8 30" fill="none">
-          <path d="M7 29L7 1L1 8" stroke="#408F95" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <svg class="top-btn__arrow-pc" xmlns="http://www.w3.org/2000/svg" width="8" height="42" viewBox="0 0 8 42" fill="none">
-          <path d="M7 41L7 1L1 8" stroke="#408F95" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
+      <span class="top-btn__arrow"></span>
+      <span class="top-btn__text">TOP</span>
     </div>
   </a>
 
   <!-- footer -->
-  <footer class="footer l-footer <?php echo is_404() ? 'l-footer--404' : ''; ?>">
-    <small class="footer__copyright">Copyright © 2021 - 2023 CodeUps LLC. All Rights Reserved.</small>
+  <footer class="footer l-footer">
+    <div class="footer__inner">
+      <nav class="footer__nav">
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="footer__nav-link">ホーム</a>
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="footer__nav-link">個人情報保護方針</a>
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="footer__nav-link no-bar">苦情・紛争の解決について</a>
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="footer__nav-link">勧誘方針</a>
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="footer__nav-link no-bar">反社会的勢力との関係遮断のための基本方針</a>
+      </nav>
+    </div>
+    <small class="footer__copyright">Copyright ©2024 ZENITH CAPITAL PARTNERS</small>
   </footer>
 
   <?php wp_footer(); ?>
