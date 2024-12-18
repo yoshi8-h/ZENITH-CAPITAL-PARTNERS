@@ -1,35 +1,63 @@
 @use "sass:math";
 
+////////////////////
 // インナー幅設定
-// コンテンツのインナー幅（最も共通の幅が多い部分）
-$inner: 1100px;
-// ※キュンパス幅ではなくインナーの幅を指す
+////////////////////
+
+// コンテンツのインナー幅（最も共通の幅が多い部分）(※キャンパス幅ではなくインナーの幅を指す)
+$inner: 1200px;
 
 // 余白
-$padding-pc: 25px;
-$padding-sp: 20px;
+$padding-pc: 40px;
+$padding-sp: 25px;
 
 ////////////////////
 // フォント設定
 ////////////////////
 
-$base-font-family: "";
-$second-font-family: "";
-// ※検証ツールでしっかり反映されているか確認する
+// font-family (※検証ツールでしっかり反映されているか確認する)
+$font-family-base: "Noto Sans JP", sans-serif;
+$font-family-en-1: "Montserrat", serif;
+$font-family-en-2: "Murecho", serif;
 
-body {
-  font-family: $base-font-family;
-}
+// font-size (bodyタグ指定の上に書く必要あり！！)
+$font-size-base: rem(16);
 
-// フォントウェイト
-$regular: 300;
+// font-weight (bodyタグ指定の上に書く必要あり！！)
 $normal: 400;
+$medium: 500;
+$semiBold: 600;
 $bold: 700;
+
+// line-height (bodyタグ指定の上に書く必要あり！！) (line-heightは、『reset.scss』で定義されており、そっちが優先される(今回は『1.75』に設定))
+// $line-height-base: 1.9;
+
 
 ////////////////////
 // 色の指定
 ////////////////////
 
 //色指定（共通性のあるものは出来る限り指定すると良い）
-$black: #111;
-$white: #fff;
+$color-font-base-1: #1e1e1e;
+$color-font-base-2: #333333;
+// $color-font-base-3: #190300;
+$color-background-base-1: #f4f6fa;
+// $color-background-base-2: #998676;
+$color-white: #fff;
+$color-accent1: #1d61af;  // headerやfooterの色
+$color-accent2: #569adf;  // headerのお問い合わせボタンの背景色
+// $color-accent3: #2c81d8;
+
+// ====================================
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $normal;
+  color: $color-font-base-1;
+  font-style: normal;
+}
+
+/* 構築時のみ、管理バーを非表示にする */
+#wpadminbar {
+  // display: none !important;
+}

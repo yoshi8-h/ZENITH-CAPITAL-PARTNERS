@@ -1,8 +1,18 @@
 body {
-	font-family: "";
+	color: #1e1e1e;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: rem(16);
+	font-style: normal;
+	font-weight: 400;
 }
 
+/* 構築時のみ、管理バーを非表示にする */
+
 .u-desktop {
+	display: block;
+}
+
+.u-mobile {
 	display: none;
 }
 
@@ -148,37 +158,37 @@ a {
 .inner {
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: 20px;
-	padding-right: 20px;
+	max-width: 1280px;
+	padding-left: 40px;
+	padding-right: 40px;
 	width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media (max-width: 1200px) {
 
-.u-desktop {
-	display: block;
+html {
+	font-size: 1.3333333333vw;
 }
 
-.u-mobile {
+}
+
+@media screen and (max-width: 767px) {
+
+.u-desktop {
 	display: none;
 }
 
-html {
-	font-size: 1.4545454545vw;
+.u-mobile {
+	display: block;
 }
-
-.inner {
-	max-width: 1150px;
-	padding-left: 25px;
-	padding-right: 25px;
-}
-
-}
-
-@media (min-width: 1100px) {
 
 html {
 	font-size: 16px;
+}
+
+.inner {
+	padding-left: 25px;
+	padding-right: 25px;
 }
 
 }
