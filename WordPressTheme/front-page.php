@@ -24,6 +24,16 @@
       </div>
     </div>
 
+    <!-- top-text セクション -->
+    <section class="top-text l-top-text">
+      <div class="top-text__inner inner">
+        <h2 class="top-text__title">人と不動産の「うつくしい」関係<br class="u-mobile">を具現化する<br class="u-mobile">「不動産ソリューションカンパニー」</h2>
+        <p class="top-text__text">
+          「ゼニス・キャピタル・パートナーズ株式会社」は、<br class="u-mobile">不動産投資理論と実践に基づく経験、<br
+          >そして人と人の繋がりを大切にして、不動産価値の持続的な成長を実現するソリューションを<br class="u-mobile">ご提供いたします。
+        </p>
+      </div>
+    </section>
 
   </main>
 

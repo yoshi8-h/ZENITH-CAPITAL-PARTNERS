@@ -1,7 +1,6 @@
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
 
-
 });
 
 /* -------------------------------------------------------------------------------- */
@@ -37,7 +36,6 @@ document.querySelector('.js-header__btn').addEventListener('click', function (e)
   document.documentElement.classList.toggle('is-fixed'); // htmlタグのスクロール固定
   document.body.classList.toggle('is-fixed'); // bodyタグのスクロール固定
 });
-
 
 /* -------------------------------------------------------------------------------- */
 /* アコーディオン (ドロワーメニュー内) */

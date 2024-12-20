@@ -1,0 +1,42 @@
+@use "global" as *;
+
+
+.top-text {
+  padding-top: rem(75);
+  padding-bottom: rem(150);
+  background: url(../images/common/top-text-bg-arrow.webp) no-repeat center center / cover;
+
+  @include mq(md) {
+    padding-top: rem(18);
+    padding-bottom: rem(32);
+  }
+}
+
+.top-text__inner {
+
+}
+
+.top-text__title {
+  font-size: rem(27);
+  font-weight: $semiBold;
+  color: #2e3e50;
+  text-align: center;
+
+  @include mq(md) {
+    font-size: rem(18);
+  }
+}
+
+.top-text__text {
+  text-align: center;
+  margin-top: rem(45);
+  font-size: rem(20);
+  font-weight: $medium;
+  color: #3d4656;
+  line-height: 2.0;
+
+  @include mq(md) {
+    margin-top: rem(15);
+    font-size: rem(15);
+  }
+}

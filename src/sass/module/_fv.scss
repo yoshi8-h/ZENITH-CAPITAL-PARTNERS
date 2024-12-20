@@ -7,6 +7,7 @@
 
   @include mq(md) {
     padding-top: rem(77);  // headerの高さ分を考慮 (border分も)
+    min-height: auto;
   }
 }
 

@@ -628,6 +628,28 @@ a {
 	font-size: 0.7875rem;
 }
 
+.top-text {
+	background: url(../images/common/top-text-bg-arrow.webp) no-repeat center center/cover;
+	padding-bottom: 9.375rem;
+	padding-top: 4.6875rem;
+}
+
+.top-text__title {
+	color: #2e3e50;
+	font-size: 1.6875rem;
+	font-weight: 600;
+	text-align: center;
+}
+
+.top-text__text {
+	color: #3d4656;
+	font-size: 1.25rem;
+	font-weight: 500;
+	line-height: 2;
+	margin-top: 2.8125rem;
+	text-align: center;
+}
+
 @media screen and (max-width: 1440px) {
 
 .header__nav {
@@ -721,6 +743,7 @@ html {
 }
 
 .fv {
+	min-height: auto;
 	padding-top: 4.8125rem;
 }
 
@@ -869,6 +892,20 @@ html {
 .top-btn {
 	bottom: 1.875rem;
 	right: 0.5rem;
+}
+
+.top-text {
+	padding-bottom: 2rem;
+	padding-top: 1.125rem;
+}
+
+.top-text__title {
+	font-size: 1.125rem;
+}
+
+.top-text__text {
+	font-size: 0.9375rem;
+	margin-top: 0.9375rem;
 }
 
 }
