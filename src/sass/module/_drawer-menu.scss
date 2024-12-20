@@ -1,0 +1,68 @@
+@use "global" as *;
+
+
+.drawer-menu {
+  display: none;
+
+  @include mq(md) {
+    display: block;
+    border-top: rem(4) solid #488ad9;
+    overflow: scroll;  // スマホ横向けの時にメニューがはみ出る際にスクロールして閲覧可能に。
+    background:  $color-white;
+    width: 70%;
+
+    position: fixed;
+    top: rem(77);  // headerの高さ
+    right: 0;
+    z-index: 400;
+    transform: translateY(-200%);  // 最初は上に隠れている。
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+
+    /* 高さを画面全体に設定 */
+    // height: calc(100vh - rem( 77)); /* ビューポート高さ - ヘッダーの高さ */
+    max-height: calc(100vh - rem(77)); /* 最大高さ: ビューポート高さ - ヘッダーの高さ */
+    height: auto; /* 内容に応じて高さを調整 */
+  }
+}
+
+.drawer-menu.is-clicked {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.drawer-menu__wrap {
+  @include mq(md) {
+    /* ラッパー要素がスクロール可能に */
+    height: 100%; /* ドロワーメニュー内で高さ全体を使用 */
+    overflow-y: auto; /* 縦スクロールを有効化 */
+  }
+}
+
+.drawer-menu__nav {
+  @include mq(md) {
+
+  }
+}
+
+
+
+/* 背景オーバーレイ */
+.js-drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* 横幅全体 */
+  height: 100%; /* 高さ全体 */
+  background-color: rgba(163, 169, 181, 0.5); /* 背景色: 半透明 */
+  z-index: 399; /* ドロワーメニューの下に配置 */
+  display: none; /* 初期状態では非表示 */
+}
+
+/* オーバーレイ表示時 */
+.js-drawer-overlay.is-active {
+  display: block;
+}
+

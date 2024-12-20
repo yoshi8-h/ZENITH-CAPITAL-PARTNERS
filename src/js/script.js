@@ -17,6 +17,41 @@ window.addEventListener("scroll", function () {
   }
 });
 
+/* -------------------------------------------------------------------------------- */
+/* ハンバーガーメニュー(ドロワーメニュー) */
+// クリックされた時に『is-clicked』クラスを付け外ししてボタンを変形・ドロワーメニューを表示/非表示
+// 「html,body」に『is-fixed』クラスを付け外ししてドロワーが開いてる時はスクロールを無効に
+// ドロワーメニュー外にオーバーレイを表示して背景を暗くする。(別途HTMLを追加済み)
+document.querySelector('.js-header__btn').addEventListener('click', function (e) {
+  e.preventDefault();
+
+  // 要素を取得
+  const headerBtn = document.querySelector('.js-header__btn'); // ハンバーガーメニューのボタン
+  const drawerMenu = document.querySelector('.js-drawer-menu'); // ドロワーメニュー
+  const drawerOverlay = document.querySelector('.js-drawer-overlay'); // 背景オーバーレイ
+
+  // 各クラスのトグル処理
+  headerBtn.classList.toggle('is-clicked'); // ボタンの状態をトグル
+  drawerMenu.classList.toggle('is-clicked'); // ドロワーメニューの開閉をトグル
+  drawerOverlay.classList.toggle('is-active'); // 背景オーバーレイの表示/非表示をトグル
+  document.documentElement.classList.toggle('is-fixed'); // htmlタグのスクロール固定
+  document.body.classList.toggle('is-fixed'); // bodyタグのスクロール固定
+});
+
+
+/* -------------------------------------------------------------------------------- */
+/* アコーディオン (ドロワーメニュー内) */
+jQuery(".js-accordion").on("click", function (e) {
+  e.preventDefault();
+
+  if (jQuery(this).parent().hasClass("is-open")) {
+    jQuery(this).parent().removeClass("is-open");
+    jQuery(this).next().slideUp();
+  } else {
+    jQuery(this).parent().addClass("is-open");
+    jQuery(this).next().slideDown();
+  }
+});
 
 
 

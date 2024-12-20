@@ -1,0 +1,74 @@
+@use "global" as *;
+
+
+.nav {
+  @include mq(md) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+}
+
+.nav__item {
+  @include mq(md) {
+    width: 100%;
+    position: relative;
+  }
+}
+
+.nav__item::after {  // 仕切り線
+  @include mq(md) {
+    content: "";
+    width: 84%;
+    height: 1px;
+    background: #bebebe;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.nav__item:last-of-type::after {
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.nav__link {
+  @include mq(md) {
+    color: #2e3f54;
+    display: block;
+    padding-block: rem(18);
+    padding-left: rem(26);
+    padding-right: rem(18);
+    font-size: rem(17);
+    transition: color 0.2s ease-out;
+  }
+}
+
+.nav__link:hover {  // hover
+  @include mq(md) {
+    color: $color-accent3;
+  }
+}
+
+
+.nav__item.is-toggle {
+  @include mq(md) {
+
+  }
+}
+
+.nav__toggle-text {
+  @include mq(md) {
+    display: block;
+    padding-block: rem(18);
+    padding-left: rem(26);
+    padding-right: rem(18);
+    font-size: rem(17);
+  }
+}
+

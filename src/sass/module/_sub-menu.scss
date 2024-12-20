@@ -64,7 +64,7 @@
   transition: width 0.2s ease-out;
 }
 
-.sub-menu__item:last-of-type:after {  // 仕切り線の点線
+.sub-menu__item:last-of-type::after {  // 仕切り線の点線
   display: none;
 }
 

@@ -17,6 +17,10 @@
           <source src="<?php echo get_theme_file_uri(); ?>/assets/images/common/fv-video-dammy.mp4" type="video/mp4">
           <p class="fv__video-alternative-text">動画を再生できるブラウザ環境ではありません。</p>
         </video>
+        <p class="fv__text">
+          人と人の繋がりを大切にして、<br
+          >不動産価値の持続的な成長を<br class="u-mobile">実現するソリューションをご提供します。
+        </p>
       </div>
     </div>
 

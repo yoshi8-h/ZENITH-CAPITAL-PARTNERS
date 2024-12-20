@@ -1,0 +1,128 @@
+@use "global" as *;
+
+
+.toggle {
+
+}
+
+.toggle.is-open .toggle__open-btn::after {  // 『.is-open』が付いた時は、縦線を90度回転。
+  @include mq(md) {
+    transform: translate(-50%, -50%) rotate(90deg);  // 『rotate』だけだと、元々指定していた『translate(-50%, -50%)』が無しになり『rotate』だけが適用されてしまうため『rotate』と『translate』の両方の記述が必要。また『translate』と『rotate』の順番も重要。逆にすると移動と回転の順番が逆になり結果が変わる。
+  }
+}
+
+.toggle__head {
+  @include mq(md) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(20);  // 念の為に指定。
+
+    padding-block: rem(18);
+    padding-left: rem(26);
+    padding-right: rem(26);
+    color: #2e3f54;
+  }
+}
+
+.toggle__head:hover .toggle__head-text {  // hover
+  @include mq(md) {
+    color: $color-accent3;
+  }
+}
+
+.toggle__head:hover .toggle__open-btn::before,
+.toggle__head:hover .toggle__open-btn::after {  // hover
+  @include mq(md) {
+    background: $color-accent3;
+  }
+}
+
+.toggle__head-text {
+  @include mq(md) {
+    font-size: rem(17);
+    transition: color 0.2s ease-out;
+  }
+}
+
+.toggle__open-btn {
+  display: block;
+  width: rem(14);
+  height: rem(3);
+  position: relative;
+}
+
+.toggle__open-btn::before,
+.toggle__open-btn::after {  // 縦線と横線の共通の指定
+  content: "";
+  background-color: #2e3f54;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: background 0.2s ease-out;
+}
+
+.toggle__open-btn::before {  // 横線
+  width: rem(14);
+  height: rem(3);
+  min-height: rem(2);
+  max-height: rem(2);
+}
+
+.toggle__open-btn::after {  // 縦線
+  width: rem(3);
+  max-width: rem(2);
+  min-width: rem(2);
+  height: rem(14);
+  transition: transform 0.3s ease-out;
+}
+
+.toggle__body {
+  @include mq(md) {
+    display: none;  // 普段(最初)は「.qa-box__body」は閉じている仕様のため。
+    border-top: 1px solid #bebebe;
+    border-bottom: 1px solid #bebebe;
+  }
+}
+
+.toggle__nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f0f6ff;
+  text-align: left;
+}
+
+.toggle__nav-link {
+  display: block;
+  width: 100%;
+  color: #2e3f54;
+  font-size: rem(15);
+  padding-block: rem(14);
+  padding-left: rem(34);
+  padding-right: rem(10);
+  position: relative;
+  transition: color 0.2s ease-out;
+}
+
+.toggle__nav-link:hover {  // hover
+  color: $color-accent3;
+}
+
+.toggle__nav-link::after {
+  content: "";
+  width: 86%;
+  height: 1px;
+  background: #bebebe;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.toggle__nav-link:last-of-type::after {
+  display: none;
+}
