@@ -1,0 +1,74 @@
+@use "global" as *;
+
+
+.sub-menu {
+  display: none;  // 通常は非表示に。
+
+  min-width: rem(200);
+  background: $color-white;
+  border-top: 4px solid $color-accent2;
+
+  position: absolute; /* サブメニューを親要素から絶対配置する */
+  top: 100%; /* 親メニューの下に配置 */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 800;  // fvより前面に表示
+}
+
+.header__nav-item:hover .sub-menu {  // hover時に、その項目に対応するサブメニューを表示
+  display: block;
+
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.sub-menu__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-menu__item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding-block: rem(16);
+  // padding-inline: rem(12);
+  padding-left: rem(18);
+  padding-right: rem(8);
+  color: $color-font-base-1;
+  font-size: rem(15);
+  font-weight: $normal;
+  transition: all 0.2s ease-out;
+  position: relative;
+}
+
+.sub-menu__item::after {  // 仕切り線の点線
+  content: "";
+  width: 86%;
+  height: 1px;
+
+  background: repeating-linear-gradient(  /* 点線 */
+    to right,         /* 線の方向 */
+    black,            /* 点の色 */
+    black 1px,        /* 点の太さ */
+    transparent 1.5px,  /* 点の後に透明部分を開始 */
+    transparent 5px   /* 透明部分の終了位置（間隔の調整） */
+  );
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.2s ease-out;
+}
+
+.sub-menu__item:last-of-type:after {  // 仕切り線の点線
+  display: none;
+}
+
+.sub-menu__item:hover {  // hover
+  background: #e6eef7;
+  color: $color-accent3;
+}

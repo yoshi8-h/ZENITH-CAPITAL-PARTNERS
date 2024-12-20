@@ -83,6 +83,13 @@
   }
 }
 
+.header__nav-item {
+  height: 100%;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
 .header__link {
   height: 100%;
   font-family: $font-family-en-2;
@@ -169,4 +176,8 @@
 
 .header__bar:nth-of-type(3) {
   top: rem(24);
+}
+
+.header__sub-menu {
+
 }

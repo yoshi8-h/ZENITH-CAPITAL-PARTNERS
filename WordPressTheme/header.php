@@ -16,12 +16,43 @@
         <a href="<?php echo esc_url(home_url('/')); ?>" class="header__title-text">ゼニス・キャピタル・パートナーズ株式会社</a>
       </h1>
       <nav class="header__nav">
-        <a href="<?php echo esc_url(get_post_type_archive_link('campaign')); ?>" class="header__link">事業案内</a>
-        <a href="<?php echo esc_url(get_post_type_archive_link('campaign')); ?>" class="header__link">実績紹介</a>
-        <a href="<?php echo esc_url(get_post_type_archive_link('campaign')); ?>" class="header__link">会社案内</a>
-        <a href="<?php echo esc_url(get_post_type_archive_link('campaign')); ?>" class="header__link">ニュース</a>
-        <a href="<?php echo esc_url(get_post_type_archive_link('campaign')); ?>" class="header__link">採用情報</a>
-        <a href="<?php echo esc_url(get_post_type_archive_link('campaign')); ?>" class="header__link-contact">お問い合わせ</a>
+        <div class="header__nav-item">
+          <a href="<?php echo esc_url(get_post_type_archive_link('business')); ?>" class="header__link">事業案内</a>
+          <!-- サブメニュー (事業案内) -->
+          <div class="header__sub-menu sub-menu is-business">
+            <div class="sub-menu__items">
+              <a href="" class="sub-menu__item">当社の不動産運用方針</a>
+              <a href="" class="sub-menu__item">アセットマネジメント</a>
+              <a href="" class="sub-menu__item">不動産コンサルティング</a>
+              <a href="" class="sub-menu__item">自己投資</a>
+              <a href="" class="sub-menu__item">テナント事業</a>
+            </div>
+          </div>
+        </div>
+        <div class="header__nav-item">
+          <a href="<?php echo esc_url(get_post_type_archive_link('business')); ?>" class="header__link">実績紹介</a>
+        </div>
+        <div class="header__nav-item">
+          <a href="<?php echo esc_url(get_post_type_archive_link('company')); ?>" class="header__link">会社案内</a>
+          <!-- サブメニュー (会社案内) -->
+          <div class="header__sub-menu sub-menu is-company">
+            <div class="sub-menu__items">
+              <a href="" class="sub-menu__item">トップメッセージ</a>
+              <a href="" class="sub-menu__item">企業理念</a>
+              <a href="" class="sub-menu__item">会社概要</a>
+              <a href="" class="sub-menu__item">主要メンバー紹介</a>
+            </div>
+          </div>
+        </div>
+        <div class="header__nav-item">
+          <a href="<?php echo esc_url(get_post_type_archive_link('news')); ?>" class="header__link">ニュース</a>
+        </div>
+        <div class="header__nav-item">
+          <a href="<?php echo esc_url(get_post_type_archive_link('recruit')); ?>" class="header__link">採用情報</a>
+        </div>
+        <div class="header__nav-item">
+          <a href="<?php echo esc_url(get_post_type_archive_link('contact')); ?>" class="header__link-contact">お問い合わせ</a>
+        </div>
       </nav>
       <!-- <button class="header__btn js-header__btn">
         <span class="header__bar"></span>
