@@ -4,7 +4,8 @@
 .top-text {
   padding-top: rem(75);
   padding-bottom: rem(150);
-  background: url(../images/common/top-text-bg-arrow.webp) no-repeat center center / cover;
+  // background: url(../images/common/top-text-bg-arrow.webp) no-repeat center center / cover;
+  position: relative;
 
   @include mq(md) {
     padding-top: rem(18);
@@ -12,8 +13,45 @@
   }
 }
 
+.top-text__bg {  // 背景画像の三角形
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.top-text__bg img {  // 背景画像の三角形
+  width: 100%;
+  object-fit: cover;
+}
+
+.top-text__bg-sp {  // 背景画像の三角形
+  display: none;
+
+  @include mq(md) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    // max-height: rem(218);
+  }
+}
+
+.top-text__bg-sp img {  // 背景画像の三角形
+  @include mq(md) {
+    width: 100%;
+    object-fit: cover;
+    // max-height: rem(260);
+  }
+}
+
 .top-text__inner {
 
+  @include mq(md) {
+    // max-width: rem(600);
+  }
 }
 
 .top-text__title {
@@ -23,7 +61,7 @@
   text-align: center;
 
   @include mq(md) {
-    font-size: rem(18);
+    font-size: rem(15);
   }
 }
 
@@ -37,6 +75,6 @@
 
   @include mq(md) {
     margin-top: rem(15);
-    font-size: rem(15);
+    font-size: rem(13.5);
   }
 }

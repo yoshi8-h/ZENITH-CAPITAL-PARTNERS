@@ -1,0 +1,26 @@
+@use "global" as *;
+
+
+.btn1 {
+  font-family: $font-family-en-1;
+  font-size: rem(20);
+  font-weight: $bold;
+  color: #889196;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem(15);
+  transition: opacity 0.2s ease-out;
+}
+
+.btn1:hover {  // hover
+  opacity: 0.4;
+}
+
+.btn1__text {
+
+}
+
+.btn1__arrow {
+
+}

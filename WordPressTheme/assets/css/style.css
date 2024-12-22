@@ -159,6 +159,26 @@ a {
 	transition: opacity 0.3s;
 }
 
+.l-management-policy {
+	margin-top: 1.875rem;
+}
+
+.btn1 {
+	align-items: center;
+	color: #889196;
+	display: flex;
+	font-family: "Montserrat", serif;
+	font-size: 1.25rem;
+	font-weight: 700;
+	gap: 0.9375rem;
+	justify-content: center;
+	transition: opacity 0.2s ease-out;
+}
+
+.btn1:hover {
+	opacity: 0.4;
+}
+
 .drawer-menu {
 	display: none;
 }
@@ -445,6 +465,110 @@ a {
 	width: 100%;
 }
 
+.management-policy__contents {
+	margin-top: 3.75rem;
+}
+
+.management-policy__content {
+	align-items: flex-end;
+	display: flex;
+	gap: 3.4375rem;
+	justify-content: center;
+}
+
+.management-policy__content:nth-of-type(n + 2) {
+	margin-top: 5rem;
+}
+
+.management-policy__contents .management-policy__content:nth-child(even) {
+	flex-direction: row-reverse;
+}
+
+.management-policy__content-title-sp {
+	display: none;
+}
+
+.management-policy__content-img {
+	-o-object-fit: cover;
+	aspect-ratio: 572/370;
+	max-width: 35.75rem;
+	object-fit: cover;
+	width: 100%;
+}
+
+.management-policy__content-img img {
+	-o-object-fit: cover;
+	aspect-ratio: 572/370;
+	max-width: 35.75rem;
+	object-fit: cover;
+	width: 100%;
+}
+
+.management-policy__content-body {
+	align-items: flex-start;
+	aspect-ratio: 572/370;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: flex-end;
+	max-width: 35.75rem;
+	width: 100%;
+}
+
+.management-policy__content-title {
+	color: #333333;
+	font-size: 1.5rem;
+	font-weight: 600;
+	white-space: nowrap;
+}
+
+.management-policy__content-text {
+	color: #1e1e1e;
+	font-size: 1.125rem;
+	font-weight: 400;
+	line-height: 1.88;
+	margin-bottom: auto;
+	margin-top: 1rem;
+}
+
+.management-policy__content-btn {
+	align-self: flex-end;
+}
+
+.management-policy__content-icon {
+	-o-object-fit: cover;
+	aspect-ratio: 572/202;
+	max-width: 35.75rem;
+	object-fit: cover;
+	width: 100%;
+}
+
+.management-policy__content-icon img {
+	-o-object-fit: cover;
+	aspect-ratio: 572/202;
+	max-width: 35.75rem;
+	object-fit: cover;
+	width: 100%;
+}
+
+.section-title {
+	text-align: center;
+}
+
+.section-title__ja {
+	color: #2d2d2d;
+	font-size: 2.3125rem;
+	font-weight: 600;
+}
+
+.section-title__en {
+	color: #b1b8c0;
+	font-family: "Montserrat", serif;
+	font-size: 1.375rem;
+	font-weight: 700;
+	margin-top: 1.125rem;
+}
+
 .sub-menu {
 	background: #fff;
 	border-top: 4px solid #569adf;
@@ -629,9 +753,27 @@ a {
 }
 
 .top-text {
-	background: url(../images/common/top-text-bg-arrow.webp) no-repeat center center/cover;
 	padding-bottom: 9.375rem;
 	padding-top: 4.6875rem;
+	position: relative;
+}
+
+.top-text__bg {
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: -1;
+}
+
+.top-text__bg img {
+	-o-object-fit: cover;
+	object-fit: cover;
+	width: 100%;
+}
+
+.top-text__bg-sp {
+	display: none;
 }
 
 .top-text__title {
@@ -796,6 +938,56 @@ html {
 	padding-right: 25px;
 }
 
+.management-policy__inner {
+	max-width: 37.5rem;
+}
+
+.management-policy__contents {
+	margin-top: 1.875rem;
+}
+
+.management-policy__content {
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+
+.management-policy__content:nth-of-type(n + 2) {
+	margin-top: 2.1875rem;
+}
+
+.management-policy__contents .management-policy__content:nth-child(even) {
+	flex-direction: column;
+}
+
+.management-policy__content-title-sp {
+	color: #1e1e1e;
+	display: block;
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+.management-policy__content-body {
+	aspect-ratio: auto;
+	height: auto;
+	max-width: none;
+}
+
+.management-policy__content-text {
+	font-size: 1rem;
+	line-height: 1.8;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.management-policy__content-btn {
+	margin-top: 0.625rem;
+}
+
+.management-policy__content-icon {
+	display: none;
+}
+
 .nav {
 	align-items: center;
 	display: flex;
@@ -846,6 +1038,15 @@ html {
 	padding-left: 1.625rem;
 	padding-right: 1.125rem;
 	padding-top: 1.125rem;
+}
+
+.section-title__ja {
+	font-size: 1.6875rem;
+}
+
+.section-title__en {
+	font-size: 0.875rem;
+	margin-top: 0.3125rem;
 }
 
 .header__nav-item:hover .sub-menu {
@@ -899,12 +1100,26 @@ html {
 	padding-top: 1.125rem;
 }
 
+.top-text__bg-sp {
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: -1;
+}
+
+.top-text__bg-sp img {
+	-o-object-fit: cover;
+	object-fit: cover;
+	width: 100%;
+}
+
 .top-text__title {
-	font-size: 1.125rem;
+	font-size: 0.9375rem;
 }
 
 .top-text__text {
-	font-size: 0.9375rem;
+	font-size: 0.84375rem;
 	margin-top: 0.9375rem;
 }
 

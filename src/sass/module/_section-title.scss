@@ -1,0 +1,29 @@
+@use "global" as *;
+
+
+.section-title {
+  text-align: center;
+}
+
+.section-title__ja {
+  font-size: rem(37);
+  font-weight: $semiBold;
+  color: #2d2d2d;
+
+  @include mq(md) {
+    font-size: rem(27);
+  }
+}
+
+.section-title__en {
+  margin-top: rem(18);
+  font-family: $font-family-en-1;
+  font-size: rem(22);
+  font-weight: $bold;
+  color: #b1b8c0;
+
+  @include mq(md) {
+    margin-top: rem(5);
+    font-size: rem(14);
+  }
+}
