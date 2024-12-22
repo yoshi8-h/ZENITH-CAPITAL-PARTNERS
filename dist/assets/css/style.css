@@ -793,6 +793,78 @@ a {
 	width: 100%;
 }
 
+.message {
+	background: #f4f6fa;
+	padding-bottom: 4.875rem;
+	padding-top: 4.375rem;
+}
+
+.message__contents {
+	align-items: flex-start;
+	display: flex;
+	gap: 3.4375rem;
+	justify-content: center;
+	margin-top: 2.1875rem;
+}
+
+.message__img-area {
+	width: 25%;
+}
+
+.message__img {
+	-o-object-fit: cover;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	max-width: 18.75rem;
+	object-fit: cover;
+	overflow: hidden;
+	width: 100%;
+}
+
+.message__img img {
+	-o-object-fit: cover;
+	aspect-ratio: 1/1;
+	max-width: 18.75rem;
+	object-fit: cover;
+	width: 100%;
+}
+
+.message__name {
+	font-size: 1rem;
+	margin-top: 1.25rem;
+	text-align: center;
+}
+
+.message__text-area {
+	width: 71%;
+}
+
+.message__text-title {
+	color: #333333;
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+
+.message__text {
+	color: #1b1b26;
+	font-size: 1.0625rem;
+	font-weight: 400;
+	line-height: 2;
+	margin-top: 1.875rem;
+}
+
+.message__btn-wrap {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2.1875rem;
+	width: -moz-fit-content;
+	width: fit-content;
+}
+
+.message__btn {
+	min-width: 19.6875rem;
+}
+
 .project {
 	padding-bottom: 5.625rem;
 	padding-top: 4.375rem;
@@ -833,8 +905,6 @@ a {
 }
 
 .project__btn {
-	margin-left: auto;
-	margin-right: auto;
 	min-width: 19.6875rem;
 }
 
@@ -895,8 +965,6 @@ a {
 }
 
 .solution__btn {
-	margin-left: auto;
-	margin-right: auto;
 	min-width: 19.6875rem;
 }
 
@@ -1345,6 +1413,19 @@ html {
 
 .management-policy__content-icon {
 	display: none;
+}
+
+.message {
+	padding-bottom: 3.125rem;
+	padding-top: 2.8125rem;
+}
+
+.message__inner {
+	max-width: 37.5rem;
+}
+
+.message__btn {
+	min-width: 15.625rem;
 }
 
 .nav {

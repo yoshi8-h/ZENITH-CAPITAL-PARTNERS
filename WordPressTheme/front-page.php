@@ -244,6 +244,36 @@
       </div>
     </section>
 
+    <!-- message セクション -->
+    <section class="message l-message">
+      <div class="message__inner inner">
+        <h2 class="message__title section-title">
+          <div class="section-title__ja">トップメッセージ</div>
+          <div class="section-title__en">TOP MESSAGE</div>
+        </h2>
+        <div class="message__contents">
+          <div class="message__img-area">
+            <div class="message__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/top-message-president.webp" alt="平田社長の写真"></div>
+            <div class="message__name">代表取締役社長　平田徹也</div>
+          </div>
+          <div class="message__text-area">
+            <div class="message__text-title">不動産ソリューションのプロフェッショナルとして、人と不動産のうつくしい係を追及し続ける。</div>
+            <p class="message__text">
+              私が生まれ育った田舎では、どこにいても山や森の濃い土や草木の匂いがしていた記憶があります。<br
+              >当時の実家のまわりには高い建物も少なく、たくさんの自然に囲まれてシンプルだけど豊かな暮らしを気に入っていました。<br
+              >一方で、故郷を離れて上京してからはコンクリートやアスファルトに囲まれた生活が当たり前になり、最初の頃は合理性や機能性ばかりが優先された場所に窮屈さや戸惑いを感じていました。
+            </p>
+            <div class="message__btn-wrap">
+              <a href="" class="message__btn btn2">
+                <div class="btn2__text">トップメッセージ</div>
+                <div class="btn2__arrow"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/btn2-arrow-white.webp" alt="→"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
   </main>
 
