@@ -153,6 +153,98 @@
       </div>
     </section>
 
+    <!-- project セクション -->
+    <section class="project l-project">
+      <div class="project__inner inner">
+        <h2 class="project__title section-title">
+          <div class="section-title__ja">業務実績</div>
+          <div class="section-title__en">PROJECT</div>
+        </h2>
+        <p class="project__text">これまでの当社の実績をご覧いただけます。</p>
+        <div class="project__contents">
+          <a href="" class="project__contents-item content2">
+            <div class="content2__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/project-content2-01.webp" alt=""></div>
+            <div class="content2__overlay">
+              <div class="content2__overlay-bg"></div>
+              <div class="content2__overlay-category">アセットマネジメント</div>
+              <p class="content2__overlay-text">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</p>
+              <div class="content2__overlay-btn">
+                <span class="content2__overlay-btn-text">MORE</span>
+                <span class="content2__overlay-btn-arrow">></span>
+              </div>
+            </div>
+          </a>
+          <a href="" class="project__contents-item content2">
+            <div class="content2__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/project-content2-01.webp" alt=""></div>
+            <div class="content2__overlay">
+            <div class="content2__overlay-bg"></div>
+              <div class="content2__overlay-category">アセットマネジメント</div>
+              <p class="content2__overlay-text">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</p>
+              <div class="content2__overlay-btn">
+                <span class="content2__overlay-btn-text">MORE</span>
+                <span class="content2__overlay-btn-arrow">></span>
+              </div>
+            </div>
+          </a>
+          <a href="" class="project__contents-item content2">
+            <div class="content2__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/project-content2-01.webp" alt=""></div>
+            <div class="content2__overlay">
+            <div class="content2__overlay-bg"></div>
+              <div class="content2__overlay-category">アセットマネジメント</div>
+              <p class="content2__overlay-text">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</p>
+              <div class="content2__overlay-btn">
+                <span class="content2__overlay-btn-text">MORE</span>
+                <span class="content2__overlay-btn-arrow">></span>
+              </div>
+            </div>
+          </a>
+          <a href="" class="project__contents-item content2">
+            <div class="content2__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/project-content2-01.webp" alt=""></div>
+            <div class="content2__overlay">
+            <div class="content2__overlay-bg"></div>
+              <div class="content2__overlay-category">アセットマネジメント</div>
+              <p class="content2__overlay-text">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</p>
+              <div class="content2__overlay-btn">
+                <span class="content2__overlay-btn-text">MORE</span>
+                <span class="content2__overlay-btn-arrow">></span>
+              </div>
+            </div>
+          </a>
+          <a href="" class="project__contents-item content2">
+            <div class="content2__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/project-content2-01.webp" alt=""></div>
+            <div class="content2__overlay">
+            <div class="content2__overlay-bg"></div>
+              <div class="content2__overlay-category">アセットマネジメント</div>
+              <p class="content2__overlay-text">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</p>
+              <div class="content2__overlay-btn">
+                <span class="content2__overlay-btn-text">MORE</span>
+                <span class="content2__overlay-btn-arrow">></span>
+              </div>
+            </div>
+          </a>
+          <a href="" class="project__contents-item content2">
+            <div class="content2__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/project-content2-01.webp" alt=""></div>
+            <div class="content2__overlay">
+            <div class="content2__overlay-bg"></div>
+              <div class="content2__overlay-category">アセットマネジメント</div>
+              <p class="content2__overlay-text">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</p>
+              <div class="content2__overlay-btn">
+                <span class="content2__overlay-btn-text">MORE</span>
+                <span class="content2__overlay-btn-arrow">></span>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="project__btn-wrap">
+          <a href="" class="project__btn btn2">
+            <div class="btn2__text">業務実績</div>
+            <div class="btn2__arrow"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/btn2-arrow-white.webp" alt="→"></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
   </main>
 
 <?php get_footer(); ?>

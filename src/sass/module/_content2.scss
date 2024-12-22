@@ -1,0 +1,103 @@
+@use "global" as *;
+
+
+.content2 {
+  position: relative;
+  overflow: hidden;
+}
+
+.content2:hover .content2__overlay {  // hover
+  transform: translateY(0);
+
+  @include mq(md) {
+    transform: translateY(100%);
+  }
+}
+
+.content2__bg {
+  aspect-ratio: 387 / 256;
+  max-width: rem(387);
+  width: 100%;
+  object-fit: cover;
+}
+
+.content2__bg img {
+  aspect-ratio: 387 / 256;
+  max-width: rem(387);
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
+// hover時のオーバーレイ部分
+.content2__overlay {
+  padding-top: rem(45);
+  padding-inline: rem(32);
+  padding-bottom: rem(25);  // 最低限を念の為指定
+
+  position: absolute;
+  inset: 0;
+
+  transform: translateY(100%);  // デフォルトでは下に隠れいている。
+  transition: transform 0.3s ease-out;
+}
+
+.content2__overlay-bg {
+  background: #222529;
+  opacity: 0.7;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.content2__overlay-category {
+  text-align: center;
+  padding-block: rem(8);
+  padding-inline: rem(8);  // 念の為に指定
+  min-width: rem(250);
+  width: fit-content;
+  margin-inline: auto;
+  background: #000;
+  background: rgba(0, 0, 0, 1);
+  color: $color-white;
+  font-size: rem(16);
+  font-weight: $medium;
+  position: relative;
+  z-index: 10;
+}
+
+.content2__overlay-text {
+  margin-top: rem(30);
+  color: $color-white;
+  font-size: rem(16);
+  font-weight: $normal;
+  position: relative;
+  z-index: 10;
+}
+
+.content2__overlay-btn {
+  position: relative;
+  z-index: 10;
+
+  margin-top: rem(20);
+  width: fit-content;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem(10);
+
+  font-size: rem(16);
+  color: #e6f1f7;
+  font-weight: $bold;
+}
+
+.content2__overlay-btn-text {
+
+}
+
+.content2__overlay-btn-arrow {
+
+}
