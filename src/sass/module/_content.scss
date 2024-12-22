@@ -1,0 +1,102 @@
+@use "global" as *;
+
+
+.content {
+  position: relative;
+}
+
+.content__link {
+  display: block;
+  width: inherit;
+  height: inherit;
+
+  aspect-ratio: 285 / 400;
+  max-width: rem(285);
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+
+  overflow: hidden;
+}
+
+.content__link:hover .content__overlay {  // hover
+  transform: translateY(0);
+}
+
+.content__bg {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+}
+
+.content__bg img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.content__plus-icon {
+  aspect-ratio: 1 / 1;
+  max-width: rem(35);
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: rem(15);
+  right: rem(15);
+}
+
+.content__plus-icon img {
+  aspect-ratio: 1 / 1;
+  max-width: rem(35);
+  width: 100%;
+  object-fit: cover;
+}
+
+.content__title {
+  margin-top: rem(15);
+  font-size: rem(17);
+  font-weight: $bold;
+  color: #181818;
+  text-align: center;
+}
+
+
+// hover時のオーバーレイ部分
+.content__overlay {
+  background: #124c8c;
+  opacity: 0.9;
+  padding-top: rem(70);
+  padding-inline: rem(22);
+  padding-bottom: rem(30);  // 最低限を念の為指定
+
+  position: absolute;
+  inset: 0;
+
+  transform: translateY(100%);
+  transition: transform 0.3s ease-out;
+}
+
+.content__overlay-text {
+  font-size: rem(16);
+  font-weight: $normal;
+  color: #e6f1f7;
+}
+
+.content__overlay-btn {
+  margin-top: rem(30);
+  width: fit-content;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem(10);
+
+  font-size: rem(16);
+  color: #e6f1f7;
+  font-weight: $bold;
+}
+
+.content__overlay-btn-text {
+}
+
+.content__overlay-btn-arrow {
+}

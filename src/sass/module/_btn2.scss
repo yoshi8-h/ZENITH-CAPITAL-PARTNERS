@@ -1,0 +1,41 @@
+@use "global" as *;
+
+
+.btn2 {
+  display: inline-flex;
+  border-radius: rem(20) 0 rem(20) 0;
+  padding-top: rem(15);
+  padding-bottom: rem(15);
+  padding-inline: rem(15);  // 最低限を指定
+  background: #3e4c61;
+  justify-content: center;
+  align-items: center;
+  gap: rem(25);
+  transition: background 0.2s ease-out;
+}
+
+.btn2:hover {  // hover
+  background: #6b7b93;
+}
+
+.btn2:hover .btn2__arrow {  // hover
+  transform: translateX(rem(5));
+}
+
+.btn2__text {
+  font-size: rem(17);
+  font-weight: $medium;
+  color: $color-white;
+}
+
+.btn2__arrow {
+  max-width: rem(85);
+  width: 100%;
+  transition: transform 0.2s ease-out;
+}
+
+.btn2__arrow img {
+  max-width: rem(85);
+  width: 100%;
+  object-fit: contain;
+}
