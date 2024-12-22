@@ -7,7 +7,7 @@
   padding-bottom: rem(78);
 
   @include mq(md) {
-    padding-top: rem(45);
+    padding-top: rem(55);
     padding-bottom: rem(50);
   }
 }
@@ -28,10 +28,20 @@
   justify-content: center;
   align-items: flex-start;
   gap: rem(55);
+
+  @include mq(md) {
+    margin-top: rem(35);
+    flex-direction: column;
+    gap: rem(25);
+  }
 }
 
 .message__img-area {
   width: 25%;
+
+  @include mq(md) {
+    width: 100%;
+  }
 }
 
 .message__img {
@@ -41,6 +51,12 @@
   object-fit: cover;
   border-radius: 50%;
   overflow: hidden;
+
+  @include mq(md) {
+    max-width: auto;
+    min-width: rem(300);
+    margin-inline: auto;
+  }
 }
 
 .message__img img {
@@ -58,12 +74,20 @@
 
 .message__text-area {
   width: 71%;
+
+  @include mq(md) {
+    width: 100%;
+  }
 }
 
 .message__text-title {
   font-size: rem(20);
   font-weight: $bold;
   color: #333333;
+
+  @include mq(md) {
+    font-size: rem(18);
+  }
 }
 
 .message__text {
@@ -72,6 +96,12 @@
   font-weight: $normal;
   color: #1b1b26;
   line-height: 2.0;
+
+  @include mq(md) {
+    margin-top: rem(20);
+    font-size: rem(16);
+    line-height: 1.7;
+  }
 }
 
 .message__btn-wrap {

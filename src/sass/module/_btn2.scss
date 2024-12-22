@@ -12,6 +12,10 @@
   align-items: center;
   gap: rem(25);
   transition: background 0.2s ease-out;
+
+  @include mq(md) {
+    gap: rem(18);
+  }
 }
 
 .btn2:hover {  // hover

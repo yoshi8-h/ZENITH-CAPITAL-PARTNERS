@@ -1233,6 +1233,10 @@ html {
 	margin-top: 3.125rem;
 }
 
+.btn2 {
+	gap: 1.125rem;
+}
+
 .content__link {
 	aspect-ratio: 161/225;
 	max-width: 10.0625rem;
@@ -1417,11 +1421,42 @@ html {
 
 .message {
 	padding-bottom: 3.125rem;
-	padding-top: 2.8125rem;
+	padding-top: 3.4375rem;
 }
 
 .message__inner {
 	max-width: 37.5rem;
+}
+
+.message__contents {
+	flex-direction: column;
+	gap: 1.5625rem;
+	margin-top: 2.1875rem;
+}
+
+.message__img-area {
+	width: 100%;
+}
+
+.message__img {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: auto;
+	min-width: 18.75rem;
+}
+
+.message__text-area {
+	width: 100%;
+}
+
+.message__text-title {
+	font-size: 1.125rem;
+}
+
+.message__text {
+	font-size: 1rem;
+	line-height: 1.7;
+	margin-top: 1.25rem;
 }
 
 .message__btn {
