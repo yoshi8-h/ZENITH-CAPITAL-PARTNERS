@@ -274,6 +274,45 @@
       </div>
     </section>
 
+    <!-- news セクション -->
+    <section class="news l-news">
+      <div class="news__inner inner">
+        <h2 class="news__title section-title">
+          <div class="section-title__ja">ニュース・トピックス</div>
+          <div class="section-title__en">NEWS / TOPICS</div>
+        </h2>
+        <div class="news__posts posts">
+          <a href="" class="posts__item post">
+            <div class="post__meta">
+              <div class="post__category is-news">お知らせ</div>
+              <time class="post__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d'); ?></time>
+            </div>
+            <p class="post__text">投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。</p>
+          </a>
+          <a href="" class="posts__item post">
+            <div class="post__meta">
+              <div class="post__category is-topics">トピックス</div>
+              <time class="post__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d'); ?></time>
+            </div>
+            <p class="post__text">投稿のテキストが入ります。</p>
+          </a>
+          <a href="" class="posts__item post">
+            <div class="post__meta">
+              <div class="post__category is-other">その他</div>
+              <time class="post__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d'); ?></time>
+            </div>
+            <p class="post__text">投稿のテキストが入ります。投稿のテキストが入ります。</p>
+          </a>
+        </div>
+        <div class="news__btn-wrap">
+          <a href="" class="news__btn btn2">
+            <div class="btn2__text">ニュース一覧</div>
+            <div class="btn2__arrow"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/btn2-arrow-white.webp" alt="→"></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
 
   </main>
 

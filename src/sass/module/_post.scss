@@ -1,0 +1,106 @@
+@use "global" as *;
+
+
+.post {
+  padding-block: rem(20);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: rem(20);
+  transition: opacity 0.2s ease-out;
+
+  @include mq(md) {
+    padding-block: rem(18);
+    flex-direction: column;
+    justify-content: center;
+    gap: rem(15);
+  }
+}
+
+.post:hover {  // hover
+  opacity: 0.6;
+}
+
+.post:nth-of-type(n + 2) {
+  position: relative;
+}
+
+.post:nth-of-type(n + 2)::before {  // 仕切り線の点線
+  content: "";
+  width: 100%;
+  height: 1px;
+
+  background: repeating-linear-gradient(  /* 点線 */
+    to right,         /* 線の方向 */
+    black,            /* 点の色 */
+    black 1px,        /* 点の太さ */
+    transparent 1.5px,  /* 点の後に透明部分を開始 */
+    transparent 5px   /* 透明部分の終了位置（間隔の調整） */
+  );
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.2s ease-out;
+}
+
+.post__meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem(18);
+
+  @include mq(md) {
+    gap: rem(7);
+  }
+}
+
+.post__category {
+  text-align: center;
+  font-size: rem(13);
+  font-weight: $semiBold;
+  color: $color-white;
+  padding-block: rem(5);
+  padding-inline: rem(5);  // 念の為最低限を指定
+  min-width: rem(100);
+  border-radius: rem(15);
+
+  @include mq(md) {
+    font-size: rem(12);
+    padding-block: rem(4);
+    padding-inline: rem(4);  // 念の為最低限を指定
+  }
+}
+
+.post__category.is-news {  // カテゴリが『お知らせ』の場合
+  background: #f4aa0a;
+}
+
+.post__category.is-topics {  // カテゴリが『トピックス』の場合
+  background: #67a5e3;
+}
+
+.post__category.is-other {  // カテゴリが『その他』の場合
+  background: #9eacb9;
+}
+
+.post__date {
+  font-size: rem(16);
+  font-weight: $normal;
+  color: $color-font-base-2;
+
+  @include mq(md) {
+    font-size: rem(15);
+  }
+}
+
+.post__text {
+  width: 100%;
+  font-size: rem(16);
+  font-weight: $normal;
+  color: #202020;
+
+  @include mq(md) {
+    font-size: rem(14);
+  }
+}

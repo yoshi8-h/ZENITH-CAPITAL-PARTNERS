@@ -108,6 +108,10 @@
   margin-top: rem(35);
   width: fit-content;
   margin-inline: auto;
+
+  @include mq(md) {
+    margin-top: rem(30);
+  }
 }
 
 .message__btn {
