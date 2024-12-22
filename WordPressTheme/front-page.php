@@ -313,6 +313,19 @@
       </div>
     </section>
 
+    <!-- contact セクション -->
+    <section class="contact l-contact">
+      <div class="contact__inner inner">
+        <h2 class="contact__title section-title">
+          <div class="section-title__ja">お問い合わせ</div>
+          <div class="section-title__en">CONTACT</div>
+        </h2>
+        <p class="contact__text">当社へのお問い合わせ・ご質問は、<br class="u-mobile">お問い合わせフォームよりお気軽にお問い合わせください。</p>
+        <div class="contact__btn-wrap">
+          <a href="" class="contact__btn btn3">お問い合わせフォーム</a>
+        </div>
+      </div>
+    </section>
 
   </main>
 

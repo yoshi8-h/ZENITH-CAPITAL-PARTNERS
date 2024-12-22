@@ -37,10 +37,15 @@
   font-weight: $normal;
   color: $color-white;
   position: relative;
+  transition: opacity 0.2s ease-out;
 
   @include mq(md) {
     font-size: rem(14);
   }
+}
+
+.footer__nav-link:hover {  // hover
+  opacity: 0.6;
 }
 
 .footer__nav-link:nth-of-type(n + 2)::before {  // 仕切り線
