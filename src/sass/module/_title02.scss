@@ -9,4 +9,9 @@
   line-height: 1.0;
   padding-bottom: rem(25);
   border-bottom: 2px solid #3d3e44;
+
+  @include mq(md) {
+    font-size: rem(20);
+    padding-bottom: rem(15);
+  }
 }

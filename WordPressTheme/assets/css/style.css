@@ -1641,6 +1641,33 @@ html {
 	transform: translateY(100%);
 }
 
+.content3 {
+	align-items: center;
+	flex-direction: column-reverse;
+	gap: 1.25rem;
+}
+
+.content3__title {
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.content3__title-number {
+	font-size: 1.875rem;
+}
+
+.content3__title-text {
+	font-size: 1.125rem;
+	line-height: 1.4;
+	margin-top: 0.25rem;
+}
+
+.content3__list {
+	gap: 0.625rem;
+	margin-top: 1.375rem;
+	padding-left: 0;
+}
+
 .drawer-menu {
 	background: #fff;
 	border-top: 0.25rem solid #488ad9;
@@ -1756,6 +1783,12 @@ html {
 .inner {
 	padding-left: 25px;
 	padding-right: 25px;
+}
+
+.list-item {
+	font-size: 0.875rem;
+	line-height: 1.7;
+	padding-left: 1.25rem;
 }
 
 .management-policy__inner {
@@ -1999,6 +2032,20 @@ html {
 	margin-top: 0.1875rem;
 }
 
+.solution-policy__message {
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	margin-top: 1.5625rem;
+}
+
+.solution-policy__contents {
+	margin-top: 2.1875rem;
+}
+
+.solution-policy__content:nth-of-type(n + 2) {
+	margin-top: 2.1875rem;
+}
+
 .solution {
 	padding-bottom: 3.75rem;
 	padding-top: 2.8125rem;
@@ -2065,6 +2112,11 @@ html {
 .title__en {
 	font-size: 2rem;
 	margin-top: -1.25rem;
+}
+
+.title02 {
+	font-size: 1.25rem;
+	padding-bottom: 0.9375rem;
 }
 
 .toggle.is-open .toggle__open-btn::after {

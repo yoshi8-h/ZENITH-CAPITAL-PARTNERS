@@ -19,10 +19,20 @@
   font-size: rem(19);
   line-height: 1.75;
   font-weight: $medium;
+
+  @include mq(md) {
+    margin-top: rem(25);
+    font-size: rem(15);
+    line-height: 1.6;
+  }
 }
 
 .solution-policy__contents {
   margin-top: rem(60);
+
+  @include mq(md) {
+    margin-top: rem(35);
+  }
 }
 
 .solution-policy__content {
@@ -31,4 +41,8 @@
 
 .solution-policy__content:nth-of-type(n + 2) {
   margin-top: rem(40);
+
+  @include mq(md) {
+    margin-top: rem(35);
+  }
 }

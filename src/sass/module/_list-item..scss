@@ -9,6 +9,12 @@
   line-height: 1.75;
   padding-left: rem(25);  // リストの前の『▶︎』アイコンを配置するスペースを考慮
   position: relative;
+
+  @include mq(md) {
+    font-size: rem(14);
+    line-height: 1.7;
+    padding-left: rem(20);
+  }
 }
 
 .list-item::before {  // リストの前の『▶︎』アイコン
