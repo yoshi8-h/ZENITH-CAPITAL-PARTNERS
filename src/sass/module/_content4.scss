@@ -1,0 +1,91 @@
+@use "global" as *;
+
+
+.content4 {
+
+}
+
+.content4__wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  width: 100%;
+}
+
+.content4__img {
+  aspect-ratio: 600 / 400;
+  max-width: rem(600);
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  z-index: 10;
+}
+
+.content4__img img {
+  aspect-ratio: 600 / 400;
+  max-width: rem(600);
+  width: 100%;
+  object-fit: cover;
+}
+
+.content4__body {
+  aspect-ratio: 635 / 243;
+  max-width: rem(635);
+  width: 100%;
+  background: $color-white;
+  padding-top: rem(60);
+  padding-bottom: rem(40);  // 最低限を指定
+  padding-inline: rem(70);
+
+  margin-left: auto;
+  z-index: 30;
+}
+
+.content4__title {
+  text-align: center;
+  font-size: rem(22);
+  font-weight: $bold;
+  color: #181818;
+  padding-bottom: rem(18);
+  border-bottom: 1px solid #686f81;
+}
+
+.content4__text {
+  margin-top: rem(30);
+  font-size: rem(17);
+  font-weight: $normal;
+  color: $color-font-base-1;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.content4__btn {
+  margin-top: rem(35);
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+}
+
+
+
+
+// =======================================
+// モディファイア
+// =======================================
+// content4--reverse (テキストと画像の配置が逆)
+.content4.content4--reverse {
+
+}
+
+.content4--reverse .content4__body {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.content4--reverse .content4__img {
+  left: auto;
+  right: 0;
+}

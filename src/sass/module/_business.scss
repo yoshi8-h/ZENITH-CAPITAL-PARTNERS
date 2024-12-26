@@ -1,0 +1,28 @@
+@use "global" as *;
+
+
+.business {
+  background: $color-background-base-1;
+  padding-top: rem(70);
+  padding-bottom: rem(120);
+}
+
+.business__inner {
+
+}
+
+.business__title {
+
+}
+
+.business__contents {
+  margin-top: rem(70);
+}
+
+.business__contents-item {
+
+}
+
+.business__contents-item:nth-of-type(n + 2) {
+  margin-top: rem(130);
+}
