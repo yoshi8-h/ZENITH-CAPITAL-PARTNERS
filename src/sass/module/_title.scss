@@ -1,0 +1,35 @@
+@use "global" as *;
+
+
+.title {
+  text-align: center;
+}
+
+.title__ja {
+  color: #202020;
+  font-size: rem(50);
+  font-weight: $semiBold;
+  position: relative;
+  z-index: 30;
+
+  @include mq(md) {
+    font-size: rem(28);
+  }
+}
+
+.title__en {
+  margin-top: rem(-38);  // 日本語文字に重なるように、上に移動
+  color: #99a0a8;
+  opacity: 0.4;
+  font-family: $font-family-en-1;
+  font-size: rem(80);
+  font-weight: $bold;
+  line-height: 1.0;
+  position: relative;
+  z-index: 10;
+
+  @include mq(md) {
+    margin-top: rem(-20);
+    font-size: rem(32);
+  }
+}

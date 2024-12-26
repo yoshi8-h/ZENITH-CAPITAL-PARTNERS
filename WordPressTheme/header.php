@@ -17,7 +17,7 @@
       </h1>
       <nav class="header__nav">
         <div class="header__nav-item">
-          <a href="<?php echo esc_url(get_post_type_archive_link('business')); ?>" class="header__link">事業案内</a>
+          <a href="<?php echo esc_url(get_permalink(get_page_by_path('business'))); ?>" class="header__link">事業案内</a>
           <!-- サブメニュー (事業案内) -->
           <div class="header__sub-menu sub-menu is-business">
             <div class="sub-menu__items">
@@ -30,10 +30,10 @@
           </div>
         </div>
         <div class="header__nav-item">
-          <a href="<?php echo esc_url(get_post_type_archive_link('business')); ?>" class="header__link">実績紹介</a>
+          <a href="<?php echo esc_url(get_permalink(get_page_by_path('business'))); ?>" class="header__link">実績紹介</a>
         </div>
         <div class="header__nav-item">
-          <a href="<?php echo esc_url(get_post_type_archive_link('company')); ?>" class="header__link">会社案内</a>
+          <a href="<?php echo esc_url(get_permalink(get_page_by_path('company'))); ?>" class="header__link">会社案内</a>
           <!-- サブメニュー (会社案内) -->
           <div class="header__sub-menu sub-menu is-company">
             <div class="sub-menu__items">
@@ -45,13 +45,13 @@
           </div>
         </div>
         <div class="header__nav-item">
-          <a href="<?php echo esc_url(get_post_type_archive_link('news')); ?>" class="header__link">ニュース</a>
+          <a href="<?php echo esc_url(get_permalink(get_page_by_path('news'))); ?>" class="header__link">ニュース</a>
         </div>
         <div class="header__nav-item">
-          <a href="<?php echo esc_url(get_post_type_archive_link('recruit')); ?>" class="header__link">採用情報</a>
+          <a href="<?php echo esc_url(get_permalink(get_page_by_path('recruit'))); ?>" class="header__link">採用情報</a>
         </div>
         <div class="header__nav-item">
-          <a href="<?php echo esc_url(get_post_type_archive_link('contact')); ?>" class="header__link-contact">お問い合わせ</a>
+          <a href="<?php echo esc_url(get_permalink(get_page_by_path('contact'))); ?>" class="header__link-contact">お問い合わせ</a>
         </div>
       </nav>
       <button class="header__btn js-header__btn">

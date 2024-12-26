@@ -1,0 +1,62 @@
+@use "global" as *;
+
+
+.sub-fv {
+  margin-top: rem(116);  // headerの高さ分を考慮 (border分も)
+  position: relative;
+
+  @include mq(md) {
+    margin-top: rem(77);  // headerの高さ分を考慮 (border分も)
+  }
+}
+
+.sub-fv__inner {
+  min-height: rem(280);
+
+  @include mq(md) {
+    min-height: rem(130);
+  }
+}
+
+.sub-fv__bg {  // 背景画像
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100%;
+}
+
+.sub-fv__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sub-fv__contents {
+  padding-top: rem(55);
+
+  @include mq(md) {
+    padding-top: rem(15);
+  }
+}
+
+.sub-fv__title {
+
+}
+
+.sub-fv__text {
+  margin-top: rem(15);
+  text-align: center;
+  color: #000;
+  font-size: rem(17);
+  font-weight: $medium;
+  position: relative;
+  z-index: 20;
+
+  @include mq(md) {
+    margin-top: rem(6);
+    font-size: rem(12);
+  }
+}
