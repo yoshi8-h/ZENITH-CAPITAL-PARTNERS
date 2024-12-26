@@ -2,5 +2,19 @@
 
 
 .list-item {
+  font-size: rem(17);
+  font-weight: $normal;
+  color: #1e1e1e;
+  text-align: left;
+  line-height: 1.75;
+  padding-left: rem(25);  // リストの前の『▶︎』アイコンを配置するスペースを考慮
+  position: relative;
+}
 
+.list-item::before {  // リストの前の『▶︎』アイコン
+  content: '▶︎';
+  color: #569adf;
+  position: absolute;
+  top: rem(0);
+  left: 0;
 }
