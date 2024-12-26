@@ -5,10 +5,17 @@
   background: $color-background-base-1;
   padding-top: rem(70);
   padding-bottom: rem(120);
+
+  @include mq(md) {
+    padding-top: rem(60);
+    padding-bottom: rem(80);
+  }
 }
 
 .business__inner {
-
+  @include mq(md) {
+    max-width: rem(600);
+  }
 }
 
 .business__title {
@@ -17,6 +24,10 @@
 
 .business__contents {
   margin-top: rem(70);
+
+  @include mq(md) {
+    margin-top: rem(40);
+  }
 }
 
 .business__contents-item {
@@ -25,4 +36,8 @@
 
 .business__contents-item:nth-of-type(n + 2) {
   margin-top: rem(130);
+
+  @include mq(md) {
+    margin-top: rem(50);
+  }
 }

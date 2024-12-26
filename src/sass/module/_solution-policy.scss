@@ -6,7 +6,9 @@
 }
 
 .solution-policy__inner {
-
+  @include mq(md) {
+    max-width: rem(600);
+  }
 }
 
 .solution-policy__title {

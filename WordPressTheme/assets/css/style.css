@@ -1698,6 +1698,23 @@ html {
 	gap: 1.125rem;
 }
 
+.business {
+	padding-bottom: 5rem;
+	padding-top: 3.75rem;
+}
+
+.business__inner {
+	max-width: 37.5rem;
+}
+
+.business__contents {
+	margin-top: 2.5rem;
+}
+
+.business__contents-item:nth-of-type(n + 2) {
+	margin-top: 3.125rem;
+}
+
 .contact {
 	padding-bottom: 3.125rem;
 	padding-top: 2.8125rem;
@@ -1764,6 +1781,44 @@ html {
 	gap: 0.625rem;
 	margin-top: 1.375rem;
 	padding-left: 0;
+}
+
+.content4__wrap {
+	display: block;
+}
+
+.content4__img {
+	left: auto;
+	max-width: none;
+	position: relative;
+}
+
+.content4__img img {
+	max-width: none;
+}
+
+.content4__body {
+	aspect-ratio: auto;
+	max-width: none;
+	padding-bottom: 1.25rem;
+	padding-left: 1.5625rem;
+	padding-right: 1.5625rem;
+	padding-top: 1.5625rem;
+}
+
+.content4__title {
+	font-size: 1.125rem;
+	padding-bottom: 0.875rem;
+}
+
+.content4__text {
+	font-size: 0.875rem;
+	line-height: 1.75;
+	margin-top: 1.25rem;
+}
+
+.content4__btn {
+	margin-top: 0.625rem;
 }
 
 .drawer-menu {
@@ -2128,6 +2183,10 @@ html {
 .section-title__en {
 	font-size: 0.875rem;
 	margin-top: 0.1875rem;
+}
+
+.solution-policy__inner {
+	max-width: 37.5rem;
 }
 
 .solution-policy__message {
