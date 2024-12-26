@@ -175,6 +175,10 @@ a {
 	margin-top: 5.625rem;
 }
 
+.l-tabs {
+	margin-top: 3.125rem;
+}
+
 .btn1 {
 	align-items: center;
 	color: #889196;
@@ -1446,6 +1450,33 @@ a {
 	color: #2c81d8;
 }
 
+.tabs {
+	align-items: center;
+	display: flex;
+	gap: 1.25rem;
+	justify-content: center;
+}
+
+.tabs__item {
+	background: #fff;
+	border: 1px solid #adafb3;
+	font-size: 1rem;
+	font-weight: 400;
+	min-width: 15.5rem;
+	padding-bottom: 0.625rem;
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
+	padding-top: 0.625rem;
+	text-align: center;
+	transition: all 0.2s ease-out;
+}
+
+.tabs__item:hover {
+	background: #000;
+	color: #fff;
+	cursor: pointer;
+}
+
 .title {
 	text-align: center;
 }
@@ -1692,6 +1723,10 @@ html {
 
 .l-solution {
 	margin-top: 3.125rem;
+}
+
+.l-tabs {
+	margin-top: 2.5rem;
 }
 
 .btn2 {
