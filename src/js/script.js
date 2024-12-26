@@ -3,6 +3,21 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
 });
 
+
+/* -------------------------------------------------------------------------------- */
+/* headerの下にborder-bottomを追加 (少しでもスクロールした場合に) */
+document.addEventListener('DOMContentLoaded', function () {
+  const header = document.querySelector('.header');
+
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 0) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+});
+
 /* -------------------------------------------------------------------------------- */
 /* トップへ戻るボタン */
 // 画面を少し(今回は80px)スクロールした時に表示(通常は非表示)

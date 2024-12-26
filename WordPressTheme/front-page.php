@@ -20,6 +20,7 @@
         <p class="fv__text">
           人と人の繋がりを大切にして、<br
           >不動産価値の持続的な成長を<br class="u-mobile">実現するソリューションをご提供します。
+          <div class="fv__text-bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/fv_text-bg.webp" alt=""></div>
         </p>
       </div>
     </div>

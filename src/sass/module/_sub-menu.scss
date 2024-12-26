@@ -7,6 +7,9 @@
   min-width: rem(200);
   background: $color-white;
   border-top: 4px solid $color-accent2;
+  border-left: 1px solid #b7c7e2;
+  border-right: 1px solid #b7c7e2;
+  border-bottom: 1px solid #b7c7e2;
 
   position: absolute; /* サブメニューを親要素から絶対配置する */
   top: 100%; /* 親メニューの下に配置 */

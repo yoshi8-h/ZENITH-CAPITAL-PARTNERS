@@ -3,7 +3,7 @@
 
 .fv {
   padding-top: rem(116);  // headerの高さ分を考慮 (border分も)
-  min-height: rem(800);
+  min-height: rem(900);
 
   @include mq(md) {
     padding-top: rem(77);  // headerの高さ分を考慮 (border分も)
@@ -19,6 +19,11 @@
   display: block;
   width: 100%;
   object-fit: cover;
+  min-height: rem(900);
+
+  @include mq(md) {
+    min-height: auto;
+  }
 }
 
 .fv__video-alternative-text {  // 動画が表示されない場合の代替テキスト (念の為に設定)
@@ -28,7 +33,7 @@
 }
 
 .fv__text {
-  font-size: rem(20);
+  font-size: rem(30);
   text-align: center;
   color: $color-white;
   position: absolute;
@@ -43,20 +48,57 @@
   }
 }
 
-.fv__text::after {  // 背景の黒い影のオーバーレイ
-  content: "";
+.fv__text-bg {  // 背景の黒い影のオーバーレイ
+  display: none;  // 仕様変更で消す事に。
+
   aspect-ratio: 1168 / 133;
   max-width: rem(1168);
   min-height: rem(133);
-  background: url(../images/common/fv_text-bg.webp) no-repeat center center / cover;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: -1;
+  z-index: 1;
 
   @include mq(md) {
-    // display: none;
+    aspect-ratio: 170 / 61;
     max-width: rem(345);
   }
 }
+
+.fv__text-bg img {  // 背景の黒い影のオーバーレイ
+  aspect-ratio: 1168 / 133;
+  max-width: rem(1168);
+  min-height: rem(133);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include mq(md) {
+    max-width: rem(345);
+  }
+}
+
+// .fv__text::after {  // 背景の黒い影のオーバーレイ
+//   content: "";
+//   aspect-ratio: 1168 / 133;
+//   max-width: rem(1168);
+//   min-height: rem(133);
+//   background: url(../images/common/fv_text-bg.webp) no-repeat center center / cover;
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   z-index: -1;
+
+//   @include mq(md) {
+//     // display: none;
+//     max-width: rem(345);
+//   }
+// }
+
+
+// * {
+//   outline: 2px solid blue;
+// }
