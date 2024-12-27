@@ -50,3 +50,38 @@
     top: rem(2);
   }
 }
+
+
+// list-item--red (赤い三角形) タブ切り替えページの不動産マネジメントの部分
+.list-item.list-item--red {
+  color: #364c6a;
+  padding-left: rem(33);
+}
+
+.list-item.list-item--red::before {  // リストの前の『▶︎』アイコン
+  color: #ef7b99;
+  font-size: rem(14);
+  top: rem(3);
+
+  @include mq(md) {
+    font-size: rem(10);
+    top: rem(2);
+  }
+}
+
+
+// list-item--red-2 (赤い三角形) タブ切り替えページの不動産マネジメントの部分の、黒文字の方
+.list-item.list-item--red-2 {
+  padding-left: rem(25);
+}
+
+.list-item.list-item--red-2::before {
+  color: #ef7b99;
+  font-size: rem(14);
+  top: rem(3);
+
+  @include mq(md) {
+    font-size: rem(10);
+    top: rem(2);
+  }
+}

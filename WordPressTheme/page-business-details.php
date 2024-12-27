@@ -123,7 +123,7 @@
           <div class="consulting__main-contents contents">
             <div class="contents__item">
               <div class="contents__item-wrap">
-                <div class="contents__item-left">
+                <div class="contents__item-box is-left">
                   <div class="contents__item-title">A社（建設業）</div>
                   <div class="contents__item-body">
                     <div class="contents__item-icon"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/contents__item-icon-01.webp" alt="ビルのアイコン"></div>
@@ -136,14 +136,14 @@
                   </div>
                 </div>
                 <div class="contents__item-divider-arrow"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/contents__item-divider-arrow.webp" alt="↔︎"></div>
-                <div class="contents__item-right">
+                <div class="contents__item-box is-right">
                   <div class="contents__item-title">B社</div>
                   <div class="contents__item-body">
-                    <div class="contents__item-icon"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/contents__item-icon-02.webp" alt="ビルのアイコン"></div>
-                    <div class="contents__item-body-left">
+                    <div class="contents__item-icon is-02"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/contents__item-icon-02.webp" alt="ビルのアイコン"></div>
+                    <div class="contents__item-body-right">
                       <ul class="contents__item-list">
-                        <li class="content5__list-item list-item  list-item--2">株価の評価根拠の大半が土地となる。</li>
-                        <li class="content5__list-item list-item  list-item--2">A社の本業の建設事業の利益から投資を回収するのに、約20年と長期間を要する。</li>
+                        <li class="contents__item-list-item list-item list-item--2">株価の評価根拠の大半が土地となる。</li>
+                        <li class="contents__item-list-item list-item list-item--2">A社の本業の建設事業の利益から投資を回収するのに、約20年と長期間を要する。</li>
                       </ul>
                       <p class="contents__item-text-red">⇒ 買収を躊躇</p>
                     </div>
@@ -154,9 +154,9 @@
             <div class="contents__divider-arrow"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/contents__divider-arrow.webp" alt="↓"></div>
             <div class="contents__item">
               <div class="contents__item-wrap">
-                <div class="contents__item-left">
+                <div class="contents__item-box is-left">
                   <div class="contents__item-title">A社（建設業）</div>
-                  <div class="contents__item-body">
+                  <div class="contents__item-body is-high">
                     <div class="contents__item-icon"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/contents__item-icon-01.webp" alt="ビルのアイコン"></div>
                     <p class="contents__item-text">
                       （本業）建設事業<br
@@ -166,33 +166,58 @@
                     </p>
                   </div>
                 </div>
-                <div class="contents__divider-arrow"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/contents__divider-arrow-icon.webp" alt="↔︎"></div>
-                <div class="contents__item-right">
-                  <div class="contents__item-title">B社</div>
-                  <div class="contents__item-body">
-                    <div class="contents__item-icon"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/contents__item-icon-02.webp" alt="ビルのアイコン"></div>
-                    <div class="contents__item-body-left">
-                      <ul class="contents__item-list">
-                        <li class="content5__list-item list-item  list-item--2">株価の評価根拠の大半が土地となる。</li>
-                        <li class="content5__list-item list-item  list-item--2">A社の本業の建設事業の利益から投資を回収するのに、約20年と長期間を要する。</li>
+                <div class="contents__item-boxes">
+                  <div class="contents__item-boxes-item box">
+                    <div class="box__arrow">
+                      <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/box__arrow-01.webp" alt="→">
+                      <div class="box__arrow-text">建設事業を<br>事業譲渡</div>
+                    </div>
+                    <div class="box__icon"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/contents__item-icon-03.webp" alt="ビルのアイコン"></div>
+                    <div class="box__body">
+                      <div class="box__title">B社</div>
+                      <ul class="box__list">
+                        <li class="box__list-item list-item list-item--2">建築事業を買収したい。</li>
                       </ul>
-                      <p class="contents__item-text-red">⇒ 買収を躊躇</p>
+                    </div>
+                  </div>
+                  <div class="contents__item-boxes-item box box--bottom">
+                    <div class="box__arrow">
+                      <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/box__arrow-02.webp" alt="→">
+                      <div class="box__arrow-text">A社の<br>株式を譲渡</div>
+                    </div>
+                    <div class="box__icon"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/contents__item-icon-04.webp" alt="ビルのアイコン"></div>
+                    <div class="box__body">
+                      <div class="box__title">C社</div>
+                      <ul class="box__list">
+                        <li class="box__list-item list-item list-item--2">A社の土地がほしい。</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="contents__item-role">
-                <div class="contents__role-title"></div>
+                <div class="contents__role-title"><span class="contents__role-title-text">当社の役割</span></div>
                 <div class="contents__role-body">
-                  <ul class="contents__role-list"></ul>
+                  <ul class="contents__role-list">
+                    <li class="contents__role-list-item list-item list-item--red">税理士等他の専門家と連携し事業譲渡のスキーム策定、実行</li>
+                    <li class="contents__role-list-item list-item list-item--red">A社の土地の権利関係の整理及び適正価格の評価</li>
+                    <li class="contents__role-list-item list-item list-item--red">C社に対する土地の有効活用の提案</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <ul class="consulting__list">
-          <li class="consulting__list-item list-item"></li>
+        <ul class="consulting__list-01">
+          <li class="consulting__list-01-item list-item list-item--2">単純に土地を売却した場合は、譲渡益1億円に対して約30%の法人税がA社に課される。</li>
+          <li class="consulting__list-01-item list-item list-item--2">土地を売却し終えた会社を清算する場合、残余財産のうち払込資本を超える部分は、株主個人に最大55%の所得税が課される。</li>
         </ul>
+        <div class="consulting__list-02-wrap">
+          <div class="consulting__list-02-title">【  不動産M＆Aを活用した場合の節税メリット  】</div>
+          <ul class="consulting__list-02">
+            <li class="consulting__list-02-item list-item list-item--red-2">単純に土地を売却した場合は、譲渡益1億円に対して約30%の法人税がA社に課される。</li>
+          </ul>
+        </div>
         <div class="consulting__content content6">
           <div class="content6__title title03">有効活用の提案</div>
           <p class="content6__text">

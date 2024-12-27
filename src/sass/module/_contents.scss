@@ -1,0 +1,215 @@
+@use "global" as *;
+
+
+.contents {
+
+}
+
+.contents__item {
+  border: 1px solid #bcc3cf;
+  padding-block: rem(25);
+  padding-inline: rem(21);
+}
+
+.contents__item:nth-of-type(n + 2) {
+  margin-top: rem(30);
+}
+
+.contents__item-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contents__item-box {
+  padding-top: rem(20);
+  padding-bottom: rem(25);
+  padding-inline: rem(34);
+  border: rem(15) solid #e9ecf1;
+  width: 43.5%;
+}
+
+.contents__item-box.is-right {  // 『right』の場合
+  padding-top: rem(20);
+  padding-bottom: rem(25);
+  padding-inline: rem(30);
+  border: rem(15) solid #efece7;
+}
+
+.contents__item-title {
+  text-align: center;
+  color: $color-font-base-1;
+  font-size: rem(18);
+  font-weight: $semiBold;
+  padding-bottom: rem(20);
+  border-bottom: 1px solid #686f81;
+}
+
+.contents__item-body {
+  padding-top: rem(18);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem(30);
+}
+
+.contents__item-body.is-high {
+  padding-top: rem(60);
+  padding-bottom: rem(40);
+}
+
+.contents__item-icon {
+  aspect-ratio: 152 / 198;
+  max-width: rem(152);
+  width: 100%;
+  object-fit: contain;
+}
+.contents__item-icon img {
+  aspect-ratio: 152 / 198;
+  max-width: rem(152);
+  width: 100%;
+  object-fit: contain;
+}
+
+.contents__item-icon.is-02 {  // 02のアイコンの場合
+  aspect-ratio: 128 / 195;
+  max-width: rem(128);
+  width: 100%;
+  object-fit: contain;
+}
+.contents__item-icon.is-02 img {  // 02のアイコンの場合
+  aspect-ratio: 128 / 195;
+  max-width: rem(128);
+  width: 100%;
+  object-fit: contain;
+}
+
+.contents__item-text {
+
+}
+
+.contents__item-divider-arrow {  // 左右のアイテム間の仕切り矢印『↔︎』
+  width: 11.8%;
+  object-fit: contain;
+  align-self: center;
+}
+
+.contents__item-divider-arrow img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.contents__item-body-right {
+
+}
+
+.contents__item-list {
+
+}
+
+.contents__item-list-item {
+
+}
+
+.contents__item-text-red {
+  margin-top: rem(2);
+  font-size: rem(18);
+  font-weight: $semiBold;
+  color: #e3636f;
+}
+
+.contents__divider-arrow {  // 『contents__item』間の下矢印『↓』
+  margin-top: rem(30);
+  width: 41%;
+  margin-inline: auto;
+  object-fit: contain;
+  position: relative;
+}
+
+.contents__divider-arrow::before {  // 下矢印の中のテキスト『不動産M&Aを活用』
+  content: "不動産M&Aを活用";
+  font-size: rem(20);
+  font-weight: $semiBold;
+  color: $color-white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% - rem(8)));
+  z-index: 1;
+}
+
+
+.contents__item-boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: rem(20);
+
+  width: 43.5%;
+}
+
+.contents__item-boxes-item {
+
+}
+
+
+.contents__item-role {
+  margin-top: rem(25);
+  padding-block: rem(25);
+  border-radius: rem(13);
+  background: #eef1f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem(170);
+  position: relative;
+  overflow: hidden;
+}
+
+.contents__role-title {
+  clip-path: polygon(0% 0%, 83% 0, 100% 50%, 83% 100%, 0% 100%);
+  width: 28.8%;
+  height: 100%;
+
+  background: #dbe1e8;  // 本体の色がグレー側
+  display: grid;
+  place-items: center;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin-right: rem(170);
+  z-index: 30;
+}
+
+.contents__role-title::after {  // 紺色の三角形を、右にズラして重ねる
+  content: "";
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0% 0%, 83% 0, 100% 50%, 83% 100%, 0% 100%);
+  background: #6987a8;
+  position: absolute;
+  right: rem(20);
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.contents__role-title-text {
+  display: block;
+  color: $color-white;
+  font-size: rem(22);
+  font-weight: $medium;
+  text-align: center;
+  margin-left: rem(-50);
+}
+
+.contents__role-body {
+  margin-left: rem(190);
+}
+
+.contents__role-list {
+
+}

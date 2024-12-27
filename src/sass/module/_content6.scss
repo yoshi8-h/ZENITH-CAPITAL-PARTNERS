@@ -1,0 +1,33 @@
+@use "global" as *;
+
+
+.content6 {
+
+}
+
+.content6__title {
+  font-size: rem(22);
+  font-weight: $semiBold;
+  color: $color-font-base-2;
+  position: relative;
+  padding-left: rem(15);  // 青い横線を配置するスペースを確保
+}
+
+.content6__title::before {
+  content: "";
+  width: rem(5);
+  height: 100%;
+  background-color: $color-accent1;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.content6__text {
+  margin-top: rem(24);
+  color: $color-font-base-1;
+  font-size: rem(17);
+  font-weight: $normal;
+  line-height: 2;
+}
