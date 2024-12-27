@@ -1,0 +1,47 @@
+@use "global" as *;
+
+
+.investment {
+  padding-bottom: rem(100);
+  // display: none;  // 今だけ指定
+
+  @include mq(md) {
+    padding-bottom: rem(65);
+  }
+}
+
+.investment__inner {
+  @include mq(md) {
+    max-width: rem(600);
+  }
+}
+
+.investment__title {
+
+}
+
+.investment__message {
+  margin-top: rem(35);
+  color: $color-font-base-1;
+  font-size: rem(17);
+  font-weight: $normal;
+  line-height: 2.0;
+
+  @include mq(md) {
+    margin-top: rem(25);
+    font-size: rem(14);
+    line-height: 1.75;
+  }
+}
+
+.investment__contents {
+  margin-top: rem(35);
+}
+
+.investment__content {
+  margin-top: rem(45);
+
+  @include mq(md) {
+    margin-top: rem(25);
+  }
+}

@@ -3,7 +3,7 @@
 
 .consulting {
   padding-bottom: rem(100);
-  // display: none;  // 今だけ指定
+  display: none;  // 今だけ指定
 
   @include mq(md) {
     padding-bottom: rem(65);

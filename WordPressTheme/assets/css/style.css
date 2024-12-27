@@ -171,6 +171,10 @@ a {
 	margin-top: 3.4375rem;
 }
 
+.l-investment {
+	margin-top: 3.4375rem;
+}
+
 .l-management-policy {
 	margin-top: 1.875rem;
 }
@@ -394,6 +398,7 @@ a {
 }
 
 .consulting {
+	display: none;
 	padding-bottom: 6.25rem;
 }
 
@@ -877,14 +882,6 @@ a {
 	width: 1px;
 }
 
-.content6__title {
-	color: #333333;
-	font-size: 1.375rem;
-	font-weight: 600;
-	padding-left: 0.9375rem;
-	position: relative;
-}
-
 .content6__title::before {
 	background-color: #1d61af;
 	content: "";
@@ -901,7 +898,7 @@ a {
 	font-size: 1.0625rem;
 	font-weight: 400;
 	line-height: 2;
-	margin-top: 1.5rem;
+	margin-top: 1.125rem;
 }
 
 .contents__item {
@@ -1411,6 +1408,26 @@ a {
 	padding-left: 40px;
 	padding-right: 40px;
 	width: 100%;
+}
+
+.investment {
+	padding-bottom: 6.25rem;
+}
+
+.investment__message {
+	color: #1e1e1e;
+	font-size: 1.0625rem;
+	font-weight: 400;
+	line-height: 2;
+	margin-top: 2.1875rem;
+}
+
+.investment__contents {
+	margin-top: 2.1875rem;
+}
+
+.investment__content {
+	margin-top: 2.8125rem;
 }
 
 .list-item {
@@ -2004,6 +2021,14 @@ a {
 	text-align: center;
 }
 
+.title03 {
+	color: #333333;
+	font-size: 1.375rem;
+	font-weight: 600;
+	padding-left: 0.9375rem;
+	position: relative;
+}
+
 .toggle__open-btn {
 	display: block;
 	height: 0.1875rem;
@@ -2215,6 +2240,10 @@ html {
 }
 
 .l-consulting {
+	margin-top: 2.5rem;
+}
+
+.l-investment {
 	margin-top: 2.5rem;
 }
 
@@ -2565,10 +2594,6 @@ html {
 	width: 100%;
 }
 
-.content6__title {
-	font-size: 1.125rem;
-}
-
 .content6__text {
 	font-size: 0.875rem;
 	line-height: 1.7;
@@ -2825,6 +2850,24 @@ html {
 .inner {
 	padding-left: 25px;
 	padding-right: 25px;
+}
+
+.investment {
+	padding-bottom: 4.0625rem;
+}
+
+.investment__inner {
+	max-width: 37.5rem;
+}
+
+.investment__message {
+	font-size: 0.875rem;
+	line-height: 1.75;
+	margin-top: 1.5625rem;
+}
+
+.investment__content {
+	margin-top: 1.5625rem;
 }
 
 .list-item {
@@ -3199,6 +3242,10 @@ html {
 .title02 {
 	font-size: 1.25rem;
 	padding-bottom: 0.9375rem;
+}
+
+.title03 {
+	font-size: 1.125rem;
 }
 
 .toggle.is-open .toggle__open-btn::after {

@@ -235,6 +235,38 @@
       </div>
     </section>
 
+    <!-- investment セクション (自己投資) -->
+    <section class="investment l-investment">
+      <div class="investment__inner inner">
+        <div class="investment__title title02">自己投資</div>
+        <p class="investment__message">
+          建物の遵法性や入居テナントの問題等の要因で本来の価値が発揮されていない不動産に自己勘定で投資する事業です。<br
+          >価値を改善することで不動産の収益力を高め安定的な収益を確保することを目指します。
+        </p>
+        <div class="investment__contents">
+          <div class="investment__content content6">
+            <div class="content6__title title03">自らも積極的に投資</div>
+            <p class="content6__text">
+              自社単独もしくは他社様との共同投資により、直接的な不動産投資を行います。積み上げてきた経験と知見を自社も実践することで業務領域を拡大しております。
+            </p>
+          </div>
+          <div class="investment__content content6">
+            <div class="content6__title title03">積極的なリスクテイク</div>
+            <p class="content6__text">
+              市場には優良物件ばかりでなく建物の遵法性違反や入居テナントの属性のため売却や金融機関からの資金調達が困難な不動産が多数存在します。<br
+              >当社は、管理可能なリスクは積極的に取ることで不動産投資の機会を拡大しております。
+            </p>
+          </div>
+          <div class="investment__content content6">
+            <div class="content6__title title03">最終的には顧客サービスへと還元</div>
+            <p class="content6__text">
+              自己投資を通じて得られた問題解決の経験は、アセットマネジメント・不動産コンサルティングの事業で活用し、最終的には地主や投資家の立場をより理解したサービスへと還元します。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
 <?php get_footer(); ?>
