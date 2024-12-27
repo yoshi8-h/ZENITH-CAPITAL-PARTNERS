@@ -9,9 +9,9 @@
 .content2:hover .content2__overlay {  // hover
   transform: translateY(0);
 
-  @include mq(md) {
-    transform: translateY(100%);
-  }
+  // @include mq(md) {
+  //   transform: translateY(100%);
+  // }
 }
 
 .content2__bg {
@@ -41,6 +41,12 @@
 
   transform: translateY(100%);  // デフォルトでは下に隠れいている。
   transition: transform 0.3s ease-out;
+
+  @include mq(md) {
+    padding-top: rem(10);
+    padding-inline: rem(8);
+    padding-bottom: rem(8);
+  }
 }
 
 .content2__overlay-bg {
@@ -66,6 +72,13 @@
   font-weight: $medium;
   position: relative;
   z-index: 10;
+
+  @include mq(md) {
+    min-width: auto;
+    padding-block: rem(2);
+    padding-inline: rem(4);
+    font-size: rem(10);
+  }
 }
 
 .content2__overlay-text {
@@ -75,6 +88,11 @@
   font-weight: $normal;
   position: relative;
   z-index: 10;
+
+  @include mq(md) {
+    margin-top: rem(4);
+    font-size: rem(9);
+  }
 }
 
 .content2__overlay-btn {
@@ -92,6 +110,11 @@
   font-size: rem(16);
   color: #e6f1f7;
   font-weight: $bold;
+
+  @include mq(md) {
+    margin-top: rem(4);
+    font-size: rem(10);
+  }
 }
 
 .content2__overlay-btn-text {

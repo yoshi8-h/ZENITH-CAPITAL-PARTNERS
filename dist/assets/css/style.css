@@ -159,6 +159,10 @@ a {
 	transition: opacity 0.3s;
 }
 
+.l-asset {
+	margin-top: 3.4375rem;
+}
+
 .l-business {
 	margin-top: 5rem;
 }
@@ -177,6 +181,34 @@ a {
 
 .l-tabs {
 	margin-top: 3.125rem;
+}
+
+.asset {
+	padding-bottom: 6.25rem;
+}
+
+.asset__message {
+	color: #1e1e1e;
+	font-size: 1.0625rem;
+	font-weight: 400;
+	line-height: 2;
+	margin-top: 2.5rem;
+}
+
+.asset__contents {
+	margin-top: 2.125rem;
+}
+
+.asset__contents__item:nth-of-type(n + 2) {
+	margin-top: 3.75rem;
+}
+
+.asset__attention-text {
+	color: #1e1e1e;
+	font-size: 1.0625rem;
+	font-weight: 400;
+	line-height: 2;
+	margin-top: 2.5rem;
 }
 
 .btn1 {
@@ -644,6 +676,65 @@ a {
 	right: 0;
 }
 
+.content5__warp {
+	align-items: center;
+	border: 0.9375rem solid #e9ecf1;
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 2.125rem;
+	padding-left: 3.125rem;
+	padding-right: 3.125rem;
+	padding-top: 2.125rem;
+}
+
+.content5__left {
+	width: 50%;
+}
+
+.content5__title {
+	align-items: flex-end;
+	display: flex;
+	gap: 0.5rem;
+	justify-content: flex-start;
+}
+
+.content5__title-number {
+	color: #333333;
+	font-family: "Murecho", serif;
+	font-size: 3.875rem;
+	font-weight: 500;
+}
+
+.content5__title-text {
+	color: #333333;
+	font-size: 1.875rem;
+	font-weight: 600;
+	margin-bottom: 0.75rem;
+}
+
+.content5__text {
+	color: #1e1e1e;
+	font-size: 1.0625rem;
+	font-weight: 400;
+	line-height: 2;
+}
+
+.content5__list {
+	position: relative;
+	width: 41%;
+}
+
+.content5__list::before {
+	background-color: #c7cbd3;
+	content: "";
+	height: 100%;
+	left: -3.4375rem;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 1px;
+}
+
 .drawer-menu {
 	display: none;
 }
@@ -740,6 +831,7 @@ a {
 .fv__video {
 	-o-object-fit: cover;
 	display: block;
+	max-height: 56.25rem;
 	min-height: 56.25rem;
 	object-fit: cover;
 	width: 100%;
@@ -968,6 +1060,10 @@ a {
 	top: 0rem;
 }
 
+.list-item.list-item--2 {
+	line-height: 2;
+}
+
 .management-policy__contents {
 	margin-top: 3.75rem;
 }
@@ -1021,7 +1117,7 @@ a {
 .management-policy__content-title {
 	color: #333333;
 	font-size: 1.5rem;
-	font-weight: 600;
+	font-weight: 700;
 	white-space: nowrap;
 }
 
@@ -1102,7 +1198,7 @@ a {
 
 .message__text-title {
 	color: #333333;
-	font-size: 1.25rem;
+	font-size: 1.1875rem;
 	font-weight: 700;
 }
 
@@ -1662,7 +1758,7 @@ a {
 .top-text__title {
 	color: #2e3e50;
 	font-size: 1.6875rem;
-	font-weight: 600;
+	font-weight: 700;
 	text-align: center;
 }
 
@@ -1713,6 +1809,10 @@ html {
 	font-size: 16px;
 }
 
+.l-asset {
+	margin-top: 2.5rem;
+}
+
 .l-business {
 	margin-top: 3.125rem;
 }
@@ -1727,6 +1827,29 @@ html {
 
 .l-tabs {
 	margin-top: 2.5rem;
+}
+
+.asset {
+	padding-bottom: 4.0625rem;
+}
+
+.asset__message {
+	font-size: 0.875rem;
+	line-height: 1.75;
+	margin-top: 1.5625rem;
+}
+
+.asset__contents {
+	margin-top: 1.875rem;
+}
+
+.asset__contents__item:nth-of-type(n + 2) {
+	margin-top: 1.875rem;
+}
+
+.asset__attention-text {
+	font-size: 0.875rem;
+	margin-top: 2.1875rem;
 }
 
 .btn2 {
@@ -1772,10 +1895,6 @@ html {
 	max-width: 10.0625rem;
 }
 
-.content__link:hover .content__overlay {
-	transform: translateY(100%);
-}
-
 .content__plus-icon {
 	max-width: 1.25rem;
 	right: 0.5rem;
@@ -1787,8 +1906,46 @@ html {
 	margin-top: 0.625rem;
 }
 
-.content2:hover .content2__overlay {
-	transform: translateY(100%);
+.content__overlay {
+	padding-bottom: 0.625rem;
+	padding-left: 0.625rem;
+	padding-right: 0.625rem;
+	padding-top: 0.9375rem;
+}
+
+.content__overlay-text {
+	font-size: 0.75rem;
+}
+
+.content__overlay-btn {
+	font-size: 0.8125rem;
+	margin-top: 0.625rem;
+}
+
+.content2__overlay {
+	padding-bottom: 0.5rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	padding-top: 0.625rem;
+}
+
+.content2__overlay-category {
+	font-size: 0.625rem;
+	min-width: auto;
+	padding-bottom: 0.125rem;
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
+	padding-top: 0.125rem;
+}
+
+.content2__overlay-text {
+	font-size: 0.5625rem;
+	margin-top: 0.25rem;
+}
+
+.content2__overlay-btn {
+	font-size: 0.625rem;
+	margin-top: 0.25rem;
 }
 
 .content3 {
@@ -2295,6 +2452,18 @@ html {
 
 .header__nav-item:hover .sub-menu {
 	display: none;
+}
+
+.tabs {
+	flex-direction: column;
+	gap: 0.9375rem;
+}
+
+.tabs__item {
+	font-size: 0.875rem;
+	min-width: 17.5rem;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
 }
 
 .title__ja {

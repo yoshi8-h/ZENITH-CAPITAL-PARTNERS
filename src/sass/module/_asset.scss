@@ -1,0 +1,65 @@
+@use "global" as *;
+
+
+.asset {
+  padding-bottom: rem(100);
+
+  @include mq(md) {
+    padding-bottom: rem(65);
+  }
+}
+
+.asset__inner {
+
+}
+
+.asset__title {
+
+}
+
+.asset__message {
+  margin-top: rem(40);
+  font-size: rem(17);
+  color: $color-font-base-1;
+  font-weight: $normal;
+  line-height: 2.0;
+
+  @include mq(md) {
+    margin-top: rem(25);
+    font-size: rem(14);
+    line-height: 1.75;
+  }
+}
+
+.asset__contents {
+  margin-top: rem(34);
+
+  @include mq(md) {
+    margin-top: rem(30);
+  }
+}
+
+.asset__contents__item {
+
+}
+
+.asset__contents__item:nth-of-type(n + 2) {
+  margin-top: rem(60);
+
+  @include mq(md) {
+    margin-top: rem(30);
+  }
+}
+
+.asset__attention-text {
+  margin-top: rem(40);
+  color: $color-font-base-1;
+  font-size: rem(17);
+  font-weight: $normal;
+  line-height: 2;
+
+  @include mq(md) {
+    margin-top: rem(35);
+    font-size: rem(14);
+  }
+}

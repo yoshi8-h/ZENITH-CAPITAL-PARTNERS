@@ -4,7 +4,7 @@
     <!-- fv -->
     <div class="fv">
       <div class="fv__inner">
-        <video class="fv__video" poster="<?php echo get_theme_file_uri(); ?>/assets/images/common/fv-video-alternative-img.webp" webkit-playsinline playsinline muted autoplay loop>
+        <video class="fv__video" poster="<?php echo get_theme_file_uri(); ?>/assets/images/common/fv-video-alternative-img.webp" webkit-playsinline playsinline muted autoplay>
             <!--
                 poster：動画ファイルが利用できない環境で代替表示される画像
                 webkit-playsinline：iOS 9までのSafari用インライン再生指定
