@@ -105,6 +105,109 @@
       </div>
     </section>
 
+    <!-- consulting セクション (不動産コンサルティング) -->
+    <section class="consulting l-consulting">
+      <div class="consulting__inner inner">
+        <div class="consulting__title title02">不動産コンサルティング</div>
+        <p class="consulting__message">事業承継に伴う事業用不動産の取り扱い、不動産の有効活用、複雑な権利関係の調整等不動産に関するお悩みの解決をサポートします。</p>
+        <div class="consulting__content content6">
+          <div class="content6__title title03">事業承継</div>
+          <p class="content6__text">
+            昨今、中小企業における事業の承継対策が社会問題となっております。<br
+            >事業承継の中で、事業用不動産の取り扱いが課題となるケースがありますが、経営者様や、弁護士、税理士等の他士業の方から当社あてに問い合わを頂くことが増えてきました。<br
+            >当社におきましては、これまで培ってきた経験を基に、事業用不動産の適正時価の把握、権利関係の把握や整理、有効活用の提案等で事業承継をサポートさせて頂きます。また、弁護士、税理士、司法書士、社会保険労務士等の他の専門家と連携しておりますので事業承継に関するお悩みをトータルにサポートさせて頂くことも可能です。
+          </p>
+        </div>
+        <div class="consulting__main">
+          <div class="consulting__main-title">【事業承継における不動産Ｍ＆Ａの活用例】</div>
+          <div class="consulting__main-contents contents">
+            <div class="contents__item">
+              <div class="contents__item-wrap">
+                <div class="contents__item-left">
+                  <div class="contents__item-title">A社（建設業）</div>
+                  <div class="contents__item-body">
+                    <div class="contents__item-icon"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/contents__item-icon-01.webp" alt="ビルのアイコン"></div>
+                    <p class="contents__item-text">
+                      （本業）建設事業<br
+                      >年商：3億円　利益：１千万円<br><br
+                      >（不動産）本社ビルの土地<br
+                      >時価：２億円　簿価：１億円
+                    </p>
+                  </div>
+                </div>
+                <div class="contents__item-divider-arrow"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/contents__item-divider-arrow.webp" alt="↔︎"></div>
+                <div class="contents__item-right">
+                  <div class="contents__item-title">B社</div>
+                  <div class="contents__item-body">
+                    <div class="contents__item-icon"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/contents__item-icon-02.webp" alt="ビルのアイコン"></div>
+                    <div class="contents__item-body-left">
+                      <ul class="contents__item-list">
+                        <li class="content5__list-item list-item  list-item--2">株価の評価根拠の大半が土地となる。</li>
+                        <li class="content5__list-item list-item  list-item--2">A社の本業の建設事業の利益から投資を回収するのに、約20年と長期間を要する。</li>
+                      </ul>
+                      <p class="contents__item-text-red">⇒ 買収を躊躇</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contents__divider-arrow"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/contents__divider-arrow.webp" alt="↓"></div>
+            <div class="contents__item">
+              <div class="contents__item-wrap">
+                <div class="contents__item-left">
+                  <div class="contents__item-title">A社（建設業）</div>
+                  <div class="contents__item-body">
+                    <div class="contents__item-icon"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/contents__item-icon-01.webp" alt="ビルのアイコン"></div>
+                    <p class="contents__item-text">
+                      （本業）建設事業<br
+                      >年商：3億円　利益：１千万円<br><br
+                      >（不動産）本社ビルの土地<br
+                      >時価：２億円　簿価：１億円
+                    </p>
+                  </div>
+                </div>
+                <div class="contents__divider-arrow"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/contents__divider-arrow-icon.webp" alt="↔︎"></div>
+                <div class="contents__item-right">
+                  <div class="contents__item-title">B社</div>
+                  <div class="contents__item-body">
+                    <div class="contents__item-icon"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/contents__item-icon-02.webp" alt="ビルのアイコン"></div>
+                    <div class="contents__item-body-left">
+                      <ul class="contents__item-list">
+                        <li class="content5__list-item list-item  list-item--2">株価の評価根拠の大半が土地となる。</li>
+                        <li class="content5__list-item list-item  list-item--2">A社の本業の建設事業の利益から投資を回収するのに、約20年と長期間を要する。</li>
+                      </ul>
+                      <p class="contents__item-text-red">⇒ 買収を躊躇</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="contents__item-role">
+                <div class="contents__role-title"></div>
+                <div class="contents__role-body">
+                  <ul class="contents__role-list"></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="consulting__list">
+          <li class="consulting__list-item list-item"></li>
+        </ul>
+        <div class="consulting__content content6">
+          <div class="content6__title title03">有効活用の提案</div>
+          <p class="content6__text">
+            総合的な観点から不動産のポテンシャルを分析することにより、その不動産の持つ本来の価値を見出し、有効活用の提案や契約内容の見直し等、保有不動産の資産価値最大化をサポートします。
+          </p>
+        </div>
+        <div class="consulting__content content6">
+          <div class="content6__title title03">権利関係の調整</div>
+          <p class="content6__text">
+            不動産には人間関係が複雑に絡み合い当事者同士では解決できない問題が多く存在します。借地権者様に対する底地を買い取った上での隣接所有者への売買の提案、底地権者と交渉し借地権と底地をあわせての売買の提案等、専門的な観点から最適な解決方法を提案します。
+          </p>
+        </div>
+      </div>
+    </section>
+
   </main>
 
 <?php get_footer(); ?>
