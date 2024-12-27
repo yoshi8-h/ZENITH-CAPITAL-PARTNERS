@@ -56,6 +56,10 @@
 .list-item.list-item--red {
   color: #364c6a;
   padding-left: rem(33);
+
+  @include mq(md) {
+    padding-left: rem(18);
+  }
 }
 
 .list-item.list-item--red::before {  // リストの前の『▶︎』アイコン

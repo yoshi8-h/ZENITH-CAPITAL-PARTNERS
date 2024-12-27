@@ -11,7 +11,9 @@
 }
 
 .consulting__inner {
-
+  @include mq(md) {
+    max-width: rem(600);
+  }
 }
 
 .consulting__title {
@@ -23,14 +25,28 @@
   color: $color-font-base-1;
   font-size: rem(17);
   font-weight: $normal;
+
+  @include mq(md) {
+    margin-top: rem(25);
+    font-size: rem(14);
+    line-height: 1.75;
+  }
 }
 
 .consulting__content {
   margin-top: rem(45);
+
+  @include mq(md) {
+    margin-top: rem(25);
+  }
 }
 
 .consulting__main {
   margin-top: rem(60);
+
+  @include mq(md) {
+    margin-top: rem(40);
+  }
 }
 
 .consulting__main-title {
@@ -38,15 +54,27 @@
   color: #495460;
   font-size: rem(22);
   font-weight: $semiBold;
+
+  @include mq(md) {
+    font-size: rem(16);
+  }
 }
 
 .consulting__main-contents {
   margin-top: rem(35);
+
+  @include mq(md) {
+    margin-top: rem(25);
+  }
 }
 
 
 .consulting__list-01 {
   margin-top: rem(30);
+
+  @include mq(md) {
+    margin-top: rem(20);
+  }
 }
 
 .consulting__list-01-item {
@@ -56,16 +84,28 @@
 
 .consulting__list-02-wrap {
   margin-top: rem(20);
+
+  @include mq(md) {
+    margin-top: rem(16);
+  }
 }
 
 .consulting__list-02-title {
   font-size: rem(18);
   font-weight: $medium;
   color: #ea6776;
+
+  @include mq(md) {
+    font-size: rem(15);
+  }
 }
 
 .consulting__list-02 {
   margin-top: rem(6);
+
+  @include mq(md) {
+    margin-top: rem(4);
+  }
 }
 
 .consulting__list-02-item {

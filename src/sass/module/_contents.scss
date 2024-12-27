@@ -9,16 +9,31 @@
   border: 1px solid #bcc3cf;
   padding-block: rem(25);
   padding-inline: rem(21);
+
+  @include mq(md) {
+    padding-block: rem(20);
+    padding-inline: rem(10);
+  }
 }
 
 .contents__item:nth-of-type(n + 2) {
   margin-top: rem(30);
+
+  @include mq(md) {
+    margin-top: rem(25);
+  }
 }
 
 .contents__item-wrap {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
+  @include mq(md) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .contents__item-box {
@@ -27,6 +42,14 @@
   padding-inline: rem(34);
   border: rem(15) solid #e9ecf1;
   width: 43.5%;
+
+  @include mq(md) {
+    padding-top: rem(15);
+    padding-bottom: rem(15);
+    padding-inline: rem(10);
+    border: rem(8) solid #e9ecf1;
+    width: 100%;
+  }
 }
 
 .contents__item-box.is-right {  // 『right』の場合
@@ -34,6 +57,14 @@
   padding-bottom: rem(25);
   padding-inline: rem(30);
   border: rem(15) solid #efece7;
+
+  @include mq(md) {
+    padding-top: rem(15);
+    padding-bottom: rem(20);
+    padding-inline: rem(10);
+    border: rem(8) solid #efece7;
+    width: 100%;
+  }
 }
 
 .contents__item-title {
@@ -43,6 +74,11 @@
   font-weight: $semiBold;
   padding-bottom: rem(20);
   border-bottom: 1px solid #686f81;
+
+  @include mq(md) {
+    font-size: rem(16);
+    padding-bottom: rem(10);
+  }
 }
 
 .contents__item-body {
@@ -51,11 +87,21 @@
   justify-content: center;
   align-items: center;
   gap: rem(30);
+
+  @include mq(md) {
+    flex-direction: column;
+    gap: rem(16);
+  }
 }
 
 .contents__item-body.is-high {
   padding-top: rem(60);
   padding-bottom: rem(40);
+
+  @include mq(md) {
+    padding-top: rem(18);
+    padding-bottom: rem(20);
+  }
 }
 
 .contents__item-icon {
@@ -63,12 +109,20 @@
   max-width: rem(152);
   width: 100%;
   object-fit: contain;
+
+  @include mq(md) {
+    max-width: auto;
+  }
 }
 .contents__item-icon img {
   aspect-ratio: 152 / 198;
   max-width: rem(152);
   width: 100%;
   object-fit: contain;
+
+  @include mq(md) {
+    max-width: auto;
+  }
 }
 
 .contents__item-icon.is-02 {  // 02のアイコンの場合
@@ -76,22 +130,41 @@
   max-width: rem(128);
   width: 100%;
   object-fit: contain;
+
+  @include mq(md) {
+    max-width: auto;
+  }
 }
 .contents__item-icon.is-02 img {  // 02のアイコンの場合
   aspect-ratio: 128 / 195;
   max-width: rem(128);
   width: 100%;
   object-fit: contain;
+
+  @include mq(md) {
+    max-width: auto;
+  }
 }
 
 .contents__item-text {
+  font-size: rem(16);
 
+  @include mq(md) {
+    font-size: rem(13);
+    line-height: 1.4;
+  }
 }
 
 .contents__item-divider-arrow {  // 左右のアイテム間の仕切り矢印『↔︎』
   width: 11.8%;
   object-fit: contain;
   align-self: center;
+
+  @include mq(md) {
+    width: 30%;
+    transform: rotate(90deg);
+    margin-block: rem(20);
+  }
 }
 
 .contents__item-divider-arrow img {
@@ -116,6 +189,10 @@
   font-size: rem(18);
   font-weight: $semiBold;
   color: #e3636f;
+
+  @include mq(md) {
+    font-size: rem(14);
+  }
 }
 
 .contents__divider-arrow {  // 『contents__item』間の下矢印『↓』
@@ -124,6 +201,12 @@
   margin-inline: auto;
   object-fit: contain;
   position: relative;
+
+  @include mq(md) {
+    margin-top: rem(25);
+    width: 80%;
+    max-width: rem(300);
+  }
 }
 
 .contents__divider-arrow::before {  // 下矢印の中のテキスト『不動産M&Aを活用』
@@ -136,6 +219,10 @@
   left: 50%;
   transform: translate(-50%, calc(-50% - rem(8)));
   z-index: 1;
+
+  @include mq(md) {
+    font-size: rem(13);
+  }
 }
 
 
@@ -147,6 +234,13 @@
   gap: rem(20);
 
   width: 43.5%;
+
+  @include mq(md) {
+    // flex-direction: row;
+    margin-top: rem(95);
+    width: 100%;
+    gap: rem(95);
+  }
 }
 
 .contents__item-boxes-item {
@@ -165,6 +259,12 @@
   gap: rem(170);
   position: relative;
   overflow: hidden;
+
+  @include mq(md) {
+    flex-direction: column;
+    gap: rem(40);
+    padding-inline: rem(20);
+  }
 }
 
 .contents__role-title {
@@ -180,8 +280,16 @@
   left: 0;
   top: 0;
   bottom: 0;
-  margin-right: rem(170);
   z-index: 30;
+
+  @include mq(md) {
+    clip-path: polygon(0% 0%, 100% 0, 100% 55%, 50% 100%, 0 55%);
+    width: 100%;
+    height: rem(100);
+    bottom: auto;
+    left: 0;
+    right: 0;
+  }
 }
 
 .contents__role-title::after {  // 紺色の三角形を、右にズラして重ねる
@@ -195,6 +303,14 @@
   top: 0;
   bottom: 0;
   z-index: -1;
+
+  @include mq(md) {
+    clip-path: polygon(0% 0%, 100% 0, 100% 55%, 50% 100%, 0 55%);
+    top: rem(-14);
+    bottom: auto;
+    right: 0;
+    left: 0;
+  }
 }
 
 .contents__role-title-text {
@@ -204,10 +320,21 @@
   font-weight: $medium;
   text-align: center;
   margin-left: rem(-50);
+
+  @include mq(md) {
+    font-size: rem(16);
+    margin-left: 0;
+    margin-top: rem(-30);
+  }
 }
 
 .contents__role-body {
   margin-left: rem(190);
+
+  @include mq(md) {
+    margin-left: 0;
+    margin-top: rem(100);
+  }
 }
 
 .contents__role-list {
