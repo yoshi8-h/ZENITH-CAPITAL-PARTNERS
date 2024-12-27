@@ -10,7 +10,9 @@
 }
 
 .asset__inner {
-
+  @include mq(md) {
+    max-width: rem(600);
+  }
 }
 
 .asset__title {
@@ -33,9 +35,26 @@
 
 .asset__contents {
   margin-top: rem(34);
+  position: relative;
 
   @include mq(md) {
     margin-top: rem(30);
+  }
+}
+
+.asset__contents::after {  // 中身のグレーの棒線
+  content: "";
+  width: rem(60);
+  height: 90%;
+  background-color: #a9aebb;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+
+  @include mq(md) {
+    width: rem(40);
   }
 }
 
@@ -61,5 +80,6 @@
   @include mq(md) {
     margin-top: rem(35);
     font-size: rem(14);
+    line-height: 1.5;
   }
 }

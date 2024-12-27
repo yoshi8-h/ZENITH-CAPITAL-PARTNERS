@@ -197,6 +197,19 @@ a {
 
 .asset__contents {
 	margin-top: 2.125rem;
+	position: relative;
+}
+
+.asset__contents::after {
+	background-color: #a9aebb;
+	content: "";
+	height: 90%;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 3.75rem;
+	z-index: -1;
 }
 
 .asset__contents__item:nth-of-type(n + 2) {
@@ -678,6 +691,7 @@ a {
 
 .content5__warp {
 	align-items: center;
+	background: #fff;
 	border: 0.9375rem solid #e9ecf1;
 	display: flex;
 	justify-content: space-between;
@@ -717,6 +731,7 @@ a {
 	font-size: 1.0625rem;
 	font-weight: 400;
 	line-height: 2;
+	margin-top: 0.375rem;
 }
 
 .content5__list {
@@ -1062,6 +1077,11 @@ a {
 
 .list-item.list-item--2 {
 	line-height: 2;
+}
+
+.list-item.list-item--2::before {
+	font-size: 0.875rem;
+	top: 0.1875rem;
 }
 
 .management-policy__contents {
@@ -1833,6 +1853,10 @@ html {
 	padding-bottom: 4.0625rem;
 }
 
+.asset__inner {
+	max-width: 37.5rem;
+}
+
 .asset__message {
 	font-size: 0.875rem;
 	line-height: 1.75;
@@ -1843,12 +1867,17 @@ html {
 	margin-top: 1.875rem;
 }
 
+.asset__contents::after {
+	width: 2.5rem;
+}
+
 .asset__contents__item:nth-of-type(n + 2) {
 	margin-top: 1.875rem;
 }
 
 .asset__attention-text {
 	font-size: 0.875rem;
+	line-height: 1.5;
 	margin-top: 2.1875rem;
 }
 
@@ -2013,6 +2042,47 @@ html {
 	margin-top: 0.625rem;
 }
 
+.content5__warp {
+	border: 0.5rem solid #e9ecf1;
+	flex-direction: column;
+	justify-content: flex-start;
+	padding-bottom: 1.25rem;
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
+	padding-top: 1.25rem;
+}
+
+.content5__left {
+	width: 100%;
+}
+
+.content5__title-number {
+	font-size: 2.125rem;
+}
+
+.content5__title-text {
+	font-size: 1.25rem;
+	margin-bottom: 0.3125rem;
+}
+
+.content5__text {
+	font-size: 0.875rem;
+	line-height: 1.7;
+}
+
+.content5__list {
+	margin-top: 1.875rem;
+	width: 100%;
+}
+
+.content5__list::before {
+	height: 1px;
+	left: 50%;
+	top: -0.9375rem;
+	transform: translate(-50%, 0);
+	width: 100%;
+}
+
 .drawer-menu {
 	background: #fff;
 	border-top: 0.25rem solid #488ad9;
@@ -2134,6 +2204,16 @@ html {
 	font-size: 0.875rem;
 	line-height: 1.7;
 	padding-left: 1.25rem;
+}
+
+.list-item.list-item--2 {
+	font-size: 0.8125rem;
+	padding-left: 1.125rem;
+}
+
+.list-item.list-item--2::before {
+	font-size: 0.625rem;
+	top: 0.125rem;
 }
 
 .management-policy__inner {
