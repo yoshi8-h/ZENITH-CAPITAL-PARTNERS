@@ -191,6 +191,10 @@ a {
 	margin-top: 3.125rem;
 }
 
+.l-tenant {
+	margin-top: 3.4375rem;
+}
+
 .asset {
 	display: none;
 	padding-bottom: 6.25rem;
@@ -882,23 +886,34 @@ a {
 	width: 1px;
 }
 
-.content6__title::before {
-	background-color: #1d61af;
-	content: "";
-	height: 100%;
-	left: 0;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	width: 0.3125rem;
-}
-
 .content6__text {
 	color: #1e1e1e;
 	font-size: 1.0625rem;
 	font-weight: 400;
 	line-height: 2;
 	margin-top: 1.125rem;
+}
+
+.content7 {
+	border: 0.9375rem solid #e9ecf1;
+	padding-bottom: 2.1875rem;
+	padding-left: 2.625rem;
+	padding-right: 2.625rem;
+	padding-top: 2.1875rem;
+}
+
+.content7__images {
+	margin-top: 2rem;
+}
+
+.content7__message {
+	font-size: 1.0625rem;
+	line-height: 2;
+	margin-top: 2.125rem;
+}
+
+.content7__body-info {
+	margin-top: 2rem;
 }
 
 .contents__item {
@@ -1401,6 +1416,115 @@ a {
 	top: 1.625rem;
 }
 
+.images {
+	align-items: flex-start;
+	display: flex;
+	gap: 0.875rem;
+	justify-content: center;
+}
+
+.images__left {
+	-o-object-fit: cover;
+	aspect-ratio: 538/412;
+	max-width: 33.625rem;
+	object-fit: cover;
+	width: 100%;
+}
+
+.images__left img {
+	-o-object-fit: cover;
+	aspect-ratio: 538/412;
+	max-width: 33.625rem;
+	object-fit: cover;
+	width: 100%;
+}
+
+.images__right {
+	grid-column-gap: 0.875rem;
+	-moz-column-gap: 0.875rem;
+	grid-row-gap: 0.875rem;
+	-o-object-fit: cover;
+	align-items: flex-start;
+	aspect-ratio: 534/412;
+	column-gap: 0.875rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	max-width: 33.375rem;
+	object-fit: cover;
+	row-gap: 0.875rem;
+	width: 100%;
+}
+
+.images__right-img {
+	-o-object-fit: cover;
+	aspect-ratio: 261/200;
+	max-width: 16.3125rem;
+	object-fit: cover;
+	width: 100%;
+}
+
+.images__right-img img {
+	-o-object-fit: cover;
+	aspect-ratio: 261/200;
+	max-width: 16.3125rem;
+	object-fit: cover;
+	width: 100%;
+}
+
+.info__title {
+	color: #333333;
+	font-size: 1.125rem;
+	font-weight: 600;
+	line-height: 1.2;
+	padding-left: 1.25rem;
+	position: relative;
+}
+
+.info__title::before {
+	background-color: #1d61af;
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 0.3125rem;
+}
+
+.info__list {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	gap: 0.3125rem;
+	justify-content: center;
+	margin-top: 1.125rem;
+}
+
+.info__list-item {
+	padding-left: 1.25rem;
+	position: relative;
+}
+
+.info__list-item::before {
+	content: "・";
+	font-size: 1.0625rem;
+	left: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.info__list-item-link {
+	-webkit-text-decoration: underline;
+	color: #2079df;
+	text-decoration: underline;
+	transition: opacity 0.2s ease-out;
+}
+
+.info__list-item-link:hover {
+	opacity: 0.4;
+}
+
 .inner {
 	margin-left: auto;
 	margin-right: auto;
@@ -1411,6 +1535,7 @@ a {
 }
 
 .investment {
+	display: none;
 	padding-bottom: 6.25rem;
 }
 
@@ -1987,6 +2112,30 @@ a {
 	cursor: pointer;
 }
 
+.tenant {
+	padding-bottom: 6.25rem;
+}
+
+.tenant__message {
+	color: #1e1e1e;
+	font-size: 1.0625rem;
+	font-weight: 400;
+	line-height: 2;
+	margin-top: 2.1875rem;
+}
+
+.tenant__contents-title {
+	margin-top: 2.1875rem;
+}
+
+.tenant__contents {
+	margin-top: 1.875rem;
+}
+
+.tenant__content:nth-of-type(n + 2) {
+	margin-top: 2.8125rem;
+}
+
 .title {
 	text-align: center;
 }
@@ -2027,6 +2176,35 @@ a {
 	font-weight: 600;
 	padding-left: 0.9375rem;
 	position: relative;
+}
+
+.title03::before {
+	background-color: #1d61af;
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 0.3125rem;
+}
+
+.title04 {
+	border-bottom: 1px solid #686f81;
+	font-size: 1.375rem;
+	font-weight: 700;
+	padding-bottom: 1.125rem;
+	padding-left: 2rem;
+	position: relative;
+}
+
+.title04::before {
+	color: #569adf;
+	content: "▶︎";
+	font-size: 0.9375rem;
+	left: 0;
+	position: absolute;
+	top: 0.375rem;
 }
 
 .toggle__open-btn {
@@ -2256,6 +2434,10 @@ html {
 }
 
 .l-tabs {
+	margin-top: 2.5rem;
+}
+
+.l-tenant {
 	margin-top: 2.5rem;
 }
 
@@ -3228,6 +3410,20 @@ html {
 	min-width: 17.5rem;
 	padding-bottom: 0.5rem;
 	padding-top: 0.5rem;
+}
+
+.tenant {
+	padding-bottom: 4.0625rem;
+}
+
+.tenant__message {
+	font-size: 0.875rem;
+	line-height: 1.75;
+	margin-top: 1.5625rem;
+}
+
+.tenant__content:nth-of-type(n + 2) {
+	margin-top: 2.1875rem;
 }
 
 .title__ja {

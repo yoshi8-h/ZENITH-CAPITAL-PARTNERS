@@ -1,0 +1,50 @@
+@use "global" as *;
+
+
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: rem(14);
+}
+
+.images__left {
+  aspect-ratio: 538 / 412;
+  max-width: rem(538);
+  width: 100%;
+  object-fit: cover;
+}
+
+.images__left img {
+  aspect-ratio: 538 / 412;
+  max-width: rem(538);
+  width: 100%;
+  object-fit: cover;
+}
+
+.images__right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: rem(14);
+  row-gap: rem(14);
+  align-items: flex-start;  // 上揃えに。
+
+  aspect-ratio: 534 / 412;
+  max-width: rem(534);
+  width: 100%;
+  object-fit: cover;
+}
+
+.images__right-img {
+  aspect-ratio: 261 / 200;
+  max-width: rem(261);
+  width: 100%;
+  object-fit: cover;
+}
+
+.images__right-img img {
+  aspect-ratio: 261 / 200;
+  max-width: rem(261);
+  width: 100%;
+  object-fit: cover;
+}

@@ -9,17 +9,6 @@
 
 }
 
-.content6__title::before {
-  content: "";
-  width: rem(5);
-  height: 100%;
-  background-color: $color-accent1;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-}
-
 .content6__text {
   margin-top: rem(18);
   color: $color-font-base-1;

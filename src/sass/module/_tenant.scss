@@ -1,26 +1,24 @@
 @use "global" as *;
 
 
-.investment {
+.tenant {
   padding-bottom: rem(100);
-  display: none;  // 今だけ指定
+  // display: none;  // 今だけ指定
 
   @include mq(md) {
     padding-bottom: rem(65);
   }
 }
 
-.investment__inner {
-  @include mq(md) {
-    max-width: rem(600);
-  }
-}
-
-.investment__title {
+.tenant__inner {
 
 }
 
-.investment__message {
+.tenant__title {
+
+}
+
+.tenant__message {
   margin-top: rem(35);
   color: $color-font-base-1;
   font-size: rem(17);
@@ -34,14 +32,22 @@
   }
 }
 
-.investment__contents {
+.tenant__contents-title {
   margin-top: rem(35);
 }
 
-.investment__content {
+.tenant__contents {
+  margin-top: rem(30);
+}
+
+.tenant__content {
+
+}
+
+.tenant__content:nth-of-type(n + 2) {
   margin-top: rem(45);
 
   @include mq(md) {
-    margin-top: rem(25);
+    margin-top: rem(35);
   }
 }

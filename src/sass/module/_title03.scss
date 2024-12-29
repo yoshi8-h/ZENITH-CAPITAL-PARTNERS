@@ -12,3 +12,14 @@
     font-size: rem(18);
   }
 }
+
+.title03::before {
+  content: "";
+  width: rem(5);
+  height: 100%;
+  background-color: $color-accent1;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,20 @@
+@use "global" as *;
+
+
+.title04 {
+  font-size: rem(22);
+  font-weight: $bold;
+  padding-bottom: rem(18);
+  border-bottom: 1px solid #686f81;
+  padding-left: rem(32);
+  position: relative;
+}
+
+.title04::before {
+  content: '▶︎';
+  font-size: rem(15);
+  color: #569adf;
+  position: absolute;
+  top: rem(6);
+  left: 0;
+}

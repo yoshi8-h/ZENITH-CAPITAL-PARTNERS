@@ -267,6 +267,83 @@
       </div>
     </section>
 
+    <!-- tenant セクション (テナント事業) -->
+    <section class="tenant l-tenant">
+      <div class="tenant__inner inner">
+        <div class="tenant__title title02">テナント事業</div>
+        <p class="tenant__message">
+          不動産の有効活用、リーシング戦略の一環として、オーナーから不動産を借上げ、自らテナントとして事業運営し不動産の価値最大化を目指します。
+        </p>
+        <div class="tenant__contents-title title03">自社運営テナントの紹介</div>
+        <div class="tenant__contents">
+          <div class="tenant__content content7">
+            <div class="content7__wrap">
+              <div class="content7__title title04">ほねつぎ市川はりきゅう接骨院</div>
+              <div class="content7__body">
+                <div class="content7__body-top">
+                  <div class="content7__images images">
+                    <div class="images__left"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/images__left-01.webp" alt="受付"></div>
+                    <div class="images__right">
+                      <div class="images__right-img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/images__right01-01.webp" alt="施術風景1"></div>
+                      <div class="images__right-img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/images__right01-02.webp" alt="施術風景2"></div>
+                      <div class="images__right-img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/images__right01-03.webp" alt="施術風景3"></div>
+                      <div class="images__right-img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/images__right01-04.webp" alt="専門器具"></div>
+                    </div>
+                  </div>
+                  <p class="content7__message">
+                    千葉県市川駅から3km離れた住宅街に所在するコンビニエンスストア跡地を再利用して、「はりきゅう接骨院」として事業展開しております。<br
+                    >肩こり、腰痛でお悩みの方は年々増えており、多くの地域住民の方々にご来院頂いております。<br
+                    >当院では、柔道整復師や鍼灸師といった国家資格保有者が、体に関する運動的なアプローチを駆使して患者様の治療に取り組んでおります。体の健康と美容は密接に関係していることがわかっております。<br
+                    >当院では美容鍼や韓国の富裕層向けのエステを導入しており、健康から美容までトータルなお悩みを解決できる治療院に進化を続けております。<br
+                    >空室で悩むオーナー様への問題解決のみならず、健康、美容増進というかたちで地域に貢献しております。
+                  </p>
+                </div>
+                <div class="content7__body-info info">
+                  <div class="info__title">店舗情報</div>
+                  <ul class="info__list">
+                    <li class="info__list-item">住所　：　〒272-0835　千葉県市川市中国分2丁目16-11</li>
+                    <li class="info__list-item">電話番号　：　047-375-0077</li>
+                    <li class="info__list-item">営業時間　：　9:00～12:30　　15:00～20:00</li>
+                    <li class="info__list-item"><a href="https://www.honetsugi-group.com/honetsugi/page/13/" target="_blank" class="info__list-item-link">ほねつぎ市川はりきゅう接骨院　公式サイト</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tenant__content content7">
+            <div class="content7__wrap">
+              <div class="content7__title title04">タイトーFステーション 盛岡南店</div>
+              <div class="content7__body">
+                <div class="content7__body-top">
+                  <div class="content7__images images">
+                    <div class="images__left"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/images__left-02.webp" alt="店前の写真"></div>
+                    <div class="images__right">
+                      <div class="images__right-img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/images__right02-01.webp" alt="ゲームセンター内1"></div>
+                      <div class="images__right-img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/images__right02-02.webp" alt="ゲームセンター内2"></div>
+                      <div class="images__right-img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/images__right02-03.webp" alt="ゲームセンター内3"></div>
+                      <div class="images__right-img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/images__right02-04.webp" alt="ゲームセンター内4"></div>
+                    </div>
+                  </div>
+                  <p class="content7__message">
+                    岩手県盛岡市に所在する土地約900坪を借り上げサブリース事業を展開しております。<br
+                    >盛岡南インターより国道4号線を北上、津志田交差点から車で5分。平日は、周辺のお客様が多く、土日祝日になるとご家族連れ、カップルでのお客様で、店内が賑わっております。<br
+                    >土地の有効活用にお悩みの地主様の問題解決のみならず、地域の活性化にも貢献しております。
+                  </p>
+                </div>
+                <div class="content7__body-info info">
+                  <div class="info__title">店舗情報</div>
+                  <ul class="info__list">
+                    <li class="info__list-item">営業時間　：　10:00～24:30　年中無休</li>
+                    <li class="info__list-item"><a href="https://www.taito.co.jp/store/00002107" target="_blank" class="info__list-item-link">タイトーFステーション盛岡南店　公式サイト</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
 <?php get_footer(); ?>
