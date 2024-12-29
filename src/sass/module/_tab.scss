@@ -1,0 +1,32 @@
+@use "global" as *;
+
+
+.tab {
+  text-align: center;
+  font-size: rem(16);
+  font-weight: $normal;
+  padding-block: rem(10);
+  padding-inline: rem(15);  // 最低限を指定
+  min-width: rem(248);
+  border: 1px solid #adafb3;
+  background: $color-white;
+  transition: all 0.2s ease-out;
+
+  @include mq(md) {
+    font-size: rem(14);
+    padding-block: rem(8);
+    min-width: rem(280);
+  }
+}
+
+.tab:hover {  // hover
+  cursor: pointer;
+  background: #000;
+  color: $color-white;
+}
+
+.tab.is-selected {  // 選択中のタブは背景色と文字色を変更、かつ、クリックできるように見せないように。
+  cursor: default;
+  background: #000;
+  color: $color-white;
+}

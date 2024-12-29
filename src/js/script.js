@@ -66,6 +66,76 @@ jQuery(".js-accordion").on("click", function (e) {
   }
 });
 
+/* -------------------------------------------------------------------------------- */
+/* タブ切り替え (事業案内ページ) */
+// クリックされたタブ(選択されているタブ)に『.is-selected』クラスを付与して選択中のタブのスタイルのみ変更。
+// クリックされたタブ(選択されているタブ)の『data-category』属性の値と同じ『data-category』属性の値を持つコンテンツのみ表示。
+// サブメニューなどのリンクからタブに飛んだ時に、そのタブが選択状態にされた形で『事業紹介ページ(タブ切り替えページ)』に遷移する。
+document.addEventListener('DOMContentLoaded', function() {
+  const tabButtons = document.querySelectorAll('.tab');
+  const tabContents = document.querySelectorAll('.js-tab-content');
+
+  // URLからクエリパラメータ（category）を取得
+  const params = new URLSearchParams(window.location.search);
+  const categoryFromUrl = params.get('category');
+
+  let activeCategory = categoryFromUrl; // URLのcategoryを優先
+  let initialTab;
+
+  if (!activeCategory) {
+    // URLにcategoryパラメータがない場合は最初のタブをデフォルトで表示
+    initialTab = tabButtons[0];
+    activeCategory = initialTab.getAttribute('data-category');
+  } else {
+    // URLにcategoryパラメータがある場合、そのcategoryに対応するタブを探す
+    initialTab = Array.from(tabButtons).find(tab => tab.getAttribute('data-category') === activeCategory);
+    if (!initialTab) {
+      // 不正なcategoryの場合はデフォルトで最初のタブを表示
+      initialTab = tabButtons[0];
+      activeCategory = initialTab.getAttribute('data-category');
+    }
+  }
+
+  // --- 初期タブの選択をURLパラメータに基づいて行う ---
+  tabButtons.forEach(tab => {
+    // URLパラメータと一致するタブにのみ 'is-selected' クラスを付与
+    if (tab.getAttribute('data-category') === activeCategory) {
+      tab.classList.add('is-selected');
+    } else {
+      tab.classList.remove('is-selected');  // 他のタブは選択を解除
+    }
+  });
+
+  // 対応するコンテンツの表示設定
+  tabContents.forEach(content => {
+    if (content.getAttribute('data-category') === activeCategory) {
+      content.classList.add('active');  // 対応するコンテンツを表示
+    } else {
+      content.classList.remove('active');  // 他のコンテンツは非表示
+    }
+  });
+
+  // タブクリック時の処理
+  tabButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const category = this.getAttribute('data-category');
+
+      // すべてのタブから選択クラスを削除
+      tabButtons.forEach(btn => btn.classList.remove('is-selected'));
+
+      // クリックされたタブに選択クラスを追加
+      this.classList.add('is-selected');
+
+      // すべてのコンテンツを非表示にする
+      tabContents.forEach(content => content.classList.remove('active'));
+
+      // 対応するカテゴリーのコンテンツを表示
+      document.querySelectorAll(`.js-tab-content[data-category="${category}"]`).forEach(content => {
+        content.classList.add('active');
+      });
+    });
+  });
+});
 
 
 

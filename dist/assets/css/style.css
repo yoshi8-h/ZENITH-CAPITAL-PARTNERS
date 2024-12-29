@@ -1561,6 +1561,14 @@ a {
 	margin-top: 2.8125rem;
 }
 
+.js-tab-content {
+	display: none;
+}
+
+.js-tab-content.active {
+	display: block;
+}
+
 .list-item {
 	color: #1e1e1e;
 	font-size: 1.0625rem;
@@ -2091,14 +2099,7 @@ a {
 	color: #2c81d8;
 }
 
-.tabs {
-	align-items: center;
-	display: flex;
-	gap: 1.25rem;
-	justify-content: center;
-}
-
-.tabs__item {
+.tab {
 	background: #fff;
 	border: 1px solid #adafb3;
 	font-size: 1rem;
@@ -2112,10 +2113,23 @@ a {
 	transition: all 0.2s ease-out;
 }
 
-.tabs__item:hover {
+.tab:hover {
 	background: #000;
 	color: #fff;
 	cursor: pointer;
+}
+
+.tab.is-selected {
+	background: #000;
+	color: #fff;
+	cursor: default;
+}
+
+.tabs {
+	align-items: center;
+	display: flex;
+	gap: 1.25rem;
+	justify-content: center;
 }
 
 .tenant {
@@ -3479,16 +3493,16 @@ html {
 	display: none;
 }
 
-.tabs {
-	flex-direction: column;
-	gap: 0.9375rem;
-}
-
-.tabs__item {
+.tab {
 	font-size: 0.875rem;
 	min-width: 17.5rem;
 	padding-bottom: 0.5rem;
 	padding-top: 0.5rem;
+}
+
+.tabs {
+	flex-direction: column;
+	gap: 0.9375rem;
 }
 
 .tenant {

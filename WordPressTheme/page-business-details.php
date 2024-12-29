@@ -20,14 +20,14 @@
 
     <!-- タブ -->
     <div class="tabs l-tabs">
-      <div class="tabs__item is-selected" data-category="category1">アセットマネジメント</div>
-      <div class="tabs__item" data-category="category2">不動産コンサルティング</div>
-      <div class="tabs__item" data-category="category3">自己投資</div>
-      <div class="tabs__item" data-category="category4">テナント事業</div>
+      <div class="tabs__item tab is-selected" data-category="category1">アセットマネジメント</div>
+      <div class="tabs__item tab" data-category="category2">不動産コンサルティング</div>
+      <div class="tabs__item tab" data-category="category3">自己投資</div>
+      <div class="tabs__item tab" data-category="category4">テナント事業</div>
     </div>
 
     <!-- asset セクション (アセットマネジメント) -->
-    <section class="asset l-asset">
+    <section class="asset l-asset js-tab-content" data-category="category1">
       <div class="asset__inner inner">
         <div class="asset__title title02">アセットマネジメント</div>
         <p class="asset__message">不動産の投資分析から、仕入れ、資金調達のアレンジ、資産価値最大化を実現する運営管理、出口戦略(売却)の立案まで、投資家の利益最大化のための一貫したサービスを提供します。</p>
@@ -106,7 +106,7 @@
     </section>
 
     <!-- consulting セクション (不動産コンサルティング) -->
-    <section class="consulting l-consulting">
+    <section class="consulting l-consulting js-tab-content" data-category="category2">
       <div class="consulting__inner inner">
         <div class="consulting__title title02">不動産コンサルティング</div>
         <p class="consulting__message">事業承継に伴う事業用不動産の取り扱い、不動産の有効活用、複雑な権利関係の調整等不動産に関するお悩みの解決をサポートします。</p>
@@ -236,7 +236,7 @@
     </section>
 
     <!-- investment セクション (自己投資) -->
-    <section class="investment l-investment">
+    <section class="investment l-investment js-tab-content" data-category="category3">
       <div class="investment__inner inner">
         <div class="investment__title title02">自己投資</div>
         <p class="investment__message">
@@ -268,7 +268,7 @@
     </section>
 
     <!-- tenant セクション (テナント事業) -->
-    <section class="tenant l-tenant">
+    <section class="tenant l-tenant js-tab-content" data-category="category4">
       <div class="tenant__inner inner">
         <div class="tenant__title title02">テナント事業</div>
         <p class="tenant__message">
