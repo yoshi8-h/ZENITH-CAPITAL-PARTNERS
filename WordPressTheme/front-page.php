@@ -26,7 +26,7 @@
     </div>
 
     <!-- top-text セクション -->
-    <section class="top-text l-top-text">
+    <section class="top-text l-top-text js-fadeInDown">
       <div class="top-text__bg u-desktop"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/top-text-bg-arrow.webp" alt=""></div>
       <div class="top-text__bg-sp u-mobile"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/top-text-bg-arrow-sp.webp" alt=""></div>
       <div class="top-text__inner inner">
@@ -48,8 +48,8 @@
         <div class="management-policy__contents">
           <div class="management-policy__content">
           <div class="management-policy__content-title-sp u-mobile">理論と実践に基づいたソリューションを提供します。</div>
-            <div class="management-policy__content-img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/management-policy__content-img01.webp" alt=""></div>
-            <div class="management-policy__content-body">
+            <div class="management-policy__content-img js-fadeInRight"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/management-policy__content-img01.webp" alt=""></div>
+            <div class="management-policy__content-body js-fadeInLeft">
               <div class="management-policy__content-title u-desktop">理論と実践に基づいたソリューションを提供します。</div>
               <p class="management-policy__content-text">不動産鑑定士業をバックグラウンドに持つ当社は、理論的な根拠と実証的なデータを駆使して不動産の価値最大化を目指します。</p>
               <a href="" class="management-policy__content-btn btn1">
@@ -61,8 +61,8 @@
           </div>
           <div class="management-policy__content">
           <div class="management-policy__content-title-sp u-mobile">信頼関係を大切にします。</div>
-            <div class="management-policy__content-img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/management-policy__content-img02.webp" alt=""></div>
-            <div class="management-policy__content-body">
+            <div class="management-policy__content-img js-fadeInLeft"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/management-policy__content-img02.webp" alt=""></div>
+            <div class="management-policy__content-body js-fadeInRight">
               <div class="management-policy__content-title u-desktop">信頼関係を大切にします。</div>
               <p class="management-policy__content-text">地主・投資家・金融機関とは、成功事例を積み重ねることで信頼関係を、不動産をご利用されるユーザー様とは、快適な環境を提供することで信頼関係を構築します。</p>
               <a href="" class="management-policy__content-btn btn1">
@@ -163,7 +163,7 @@
         </h2>
         <p class="project__text">これまでの当社の実績をご覧いただけます。</p>
         <div class="project__contents">
-          <a href="" class="project__contents-item content2">
+          <a href="" class="project__contents-item content2 js-fadeInUp">
             <div class="content2__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/project-content2-01.webp" alt=""></div>
             <div class="content2__overlay">
               <div class="content2__overlay-bg"></div>
@@ -175,7 +175,7 @@
               </div>
             </div>
           </a>
-          <a href="" class="project__contents-item content2">
+          <a href="" class="project__contents-item content2 js-fadeInUp">
             <div class="content2__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/project-content2-01.webp" alt=""></div>
             <div class="content2__overlay">
             <div class="content2__overlay-bg"></div>
@@ -187,7 +187,7 @@
               </div>
             </div>
           </a>
-          <a href="" class="project__contents-item content2">
+          <a href="" class="project__contents-item content2 js-fadeInUp">
             <div class="content2__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/project-content2-01.webp" alt=""></div>
             <div class="content2__overlay">
             <div class="content2__overlay-bg"></div>
@@ -199,7 +199,7 @@
               </div>
             </div>
           </a>
-          <a href="" class="project__contents-item content2">
+          <a href="" class="project__contents-item content2 js-fadeInUp">
             <div class="content2__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/project-content2-01.webp" alt=""></div>
             <div class="content2__overlay">
             <div class="content2__overlay-bg"></div>
@@ -211,7 +211,7 @@
               </div>
             </div>
           </a>
-          <a href="" class="project__contents-item content2">
+          <a href="" class="project__contents-item content2 js-fadeInUp">
             <div class="content2__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/project-content2-01.webp" alt=""></div>
             <div class="content2__overlay">
             <div class="content2__overlay-bg"></div>
@@ -223,7 +223,7 @@
               </div>
             </div>
           </a>
-          <a href="" class="project__contents-item content2">
+          <a href="" class="project__contents-item content2 js-fadeInUp">
             <div class="content2__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/project-content2-01.webp" alt=""></div>
             <div class="content2__overlay">
             <div class="content2__overlay-bg"></div>
@@ -246,7 +246,7 @@
     </section>
 
     <!-- message セクション -->
-    <section class="message l-message">
+    <section class="message l-message js-fadeInUp">
       <div class="message__inner inner">
         <h2 class="message__title section-title">
           <div class="section-title__ja">トップメッセージ</div>

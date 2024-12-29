@@ -9,6 +9,8 @@
   color: #202020;
   font-size: rem(50);
   font-weight: $semiBold;
+  letter-spacing: 0.28em;
+  text-indent: 0.28em;
   position: relative;
   z-index: 30;
 
@@ -25,6 +27,8 @@
   font-size: rem(80);
   font-weight: $bold;
   line-height: 1.0;
+  letter-spacing: 0.01em;
+  text-indent: 0.01em;
   position: relative;
   z-index: 10;
 

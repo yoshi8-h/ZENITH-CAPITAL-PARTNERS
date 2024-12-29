@@ -137,3 +137,103 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+/* ================================================================================ */
+/*  アニメーション  */
+// ※jQueryなどの制御の記述は、GSAPの記述より前に書く必要あり。
+/* ================================================================================ */
+
+/* １つの要素をフワッと下から出現 */
+// ページ先頭にある場合のみ、発火位置を調整するためのクラス『is-top-element』も同時に付与するかどうかで、scrollTriggerの発火位置(start)を調整できるようにしている。
+// →ページの先頭付近にある要素は、scrollTriggerでスクロールしてアニメーションが発火する位置を、元から超えているため、画面リロード時に、すでにアニメーションが発火された状態になってしまっているため、それを防ぐ方法。
+document.addEventListener('DOMContentLoaded', function () {
+  var fadeInUps = document.querySelectorAll(".js-fadeInUp"); // ページ内の、このアニメーションをさせたい全ての要素を取得
+
+  fadeInUps.forEach(function (item) {
+    var isTopElement = item.classList.contains("is-top-element"); // クラスも同時に持っているか判定
+
+    gsap.fromTo(item, {
+      y: 20,
+      autoAlpha: 0
+    }, {
+      y: 0,
+      autoAlpha: 1,
+      scrollTrigger: {
+        trigger: item,
+        start: isTopElement ? 'top 50%' : 'top 70%' // 『is-top-element』クラスも同時に付与されている要素のみ、発火位置を下め(50%)に調整。→ページの先頭付近にある要素は、scrollTriggerでスクロールしてアニメーションが発火する位置を、元から超えているため、画面リロード時に、すでにアニメーションが発火された状態になってしまっているため、それを防ぐ方法。
+        // markers:{
+        //   startColor: "green",
+        // },
+      }
+    });
+  });
+});
+
+/* １つの要素をフワッと上から下に出現 */
+document.addEventListener('DOMContentLoaded', function () {
+  var fadeInUps = document.querySelectorAll(".js-fadeInDown"); // ページ内の、このアニメーションをさせたい全ての要素を取得
+
+  fadeInUps.forEach(function (item) {
+    gsap.fromTo(item, {
+      y: -30,
+      autoAlpha: 0
+    }, {
+      y: 0,
+      autoAlpha: 1,
+      scrollTrigger: {
+        trigger: item,
+        start: 'top 70%'
+        // markers:{
+        //   startColor: "green",
+        // },
+      }
+    });
+  });
+});
+
+/* １つの要素をフワッと左から右に出現 */
+document.addEventListener('DOMContentLoaded', function () {
+  var fadeInRights = document.querySelectorAll(".js-fadeInRight"); // ページ内の、このアニメーションをさせたい全ての要素を取得
+
+  fadeInRights.forEach(function (item) {
+    gsap.fromTo(item, {
+      x: -30,
+      autoAlpha: 0
+    }, {
+      x: 0,
+      autoAlpha: 1,
+      scrollTrigger: {
+        trigger: item,
+        start: 'top 70%',
+        // markers:{
+        //   startColor: "green",
+        // },
+        end: 'top 20%',
+        // アニメーション終了タイミングを設定
+        toggleActions: 'play none none none' // アニメーションの挙動制御
+      }
+    });
+  });
+});
+
+/* １つの要素をフワッと右から左に出現 */
+document.addEventListener('DOMContentLoaded', function () {
+  var fadeInLefts = document.querySelectorAll(".js-fadeInLeft"); // ページ内の、このアニメーションをさせたい全ての要素を取得
+
+  fadeInLefts.forEach(function (item) {
+    gsap.fromTo(item, {
+      x: 30,
+      autoAlpha: 0
+    }, {
+      x: 0,
+      autoAlpha: 1,
+      scrollTrigger: {
+        trigger: item,
+        start: 'top 70%'
+        // markers:{
+        //   startColor: "green",
+        // },
+      }
+    });
+  });
+});
