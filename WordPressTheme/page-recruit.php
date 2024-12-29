@@ -18,71 +18,80 @@
       </div>
     </div>
 
-    <!-- business セクション -->
-    <section class="business l-business">
-      <div class="business__inner inner">
-        <div class="business__title title02">事業案内</div>
-        <div class="business__contents">
-          <div class="business__contents-item content4">
-            <div class="content4__wrap">
-              <div class="content4__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/content4__img-01.webp" alt=""></div>
-              <div class="content4__body">
-                <div class="content4__title">アセットマネジメント</div>
-                <p class="content4__text">
-                  不動産の投資分析から、仕入れ、資金調達のアレンジ、資産価値最大化を実現する運営管理、出口戦略（売却）の立案まで、投資家の利益最大化のための一貫したサービスを提供します。
-                </p>
-                <a href="" class="content4__btn btn1">
-                  <span class="btn1__text">MORE</span>
-                  <span class="btn1__arrow">></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="business__contents-item content4 content4--reverse">
-            <div class="content4__wrap">
-              <div class="content4__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/content4__img-02.webp" alt=""></div>
-              <div class="content4__body">
-                <div class="content4__title">不動産コンサルティング</div>
-                <p class="content4__text">
-                  事業承継に伴う事業用不動産の取り扱い、不動産の有効活用、複雑な権利関係の調整等不動産に関するお悩みの解決をサポートします。
-                </p>
-                <a href="" class="content4__btn btn1">
-                  <span class="btn1__text">MORE</span>
-                  <span class="btn1__arrow">></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="business__contents-item content4">
-            <div class="content4__wrap">
-              <div class="content4__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/content4__img-03.webp" alt=""></div>
-              <div class="content4__body">
-                <div class="content4__title">自己投資</div>
-                <p class="content4__text">
-                  建物の遵法性や入居テナントの問題等の要因で本来の価値が発揮されていない不動産に自己勘定で投資する事業です。価値を改善することで不動産の収益力を高め安定的な収益を確保することを目指します。
-                </p>
-                <a href="" class="content4__btn btn1">
-                  <span class="btn1__text">MORE</span>
-                  <span class="btn1__arrow">></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="business__contents-item content4 content4--reverse">
-            <div class="content4__wrap">
-              <div class="content4__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/content4__img-04.webp" alt=""></div>
-              <div class="content4__body">
-                <div class="content4__title">テナント事業</div>
-                <p class="content4__text">
-                  不動産の有効活用、リーシング戦略の一環として、オーナーから不動産を借上げ、自らテナントとして事業運営し不動産の価値最大化を目指します。
-                </p>
-                <a href="" class="content4__btn btn1">
-                  <span class="btn1__text">MORE</span>
-                  <span class="btn1__arrow">></span>
-                </a>
-              </div>
-            </div>
-          </div>
+    <!-- recruit セクション -->
+    <section class="recruit l-recruit">
+      <div class="recruit__inner inner">
+        <div class="recruit__contents">
+          <!-- 募集要項 (表) -->
+          <table class="recruit__table table">
+            <thead class="table__head">
+              <tr>
+                <th class="table__header">項目</th>
+                <th class="table__header-body">内容</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table__row">
+                <td class="table__cell-head">職種</td>
+                <td class="table__cell-body">不動産コンサルタント</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__cell-head">雇用形態</td>
+                <td class="table__cell-body">正社員</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__cell-head">業務内容</td>
+                <td class="table__cell-body">
+                  不動産に関する総合的なサービス業務を担当していただきます。<br
+                  >事業会社のお客様が保有される不動産に関する調査、有効活用の提案、売却のサポート等の業務や、投資ファンドのお客様が保有される不動産の管理・運営(アセットマネジメント業務)、不動産投資家(大家さん)向けの投資用不動産の紹介業務などです。
+                </td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__cell-head">応募資格</td>
+                <td class="table__cell-body">高卒以上（不動産コンサルティング、調査、売買仲介、管理・運営業務の経験者）</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__cell-head">資格</td>
+                <td class="table__cell-body">宅地建物取引士、不動産鑑定士の資格保有者、事業承継、M&Aの実務経験者優遇</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__cell-head">勤務地</td>
+                <td class="table__cell-body">東京都千代田区</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__cell-head">転勤</td>
+                <td class="table__cell-body">なし</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__cell-head">給与形態</td>
+                <td class="table__cell-body">年俸制</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__cell-head">諸手当</td>
+                <td class="table__cell-body">通勤手当</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__cell-head">定期昇給</td>
+                <td class="table__cell-body">年1回</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__cell-head">保険</td>
+                <td class="table__cell-body">健康保険、厚生年金保険、雇用保険、労災保険　完備</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__cell-head">応募方法</td>
+                <td class="table__cell-body">書類選考の上、合格者には面接の設定をいたします。</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__cell-head">応募先</td>
+                <td class="table__cell-body">
+                  〒100-0006　東京都千代田区有楽町１丁目9番4号　蚕糸会館７階<br
+                  >ゼニス・キャピタル・パートナーズ株式会社 　管理部<br
+                  >メール：〇〇〇〇〇〇
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>

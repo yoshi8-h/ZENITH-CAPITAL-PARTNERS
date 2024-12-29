@@ -1,0 +1,40 @@
+@use "global" as *;
+
+
+.table {
+  width: 100%;
+  border-collapse: collapse;  // ※表のセルの仕切り線を無くす記述。
+  background-color: #ffffff;
+}
+
+.table__head {
+  display: none;
+}
+
+.table__header {
+}
+.table__header-body {
+}
+
+.table__row {
+  border: 1px solid #adb0b1;
+}
+
+.table__cell-head {  // 項目名
+  width: 18.34%;
+  padding-block: rem(22);
+  padding-left: rem(20);
+  padding-right: rem(12);  // 最低限を指定
+  background: #f1f2f5;
+  font-size: rem(17);
+  font-weight: $medium;
+}
+
+.table__cell-body {  // 内容
+  padding-block: rem(22);
+  padding-left: rem(28);
+  padding-right: rem(12);  // 最低限を指定
+  font-size: rem(17);
+  font-weight: $medium;
+  line-height: 2.0;
+}

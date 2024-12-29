@@ -1,0 +1,22 @@
+@use "global" as *;
+
+
+.recruit {
+  padding-bottom: rem(110);
+
+  @include mq(md) {
+    padding-bottom: rem(65);
+  }
+}
+
+.recruit__inner {
+
+}
+
+.recruit__contents {
+
+}
+
+.recruit__table {
+
+}
