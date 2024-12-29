@@ -8,6 +8,12 @@
   border-bottom: 1px solid #686f81;
   padding-left: rem(32);
   position: relative;
+
+  @include mq(md) {
+    font-size: rem(17);
+    padding-bottom: rem(10);
+    padding-left: rem(18);
+  }
 }
 
 .title04::before {
@@ -17,4 +23,9 @@
   position: absolute;
   top: rem(6);
   left: 0;
+
+  @include mq(md) {
+    font-size: rem(12);
+    top: rem(4);
+  }
 }

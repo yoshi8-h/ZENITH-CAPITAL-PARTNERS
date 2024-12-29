@@ -12,6 +12,11 @@
   position: relative;
   padding-left: rem(20);
   line-height: 1.2;
+
+  @include mq(md) {
+    font-size: rem(16);
+    padding-left: rem(16);
+  }
 }
 
 .info__title::before {  // 青い横線
@@ -32,11 +37,30 @@
   justify-content: center;
   align-items: flex-start;
   gap: rem(5);
+
+  @include mq(md) {
+    margin-top: rem(10);
+  }
 }
 
 .info__list-item {
   padding-left: rem(20);
+  font-size: rem(17);
+  line-height: 1.75;
   position: relative;
+
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.info__list-item-sp {  // SPバージョンのリストアイテム
+  display: none;
+
+  @include mq(md) {
+    display: block;
+    font-size: rem(12);
+  }
 }
 
 .info__list-item::before {  // リストアイテム前の『・』
@@ -46,6 +70,10 @@
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+
+  @include mq(md) {
+    font-size: rem(14);
+  }
 }
 
 .info__list-item-link {

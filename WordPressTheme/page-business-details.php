@@ -305,6 +305,10 @@
                     <li class="info__list-item">電話番号　：　047-375-0077</li>
                     <li class="info__list-item">営業時間　：　9:00～12:30　　15:00～20:00</li>
                     <li class="info__list-item"><a href="https://www.honetsugi-group.com/honetsugi/page/13/" target="_blank" class="info__list-item-link">ほねつぎ市川はりきゅう接骨院　公式サイト</a></li>
+                    <li class="info__list-item-sp">住所：〒272-0835 千葉県市川市中国分2丁目16-11</li>
+                    <li class="info__list-item-sp">電話番号：047-375-0077</li>
+                    <li class="info__list-item-sp">営業時間：9:00～12:30　15:00～20:00</li>
+                    <li class="info__list-item-sp"><a href="https://www.honetsugi-group.com/honetsugi/page/13/" target="_blank" class="info__list-item-link">ほねつぎ市川はりきゅう接骨院　公式サイト</a></li>
                   </ul>
                 </div>
               </div>
@@ -335,6 +339,8 @@
                   <ul class="info__list">
                     <li class="info__list-item">営業時間　：　10:00～24:30　年中無休</li>
                     <li class="info__list-item"><a href="https://www.taito.co.jp/store/00002107" target="_blank" class="info__list-item-link">タイトーFステーション盛岡南店　公式サイト</a></li>
+                    <li class="info__list-item-sp">営業時間：10:00～24:30　年中無休</li>
+                    <li class="info__list-item-sp"><a href="https://www.taito.co.jp/store/00002107" target="_blank" class="info__list-item-link">タイトーFステーション盛岡南店　公式サイト</a></li>
                   </ul>
                 </div>
               </div>

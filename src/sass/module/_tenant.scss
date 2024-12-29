@@ -11,7 +11,9 @@
 }
 
 .tenant__inner {
-
+  @include mq(md) {
+    max-width: rem(600);
+  }
 }
 
 .tenant__title {
@@ -34,10 +36,18 @@
 
 .tenant__contents-title {
   margin-top: rem(35);
+
+  @include mq(md) {
+    margin-top: rem(30);
+  }
 }
 
 .tenant__contents {
   margin-top: rem(30);
+
+  @include mq(md) {
+    margin-top: rem(25);
+  }
 }
 
 .tenant__content {

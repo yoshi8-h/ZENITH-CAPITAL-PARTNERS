@@ -6,6 +6,12 @@
   justify-content: center;
   align-items: flex-start;
   gap: rem(14);
+
+  @include mq(md) {
+    flex-direction: column;
+    align-items: center;
+    gap: rem(6);
+  }
 }
 
 .images__left {
@@ -13,6 +19,10 @@
   max-width: rem(538);
   width: 100%;
   object-fit: cover;
+
+  @include mq(md) {
+    max-width: auto;
+  }
 }
 
 .images__left img {
@@ -20,6 +30,10 @@
   max-width: rem(538);
   width: 100%;
   object-fit: cover;
+
+  @include mq(md) {
+    max-width: auto;
+  }
 }
 
 .images__right {
@@ -33,6 +47,12 @@
   max-width: rem(534);
   width: 100%;
   object-fit: cover;
+
+  @include mq(md) {
+    column-gap: rem(6);
+    row-gap: rem(6);
+    max-width: auto;
+  }
 }
 
 .images__right-img {
@@ -40,6 +60,10 @@
   max-width: rem(261);
   width: 100%;
   object-fit: cover;
+
+  @include mq(md) {
+    max-width: auto;
+  }
 }
 
 .images__right-img img {
@@ -47,4 +71,8 @@
   max-width: rem(261);
   width: 100%;
   object-fit: cover;
+
+  @include mq(md) {
+    max-width: auto;
+  }
 }

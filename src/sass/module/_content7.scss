@@ -5,6 +5,12 @@
   padding-block: rem(35);
   padding-inline: rem(42);
   border: rem(15) solid #e9ecf1;
+
+  @include mq(md) {
+    padding-block: rem(20);
+    padding-inline: rem(14);
+    border: rem(8) solid #e9ecf1;
+  }
 }
 
 .content7__wrap {
@@ -25,14 +31,28 @@
 
 .content7__images {
   margin-top: rem(32);
+
+  @include mq(md) {
+    margin-top: rem(18);
+  }
 }
 
 .content7__message {
   margin-top: rem(34);
   font-size: rem(17);
   line-height: 2.0;
+
+  @include mq(md) {
+    margin-top: rem(14);
+    font-size: rem(14);
+    line-height: 1.7;
+  }
 }
 
 .content7__body-info {
   margin-top: rem(32);
+
+  @include mq(md) {
+    margin-top: rem(18);
+  }
 }

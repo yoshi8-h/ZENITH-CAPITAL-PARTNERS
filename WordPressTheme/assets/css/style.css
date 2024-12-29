@@ -1501,8 +1501,14 @@ a {
 }
 
 .info__list-item {
+	font-size: 1.0625rem;
+	line-height: 1.75;
 	padding-left: 1.25rem;
 	position: relative;
+}
+
+.info__list-item-sp {
+	display: none;
 }
 
 .info__list-item::before {
@@ -2782,6 +2788,28 @@ html {
 	margin-top: 0.9375rem;
 }
 
+.content7 {
+	border: 0.5rem solid #e9ecf1;
+	padding-bottom: 1.25rem;
+	padding-left: 0.875rem;
+	padding-right: 0.875rem;
+	padding-top: 1.25rem;
+}
+
+.content7__images {
+	margin-top: 1.125rem;
+}
+
+.content7__message {
+	font-size: 0.875rem;
+	line-height: 1.7;
+	margin-top: 0.875rem;
+}
+
+.content7__body-info {
+	margin-top: 1.125rem;
+}
+
 .contents__item {
 	padding-bottom: 1.25rem;
 	padding-left: 0.625rem;
@@ -3027,6 +3055,57 @@ html {
 	transition: width 0.3s ease-out;
 	width: 2.25rem;
 	z-index: 100;
+}
+
+.images {
+	align-items: center;
+	flex-direction: column;
+	gap: 0.375rem;
+}
+
+.images__left {
+	max-width: auto;
+}
+
+.images__left img {
+	max-width: auto;
+}
+
+.images__right {
+	-moz-column-gap: 0.375rem;
+	column-gap: 0.375rem;
+	max-width: auto;
+	row-gap: 0.375rem;
+}
+
+.images__right-img {
+	max-width: auto;
+}
+
+.images__right-img img {
+	max-width: auto;
+}
+
+.info__title {
+	font-size: 1rem;
+	padding-left: 1rem;
+}
+
+.info__list {
+	margin-top: 0.625rem;
+}
+
+.info__list-item {
+	display: none;
+}
+
+.info__list-item-sp {
+	display: block;
+	font-size: 0.75rem;
+}
+
+.info__list-item::before {
+	font-size: 0.875rem;
 }
 
 .inner {
@@ -3416,9 +3495,21 @@ html {
 	padding-bottom: 4.0625rem;
 }
 
+.tenant__inner {
+	max-width: 37.5rem;
+}
+
 .tenant__message {
 	font-size: 0.875rem;
 	line-height: 1.75;
+	margin-top: 1.5625rem;
+}
+
+.tenant__contents-title {
+	margin-top: 1.875rem;
+}
+
+.tenant__contents {
 	margin-top: 1.5625rem;
 }
 
@@ -3442,6 +3533,17 @@ html {
 
 .title03 {
 	font-size: 1.125rem;
+}
+
+.title04 {
+	font-size: 1.0625rem;
+	padding-bottom: 0.625rem;
+	padding-left: 1.125rem;
+}
+
+.title04::before {
+	font-size: 0.75rem;
+	top: 0.25rem;
 }
 
 .toggle.is-open .toggle__open-btn::after {
