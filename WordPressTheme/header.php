@@ -21,16 +21,16 @@
           <!-- サブメニュー (事業案内) -->
           <div class="header__sub-menu sub-menu is-business">
             <div class="sub-menu__items">
-              <a href="" class="sub-menu__item">当社の不動産運用方針</a>
-              <a href="" class="sub-menu__item">アセットマネジメント</a>
-              <a href="" class="sub-menu__item">不動産コンサルティング</a>
-              <a href="" class="sub-menu__item">自己投資</a>
-              <a href="" class="sub-menu__item">テナント事業</a>
+              <a href="<?php echo esc_url(get_permalink(get_page_by_path('business'))); ?>" class="sub-menu__item">当社の不動産運用方針</a>
+              <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category1" class="sub-menu__item">アセットマネジメント</a>
+              <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category2" class="sub-menu__item">不動産コンサルティング</a>
+              <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category3" class="sub-menu__item">自己投資</a>
+              <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category4" class="sub-menu__item">テナント事業</a>
             </div>
           </div>
         </div>
         <div class="header__nav-item">
-          <a href="<?php echo esc_url(get_permalink(get_page_by_path('business'))); ?>" class="header__link">実績紹介</a>
+          <a href="<?php echo esc_url(get_permalink(get_page_by_path('works'))); ?>" class="header__link">実績紹介</a>
         </div>
         <div class="header__nav-item">
           <a href="<?php echo esc_url(get_permalink(get_page_by_path('company'))); ?>" class="header__link">会社案内</a>
@@ -74,15 +74,15 @@
           <div class="toggle__body">
             <div class="toggle__nav">
               <a href="<?php echo esc_url(get_permalink(get_page_by_path('business'))); ?>" class="toggle__nav-link">当社の不動産運用方針</a>
-              <a href="<?php echo esc_url(get_permalink(get_page_by_path('business'))); ?>" class="toggle__nav-link">アセットマネジメント</a>
-              <a href="<?php echo esc_url(get_permalink(get_page_by_path('business'))); ?>" class="toggle__nav-link">不動産コンサルティング</a>
-              <a href="<?php echo esc_url(get_permalink(get_page_by_path('business'))); ?>" class="toggle__nav-link">自己投資</a>
-              <a href="<?php echo esc_url(get_permalink(get_page_by_path('business'))); ?>" class="toggle__nav-link">主要メンバー紹介</a>
+              <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category1" class="toggle__nav-link">アセットマネジメント</a>
+              <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category2" class="toggle__nav-link">不動産コンサルティング</a>
+              <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category3" class="toggle__nav-link">自己投資</a>
+              <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category4" class="toggle__nav-link">主要メンバー紹介</a>
             </div>
           </div>
         </div>
         <div class="nav__item">
-          <a href="<?php echo esc_url(get_permalink(get_page_by_path('business'))); ?>" class="nav__link">実績紹介</a>
+          <a href="<?php echo esc_url(get_permalink(get_page_by_path('works'))); ?>" class="nav__link">実績紹介</a>
         </div>
         <div class="nav__item toggle">
           <button type="button" class="toggle__head js-accordion">
@@ -91,10 +91,10 @@
           </button>
           <div class="toggle__body">
             <div class="toggle__nav">
-              <a href="<?php echo esc_url(get_permalink(get_page_by_path('business'))); ?>" class="toggle__nav-link">トップメッセージ</a>
-              <a href="<?php echo esc_url(get_permalink(get_page_by_path('business'))); ?>" class="toggle__nav-link">企業理念</a>
-              <a href="<?php echo esc_url(get_permalink(get_page_by_path('business'))); ?>" class="toggle__nav-link">会社概要</a>
-              <a href="<?php echo esc_url(get_permalink(get_page_by_path('business'))); ?>" class="toggle__nav-link">主要メンバー紹介</a>
+              <a href="<?php echo esc_url(get_permalink(get_page_by_path('company'))); ?>" class="toggle__nav-link">トップメッセージ</a>
+              <a href="<?php echo esc_url(get_permalink(get_page_by_path('company'))); ?>" class="toggle__nav-link">企業理念</a>
+              <a href="<?php echo esc_url(get_permalink(get_page_by_path('company'))); ?>" class="toggle__nav-link">会社概要</a>
+              <a href="<?php echo esc_url(get_permalink(get_page_by_path('company'))); ?>" class="toggle__nav-link">主要メンバー紹介</a>
             </div>
           </div>
         </div>
