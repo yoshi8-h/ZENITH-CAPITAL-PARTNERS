@@ -1,0 +1,18 @@
+@use "global" as *;
+
+
+.news-page {
+  padding-bottom: rem(110);
+
+  @include mq(md) {
+    padding-bottom: rem(65);
+  }
+}
+
+.news-page__inner {
+
+}
+
+.news-page__posts {
+
+}

@@ -37,3 +37,13 @@
     font-size: rem(32);
   }
 }
+
+
+
+.title__ja.is-narrow {  // letter-spacingが狭い場合に付与するクラス
+  letter-spacing: 0.02em;
+  text-indent: 0.02em;
+}
+
+
+

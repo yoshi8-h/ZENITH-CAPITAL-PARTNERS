@@ -7,7 +7,6 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: rem(20);
-  transition: opacity 0.2s ease-out;
 
   @include mq(md) {
     padding-block: rem(18);
@@ -15,10 +14,6 @@
     justify-content: center;
     gap: rem(15);
   }
-}
-
-.post:hover {  // hover
-  opacity: 0.6;
 }
 
 .post:nth-of-type(n + 2) {
@@ -94,12 +89,37 @@
   }
 }
 
-.post__text {
+.post__link-text {
+  text-decoration: underline;  // 下線を表示
   width: 100%;
   font-size: rem(16);
   font-weight: $normal;
   color: #202020;
   line-height: 1.75;
+  transition: opacity 0.2s ease-out;
+
+  @include mq(md) {
+    font-size: rem(14);
+  }
+}
+
+.post__link-text:hover {  // hover
+  opacity: 0.6;
+}
+
+
+
+
+// =======================================
+// モディファイア
+// =======================================
+// post--main (NEWS一覧ページのpost (TOPページと、文字サイズが異なる為))
+.post--main {
+
+}
+
+.post--main .post__link-text {
+  font-size: rem(17);
 
   @include mq(md) {
     font-size: rem(14);

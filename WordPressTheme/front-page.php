@@ -283,27 +283,27 @@
           <div class="section-title__en">NEWS / TOPICS</div>
         </h2>
         <div class="news__posts posts">
-          <a href="" class="posts__item post">
+          <div class="posts__item post">
             <div class="post__meta">
               <div class="post__category is-news">お知らせ</div>
               <time class="post__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d'); ?></time>
             </div>
-            <p class="post__text">投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。</p>
-          </a>
-          <a href="" class="posts__item post">
+            <a href="" class="post__link-text">投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。</a>
+          </div>
+          <div class="posts__item post">
             <div class="post__meta">
               <div class="post__category is-topics">トピックス</div>
               <time class="post__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d'); ?></time>
             </div>
-            <p class="post__text">投稿のテキストが入ります。</p>
-          </a>
-          <a href="" class="posts__item post">
+            <a href="" class="post__link-text">投稿のテキストが入ります。</a>
+          </div>
+          <div class="posts__item post">
             <div class="post__meta">
               <div class="post__category is-other">その他</div>
               <time class="post__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d'); ?></time>
             </div>
-            <p class="post__text">投稿のテキストが入ります。投稿のテキストが入ります。</p>
-          </a>
+            <a href="" class="post__link-text">投稿のテキストが入ります。投稿のテキストが入ります。</a>
+          </div>
         </div>
         <div class="news__btn-wrap">
           <a href="" class="news__btn btn2">

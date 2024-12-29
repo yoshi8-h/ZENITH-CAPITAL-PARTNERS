@@ -179,6 +179,10 @@ a {
 	margin-top: 1.875rem;
 }
 
+.l-news-page {
+	margin-top: 3.75rem;
+}
+
 .l-recruit {
 	margin-top: 3.75rem;
 }
@@ -1776,6 +1780,10 @@ a {
 	min-width: 19.6875rem;
 }
 
+.news-page {
+	padding-bottom: 6.875rem;
+}
+
 .news {
 	padding-bottom: 5.625rem;
 	padding-top: 3.75rem;
@@ -1804,11 +1812,6 @@ a {
 	justify-content: space-between;
 	padding-bottom: 1.25rem;
 	padding-top: 1.25rem;
-	transition: opacity 0.2s ease-out;
-}
-
-.post:hover {
-	opacity: 0.6;
 }
 
 .post:nth-of-type(n + 2) {
@@ -1865,12 +1868,23 @@ a {
 	font-weight: 400;
 }
 
-.post__text {
+.post__link-text {
+	-webkit-text-decoration: underline;
 	color: #202020;
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.75;
+	text-decoration: underline;
+	transition: opacity 0.2s ease-out;
 	width: 100%;
+}
+
+.post__link-text:hover {
+	opacity: 0.6;
+}
+
+.post--main .post__link-text {
+	font-size: 1.0625rem;
 }
 
 .posts {
@@ -2224,6 +2238,11 @@ a {
 	z-index: 10;
 }
 
+.title__ja.is-narrow {
+	letter-spacing: 0.02em;
+	text-indent: 0.02em;
+}
+
 .title02 {
 	border-bottom: 2px solid #3d3e44;
 	color: #3d3e44;
@@ -2486,6 +2505,10 @@ html {
 }
 
 .l-investment {
+	margin-top: 2.5rem;
+}
+
+.l-news-page {
 	margin-top: 2.5rem;
 }
 
@@ -3373,6 +3396,10 @@ html {
 	padding-top: 1.125rem;
 }
 
+.news-page {
+	padding-bottom: 4.0625rem;
+}
+
 .news {
 	padding-bottom: 3.125rem;
 	padding-top: 3.4375rem;
@@ -3418,7 +3445,11 @@ html {
 	font-size: 0.9375rem;
 }
 
-.post__text {
+.post__link-text {
+	font-size: 0.875rem;
+}
+
+.post--main .post__link-text {
 	font-size: 0.875rem;
 }
 
