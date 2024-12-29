@@ -85,7 +85,7 @@
               <tr class="table__row">
                 <td class="table__cell-head">応募先</td>
                 <td class="table__cell-body">
-                  〒100-0006　東京都千代田区有楽町１丁目9番4号　蚕糸会館７階<br
+                  〒100-0006　<br class="u-mobile">東京都千代田区有楽町１丁目9番4号　蚕糸会館７階<br
                   >ゼニス・キャピタル・パートナーズ株式会社 　管理部<br
                   >メール：〇〇〇〇〇〇
                 </td>
