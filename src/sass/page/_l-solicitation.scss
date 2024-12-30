@@ -1,0 +1,10 @@
+@use "global" as *;
+
+
+.l-solicitation {
+  margin-top: rem(60);
+
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
