@@ -25,6 +25,10 @@
   justify-content: center;
   align-items: center;
   gap: rem(12);
+
+  @include mq(md) {
+    gap: rem(8);
+  }
 }
 
 /* ====== ページ番号リンクのスタイル ====== */
@@ -39,6 +43,12 @@
   font-size: rem(16);
   line-height: normal;
   transition: background 0.2s ease-out;
+
+  @include mq(md) {
+    height: rem(28);  // ページネーションは高さが絶対に変わらないから、高さを指定してOK。
+    min-width: rem(28);  // 最小幅を指定。
+    font-size: rem(13);
+  }
 }
 
 .wp-pagenavi .page:hover {  // hover
@@ -59,6 +69,12 @@
   line-height: normal;
   background: #eef0f1;
   border-radius: rem(5);
+
+  @include mq(md) {
+    height: rem(28);  // ページネーションは高さが絶対に変わらないから、高さを指定してOK。
+    min-width: rem(28);  // 最小幅を指定。
+    font-size: rem(13);
+  }
 }
 
 
@@ -78,6 +94,13 @@
   width: rem(16);
   height: rem(16);
   transition: opacity 0.2s ease-out;
+
+  @include mq(md) {
+    margin-right: rem(10);
+    font-size: rem(13);
+    width: rem(14);
+    height: rem(14);
+  }
 }
 
 .wp-pagenavi .first:hover {
@@ -95,6 +118,11 @@
   position: absolute;
   top: 50%;
   left: 0;
+
+  @include mq(md) {
+    width: rem(14);
+    height: rem(14);
+  }
 }
 
 .wp-pagenavi .first::before {  // 『≪』の、『＜』の左側
@@ -116,6 +144,13 @@
   width: rem(16);
   height: rem(16);
   transition: opacity 0.2s ease-out;
+
+  @include mq(md) {
+    margin-left: rem(10);
+    font-size: rem(13);
+    width: rem(14);
+    height: rem(14);
+  }
 }
 
 .wp-pagenavi .last:hover {
@@ -133,6 +168,11 @@
   position: absolute;
   top: 50%;
   left: 0;
+
+  @include mq(md) {
+    width: rem(14);
+    height: rem(14);
+  }
 }
 
 .wp-pagenavi .last::before {  // 『≪』の、『＜』の左側
@@ -147,10 +187,18 @@
 /* ====== 「次へ」「前へ」リンク ====== */
 .wp-pagenavi .previouspostslink {
   margin-right: rem(30);
+
+  @include mq(md) {
+    margin-right: rem(10);
+  }
 }
 
 .wp-pagenavi .nextpostslink {
   margin-left: rem(30);
+
+  @include mq(md) {
+    margin-left: rem(10);
+  }
 }
 .wp-pagenavi .previouspostslink,
 .wp-pagenavi .nextpostslink {
@@ -161,6 +209,12 @@
   width: rem(16);
   height: rem(16);
   transition: opacity 0.2s ease-out;
+
+  @include mq(md) {
+    font-size: rem(13);
+    width: rem(14);
+    height: rem(14);
+  }
 }
 
 .wp-pagenavi .previouspostslink:hover,
@@ -179,6 +233,11 @@
   top: 50%;
   left: 0;
   transform: translate(0,-50%) rotate(-45deg);
+
+  @include mq(md) {
+    width: rem(14);
+    height: rem(14);
+  }
 }
 
 .wp-pagenavi .nextpostslink::after {  //『＞』
@@ -192,4 +251,9 @@
   top: 50%;
   left: 0;
   transform: translate(0,-50%) rotate(45deg);
+
+  @include mq(md) {
+    width: rem(14);
+    height: rem(14);
+  }
 }

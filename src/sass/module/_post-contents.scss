@@ -1,0 +1,209 @@
+@use "global" as *;
+
+
+.post-contents {
+  padding-bottom: rem(110);
+
+  @include mq(md) {
+    padding-bottom: rem(65);
+  }
+}
+
+.post-contents__inner {
+
+}
+
+.post-contents__wrap {
+
+}
+
+.post-contents__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: rem(15);
+  border-bottom: 1px solid #2c2c2c;
+}
+
+.post-contents__meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem(12);
+}
+
+.post-contents__category {
+  text-align: center;
+  font-size: rem(13);
+  font-weight: $normal;
+  color: $color-white;
+  padding-block: rem(5);
+  padding-inline: rem(5);  // 念の為最低限を指定
+  min-width: rem(100);
+  border-radius: rem(15);
+
+  background: #60606a;  // 何もカテゴリが選ばれていない場合の背景色を指定
+
+  @include mq(md) {
+    font-size: rem(12);
+    padding-block: rem(4);
+    padding-inline: rem(4);  // 念の為最低限を指定
+  }
+}
+
+.post-contents__category.is-notice {  // カテゴリが『お知らせ』の場合
+  background: #f4aa0a;
+}
+
+.post-contents__category.is-topics {  // カテゴリが『トピックス』の場合
+  background: #67a5e3;
+}
+
+.post-contents__category.is-other {  // カテゴリが『その他』の場合
+  background: #9eacb9;
+}
+
+.post-contents__date {
+  font-size: rem(16);
+  font-weight: $normal;
+  color: $color-font-base-2;
+
+  @include mq(md) {
+    font-size: rem(15);
+  }
+}
+
+.post-contents__list-link {
+  font-size: rem(16);
+  font-weight: $normal;
+  color: #353f48;
+  transition: opacity 0.2s ease-out;
+}
+
+.post-contents__list-link:hover {
+  opacity: 0.4;
+}
+
+
+.post-contents__contents-wrap {
+  margin-top: rem(35);
+
+  @include mq(md) {
+    margin-top: rem(28);
+  }
+}
+
+
+.post-contents__title {  // 投稿のタイトル
+  text-align: center;
+  color: #465a70;
+  font-family: $font-family-en-2;
+  font-size: rem(24);
+  font-weight: $semiBold;
+  line-height: 1.5;
+}
+
+
+
+
+// 『the_content();』で表示される投稿内容を囲う要素
+.post-contents__content {
+  margin-top: rem(30);
+
+  @include mq(md) {
+    margin-top: rem(30);
+  }
+}
+
+// pタグ
+.post-contents__content p {
+  font-size: rem(17);
+  font-weight: $normal;
+  color: $color-font-base-1;
+  line-height: 2.0;
+}
+.post-contents__content p:nth-of-type(n + 2) {
+  margin-top: rem(35);
+}
+/* h1, h2, h3, h4, h5, h6 に隣接する p タグの margin-top を 0 にする (優先度を上げるためにわざわざ優先度の上がる指定をしている) */
+.post-contents__contents-wrap .post-contents__content h1 + p,
+.post-contents__contents-wrap .post-contents__content h2 + p,
+.post-contents__contents-wrap .post-contents__content h3 + p,
+.post-contents__contents-wrap .post-contents__content h4 + p,
+.post-contents__contents-wrap .post-contents__content h5 + p,
+.post-contents__contents-wrap .post-contents__content h6 + p {
+  margin-top: 0;
+}
+
+// aタグ
+.post-contents__content a {
+  color: #2079df;
+  text-decoration: underline;
+
+  font-size: rem(17);
+  font-weight: $normal;
+  line-height: 2.0;
+}
+
+// h2タグ (見出し2)
+.post-contents__content h2 {
+  margin-top: rem(35);
+  font-size: rem(22);
+  font-weight: $semiBold;
+  line-height: 1.5;
+  padding-left: rem(15);
+  position: relative;
+}
+.post-contents__content h2:before {
+  content: "";
+  width: rem(5);
+  height: 100%;
+  background: $color-accent1;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+// h3タグ (見出し3)
+.post-contents__content h3 {
+  margin-top: rem(30);
+  font-size: rem(20);
+  font-weight: $semiBold;
+  line-height: 1.5;
+  padding-left: rem(23);
+  position: relative;
+}
+.post-contents__content h3:before {
+  content: "■";
+  font-size: rem(18);
+  // width: rem(5);
+  // height: rem(5);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+// h4タグ (見出し4)
+.post-contents__content h4 {
+  margin-top: rem(24);
+  font-size: rem(18);
+  font-weight: $bold;
+  line-height: 1.5;
+}
+
+// h5タグ (見出し5)
+.post-contents__content h5 {
+  margin-top: rem(20);
+  font-size: rem(17);
+  font-weight: $bold;
+  line-height: 1.5;
+}
+
+// h6タグ (見出し6)
+.post-contents__content h6 {
+  margin-top: rem(16);
+  font-size: rem(17);
+  line-height: 1.5;
+}

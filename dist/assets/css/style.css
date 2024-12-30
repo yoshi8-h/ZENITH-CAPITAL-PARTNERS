@@ -183,6 +183,10 @@ a {
 	margin-top: 3.75rem;
 }
 
+.l-post-contents {
+	margin-top: 3.125rem;
+}
+
 .l-recruit {
 	margin-top: 3.75rem;
 }
@@ -1809,6 +1813,174 @@ a {
 	min-width: 19.6875rem;
 }
 
+.post-contents {
+	padding-bottom: 6.875rem;
+}
+
+.post-contents__top {
+	align-items: center;
+	border-bottom: 1px solid #2c2c2c;
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 0.9375rem;
+}
+
+.post-contents__meta {
+	align-items: center;
+	display: flex;
+	gap: 0.75rem;
+	justify-content: center;
+}
+
+.post-contents__category {
+	background: #60606a;
+	border-radius: 0.9375rem;
+	color: #fff;
+	font-size: 0.8125rem;
+	font-weight: 400;
+	min-width: 6.25rem;
+	padding-bottom: 0.3125rem;
+	padding-left: 0.3125rem;
+	padding-right: 0.3125rem;
+	padding-top: 0.3125rem;
+	text-align: center;
+}
+
+.post-contents__category.is-notice {
+	background: #f4aa0a;
+}
+
+.post-contents__category.is-topics {
+	background: #67a5e3;
+}
+
+.post-contents__category.is-other {
+	background: #9eacb9;
+}
+
+.post-contents__date {
+	color: #333333;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.post-contents__list-link {
+	color: #353f48;
+	font-size: 1rem;
+	font-weight: 400;
+	transition: opacity 0.2s ease-out;
+}
+
+.post-contents__list-link:hover {
+	opacity: 0.4;
+}
+
+.post-contents__contents-wrap {
+	margin-top: 2.1875rem;
+}
+
+.post-contents__title {
+	color: #465a70;
+	font-family: "Murecho", serif;
+	font-size: 1.5rem;
+	font-weight: 600;
+	line-height: 1.5;
+	text-align: center;
+}
+
+.post-contents__content {
+	margin-top: 1.875rem;
+}
+
+.post-contents__content p {
+	color: #1e1e1e;
+	font-size: 1.0625rem;
+	font-weight: 400;
+	line-height: 2;
+}
+
+.post-contents__content p:nth-of-type(n + 2) {
+	margin-top: 2.1875rem;
+}
+
+/* h1, h2, h3, h4, h5, h6 に隣接する p タグの margin-top を 0 にする (優先度を上げるためにわざわざ優先度の上がる指定をしている) */
+
+.post-contents__contents-wrap .post-contents__content h1 + p,
+.post-contents__contents-wrap .post-contents__content h2 + p,
+.post-contents__contents-wrap .post-contents__content h3 + p,
+.post-contents__contents-wrap .post-contents__content h4 + p,
+.post-contents__contents-wrap .post-contents__content h5 + p,
+.post-contents__contents-wrap .post-contents__content h6 + p {
+	margin-top: 0;
+}
+
+.post-contents__content a {
+	-webkit-text-decoration: underline;
+	color: #2079df;
+	font-size: 1.0625rem;
+	font-weight: 400;
+	line-height: 2;
+	text-decoration: underline;
+}
+
+.post-contents__content h2 {
+	font-size: 1.375rem;
+	font-weight: 600;
+	line-height: 1.5;
+	margin-top: 2.1875rem;
+	padding-left: 0.9375rem;
+	position: relative;
+}
+
+.post-contents__content h2:before {
+	background: #1d61af;
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 0.3125rem;
+}
+
+.post-contents__content h3 {
+	font-size: 1.25rem;
+	font-weight: 600;
+	line-height: 1.5;
+	margin-top: 1.875rem;
+	padding-left: 1.4375rem;
+	position: relative;
+}
+
+.post-contents__content h3:before {
+	content: "■";
+	font-size: 1.125rem;
+	left: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.post-contents__content h4 {
+	font-size: 1.125rem;
+	font-weight: 700;
+	line-height: 1.5;
+	margin-top: 1.5rem;
+}
+
+.post-contents__content h5 {
+	font-size: 1.0625rem;
+	font-weight: 700;
+	line-height: 1.5;
+	margin-top: 1.25rem;
+}
+
+.post-contents__content h6 {
+	font-size: 1.0625rem;
+	line-height: 1.5;
+	margin-top: 1rem;
+}
+
 .post {
 	align-items: flex-start;
 	display: flex;
@@ -2706,6 +2878,10 @@ html {
 }
 
 .l-news-page {
+	margin-top: 2.5rem;
+}
+
+.l-post-contents {
 	margin-top: 2.5rem;
 }
 
@@ -3622,6 +3798,30 @@ html {
 	min-width: 15.625rem;
 }
 
+.post-contents {
+	padding-bottom: 4.0625rem;
+}
+
+.post-contents__category {
+	font-size: 0.75rem;
+	padding-bottom: 0.25rem;
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
+	padding-top: 0.25rem;
+}
+
+.post-contents__date {
+	font-size: 0.9375rem;
+}
+
+.post-contents__contents-wrap {
+	margin-top: 1.75rem;
+}
+
+.post-contents__content {
+	margin-top: 1.875rem;
+}
+
 .post {
 	flex-direction: column;
 	gap: 0.9375rem;
@@ -3934,6 +4134,73 @@ html {
 .top-text__text {
 	font-size: 0.84375rem;
 	margin-top: 0.9375rem;
+}
+
+.wp-pagenavi {
+	gap: 0.5rem;
+}
+
+.wp-pagenavi .page {
+	font-size: 0.8125rem;
+	height: 1.75rem;
+	min-width: 1.75rem;
+}
+
+.wp-pagenavi .current {
+	font-size: 0.8125rem;
+	height: 1.75rem;
+	min-width: 1.75rem;
+}
+
+.wp-pagenavi .first {
+	font-size: 0.8125rem;
+	height: 0.875rem;
+	margin-right: 0.625rem;
+	width: 0.875rem;
+}
+
+.wp-pagenavi .first::before,
+.wp-pagenavi .first::after {
+	height: 0.875rem;
+	width: 0.875rem;
+}
+
+.wp-pagenavi .last {
+	font-size: 0.8125rem;
+	height: 0.875rem;
+	margin-left: 0.625rem;
+	width: 0.875rem;
+}
+
+.wp-pagenavi .last::before,
+.wp-pagenavi .last::after {
+	height: 0.875rem;
+	width: 0.875rem;
+}
+
+.wp-pagenavi .previouspostslink {
+	margin-right: 0.625rem;
+}
+
+.wp-pagenavi .nextpostslink {
+	margin-left: 0.625rem;
+}
+
+.wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink {
+	font-size: 0.8125rem;
+	height: 0.875rem;
+	width: 0.875rem;
+}
+
+.wp-pagenavi .previouspostslink::before {
+	height: 0.875rem;
+	width: 0.875rem;
+}
+
+.wp-pagenavi .nextpostslink::after {
+	height: 0.875rem;
+	width: 0.875rem;
 }
 
 }
