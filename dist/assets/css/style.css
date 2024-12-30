@@ -159,6 +159,10 @@ a {
 	transition: opacity 0.3s;
 }
 
+.l-antisocial {
+	margin-top: 3.75rem;
+}
+
 .l-asset {
 	margin-top: 3.4375rem;
 }
@@ -217,6 +221,20 @@ a {
 
 .l-tenant {
 	margin-top: 3.4375rem;
+}
+
+.antisocial {
+	padding-bottom: 6.875rem;
+}
+
+.antisocial__first-text {
+	color: #333333;
+	font-size: 1.0625rem;
+	font-weight: 400;
+}
+
+.antisocial__list {
+	margin-top: 2.1875rem;
 }
 
 .asset {
@@ -2678,6 +2696,10 @@ a {
 	text-indent: 0.02em;
 }
 
+.title__ja.is-small {
+	font-size: 2.625rem;
+}
+
 .title--2 .title__en {
 	display: none;
 }
@@ -3116,6 +3138,10 @@ html {
 	font-size: 16px;
 }
 
+.l-antisocial {
+	margin-top: 2.5rem;
+}
+
 .l-asset {
 	margin-top: 2.5rem;
 }
@@ -3170,6 +3196,23 @@ html {
 
 .l-tenant {
 	margin-top: 2.5rem;
+}
+
+.antisocial {
+	padding-bottom: 4.0625rem;
+}
+
+.antisocial__inner {
+	max-width: 37.5rem;
+}
+
+.antisocial__first-text {
+	font-size: 0.875rem;
+	line-height: 1.7;
+}
+
+.antisocial__list {
+	margin-top: 1.5625rem;
 }
 
 .asset {
@@ -4427,6 +4470,10 @@ html {
 	padding-top: 2.1875rem;
 }
 
+.sub-fv--2 .sub-fv__contents.is-2row {
+	padding-top: 1.375rem;
+}
+
 .header__nav-item:hover .sub-menu {
 	display: none;
 }
@@ -4494,6 +4541,10 @@ html {
 .title__en {
 	font-size: 2rem;
 	margin-top: -1.25rem;
+}
+
+.title__ja.is-small {
+	font-size: 1.5rem;
 }
 
 .title02 {

@@ -91,3 +91,9 @@
     padding-top: rem(35);
   }
 }
+
+.sub-fv--2 .sub-fv__contents.is-2row {
+  @include mq(md) {
+    padding-top: rem(22);
+  }
+}

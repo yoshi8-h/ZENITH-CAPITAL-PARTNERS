@@ -45,6 +45,14 @@
   text-indent: 0.02em;
 }
 
+.title__ja.is-small {  // 文字サイズが少し小さい場合に付与するクラス (反社会的勢力ページなど)
+  font-size: rem(42);
+
+  @include mq(md) {
+    font-size: rem(24);
+  }
+}
+
 
 
 
