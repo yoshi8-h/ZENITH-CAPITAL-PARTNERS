@@ -16,3 +16,11 @@
 .news-page__posts {
 
 }
+
+.news-page__pagenavi {
+  margin-top: rem(40);
+
+  @include mq(md) {
+    margin-top: rem(30);
+  }
+}

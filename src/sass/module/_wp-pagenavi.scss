@@ -1,0 +1,195 @@
+@use "global" as *;
+
+
+// プラグイン『WP-PageNavi』を使用
+.wp-pagenavi {
+}
+
+.wp-pagenavi__prev {
+}
+
+.wp-pagenavi__current {
+}
+
+.wp-pagenavi__number {
+}
+
+.wp-pagenavi__next {
+}
+
+
+
+/* ページネーション全体のスタイル */
+.wp-pagenavi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem(12);
+}
+
+/* ====== ページ番号リンクのスタイル ====== */
+.wp-pagenavi .page {
+  height: rem(30);  // ページネーションは高さが絶対に変わらないから、高さを指定してOK。
+  min-width: rem(30);  // 最小幅を指定。
+  padding-inline: rem(3);  // paddingは、横方向のみ最低限を指定。縦方向の指定は不要。
+  display: grid;
+  place-items: center;
+
+  color: $color-font-base-1;
+  font-size: rem(16);
+  line-height: normal;
+  transition: background 0.2s ease-out;
+}
+
+.wp-pagenavi .page:hover {  // hover
+  background: #eef0f1;
+  border-radius: rem(5);
+}
+
+/* ====== 現在のページ番号 (総ページ数) ====== */
+.wp-pagenavi .current {
+  height: rem(30);  // ページネーションは高さが絶対に変わらないから、高さを指定してOK。
+  min-width: rem(30);  // 最小幅を指定。
+  padding-inline: rem(3);  // paddingは、横方向のみ最低限を指定。縦方向の指定は不要。
+  display: grid;
+  place-items: center;
+
+  color: $color-font-base-1;
+  font-size: rem(16);
+  line-height: normal;
+  background: #eef0f1;
+  border-radius: rem(5);
+}
+
+
+/* ====== 現在のページの順番 ====== */
+.wp-pagenavi .pages {  // 『1/12』のように、合計何ページある内の何ページ目かを表示する部分クラス名『pages』
+  display: none;
+}
+
+
+/* ====== 最初の一覧ページに飛ぶリンク ====== */
+.wp-pagenavi .first {
+  margin-right: rem(18);
+  font-size: rem(24);
+  display: grid;
+  place-items: center;
+  position: relative;
+  width: rem(16);
+  height: rem(16);
+  transition: opacity 0.2s ease-out;
+}
+
+.wp-pagenavi .first:hover {
+  opacity: 0.4;
+}
+
+.wp-pagenavi .first::before,
+.wp-pagenavi .first::after {
+  content: "";
+  width: rem(16); /* 矢印の太さ */
+  height: rem(16); /* 矢印の高さ */
+  border-top: 1.5px solid $color-font-base-2;
+	border-left: 1.5px solid $color-font-base-2;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.wp-pagenavi .first::before {  // 『≪』の、『＜』の左側
+  transform: translate(0,-50%) rotate(-45deg);
+}
+
+.wp-pagenavi .first::after {  // 『≪』の、『＜』の右側
+  transform: translate(-5px,-50%) rotate(-45deg);
+}
+
+
+/* ====== 最後の一覧ページに飛ぶリンク ====== */
+.wp-pagenavi .last {
+  margin-left: rem(18);
+  font-size: rem(24);
+  display: grid;
+  place-items: center;
+  position: relative;
+  width: rem(16);
+  height: rem(16);
+  transition: opacity 0.2s ease-out;
+}
+
+.wp-pagenavi .last:hover {
+  opacity: 0.4;
+}
+
+.wp-pagenavi .last::before,
+.wp-pagenavi .last::after {
+  content: "";
+  width: rem(16); /* 矢印の太さ */
+  height: rem(16); /* 矢印の高さ */
+  border-top: 1.5px solid $color-font-base-2;
+	border-right: 1.5px solid $color-font-base-2;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.wp-pagenavi .last::before {  // 『≪』の、『＜』の左側
+  transform: translate(0,-50%) rotate(45deg);
+}
+
+.wp-pagenavi .last::after {  // 『≪』の、『＜』の右側
+  transform: translate(-5px,-50%) rotate(45deg);
+}
+
+
+/* ====== 「次へ」「前へ」リンク ====== */
+.wp-pagenavi .previouspostslink {
+  margin-right: rem(30);
+}
+
+.wp-pagenavi .nextpostslink {
+  margin-left: rem(30);
+}
+.wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink {
+  font-size: rem(24);
+  display: grid;
+  place-items: center;
+  position: relative;
+  width: rem(16);
+  height: rem(16);
+  transition: opacity 0.2s ease-out;
+}
+
+.wp-pagenavi .previouspostslink:hover,
+.wp-pagenavi .nextpostslink:hover {  // hover
+  opacity: 0.4;
+}
+
+.wp-pagenavi .previouspostslink::before {  //『＜』
+  content: "";
+  width: rem(16); /* 矢印の太さ */
+  height: rem(16); /* 矢印の高さ */
+  border-top: 1.5px solid $color-font-base-2;
+	border-left: 1.5px solid $color-font-base-2;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0,-50%) rotate(-45deg);
+}
+
+.wp-pagenavi .nextpostslink::after {  //『＞』
+  content: "";
+  width: rem(16); /* 矢印の太さ */
+  height: rem(16); /* 矢印の高さ */
+  border-top: 1.5px solid $color-font-base-2;
+	border-right: 1.5px solid $color-font-base-2;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0,-50%) rotate(45deg);
+}

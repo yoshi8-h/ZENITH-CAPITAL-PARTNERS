@@ -1784,6 +1784,10 @@ a {
 	padding-bottom: 6.875rem;
 }
 
+.news-page__pagenavi {
+	margin-top: 2.5rem;
+}
+
 .news {
 	padding-bottom: 5.625rem;
 	padding-top: 3.75rem;
@@ -2452,6 +2456,191 @@ a {
 	line-height: 2;
 	margin-top: 2.8125rem;
 	text-align: center;
+}
+
+/* ページネーション全体のスタイル */
+
+.wp-pagenavi {
+	align-items: center;
+	display: flex;
+	gap: 0.75rem;
+	justify-content: center;
+}
+
+/* ====== ページ番号リンクのスタイル ====== */
+
+.wp-pagenavi .page {
+	align-items: center;
+	color: #1e1e1e;
+	display: grid;
+	font-size: 1rem;
+	height: 1.875rem;
+	justify-items: center;
+	line-height: normal;
+	min-width: 1.875rem;
+	padding-left: 0.1875rem;
+	padding-right: 0.1875rem;
+	place-items: center;
+	transition: background 0.2s ease-out;
+}
+
+.wp-pagenavi .page:hover {
+	background: #eef0f1;
+	border-radius: 0.3125rem;
+}
+
+/* ====== 現在のページ番号 (総ページ数) ====== */
+
+.wp-pagenavi .current {
+	align-items: center;
+	background: #eef0f1;
+	border-radius: 0.3125rem;
+	color: #1e1e1e;
+	display: grid;
+	font-size: 1rem;
+	height: 1.875rem;
+	justify-items: center;
+	line-height: normal;
+	min-width: 1.875rem;
+	padding-left: 0.1875rem;
+	padding-right: 0.1875rem;
+	place-items: center;
+}
+
+/* ====== 現在のページの順番 ====== */
+
+.wp-pagenavi .pages {
+	display: none;
+}
+
+/* ====== 最初の一覧ページに飛ぶリンク ====== */
+
+.wp-pagenavi .first {
+	align-items: center;
+	display: grid;
+	font-size: 1.5rem;
+	height: 1rem;
+	justify-items: center;
+	margin-right: 1.125rem;
+	place-items: center;
+	position: relative;
+	transition: opacity 0.2s ease-out;
+	width: 1rem;
+}
+
+.wp-pagenavi .first:hover {
+	opacity: 0.4;
+}
+
+.wp-pagenavi .first::before,
+.wp-pagenavi .first::after {
+	border-left: 1.5px solid #333333;
+	border-top: 1.5px solid #333333;
+	content: "";
+	height: 1rem; /* 矢印の高さ */
+	left: 0;
+	position: absolute;
+	top: 50%;
+	width: 1rem; /* 矢印の太さ */
+}
+
+.wp-pagenavi .first::before {
+	transform: translate(0, -50%) rotate(-45deg);
+}
+
+.wp-pagenavi .first::after {
+	transform: translate(-5px, -50%) rotate(-45deg);
+}
+
+/* ====== 最後の一覧ページに飛ぶリンク ====== */
+
+.wp-pagenavi .last {
+	align-items: center;
+	display: grid;
+	font-size: 1.5rem;
+	height: 1rem;
+	justify-items: center;
+	margin-left: 1.125rem;
+	place-items: center;
+	position: relative;
+	transition: opacity 0.2s ease-out;
+	width: 1rem;
+}
+
+.wp-pagenavi .last:hover {
+	opacity: 0.4;
+}
+
+.wp-pagenavi .last::before,
+.wp-pagenavi .last::after {
+	border-right: 1.5px solid #333333;
+	border-top: 1.5px solid #333333;
+	content: "";
+	height: 1rem; /* 矢印の高さ */
+	left: 0;
+	position: absolute;
+	top: 50%;
+	width: 1rem; /* 矢印の太さ */
+}
+
+.wp-pagenavi .last::before {
+	transform: translate(0, -50%) rotate(45deg);
+}
+
+.wp-pagenavi .last::after {
+	transform: translate(-5px, -50%) rotate(45deg);
+}
+
+/* ====== 「次へ」「前へ」リンク ====== */
+
+.wp-pagenavi .previouspostslink {
+	margin-right: 1.875rem;
+}
+
+.wp-pagenavi .nextpostslink {
+	margin-left: 1.875rem;
+}
+
+.wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink {
+	align-items: center;
+	display: grid;
+	font-size: 1.5rem;
+	height: 1rem;
+	justify-items: center;
+	place-items: center;
+	position: relative;
+	transition: opacity 0.2s ease-out;
+	width: 1rem;
+}
+
+.wp-pagenavi .previouspostslink:hover,
+.wp-pagenavi .nextpostslink:hover {
+	opacity: 0.4;
+}
+
+.wp-pagenavi .previouspostslink::before {
+	border-left: 1.5px solid #333333;
+	border-top: 1.5px solid #333333;
+	content: "";
+	height: 1rem; /* 矢印の高さ */
+	left: 0;
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%) rotate(-45deg);
+	width: 1rem; /* 矢印の太さ */
+}
+
+.wp-pagenavi .nextpostslink::after {
+	border-right: 1.5px solid #333333;
+	border-top: 1.5px solid #333333;
+	content: "";
+	height: 1rem; /* 矢印の高さ */
+	left: 0;
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%) rotate(45deg);
+	width: 1rem; /* 矢印の太さ */
 }
 
 @media screen and (max-width: 1440px) {
@@ -3398,6 +3587,10 @@ html {
 
 .news-page {
 	padding-bottom: 4.0625rem;
+}
+
+.news-page__pagenavi {
+	margin-top: 1.875rem;
 }
 
 .news {
