@@ -1897,6 +1897,13 @@ a {
 	border-top: 1px solid #000;
 }
 
+.posts__no-posts {
+	font-size: 1.125rem;
+	padding-bottom: 1.25rem;
+	padding-top: 1.25rem;
+	text-align: center;
+}
+
 .project {
 	padding-bottom: 5.625rem;
 	padding-top: 4.375rem;
@@ -3644,6 +3651,10 @@ html {
 }
 
 .post--main .post__link-text {
+	font-size: 0.875rem;
+}
+
+.posts__no-posts {
 	font-size: 0.875rem;
 }
 

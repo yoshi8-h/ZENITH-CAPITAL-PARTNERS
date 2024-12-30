@@ -283,27 +283,71 @@
           <div class="section-title__en">NEWS / TOPICS</div>
         </h2>
         <div class="news__posts posts">
+          <?php
+          // 最新の投稿3件を取得するクエリ
+          $args = array(
+            'post_type'      => 'post',      // 投稿タイプ
+            'posts_per_page' => 3,           // 表示する投稿数
+            'orderby'        => 'date',      // 並び順
+            'order'          => 'DESC',      // 降順
+          );
+          $latest_posts = new WP_Query($args);
+
+          if ($latest_posts->have_posts()) :
+            while ($latest_posts->have_posts()) :
+              $latest_posts->the_post();
+              // カテゴリの処理
+              $categories = get_the_category();
+              $category_class = '';
+              $category_name = '';
+              if (!empty($categories)) {
+                $first_category = $categories[0];
+                switch ($first_category->slug) {
+                  case 'notice':
+                    $category_class = 'is-notice';
+                    $category_name = 'お知らせ';
+                    break;
+                  case 'topics':
+                    $category_class = 'is-topics';
+                    $category_name = 'トピックス';
+                    break;
+                  case 'other':
+                    $category_class = 'is-other';
+                    $category_name = 'その他';
+                    break;
+                  default:
+                    $category_name = esc_html($first_category->name);
+                    break;
+                }
+              } else {
+                $category_name = 'カテゴリなし';
+              }
+          ?>
           <div class="posts__item post">
             <div class="post__meta">
-              <div class="post__category is-news">お知らせ</div>
+              <div class="post__category <?php echo esc_attr($category_class); ?>">
+                <?php echo esc_html($category_name); ?>
+              </div>
               <time class="post__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d'); ?></time>
             </div>
-            <a href="" class="post__link-text">投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。投稿のテキストが入ります。</a>
+            <a href="<?php the_permalink(); ?>" class="post__link-text">
+              <?php
+                // 投稿の内容を取得して短縮
+                $content = strip_tags(get_the_content());
+                echo mb_substr($content, 0, 120) . '...';
+              ?>
+            </a>
           </div>
-          <div class="posts__item post">
-            <div class="post__meta">
-              <div class="post__category is-topics">トピックス</div>
-              <time class="post__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d'); ?></time>
-            </div>
-            <a href="" class="post__link-text">投稿のテキストが入ります。</a>
-          </div>
-          <div class="posts__item post">
-            <div class="post__meta">
-              <div class="post__category is-other">その他</div>
-              <time class="post__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d'); ?></time>
-            </div>
-            <a href="" class="post__link-text">投稿のテキストが入ります。投稿のテキストが入ります。</a>
-          </div>
+          <?php
+            endwhile;
+          else :
+          ?>
+            <!-- 投稿がない場合の表示 -->
+            <p class="posts__no-posts">現在、最新の投稿がありません。</p>
+          <?php
+          endif;
+          wp_reset_postdata(); // クエリをリセット
+          ?>
         </div>
         <div class="news__btn-wrap">
           <a href="" class="news__btn btn2">

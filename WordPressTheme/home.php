@@ -70,6 +70,9 @@
                 </a>
               </div>
             <?php endwhile; ?>
+          <?php else : ?>
+            <!-- 投稿がない場合の表示 -->
+            <p class="posts__no-posts">現在投稿がありません。</p>
           <?php endif; ?>
         </div>
         <!-- ページネーション -->
