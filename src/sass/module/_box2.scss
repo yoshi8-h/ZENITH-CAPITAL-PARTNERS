@@ -5,6 +5,11 @@
   padding-block: rem(25);
   padding-inline: rem(30);
   border: 1px solid #c2cbdb;
+
+  @include mq(md) {
+    padding-block: rem(15);
+    padding-inline: rem(15);
+  }
 }
 
 .box2.is-ml {  // margin-leftが必要な箇所
@@ -19,10 +24,18 @@
   font-size: rem(18);
   font-weight: $semiBold;
   color: $color-font-base-2;
+
+  @include mq(md) {
+    font-size: rem(16);
+  }
 }
 
 .box2__body {
   margin-top: rem(14);
+
+  @include mq(md) {
+    margin-top: rem(12);
+  }
 }
 
 .box2__list {
@@ -31,12 +44,22 @@
   justify-content: center;
   align-items: flex-start;
   gap: rem(10);
+
+  @include mq(md) {
+    gap: rem(4);
+  }
 }
 
 .box2__list.is-row {  // 横並びの場合
   flex-direction: row;
   justify-content: flex-start;
   gap: rem(70);
+
+  @include mq(md) {
+    flex-direction: column;
+    justify-content: center;
+    gap: rem(4);
+  }
 }
 
 .box2__list-item {
@@ -48,7 +71,16 @@
 
   @include mq(md) {
     font-size: rem(14);
-    padding-left: rem(12);
+    padding-left: 0;
+  }
+}
+
+.box2__list-item-sp {  // SPのみ表示形式
+  display: none;
+
+  @include mq(md) {
+    display: block;
+    font-size: rem(14);
   }
 }
 
@@ -64,7 +96,6 @@
   transform: translateY(calc(-50% + 1px));
 
   @include mq(md) {
-    width: rem(8);
-    height: rem(8);
+    display: none;
   }
 }

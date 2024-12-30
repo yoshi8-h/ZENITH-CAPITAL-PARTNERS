@@ -25,8 +25,10 @@
             <div class="box2__title">受付窓口</div>
             <div class="box2__body">
               <ul class="box2__list is-row">
-                <li class="box2__list-item">電話　：　03-5222-4310　（平日9時～17時）</li>
-                <li class="box2__list-item">メール　：　xxxx@xxxx.co.jp</li>
+                <li class="box2__list-item u-desktop">電話　：　03-5222-4310　（平日9時～17時）</li>
+                <li class="box2__list-item u-desktop">メール　：　xxxx@xxxx.co.jp</li>
+                <li class="box2__list-item-sp">電話：03-5222-4310（平日9時～17時）</li>
+                <li class="box2__list-item-sp">メール：xxxx@xxxx.co.jp</li>
               </ul>
             </div>
           </div>
@@ -46,8 +48,8 @@
               <div class="box2__title">特定非営利活動法人証券・金融商品あっせん相談センター</div>
               <div class="box2__body">
                 <ul class="box2__list">
-                  <li class="box2__list-item">〒103-0025　東京都中央区日本橋茅場町2-1-1</li>
-                  <li class="box2__list-item">電話 ： 0120-64-5005（フリーダイヤル）　　　受付時間 ： 月～金 　9:00～17:00（祝日等を除く）</li>
+                  <li class="box2__list-item">〒103-0025　<br class="u-mobile">東京都中央区日本橋茅場町2-1-1</li>
+                  <li class="box2__list-item">電話 ： 0120-64-5005（フリーダイヤル）　　　受付時間 ： 月～金 　<br class="u-mobile">9:00～17:00（祝日等を除く）</li>
                 </ul>
               </div>
             </div>
@@ -73,8 +75,8 @@
               <div class="box2__title">東京弁護士会　紛争解決センター</div>
               <div class="box2__body">
                 <ul class="box2__list">
-                  <li class="box2__list-item">〒100-0013 東京都千代田区霞が関1-1-3 東京弁護士会</li>
-                  <li class="box2__list-item">電話 ： 03-3581-0031　　　受付時間：月～金（祝日・年末年始を除く）9:00～12:00　13:00～15:00</li>
+                  <li class="box2__list-item">〒100-0013 <br class="u-mobile">東京都千代田区霞が関1-1-3 東京弁護士会</li>
+                  <li class="box2__list-item">電話 ： 03-3581-0031　　　<br class="u-mobile">受付時間：月～金（祝日・年末年始を除く）<br class="u-mobile">9:00～12:00　13:00～15:00</li>
                 </ul>
               </div>
             </div>
@@ -82,8 +84,8 @@
               <div class="box2__title">第一東京弁護士会　仲裁センター</div>
               <div class="box2__body">
                 <ul class="box2__list">
-                  <li class="box2__list-item">〒100-0013 東京都千代田区霞が関1-1-3 第一東京弁護士会仲裁センター事務局</li>
-                  <li class="box2__list-item">電話 ： 03-3595-8588　　　受付時間：月～金（祝日・年末年始を除く）10:00～12:00　13:00～16:00</li>
+                  <li class="box2__list-item">〒100-0013 <br class="u-mobile">東京都千代田区霞が関1-1-3 第一東京弁護士会仲裁センター事務局</li>
+                  <li class="box2__list-item">電話 ： 03-3595-8588　　　<br class="u-mobile">受付時間：月～金（祝日・年末年始を除く）<br class="u-mobile">10:00～12:00　13:00～16:00</li>
                 </ul>
               </div>
             </div>
@@ -91,8 +93,8 @@
               <div class="box2__title">第二東京弁護士会　仲裁センター</div>
               <div class="box2__body">
                 <ul class="box2__list">
-                  <li class="box2__list-item">〒100-0013 東京都千代田区霞が関1-1-3 弁護士会館9階</li>
-                  <li class="box2__list-item">電話 ： 03-3581-2249　　　受付時間：月～金（祝日・年末年始を除く）9:00～12:00　13:00～17:00</li>
+                  <li class="box2__list-item">〒100-0013 <br class="u-mobile">東京都千代田区霞が関1-1-3 弁護士会館9階</li>
+                  <li class="box2__list-item">電話 ： 03-3581-2249　　　<br class="u-mobile">受付時間：月～金（祝日・年末年始を除く）<br class="u-mobile">9:00～12:00　13:00～17:00</li>
                 </ul>
               </div>
             </div>
