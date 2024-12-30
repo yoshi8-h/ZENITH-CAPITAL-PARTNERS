@@ -1,0 +1,70 @@
+@use "global" as *;
+
+
+.box2 {
+  padding-block: rem(25);
+  padding-inline: rem(30);
+  border: 1px solid #c2cbdb;
+}
+
+.box2.is-ml {  // margin-leftが必要な箇所
+  margin-left: rem(20);
+
+  @include mq(md) {
+    margin-left: 0;
+  }
+}
+
+.box2__title {
+  font-size: rem(18);
+  font-weight: $semiBold;
+  color: $color-font-base-2;
+}
+
+.box2__body {
+  margin-top: rem(14);
+}
+
+.box2__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: rem(10);
+}
+
+.box2__list.is-row {  // 横並びの場合
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: rem(70);
+}
+
+.box2__list-item {
+  font-size: rem(17);
+  font-weight: $normal;
+  color: $color-font-base-2;
+  padding-left: rem(18);
+  position: relative;
+
+  @include mq(md) {
+    font-size: rem(14);
+    padding-left: rem(12);
+  }
+}
+
+.box2__list-item::before {  // 手前の『●』
+  content: "";
+  width: rem(10);
+  height: rem(10);
+  border-radius: 50%;
+  background: $color-font-base-2;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(calc(-50% + 1px));
+
+  @include mq(md) {
+    width: rem(8);
+    height: rem(8);
+  }
+}

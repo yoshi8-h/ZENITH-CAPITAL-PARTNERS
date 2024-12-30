@@ -1,0 +1,103 @@
+@use "global" as *;
+
+
+.resolution {
+  padding-bottom: rem(110);
+
+  @include mq(md) {
+    padding-bottom: rem(65);
+  }
+}
+
+.resolution__inner {
+
+}
+
+.resolution__wrap {
+
+}
+
+.resolution__first-text {
+  font-size: rem(17);
+  font-weight: $normal;
+  color: $color-font-base-2;
+
+  @include mq(md) {
+    font-size: rem(14);
+    line-height: 1.7;
+  }
+}
+
+.resolution__box {
+  margin-top: rem(30);
+}
+
+.resolution__texts {
+  margin-top: rem(45);
+
+  @include mq(md) {
+    margin-top: rem(35);
+  }
+}
+
+.resolution__text {
+  margin-top: rem(15);
+  font-size: rem(17);
+  font-weight: $normal;
+  color: $color-font-base-2;
+}
+
+.resolution__text.is-ml {  // margin-leftが必要な箇所
+  margin-left: rem(20);
+
+  @include mq(md) {
+    margin-left: 0;
+  }
+}
+
+.resolution__text.is-mt {  // margin-topが必要な箇所
+  margin-top: rem(30);
+
+  @include mq(md) {
+    margin-top: rem(20);
+  }
+}
+
+.resolution__list {
+  margin-top: rem(15);
+  margin-left: rem(20);
+}
+
+.resolution__list-item {
+  font-size: rem(17);
+  font-weight: $normal;
+  color: $color-font-base-2;
+  line-height: 1.8;
+  list-style: none;
+  padding-left: 2.2em;
+  text-indent: -1.9em;
+
+  @include mq(md) {
+    font-size: rem(14);
+    line-height: 1.7;
+    padding-left: 1.3em;
+  }
+}
+
+.resolution__texts2 {
+  margin-top: rem(45);
+
+  @include mq(md) {
+    margin-top: rem(35);
+  }
+}
+
+.resolution__title {
+  font-size: rem(18);
+  font-weight: $semiBold;
+  color: $color-font-base-2;
+
+  @include mq(md) {
+    font-size: rem(15);
+  }
+}

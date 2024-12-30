@@ -24,7 +24,7 @@
           <div class="resolution__box box2">
             <div class="box2__title">受付窓口</div>
             <div class="box2__body">
-              <ul class="box2__list">
+              <ul class="box2__list is-row">
                 <li class="box2__list-item">電話　：　03-5222-4310　（平日9時～17時）</li>
                 <li class="box2__list-item">メール　：　xxxx@xxxx.co.jp</li>
               </ul>
@@ -41,8 +41,8 @@
           </div>
           <div class="resolution__texts2">
             <div class="resolution__title">第二種金融商品取引業務に係る苦情等</div>
-            <p class="resolution__text">第二種金融商品取引業務に係る苦情等のお申出に対しましては、当社が利用登録をしている、特定非営利活動法人証券・金融商品あっせん相談センターを利用することにより、金融商品取引業等業務関連の苦情の解決及び紛争の解決を図ります。この団体をご利用になる場合には、次の連絡先までお申出下さい。</p>
-            <div class="resolution__box box2">
+            <p class="resolution__text is-ml">第二種金融商品取引業務に係る苦情等のお申出に対しましては、当社が利用登録をしている、特定非営利活動法人証券・金融商品あっせん相談センターを利用することにより、金融商品取引業等業務関連の苦情の解決及び紛争の解決を図ります。この団体をご利用になる場合には、次の連絡先までお申出下さい。</p>
+            <div class="resolution__box box2 is-ml">
               <div class="box2__title">特定非営利活動法人証券・金融商品あっせん相談センター</div>
               <div class="box2__body">
                 <ul class="box2__list">
@@ -51,7 +51,7 @@
                 </ul>
               </div>
             </div>
-            <p class="resolution__text">なお、あっせん相談センターが行う苦情解決及びあっせん手続きの標準的な流れは次のとおりです。 詳しくは、同センターにご照会下さい。</p>
+            <p class="resolution__text is-ml is-mt">なお、あっせん相談センターが行う苦情解決及びあっせん手続きの標準的な流れは次のとおりです。 詳しくは、同センターにご照会下さい。</p>
           </div>
           <div class="resolution__texts2">
             <div class="resolution__title">苦情解決の標準的な流れ</div>
@@ -68,8 +68,8 @@
           </div>
           <div class="resolution__texts2">
             <div class="resolution__title">投資助言・代理業務に係る苦情等</div>
-            <p class="resolution__text">投資助言・代理業務に係る苦情等のお申出に対する紛争の解決に関しては、東京弁護士会、第一東京弁護士会及び第二東京弁護士会（以下、「三弁護士会」と総称します。）と協定を締結し、東京弁護士会の設置・運営する東京弁護士会紛争解決センター、第一東京弁護士会の設置・運営する第一弁護士会仲裁センターおよび第二東京弁護士会の設置・運営する第二東京弁護士会仲裁センター（以上三センターを「仲裁センターという」）を利用したあっせん・仲裁手続きにより金融商品取引行等業務関連紛争の解決を図ります。これらの団体をご利用になる場合には、次の連絡先までお申出下さい。</p>
-            <div class="resolution__box box2">
+            <p class="resolution__text is-ml">投資助言・代理業務に係る苦情等のお申出に対する紛争の解決に関しては、東京弁護士会、第一東京弁護士会及び第二東京弁護士会（以下、「三弁護士会」と総称します。）と協定を締結し、東京弁護士会の設置・運営する東京弁護士会紛争解決センター、第一東京弁護士会の設置・運営する第一弁護士会仲裁センターおよび第二東京弁護士会の設置・運営する第二東京弁護士会仲裁センター（以上三センターを「仲裁センターという」）を利用したあっせん・仲裁手続きにより金融商品取引行等業務関連紛争の解決を図ります。これらの団体をご利用になる場合には、次の連絡先までお申出下さい。</p>
+            <div class="resolution__box box2 is-ml">
               <div class="box2__title">東京弁護士会　紛争解決センター</div>
               <div class="box2__body">
                 <ul class="box2__list">
@@ -78,7 +78,7 @@
                 </ul>
               </div>
             </div>
-            <div class="resolution__box box2">
+            <div class="resolution__box box2 is-ml">
               <div class="box2__title">第一東京弁護士会　仲裁センター</div>
               <div class="box2__body">
                 <ul class="box2__list">
@@ -87,7 +87,7 @@
                 </ul>
               </div>
             </div>
-            <div class="resolution__box box2">
+            <div class="resolution__box box2 is-ml">
               <div class="box2__title">第二東京弁護士会　仲裁センター</div>
               <div class="box2__body">
                 <ul class="box2__list">
@@ -96,7 +96,7 @@
                 </ul>
               </div>
             </div>
-            <p class="resolution__text">なお、仲裁センターが行う紛争解決手続きの標準的な流れは次のとおりです。詳しくは、同センターにご照会下さい。</p>
+            <p class="resolution__text is-ml">なお、仲裁センターが行う紛争解決手続きの標準的な流れは次のとおりです。詳しくは、同センターにご照会下さい。</p>
           </div>
           <div class="resolution__texts2">
             <div class="resolution__title">苦情解決の標準的な流れ</div>
