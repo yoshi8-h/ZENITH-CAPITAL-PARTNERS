@@ -20,7 +20,7 @@
     <section class="privacy l-privacy">
       <div class="privacy__inner inner">
         <div class="privacy__wrap">
-          <p class="privacy__first-text"> 当社（ゼニス・キャピタル・パートナーズ株式会社）は、個人情報の保護に関する法律（以下｢個人情報保護法｣という。）に基づき、下記の事項を公表いたします。</p>
+          <p class="privacy__first-text">当社（ゼニス・キャピタル・パートナーズ株式会社）は、個人情報の保護に関する法律（以下｢個人情報保護法｣という。）に基づき、下記の事項を公表いたします。</p>
           <ol class="privacy__list list">
             <li class="list__item">
               <div class="list__item-title">1．個人情報に対する当社の基本的姿勢</div>
