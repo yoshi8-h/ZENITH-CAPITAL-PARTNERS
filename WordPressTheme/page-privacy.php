@@ -33,12 +33,12 @@
             <li class="list__item">
               <div class="list__item-title">3．お客様の個人情報の利用目的</div>
               <p class="list__item-text">当社は、次の目的で個人情報を利用します。なお、お客様からのお申出があった場合には、この一部又は全部の利用を取りやめます。</p>
-              <p class="list__item-list">
-                ①  当社とお客様との契約の締結又は履行、賃貸取引にあたっては契約管理、売買取引にあたっては契約後の管理・アフターサービスの実施のため<br
-                >②  当社の不動産物件及びサービスの紹介並びにお客様にとって有用と思われるサービス等を紹介するため<br
-                >③  当社が取扱いを予定している不動産物件に関する事例資料収集のため<br
-                >④  お客様からご依頼いただいた不動産調査業務等に関するサービスの提供のため
-              </p>
+              <ol class="list__item-list">
+                <li class="list__item-list-item">① 当社とお客様との契約の締結又は履行、賃貸取引にあたっては契約管理、売買取引にあたっては契約後の管理・アフターサービスの実施のため</li>
+                <li class="list__item-list-item">② 当社の不動産物件及びサービスの紹介並びにお客様にとって有用と思われるサービス等を紹介するため</li>
+                <li class="list__item-list-item">③ 当社が取扱いを予定している不動産物件に関する事例資料収集のため</li>
+                <li class="list__item-list-item">④ お客様からご依頼いただいた不動産調査業務等に関するサービスの提供のため</li>
+              </ol>
             </li>
             <li class="list__item">
               <div class="list__item-title">4．お客様の個人情報の利用目的</div>
@@ -62,10 +62,10 @@
             </li>
             <li class="list__item">
               <div class="list__item-title">9．お問い合わせ先</div>
-              <p class="list__item-text">〒100-0006 千代田区有楽町一丁目9番4号 蚕糸会館7階　ゼニス・キャピタル・パートナーズ株式会社 管理部</p>
+              <p class="list__item-text">〒100-0006 <br class="u-mobile">千代田区有楽町一丁目9番4号 蚕糸会館7階　<br class="u-mobile">ゼニス・キャピタル・パートナーズ株式会社 管理部</p>
               <div class="list__item-info">
                 <div class="list__item-info-item">電話　：　03-5222-4310　（平日9時～17時）</div>
-                <div class="list__item-info-item">メール ：　xxxx@xxxx.co.jp</div>
+                <div class="list__item-info-item">メール　：　xxxx@xxxx.co.jp</div>
               </div>
             </li>
             <li class="list__item">

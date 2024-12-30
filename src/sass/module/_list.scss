@@ -13,7 +13,7 @@
   margin-top: rem(40);
 
   @include mq(md) {
-    margin-top: rem(30);
+    margin-top: rem(20);
   }
 
 }
@@ -22,6 +22,10 @@
   font-size: rem(18);
   font-weight: $semiBold;
   color: $color-font-base-2;
+
+  @include mq(md) {
+    font-size: rem(15);
+  }
 }
 
 .list__item-text {
@@ -31,14 +35,37 @@
   font-weight: $normal;
   line-height: 2.0;
   color: $color-font-base-2;
+
+  @include mq(md) {
+    margin-left: 0;
+    margin-top: rem(10);
+    font-size: rem(14);
+    line-height: 1.7;
+  }
 }
 
 .list__item-list {
-  margin-left: rem(40);
+  margin-left: rem(30);
   margin-top: rem(6);
+
+  @include mq(md) {
+    margin-left: 0;
+  }
+}
+
+.list__item-list-item {
   font-size: rem(17);
   font-weight: $normal;
   line-height: 2.0;
+  list-style: none;
+  padding-left: 2.2em;
+  text-indent: -1.2em;
+
+  @include mq(md) {
+    font-size: rem(14);
+    line-height: 1.7;
+    padding-left: 1.3em;
+  }
 }
 
 .list__item-info {
@@ -48,6 +75,14 @@
   justify-content: flex-start;
   align-items: flex-start;
   gap: rem(70);
+
+  @include mq(md) {
+    margin-left: 0;
+    margin-top: rem(4);
+    flex-direction: column;
+    justify-content: center;
+    gap: rem(6);
+  }
 }
 
 .list__item-info-item {
@@ -56,6 +91,11 @@
   color: $color-font-base-2;
   padding-left: rem(18);
   position: relative;
+
+  @include mq(md) {
+    font-size: rem(14);
+    padding-left: rem(12);
+  }
 }
 
 .list__item-info-item::before {  // 手前の『●』
@@ -68,4 +108,9 @@
   top: 50%;
   left: 0;
   transform: translateY(calc(-50% + 1px));
+
+  @include mq(md) {
+    width: rem(8);
+    height: rem(8);
+  }
 }

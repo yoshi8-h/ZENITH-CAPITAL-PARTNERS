@@ -10,7 +10,9 @@
 }
 
 .privacy__inner {
-
+  // @include mq(md) {
+  //   max-width: rem(600);
+  // }
 }
 
 .privacy__wrap {
@@ -21,8 +23,17 @@
   font-size: rem(17);
   font-weight: $normal;
   color: $color-font-base-2;
+
+  @include mq(md) {
+    font-size: rem(14);
+    line-height: 1.7;
+  }
 }
 
 .privacy__list {
   margin-top: rem(35);
+
+  @include mq(md) {
+    margin-top: rem(30);
+  }
 }

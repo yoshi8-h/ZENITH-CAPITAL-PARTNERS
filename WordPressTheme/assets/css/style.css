@@ -1650,11 +1650,17 @@ a {
 }
 
 .list__item-list {
+	margin-left: 1.875rem;
+	margin-top: 0.375rem;
+}
+
+.list__item-list-item {
 	font-size: 1.0625rem;
 	font-weight: 400;
 	line-height: 2;
-	margin-left: 2.5rem;
-	margin-top: 0.375rem;
+	list-style: none;
+	padding-left: 2.2em;
+	text-indent: -1.2em;
 }
 
 .list__item-info {
@@ -3719,7 +3725,46 @@ html {
 }
 
 .list__item:nth-of-type(n + 2) {
-	margin-top: 1.875rem;
+	margin-top: 1.25rem;
+}
+
+.list__item-title {
+	font-size: 0.9375rem;
+}
+
+.list__item-text {
+	font-size: 0.875rem;
+	line-height: 1.7;
+	margin-left: 0;
+	margin-top: 0.625rem;
+}
+
+.list__item-list {
+	margin-left: 0;
+}
+
+.list__item-list-item {
+	font-size: 0.875rem;
+	line-height: 1.7;
+	padding-left: 1.3em;
+}
+
+.list__item-info {
+	flex-direction: column;
+	gap: 0.375rem;
+	justify-content: center;
+	margin-left: 0;
+	margin-top: 0.25rem;
+}
+
+.list__item-info-item {
+	font-size: 0.875rem;
+	padding-left: 0.75rem;
+}
+
+.list__item-info-item::before {
+	height: 0.5rem;
+	width: 0.5rem;
 }
 
 .management-policy__inner {
@@ -3963,6 +4008,15 @@ html {
 
 .privacy {
 	padding-bottom: 4.0625rem;
+}
+
+.privacy__first-text {
+	font-size: 0.875rem;
+	line-height: 1.7;
+}
+
+.privacy__list {
+	margin-top: 1.875rem;
 }
 
 .project {
