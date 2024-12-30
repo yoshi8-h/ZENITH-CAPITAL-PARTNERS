@@ -139,10 +139,13 @@
 .post-contents__content a {
   color: #2079df;
   text-decoration: underline;
-
   font-size: rem(17);
   font-weight: $normal;
   line-height: 2.0;
+  transition: opacity 0.2s ease-out;
+}
+.post-contents__content a:hover {  // hover
+  opacity: 0.4;
 }
 
 // h2タグ (見出し2)

@@ -5,8 +5,8 @@
     <div class="sub-fv">
       <div class="sub-fv__inner">
         <picture class="sub-fv__bg">
-          <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/sub-fv_bg-solution.webp">
-          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/sub-fv_bg-solution-sp.webp" alt="">
+          <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/sub-fv_bg-news.webp">
+          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/sub-fv_bg-news-sp.webp" alt="">
         </picture>
         <div class="sub-fv__contents">
           <h2 class="sub-fv__title title">

@@ -1921,6 +1921,11 @@ a {
 	font-weight: 400;
 	line-height: 2;
 	text-decoration: underline;
+	transition: opacity 0.2s ease-out;
+}
+
+.post-contents__content a:hover {
+	opacity: 0.4;
 }
 
 .post-contents__content h2 {
@@ -2240,6 +2245,18 @@ a {
 	z-index: 20;
 }
 
+.sub-fv--2 .sub-fv__text {
+	display: none;
+}
+
+.sub-fv--2 .sub-fv__inner {
+	min-height: 15rem;
+}
+
+.sub-fv--2 .sub-fv__contents {
+	padding-top: 4.375rem;
+}
+
 .sub-menu {
 	background: #fff;
 	border-bottom: 1px solid #b7c7e2;
@@ -2425,6 +2442,10 @@ a {
 .title__ja.is-narrow {
 	letter-spacing: 0.02em;
 	text-indent: 0.02em;
+}
+
+.title--2 .title__en {
+	display: none;
 }
 
 .title02 {
@@ -3975,6 +3996,14 @@ html {
 .sub-fv__text {
 	font-size: 0.75rem;
 	margin-top: 0.375rem;
+}
+
+.sub-fv--2 .sub-fv__inner {
+	min-height: 8.125rem;
+}
+
+.sub-fv--2 .sub-fv__contents {
+	padding-top: 2.1875rem;
 }
 
 .header__nav-item:hover .sub-menu {

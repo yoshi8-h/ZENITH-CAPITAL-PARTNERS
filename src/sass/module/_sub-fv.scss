@@ -60,3 +60,34 @@
     font-size: rem(12);
   }
 }
+
+
+
+
+// =======================================
+// モディファイア
+// =======================================
+// sub-fv--2 (個人情報保護方針などのページの、英語のタイトルがないページ用)
+.sub-fv--2 {
+
+}
+
+.sub-fv--2 .sub-fv__text {
+  display: none;
+}
+
+.sub-fv--2 .sub-fv__inner {
+  min-height: rem(240);
+
+  @include mq(md) {
+    min-height: rem(130);
+  }
+}
+
+.sub-fv--2 .sub-fv__contents {
+  padding-top: rem(70);
+
+  @include mq(md) {
+    padding-top: rem(35);
+  }
+}
