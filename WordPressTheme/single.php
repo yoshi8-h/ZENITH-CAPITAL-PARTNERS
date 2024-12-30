@@ -59,7 +59,7 @@
               </div>
               <time class="post-contents__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d'); ?></time>
             </div>
-            <a href="" class="post-contents__list-link">ニュース・トピックス一覧に戻る　→</a>
+            <a href="<?php echo esc_url(get_permalink(get_page_by_path('news'))); ?>" class="post-contents__list-link">ニュース・トピックス一覧に戻る　→</a>
           </div>
           <div class="post-contents__contents-wrap">
             <h1 class="post-contents__title"><?php the_title(); ?></h1>
