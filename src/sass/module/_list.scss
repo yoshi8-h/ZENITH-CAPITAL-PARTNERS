@@ -1,0 +1,71 @@
+@use "global" as *;
+
+
+.list {
+
+}
+
+.list__item {
+
+}
+
+.list__item:nth-of-type(n + 2) {
+  margin-top: rem(40);
+
+  @include mq(md) {
+    margin-top: rem(30);
+  }
+
+}
+
+.list__item-title {
+  font-size: rem(18);
+  font-weight: $semiBold;
+  color: $color-font-base-2;
+}
+
+.list__item-text {
+  margin-left: rem(20);
+  margin-top: rem(13);
+  font-size: rem(17);
+  font-weight: $normal;
+  line-height: 2.0;
+  color: $color-font-base-2;
+}
+
+.list__item-list {
+  margin-left: rem(40);
+  margin-top: rem(6);
+  font-size: rem(17);
+  font-weight: $normal;
+  line-height: 2.0;
+}
+
+.list__item-info {
+  margin-left: rem(20);
+  margin-top: rem(6);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: rem(70);
+}
+
+.list__item-info-item {
+  font-size: rem(17);
+  font-weight: $normal;
+  color: $color-font-base-2;
+  padding-left: rem(18);
+  position: relative;
+}
+
+.list__item-info-item::before {  // 手前の『●』
+  content: "";
+  width: rem(10);
+  height: rem(10);
+  border-radius: 50%;
+  background: $color-font-base-2;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(calc(-50% + 1px));
+}
