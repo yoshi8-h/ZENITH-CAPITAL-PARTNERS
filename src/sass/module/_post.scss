@@ -60,6 +60,8 @@
   min-width: rem(100);
   border-radius: rem(15);
 
+  background: #60606a;  // 何もカテゴリが選ばれていない場合の背景色を指定
+
   @include mq(md) {
     font-size: rem(12);
     padding-block: rem(4);
@@ -67,7 +69,7 @@
   }
 }
 
-.post__category.is-news {  // カテゴリが『お知らせ』の場合
+.post__category.is-notice {  // カテゴリが『お知らせ』の場合
   background: #f4aa0a;
 }
 

@@ -25,9 +25,41 @@
           <?php if (have_posts()) : ?>
             <?php while (have_posts()) : ?>
               <?php the_post(); ?>
-              <div class="posts__item post post--main js-fadeInUp">
+              <div class="posts__item post post--main js-fadeInUpFirst">
                 <div class="post__meta">
-                  <div class="post__category is-news">お知らせ</div>
+                  <?php
+                    // 投稿のカテゴリを取得
+                    $categories = get_the_category();
+                    $category_class = '';
+                    $category_name = '';
+                    if (!empty($categories)) {
+                      // 最初のカテゴリを取得
+                      $first_category = $categories[0];
+                      switch ($first_category->slug) {
+                        case 'notice':
+                          $category_class = 'is-notice';
+                          $category_name = 'お知らせ';
+                          break;
+                        case 'topics':
+                          $category_class = 'is-topics';
+                          $category_name = 'トピックス';
+                          break;
+                        case 'other':
+                          $category_class = 'is-other';
+                          $category_name = 'その他';
+                          break;
+                        default:
+                          $category_name = esc_html($first_category->name);
+                          break;
+                      }
+                    } else {
+                      // カテゴリがない場合
+                      $category_name = 'カテゴリなし';
+                    }
+                  ?>
+                  <div class="post__category <?php echo esc_attr($category_class); ?>">
+                    <?php echo esc_html($category_name); ?>
+                  </div>
                   <time class="post__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d'); ?></time>
                 </div>
                 <a href="<?php the_permalink(); ?>" class="post__link-text">

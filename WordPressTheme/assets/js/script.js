@@ -237,3 +237,24 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  var fadeInUps = document.querySelectorAll(".js-fadeInUpFirst"); // ページ内の、このアニメーションをさせたい全ての要素を取得
+
+  fadeInUps.forEach(function (item) {
+    gsap.fromTo(item, {
+      y: 20,
+      autoAlpha: 0
+    }, {
+      y: 0,
+      autoAlpha: 1,
+      scrollTrigger: {
+        trigger: item,
+        start: 'top 90%' // 『is-top-element』クラスも同時に付与されている要素のみ、発火位置を下め(50%)に調整。→ページの先頭付近にある要素は、scrollTriggerでスクロールしてアニメーションが発火する位置を、元から超えているため、画面リロード時に、すでにアニメーションが発火された状態になってしまっているため、それを防ぐ方法。
+        // markers:{
+        //   startColor: "green",
+        // },
+      }
+    });
+  });
+});
