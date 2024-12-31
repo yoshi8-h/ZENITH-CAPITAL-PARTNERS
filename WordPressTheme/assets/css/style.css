@@ -159,6 +159,10 @@ a {
 	transition: opacity 0.3s;
 }
 
+.l-anchors {
+	margin-top: 1.875rem;
+}
+
 .l-antisocial {
 	margin-top: 3.75rem;
 }
@@ -221,6 +225,31 @@ a {
 
 .l-tenant {
 	margin-top: 3.4375rem;
+}
+
+.anchors__wrap {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.anchors__item {
+	border-left: 1px solid #b6bcc8;
+	color: #333333;
+	display: inline-block;
+	font-size: 1rem;
+	padding-bottom: 0.1875rem;
+	padding-left: 1.875rem;
+	padding-right: 1.875rem;
+	padding-top: 0.1875rem;
+}
+
+.anchors__item:last-of-type {
+	border-right: 1px solid #b6bcc8;
+}
+
+.anchors__item:hover {
+	opacity: 0.6;
 }
 
 .antisocial {
@@ -3168,6 +3197,10 @@ html {
 
 html {
 	font-size: 16px;
+}
+
+.l-anchors {
+	margin-top: 1.5625rem;
 }
 
 .l-antisocial {
