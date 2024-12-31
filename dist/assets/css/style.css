@@ -227,6 +227,10 @@ a {
 	margin-top: 3.4375rem;
 }
 
+.l-top-message {
+	margin-top: 3.125rem;
+}
+
 .anchors__wrap {
 	align-items: center;
 	display: flex;
@@ -2936,6 +2940,78 @@ a {
 	font-size: 0.7875rem;
 }
 
+.top-message {
+	padding-bottom: 5.625rem;
+}
+
+.top-message__contents {
+	margin-top: 3.125rem;
+}
+
+.top-message__img-area {
+	position: relative;
+}
+
+.top-message__img {
+	-o-object-fit: cover;
+	aspect-ratio: 1200/493;
+	max-width: 75rem;
+	object-fit: cover;
+	width: 100%;
+}
+
+.top-message__img img {
+	-o-object-fit: cover;
+	aspect-ratio: 1200/493;
+	max-width: 75rem;
+	object-fit: cover;
+	width: 100%;
+}
+
+.top-message__img-text {
+	color: #3e4955;
+	font-size: 1.4375rem;
+	font-weight: 600;
+	position: absolute;
+	right: 7.5rem;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.top-message__messages {
+	margin-top: 3.125rem;
+}
+
+.top-message__message {
+	color: #1e1e1e;
+	font-size: 1.0625rem;
+	font-weight: 400;
+	line-height: 2;
+}
+
+.top-message__message:nth-of-type(n + 2) {
+	margin-top: 2.5rem;
+}
+
+.top-message__president-name {
+	-o-object-fit: contain;
+	aspect-ratio: 325/25;
+	margin: 1.875rem;
+	margin-left: auto;
+	max-width: 20.3125rem;
+	object-fit: contain;
+	width: 100%;
+}
+
+.top-message__president-name img {
+	-o-object-fit: contain;
+	aspect-ratio: 325/25;
+	max-width: 20.3125rem;
+	object-fit: contain;
+	width: 100%;
+}
+
 .top-text {
 	padding-bottom: 9.375rem;
 	padding-top: 4.6875rem;
@@ -3260,6 +3336,10 @@ html {
 }
 
 .l-tenant {
+	margin-top: 2.5rem;
+}
+
+.l-top-message {
 	margin-top: 2.5rem;
 }
 
@@ -4754,6 +4834,10 @@ html {
 .top-btn {
 	bottom: 1.875rem;
 	right: 0.5rem;
+}
+
+.top-message {
+	padding-bottom: 3.75rem;
 }
 
 .top-text {

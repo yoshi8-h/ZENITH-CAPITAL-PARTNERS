@@ -2,7 +2,11 @@
 
 
 .top-message {
+  padding-bottom: rem(90);
 
+  @include mq(md) {
+    padding-bottom: rem(60);
+  }
 }
 
 .top-message__inner {
@@ -14,29 +18,65 @@
 }
 
 .top-message__contents {
-
+  margin-top: rem(50);
 }
 
 .top-message__img-area {
-
+  position: relative;
 }
 
 .top-message__img {
+  aspect-ratio: 1200 / 493;
+  max-width: rem(1200);
+  width: 100%;
+  object-fit: cover;
+}
 
+.top-message__img img {
+  aspect-ratio: 1200 / 493;
+  max-width: rem(1200);
+  width: 100%;
+  object-fit: cover;
 }
 
 .top-message__img-text {
-
+  text-align: center;
+  font-size: rem(23);
+  font-weight: $semiBold;
+  color: #3e4955;
+  position: absolute;
+  top: 50%;
+  right: rem(120);
+  transform: translateY(-50%);
 }
 
 .top-message__messages {
-
+  margin-top: rem(50);
 }
 
 .top-message__message {
+  font-size: rem(17);
+  font-weight: $normal;
+  color: $color-font-base-1;
+  line-height: 2.0;
+}
 
+.top-message__message:nth-of-type(n + 2) {
+  margin-top: rem(40);
 }
 
 .top-message__president-name {
+  margin: rem(30);
+  margin-left: auto;
+  aspect-ratio: 325 / 25;
+  max-width: rem(325);
+  width: 100%;
+  object-fit: contain;
+}
 
+.top-message__president-name img {
+  aspect-ratio: 325 / 25;
+  max-width: rem(325);
+  width: 100%;
+  object-fit: contain;
 }

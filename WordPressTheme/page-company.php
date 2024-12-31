@@ -36,7 +36,7 @@
         <div class="top-message__title title02">トップメッセージ</div>
         <div class="top-message__contents">
           <div class="top-message__img-area">
-            <div class="top-message__img"><img src="" alt=""></div>
+            <div class="top-message__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/top-message-president.webp" alt="平田社長の写真"></div>
             <p class="top-message__img-text">
               不動産ソリューションのプロフェッショナルとして、<br
               >人と不動産のうつくしい関係を追及し続ける。
