@@ -2012,6 +2012,23 @@ a {
 	min-width: 19.6875rem;
 }
 
+.philosophy {
+	background: #f4f6fa;
+	padding-bottom: 6.25rem;
+	padding-top: 5.625rem;
+}
+
+.philosophy__wrap {
+	margin-top: 4.0625rem;
+}
+
+.philosophy__contents-title {
+	color: #2e3e50;
+	font-size: 1.75rem;
+	font-weight: 600;
+	text-align: center;
+}
+
 .post-contents {
 	padding-bottom: 6.875rem;
 }

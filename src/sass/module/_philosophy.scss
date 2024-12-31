@@ -1,0 +1,35 @@
+@use "global" as *;
+
+
+.philosophy {
+  background: $color-background-base-1;
+  padding-top: rem(90);
+  padding-bottom: rem(100);
+}
+
+.philosophy__inner {
+
+}
+
+.philosophy__title {
+
+}
+
+.philosophy__wrap {
+  margin-top: rem(65);
+}
+
+.philosophy__contents-title {
+  text-align: center;
+  font-size: rem(28);
+  font-weight: $semiBold;
+  color: #2e3e50;
+}
+
+.philosophy__contents {
+
+}
+
+.philosophy__contents-item {
+
+}

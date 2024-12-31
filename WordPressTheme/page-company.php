@@ -23,7 +23,7 @@
       <div class="anchors__inner inner">
         <div class="anchors__wrap">
           <a href="#top-message" class="anchors__item">トップメッセージ</a>
-          <a href="" class="anchors__item">企業理念</a>
+          <a href="#philosophy" class="anchors__item">企業理念</a>
           <a href="" class="anchors__item">会社概要</a>
           <a href="" class="anchors__item">主要メンバー紹介</a>
         </div>
@@ -65,6 +65,30 @@
         </div>
       </div>
     </section>
+
+    <!-- philosophy セクション (企業理念) -->
+    <section id="philosophy" class="philosophy l-philosophy">
+      <div class="philosophy__inner inner">
+        <div class="philosophy__title title02">企業理念</div>
+        <div class="philosophy__wrap">
+          <div class="philosophy__contents-title">人と不動産の「うつくしい」関係を具現化する「不動産ソリューションカンパニー」</div>
+          <div class="philosophy__contents">
+            <div class="philosophy__contents-item content8">
+              <div class="content8__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/philosophy-img01.webp" alt=""></div>
+              <div class="content8__body">
+                <div class="content8__title">その土地の「記憶」がいつまでも受け継げられていること。</div>
+                <p class="content8__text">
+                  不動産は、その土地にふさわしいものでなければいけない、と私たちは考えています。最近では日本全国で同じような不動産を多く見かけますが、その土地にとってふさわしい不動産とは、それぞれの土地固有の匂いや空気感、そして歴史など、土地の「記憶」を大切にしながら作られたものです。<br
+                  >このような不動産は、その地域にとって大切なものとなり、そこに暮らし集う人たちから愛され続けます。<br
+                  >そして、このような人々と不動産の美しい関係が、その地域に根差す新しい文化を育んでいくのだと思うのです。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
   </main>
 
