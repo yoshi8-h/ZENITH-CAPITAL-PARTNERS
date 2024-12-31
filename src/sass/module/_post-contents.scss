@@ -23,6 +23,13 @@
   align-items: center;
   padding-bottom: rem(15);
   border-bottom: 1px solid #2c2c2c;
+
+  @include mq(md) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: rem(10);
+  }
 }
 
 .post-contents__meta {
@@ -78,6 +85,11 @@
   font-weight: $normal;
   color: #353f48;
   transition: opacity 0.2s ease-out;
+
+  @include mq(md) {
+    font-size: rem(13);
+    // margin-left: auto;
+  }
 }
 
 .post-contents__list-link:hover {
@@ -101,6 +113,10 @@
   font-size: rem(24);
   font-weight: $semiBold;
   line-height: 1.5;
+
+  @include mq(md) {
+    font-size: rem(22);
+  }
 }
 
 
@@ -111,7 +127,7 @@
   margin-top: rem(30);
 
   @include mq(md) {
-    margin-top: rem(30);
+    margin-top: rem(20);
   }
 }
 
@@ -121,9 +137,16 @@
   font-weight: $normal;
   color: $color-font-base-1;
   line-height: 2.0;
+  @include mq(md) {
+    font-size: rem(14);
+    line-height: 1.7;
+  }
 }
 .post-contents__content p:nth-of-type(n + 2) {
   margin-top: rem(35);
+  @include mq(md) {
+    margin-top: rem(20);
+  }
 }
 /* h1, h2, h3, h4, h5, h6 に隣接する p タグの margin-top を 0 にする (優先度を上げるためにわざわざ優先度の上がる指定をしている) */
 .post-contents__contents-wrap .post-contents__content h1 + p,
@@ -143,9 +166,26 @@
   font-weight: $normal;
   line-height: 2.0;
   transition: opacity 0.2s ease-out;
+  @include mq(md) {
+    font-size: rem(14);
+    line-height: 1.7;
+  }
 }
 .post-contents__content a:hover {  // hover
   opacity: 0.4;
+}
+
+// imgタグ
+.post-contents__content img {
+  display: block;
+  margin-top: rem(35);
+  width: 100%;
+  object-fit: cover;
+  @include mq(md) {
+    margin-top: rem(20);
+    max-width: rem(600);
+    margin-inline: auto;
+  }
 }
 
 // h2タグ (見出し2)
@@ -156,6 +196,11 @@
   line-height: 1.5;
   padding-left: rem(15);
   position: relative;
+  @include mq(md) {
+    margin-top: rem(25);
+    font-size: rem(20);
+    padding-left: rem(12);
+  }
 }
 .post-contents__content h2:before {
   content: "";
@@ -176,6 +221,11 @@
   line-height: 1.5;
   padding-left: rem(23);
   position: relative;
+  @include mq(md) {
+    margin-top: rem(25);
+    font-size: rem(18);
+    padding-left: rem(20);
+  }
 }
 .post-contents__content h3:before {
   content: "■";
@@ -186,6 +236,9 @@
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+  @include mq(md) {
+    font-size: rem(16);
+  }
 }
 
 // h4タグ (見出し4)
@@ -194,6 +247,10 @@
   font-size: rem(18);
   font-weight: $bold;
   line-height: 1.5;
+  @include mq(md) {
+    margin-top: rem(20);
+    font-size: rem(17);
+  }
 }
 
 // h5タグ (見出し5)
@@ -202,6 +259,10 @@
   font-size: rem(17);
   font-weight: $bold;
   line-height: 1.5;
+  @include mq(md) {
+    margin-top: rem(16);
+    font-size: rem(17);
+  }
 }
 
 // h6タグ (見出し6)
@@ -209,4 +270,43 @@
   margin-top: rem(16);
   font-size: rem(17);
   line-height: 1.5;
+  @include mq(md) {
+    margin-top: rem(16);
+    font-size: rem(16);
+  }
+}
+
+// ulタグ, liタグ
+.post-contents__content ul {
+  margin-top: rem(10);
+  @include mq(md) {
+    margin-top: rem(8);
+  }
+}
+.post-contents__content li {
+  font-size: rem(17);
+  font-weight: $normal;
+  color: $color-font-base-1;
+  line-height: 2.0;
+  padding-left: rem(18);
+  position: relative;
+  @include mq(md) {
+    font-size: rem(14);
+    line-height: 1.7;
+    padding-left: rem(14);
+  }
+}
+.post-contents__content li::before {  // リストの前の『・』アイコン
+  content: "・";
+  font-size: rem(17);
+  font-weight: $normal;
+  color: $color-font-base-1;
+  line-height: 2.0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  @include mq(md) {
+    font-size: rem(14);
+    line-height: 1.7;
+  }
 }

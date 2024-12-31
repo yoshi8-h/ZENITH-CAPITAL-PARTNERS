@@ -2094,6 +2094,14 @@ a {
 	opacity: 0.4;
 }
 
+.post-contents__content img {
+	-o-object-fit: cover;
+	display: block;
+	margin-top: 2.1875rem;
+	object-fit: cover;
+	width: 100%;
+}
+
 .post-contents__content h2 {
 	font-size: 1.375rem;
 	font-weight: 600;
@@ -2150,6 +2158,30 @@ a {
 	font-size: 1.0625rem;
 	line-height: 1.5;
 	margin-top: 1rem;
+}
+
+.post-contents__content ul {
+	margin-top: 0.625rem;
+}
+
+.post-contents__content li {
+	color: #1e1e1e;
+	font-size: 1.0625rem;
+	font-weight: 400;
+	line-height: 2;
+	padding-left: 1.125rem;
+	position: relative;
+}
+
+.post-contents__content li::before {
+	color: #1e1e1e;
+	content: "・";
+	font-size: 1.0625rem;
+	font-weight: 400;
+	left: 0;
+	line-height: 2;
+	position: absolute;
+	top: 0;
 }
 
 .post {
@@ -4208,6 +4240,13 @@ html {
 	padding-bottom: 4.0625rem;
 }
 
+.post-contents__top {
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 0.625rem;
+	justify-content: center;
+}
+
 .post-contents__category {
 	font-size: 0.75rem;
 	padding-bottom: 0.25rem;
@@ -4220,12 +4259,87 @@ html {
 	font-size: 0.9375rem;
 }
 
+.post-contents__list-link {
+	font-size: 0.8125rem;
+}
+
 .post-contents__contents-wrap {
 	margin-top: 1.75rem;
 }
 
+.post-contents__title {
+	font-size: 1.375rem;
+}
+
 .post-contents__content {
-	margin-top: 1.875rem;
+	margin-top: 1.25rem;
+}
+
+.post-contents__content p {
+	font-size: 0.875rem;
+	line-height: 1.7;
+}
+
+.post-contents__content p:nth-of-type(n + 2) {
+	margin-top: 1.25rem;
+}
+
+.post-contents__content a {
+	font-size: 0.875rem;
+	line-height: 1.7;
+}
+
+.post-contents__content img {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1.25rem;
+	max-width: 37.5rem;
+}
+
+.post-contents__content h2 {
+	font-size: 1.25rem;
+	margin-top: 1.5625rem;
+	padding-left: 0.75rem;
+}
+
+.post-contents__content h3 {
+	font-size: 1.125rem;
+	margin-top: 1.5625rem;
+	padding-left: 1.25rem;
+}
+
+.post-contents__content h3:before {
+	font-size: 1rem;
+}
+
+.post-contents__content h4 {
+	font-size: 1.0625rem;
+	margin-top: 1.25rem;
+}
+
+.post-contents__content h5 {
+	font-size: 1.0625rem;
+	margin-top: 1rem;
+}
+
+.post-contents__content h6 {
+	font-size: 1rem;
+	margin-top: 1rem;
+}
+
+.post-contents__content ul {
+	margin-top: 0.5rem;
+}
+
+.post-contents__content li {
+	font-size: 0.875rem;
+	line-height: 1.7;
+	padding-left: 0.875rem;
+}
+
+.post-contents__content li::before {
+	font-size: 0.875rem;
+	line-height: 1.7;
 }
 
 .post {
