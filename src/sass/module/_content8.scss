@@ -6,6 +6,12 @@
   justify-content: center;
   align-items: flex-start;
   gap: rem(65);
+
+  @include mq(md) {
+    flex-direction: column;
+    align-items: center;
+    gap: rem(14);
+  }
 }
 
 .content8__img {
@@ -14,6 +20,10 @@
   width: 100%;
   object-fit: cover;
   z-index: 30;  // タイトルの下線より上に来るように
+
+  @include mq(md) {
+    max-width: rem(600);
+  }
 }
 
 .content8__img img {
@@ -21,11 +31,20 @@
   max-width: rem(515);
   width: 100%;
   object-fit: cover;
+
+  @include mq(md) {
+    max-width: rem(600);
+  }
 }
 
 .content8__body {
   width: 52%;
-  margin-top: rem(65);
+  margin-top: rem(60);
+
+  @include mq(md) {
+    width: 100%;
+    margin-top: 0;
+  }
 }
 
 .content8__title {
@@ -35,6 +54,12 @@
   line-height: 1.74;
   padding-bottom: rem(20);
   position: relative;
+
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: 1.7;
+    padding-bottom: rem(8);
+  }
 }
 
 .content8__title::after {
@@ -46,6 +71,10 @@
   bottom: 0;
   right: 0;
   z-index: 1;
+
+  @include mq(md) {
+    width: 100%;
+  }
 }
 
 .content8__text {
@@ -54,6 +83,12 @@
   font-weight: $normal;
   color: #1b1d26;
   line-height: 2.0;
+
+  @include mq(md) {
+    margin-top: rem(18);
+    font-size: rem(14);
+    line-height: 1.7;
+  }
 }
 
 
@@ -65,6 +100,12 @@
 // content8--reverse (テキストと画像の配置が逆)
 .content8.content8--reverse {
   flex-direction: row-reverse;
+
+  @include mq(md) {
+    flex-direction: column;
+    align-items: center;
+    gap: rem(10);
+  }
 }
 
 .content8.content8--reverse .content8__title::after {
@@ -77,6 +118,10 @@
   right: auto;
   left: 0;  // 左寄せに
   z-index: 1;
+
+  @include mq(md) {
+    width: 100%;
+  }
 }
 
 
@@ -84,7 +129,6 @@
 .content8.content8--low {
 }
 
-.content8__body {
-  width: 52%;
-  margin-top: rem(65);
+.content8.content8--low .content8__body {
+  margin-top: rem(45);
 }

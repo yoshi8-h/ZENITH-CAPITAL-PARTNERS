@@ -1074,7 +1074,7 @@ a {
 }
 
 .content8__body {
-	margin-top: 4.0625rem;
+	margin-top: 3.75rem;
 	width: 52%;
 }
 
@@ -1122,9 +1122,8 @@ a {
 	z-index: 1;
 }
 
-.content8__body {
-	margin-top: 4.0625rem;
-	width: 52%;
+.content8.content8--low .content8__body {
+	margin-top: 2.8125rem;
 }
 
 .contents__item {
@@ -3889,6 +3888,51 @@ html {
 	margin-top: 1.125rem;
 }
 
+.content8 {
+	align-items: center;
+	flex-direction: column;
+	gap: 0.875rem;
+}
+
+.content8__img {
+	max-width: 37.5rem;
+}
+
+.content8__img img {
+	max-width: 37.5rem;
+}
+
+.content8__body {
+	margin-top: 0;
+	width: 100%;
+}
+
+.content8__title {
+	font-size: 1rem;
+	line-height: 1.7;
+	padding-bottom: 0.5rem;
+}
+
+.content8__title::after {
+	width: 100%;
+}
+
+.content8__text {
+	font-size: 0.875rem;
+	line-height: 1.7;
+	margin-top: 1.125rem;
+}
+
+.content8.content8--reverse {
+	align-items: center;
+	flex-direction: column;
+	gap: 0.625rem;
+}
+
+.content8.content8--reverse .content8__title::after {
+	width: 100%;
+}
+
 .contents__item {
 	padding-bottom: 1.25rem;
 	padding-left: 0.625rem;
@@ -4470,6 +4514,27 @@ html {
 
 .news__btn {
 	min-width: 15.625rem;
+}
+
+.philosophy {
+	padding-bottom: 4.375rem;
+	padding-top: 4.375rem;
+}
+
+.philosophy__wrap {
+	margin-top: 2.1875rem;
+}
+
+.philosophy__contents-title {
+	font-size: 1.25rem;
+}
+
+.philosophy__contents {
+	margin-top: 1.5625rem;
+}
+
+.philosophy__contents-item:nth-of-type(n + 2) {
+	margin-top: 3.4375rem;
 }
 
 .post-contents {

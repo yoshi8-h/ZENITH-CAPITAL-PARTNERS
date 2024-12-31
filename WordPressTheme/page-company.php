@@ -71,7 +71,7 @@
       <div class="philosophy__inner inner">
         <div class="philosophy__title title02">企業理念</div>
         <div class="philosophy__wrap">
-          <div class="philosophy__contents-title">人と不動産の「うつくしい」関係を具現化する「不動産ソリューションカンパニー」</div>
+          <div class="philosophy__contents-title">人と不動産の「うつくしい」関係<br class="u-mobile">を具現化する「不動産ソリューションカンパニー」</div>
           <div class="philosophy__contents">
             <div class="philosophy__contents-item content8">
               <div class="content8__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/philosophy-img01.webp" alt=""></div>

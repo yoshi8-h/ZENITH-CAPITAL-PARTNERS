@@ -5,6 +5,11 @@
   background: $color-background-base-1;
   padding-top: rem(90);
   padding-bottom: rem(100);
+
+  @include mq(md) {
+    padding-top: rem(70);
+    padding-bottom: rem(70);
+  }
 }
 
 .philosophy__inner {
@@ -17,6 +22,10 @@
 
 .philosophy__wrap {
   margin-top: rem(65);
+
+  @include mq(md) {
+    margin-top: rem(35);
+  }
 }
 
 .philosophy__contents-title {
@@ -24,10 +33,18 @@
   font-size: rem(28);
   font-weight: $semiBold;
   color: #2e3e50;
+
+  @include mq(md) {
+    font-size: rem(20);
+  }
 }
 
 .philosophy__contents {
   margin-top: rem(65);
+
+  @include mq(md) {
+    margin-top: rem(25);
+  }
 }
 
 .philosophy__contents-item {
@@ -36,4 +53,8 @@
 
 .philosophy__contents-item:nth-of-type(n + 2) {
   margin-top: rem(72);
+
+  @include mq(md) {
+    margin-top: rem(55);
+  }
 }
