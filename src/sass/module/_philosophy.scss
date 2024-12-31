@@ -27,9 +27,13 @@
 }
 
 .philosophy__contents {
-
+  margin-top: rem(65);
 }
 
 .philosophy__contents-item {
 
+}
+
+.philosophy__contents-item:nth-of-type(n + 2) {
+  margin-top: rem(72);
 }

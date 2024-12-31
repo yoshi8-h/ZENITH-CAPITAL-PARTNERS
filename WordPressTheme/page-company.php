@@ -84,6 +84,29 @@
                 </p>
               </div>
             </div>
+            <div class="philosophy__contents-item content8 content8--reverse">
+              <div class="content8__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/philosophy-img02.webp" alt=""></div>
+              <div class="content8__body">
+                <div class="content8__title">そこに暮らし、集う人たちの「経験価値」がその不動産の価値となる。</div>
+                <p class="content8__text">
+                  もう一つ大切なことは、不動産の価値は感動や喜び、安らぎ、繋がり、触れ合いといった「経験価値」によってはじめて生まれてくるものだということです。<br
+                  >その場所に暮らし、集うことによって「自分らしくいられる」と感じてもらうことが大切なのです。<br
+                  >また、「経験価値」というものは積み重なることによって更に価値を増幅させる性質があるので、時間の経過とともに資産価値も高まっていくのです。<br
+                  >不動産のスペックや機能価値だけではなく、そこに暮らし、集う人々の感情に寄り添い、その場所ならではの経験価値をデザインすることが求められているのです。
+                </p>
+              </div>
+            </div>
+            <div class="philosophy__contents-item content8 content8--low">
+              <div class="content8__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/philosophy-img03.webp" alt=""></div>
+              <div class="content8__body">
+                <div class="content8__title">理論に裏打ちされた豊富な経験が、人と不動産の「持続的な関係性」を可能にする。</div>
+                <p class="content8__text">
+                  不動産が人々の社会生活や日々の営みを支える場である以上、そこには想定外のトラブルや行き違いが生じることもあります。<br
+                  >場合によっては事が大きくなり、不動産価値に多大な影響を及ぼすことも考えられます。人と不動産の＜持続的な関係性＞を実現するためには、確かな理論に裏打ちされた、そして様々な立場の方の想いに寄り添ったプロフェッショナルとしての解決策が求められます。<br
+                  >わたしたちは不動産鑑定士や宅地建物取引士の資格をもった不動産のプロフェッショナル、そして経験価値デザインのプロフェッショナルから形成されるチームで最適な不動産ソリューションをご提供して、人と不動産の「持続的な関係性＝うつくしい関係」の実現をご支援します。
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
