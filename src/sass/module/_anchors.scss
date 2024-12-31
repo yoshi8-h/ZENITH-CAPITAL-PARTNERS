@@ -13,6 +13,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include mq(md) {
+    flex-direction: column;
+  }
 }
 
 .anchors__item {
@@ -22,10 +26,25 @@
   padding-inline: rem(30);
   padding-block: rem(3);
   border-left: 1px solid #b6bcc8;
+
+  @include mq(md) {
+    display: block;
+    min-width: rem(180);
+    text-align: center;
+    font-size: rem(15);
+    padding-block: rem(10);
+    border-left: none;
+    border-top: 1px solid #b6bcc8;
+  }
 }
 
 .anchors__item:last-of-type {
   border-right: 1px solid #b6bcc8;
+
+  @include mq(md) {
+    border-right: none;
+    border-bottom: 1px solid #b6bcc8;
+  }
 }
 
 .anchors__item:hover {  // hover

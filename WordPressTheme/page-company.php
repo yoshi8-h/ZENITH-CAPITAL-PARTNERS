@@ -22,7 +22,7 @@
     <div class="anchors l-anchors">
       <div class="anchors__inner inner">
         <div class="anchors__wrap">
-          <a href="" class="anchors__item">トップメッセージ</a>
+          <a href="#top-message" class="anchors__item">トップメッセージ</a>
           <a href="" class="anchors__item">企業理念</a>
           <a href="" class="anchors__item">会社概要</a>
           <a href="" class="anchors__item">主要メンバー紹介</a>
@@ -31,15 +31,18 @@
     </div>
 
     <!-- top-message セクション (トップメッセージ) -->
-    <section class="top-message l-top-message">
+    <section id="top-message" class="top-message l-top-message">
       <div class="top-message__inner inner">
         <div class="top-message__title title02">トップメッセージ</div>
         <div class="top-message__contents">
           <div class="top-message__img-area">
-            <div class="top-message__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/top-message-president.webp" alt="平田社長の写真"></div>
+            <picture class="top-message__img">
+              <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/top-message-president.webp">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/top-message-president-sp.webp" alt="平田社長の写真">
+            </picture>
             <p class="top-message__img-text">
-              不動産ソリューションのプロフェッショナルとして、<br
-              >人と不動産のうつくしい関係を追及し続ける。
+              不動産ソリューションの<br class="u-mobile">プロフェッショナルとして、<br
+              >人と不動産のうつくしい関係<br class="u-mobile">を追及し続ける。
             </p>
           </div>
           <div class="top-message__messages">

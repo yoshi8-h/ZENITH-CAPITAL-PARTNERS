@@ -2997,8 +2997,8 @@ a {
 .top-message__president-name {
 	-o-object-fit: contain;
 	aspect-ratio: 325/25;
-	margin: 1.875rem;
 	margin-left: auto;
+	margin-top: 1.875rem;
 	max-width: 20.3125rem;
 	object-fit: contain;
 	width: 100%;
@@ -3341,6 +3341,26 @@ html {
 
 .l-top-message {
 	margin-top: 2.5rem;
+}
+
+.anchors__wrap {
+	flex-direction: column;
+}
+
+.anchors__item {
+	border-left: none;
+	border-top: 1px solid #b6bcc8;
+	display: block;
+	font-size: 0.9375rem;
+	min-width: 11.25rem;
+	padding-bottom: 0.625rem;
+	padding-top: 0.625rem;
+	text-align: center;
+}
+
+.anchors__item:last-of-type {
+	border-bottom: 1px solid #b6bcc8;
+	border-right: none;
 }
 
 .antisocial {
@@ -4838,6 +4858,51 @@ html {
 
 .top-message {
 	padding-bottom: 3.75rem;
+}
+
+.top-message__contents {
+	margin-top: 2.5rem;
+}
+
+.top-message__img {
+	aspect-ratio: 600/400;
+	max-width: 37.5rem;
+}
+
+.top-message__img img {
+	aspect-ratio: 600/400;
+	max-width: 37.5rem;
+}
+
+.top-message__img-text {
+	font-size: 1.125rem;
+	margin-top: 0.9375rem;
+	position: static;
+	right: auto;
+	top: auto;
+	transform: none;
+}
+
+.top-message__messages {
+	margin-top: 0.9375rem;
+}
+
+.top-message__message {
+	font-size: 0.875rem;
+	line-height: 1.7;
+}
+
+.top-message__message:nth-of-type(n + 2) {
+	margin-top: 0.9375rem;
+}
+
+.top-message__president-name {
+	margin-top: 0.9375rem;
+	max-width: 12.5rem;
+}
+
+.top-message__president-name img {
+	max-width: 12.5rem;
 }
 
 .top-text {
