@@ -17,40 +17,37 @@
 }
 
 .table02__row {
-  border: 1px solid #adb0b1;
+
 }
 
 .table02__cell-head {  // 項目名
-  width: 18.34%;
+  width: 9%;
+  border-bottom: 1px solid #000;
   padding-block: rem(22);
-  padding-left: rem(20);
-  padding-right: rem(12);  // 最低限を指定
-  background: #f1f2f5;
+  padding-right: rem(10);  // 最低限を指定
   font-size: rem(17);
-  font-weight: $medium;
+  font-weight: $normal;
 
   @include mq(md) {
     width: 25%;
     padding-block: rem(15);
-    padding-left: rem(10);
     padding-right: rem(6);  // 最低限を指定
     font-size: rem(14);
   }
 }
 
 .table02__cell-body {  // 内容
+  border-bottom: 1px solid #dcdddf;
   padding-block: rem(22);
-  padding-left: rem(28);
+  padding-left: rem(60);
   padding-right: rem(12);  // 最低限を指定
   font-size: rem(17);
-  font-weight: $medium;
-  line-height: 2.0;
+  font-weight: $normal;
 
   @include mq(md) {
     padding-block: rem(15);
     padding-left: rem(10);
-    padding-right: rem(8);  // 最低限を指定
+    padding-right: 0;
     font-size: rem(14);
-    line-height: 1.7;
   }
 }
