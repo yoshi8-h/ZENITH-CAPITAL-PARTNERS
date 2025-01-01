@@ -30,6 +30,7 @@
 }
 
 .top-message__img {
+  display: block;
   aspect-ratio: 1200 / 493;
   max-width: rem(1200);
   width: 100%;
@@ -38,6 +39,7 @@
   @include mq(md) {
     aspect-ratio: 600 / 400;
     max-width: rem(600);
+    margin-inline: auto;
   }
 }
 

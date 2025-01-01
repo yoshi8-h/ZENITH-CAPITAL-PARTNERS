@@ -1,0 +1,18 @@
+@use "global" as *;
+
+
+.history {
+
+}
+
+.history__title {
+
+}
+
+.history__table {
+  margin-top: rem(25);
+
+  @include mq(md) {
+    margin-top: rem(20);
+  }
+}

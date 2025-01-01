@@ -24,7 +24,7 @@
         <div class="anchors__wrap">
           <a href="#top-message" class="anchors__item">トップメッセージ</a>
           <a href="#philosophy" class="anchors__item">企業理念</a>
-          <a href="" class="anchors__item">会社概要</a>
+          <a href="#overview" class="anchors__item">会社概要</a>
           <a href="" class="anchors__item">主要メンバー紹介</a>
         </div>
       </div>
@@ -106,6 +106,109 @@
                   >わたしたちは不動産鑑定士や宅地建物取引士の資格をもった不動産のプロフェッショナル、そして経験価値デザインのプロフェッショナルから形成されるチームで最適な不動産ソリューションをご提供して、人と不動産の「持続的な関係性＝うつくしい関係」の実現をご支援します。
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- overview セクション (会社概要) -->
+    <section id="overview" class="overview l-overview">
+      <div class="overview__inner inner">
+        <div class="overview__title title02">会社概要</div>
+        <div class="overview__contents">
+          <!-- 会社概要 (company-overview) -->
+          <div class="overview__contents-item content9">
+            <div class="content9__overview company-overview">
+              <div class="company-overview__title title03 title03--2">会社概要</div>
+              <table class="company-overview__table table">
+                <thead class="table__head">
+                  <tr>
+                    <th class="table__header">項目</th>
+                    <th class="table__header-body">内容</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table__row">
+                    <td class="table__cell-head">会社名</td>
+                    <td class="table__cell-body">ゼニス・キャピタル・パートナーズ株式会社</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__cell-head">所在地</td>
+                    <td class="table__cell-body">
+                      東京都千代田区有楽町一丁目9番4号　蚕糸会館７階<br
+                      >TEL:03-5222-4310　　　<br class="u-mobile">FAX:03-5222-3700
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__cell-head">代表取締役社長</td>
+                    <td class="table__cell-body">平田　徹也</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__cell-head">設立日</td>
+                    <td class="table__cell-body">6,500万円</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__cell-head">業務内容</td>
+                    <td class="table__cell-body">
+                      ・アセットマネジメト<br
+                      >・不動産コンサルティング<br
+                      >・自己投資<br
+                      >・テナント事業
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__cell-head">免許</td>
+                    <td class="table__cell-body">
+                    ・宅地建物取引業（東京都知事（3）第90681号）<br
+                    >・金融商品取引業（関東財務局長（金商）第1802号）<br
+                    >　(第二種金融商品取引業、投資助言・代理業)
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__cell-head">有資格者</td>
+                    <td class="table__cell-body">
+                      ・不動産鑑定士3名<br
+                      >・宅地建物取引士5名<br
+                      >・不動産証券化協会認定マスター2名<br
+                      >・事業承継士1名<br
+                      >・社会保険労務士1名
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- 沿革 (history) -->
+          <div class="overview__contents-item content9">
+            <div class="content9__history history">
+              <div class="history__title title03 title03--2">沿革</div>
+              <table class="history__table table02">
+                <thead class="table02__head">
+                  <tr>
+                    <th class="table02__header">項目</th>
+                    <th class="table02__header-body">内容</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table02__row">
+                    <td class="table02__cell-head">2006年3月</td>
+                    <td class="table02__cell-body">株式会社ゼニス・キャピタル・パートナーズ設立</td>
+                  </tr>
+                  <tr class="table02__row">
+                    <td class="table02__cell-head">2008年2月</td>
+                    <td class="table02__cell-body">第二種金融商品取引業、投資助言・代理業の免許を取得</td>
+                  </tr>
+                  <tr class="table02__row">
+                    <td class="table02__cell-head">2013年8月</td>
+                    <td class="table02__cell-body">業務拡大に伴い港区新橋から千代田区有楽町へ事務所を移転</td>
+                  </tr>
+                  <tr class="table02__row">
+                    <td class="table02__cell-head">2024年6月</td>
+                    <td class="table02__cell-body">業務拡大に伴う組織再編のため株式会社LIMを設立し「ほねつぎ市川はりきゅう接骨院」事業を移管</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>

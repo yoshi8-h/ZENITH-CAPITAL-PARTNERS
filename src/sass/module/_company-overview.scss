@@ -1,0 +1,22 @@
+@use "global" as *;
+
+
+.company-overview {
+  padding-bottom: rem(110);
+
+  @include mq(md) {
+    padding-bottom: rem(80);
+  }
+}
+
+.company-overview__title {
+
+}
+
+.company-overview__table {
+  margin-top: rem(25);
+
+  @include mq(md) {
+    margin-top: rem(20);
+  }
+}
