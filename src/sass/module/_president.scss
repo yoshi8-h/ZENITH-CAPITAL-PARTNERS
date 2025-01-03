@@ -2,37 +2,74 @@
 
 
 .president {
-
+  padding-left: rem(25);
 }
 
 .president__top {
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: rem(150);
 }
 
 .president__img {
+  aspect-ratio: 600 / 400;
+  max-width: rem(600);
+  width: 50%;
+  object-fit: cover;
+}
 
+.president__img img {
+  aspect-ratio: 600 / 400;
+  max-width: rem(600);
+  width: 100%;
+  object-fit: cover;
 }
 
 .president__body {
-
+  width: 35.5%;
 }
 
 .president__name {
+  font-size: rem(23);
+  font-weight: $semiBold;
+  color: #262626;
+  padding-left: rem(14);
+  position: relative;
+}
 
+.president__name::before {  // 手前の青い縦ライン
+  content: "";
+  width: rem(6);
+  height: 100%;
+  background: $color-accent2;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
 }
 
 .president__license {
-
+  margin-top: rem(24);
+  padding-left: rem(14);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: rem(2);
 }
 
 .president__license-title {
-
+  font-size: rem(17);
+  font-weight: $semiBold;
+  color: #4d4d4d;
 }
 
 .president__license-items {
-
+  font-size: rem(17);
+  font-weight: $normal;
+  color: #4d4d4d;
 }
 
 .president__career-table {
-
+  margin-top: rem(40);
 }
