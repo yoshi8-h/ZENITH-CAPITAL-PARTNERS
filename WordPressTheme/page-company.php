@@ -25,7 +25,7 @@
           <a href="#top-message" class="anchors__item">トップメッセージ</a>
           <a href="#philosophy" class="anchors__item">企業理念</a>
           <a href="#overview" class="anchors__item">会社概要</a>
-          <a href="" class="anchors__item">主要メンバー紹介</a>
+          <a href="<?php echo esc_url(get_permalink(get_page_by_path('company-member'))); ?>" class="anchors__item">主要メンバー紹介</a>
         </div>
       </div>
     </div>
@@ -230,7 +230,6 @@
         </div>
       </div>
     </section>
-
 
   </main>
 

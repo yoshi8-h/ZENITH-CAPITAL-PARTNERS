@@ -254,7 +254,7 @@
         </h2>
         <div class="message__contents">
           <div class="message__img-area">
-            <div class="message__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/top-message-president.webp" alt="平田社長の写真"></div>
+            <div class="message__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/front-page-message-president.webp" alt="平田社長の写真"></div>
             <div class="message__name">代表取締役社長　平田徹也</div>
           </div>
           <div class="message__text-area">
