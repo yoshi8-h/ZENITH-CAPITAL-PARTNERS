@@ -30,6 +30,77 @@ window.addEventListener("scroll", function () {
 });
 
 /* -------------------------------------------------------------------------------- */
+/* スムーススクロール */
+// 「#」だけのリンク (TOPに戻るボタン)の時は、headerの高さを考慮せず、ページ先頭へ遷移するように。
+// 別ページに遷移して、かつそのページの指定のリンク先に遷移する場合は、headerの高さを考慮して遷移
+// 他ページ(全く別のサイト)に遷移する際は、処理をスキップ
+document.addEventListener("DOMContentLoaded", function () {
+  var header = document.querySelector(".header"); // ヘッダー要素
+  var headerHeight = header ? header.offsetHeight : 0; // ヘッダー高さを取得
+
+  var adjustScrollForHash = function adjustScrollForHash() {
+    var hash = window.location.hash; // 現在のURLのハッシュ部分を取得
+    if (hash) {
+      var targetElement = document.querySelector(hash); // ハッシュから要素を取得
+      if (targetElement) {
+        var targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+        // スムーススクロールで位置を調整
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth"
+        });
+      }
+    }
+  };
+
+  // 初期ロード時にURLハッシュを確認してスクロール位置を調整
+  adjustScrollForHash();
+
+  // ページ内リンクのクリックイベントを設定
+  var anchorLinks = document.querySelectorAll('a[href^="#"], a[href*="#"]');
+  anchorLinks.forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      var href = link.getAttribute("href");
+
+      // 他のページに遷移する場合の対策
+      if (href.includes("#") && href.startsWith(location.origin)) {
+        return; // 他のページへのリンクはここでは処理しない
+      }
+
+      // 現在のページ内のリンクを処理
+      if (href.startsWith("#")) {
+        e.preventDefault(); // デフォルト動作を無効化
+
+        var targetId = href.slice(1);
+        var targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          var targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+          // スムーススクロール
+          window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth"
+          });
+        } else if (href === "#") {
+          // TOPに戻るリンク
+          e.preventDefault(); // デフォルト動作を無効化
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+        }
+      }
+    });
+  });
+
+  // ページ遷移後にハッシュ位置を調整
+  window.addEventListener("load", function () {
+    adjustScrollForHash();
+  });
+});
+
+/* -------------------------------------------------------------------------------- */
 /* ハンバーガーメニュー(ドロワーメニュー) */
 // クリックされた時に『is-clicked』クラスを付け外ししてボタンを変形・ドロワーメニューを表示/非表示
 // 「html,body」に『is-fixed』クラスを付け外ししてドロワーが開いてる時はスクロールを無効に
