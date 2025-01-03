@@ -211,6 +211,22 @@
               </table>
             </div>
           </div>
+          <!-- アクセス (access) -->
+          <div class="overview__contents-item content9">
+            <div class="content9__access access">
+              <div class="access__title title03 title03--2">アクセス</div>
+              <div class="access__body">
+                <div class="access__map">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.0767484967796!2d139.75840027652384!3d35.67511217258926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bf024155555%3A0xf8dba96f3e55b4fd!2z44K844OL44K5772l44Kt44Oj44OU44K_44Or772l44OR44O844OI44OK44O844K644ix!5e0!3m2!1sja!2sjp!4v1735877037010!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <ul class="access__list">
+                  <li class="access__list-item list-item">ＪＲ線・地下鉄有楽町線　「有楽町」駅より徒歩2分</li>
+                  <li class="access__list-item list-item">地下鉄日比谷線・千代田線・都営三田線　<br>「日比谷」駅より徒歩2分</li>
+                  <li class="access__list-item list-item">地下鉄丸ノ内線　「銀座」駅より徒歩5分</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

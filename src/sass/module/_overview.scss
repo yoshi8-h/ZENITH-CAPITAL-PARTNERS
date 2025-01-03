@@ -2,7 +2,11 @@
 
 
 .overview {
+  padding-bottom: rem(110);
 
+  @include mq(md) {
+    padding-bottom: rem(80);
+  }
 }
 
 .overview__inner {
@@ -19,4 +23,12 @@
 
 .overview__contents-item {
 
+}
+
+.overview__contents-item:nth-of-type(n + 2) {
+  margin-top: rem(70);
+
+  @include mq(md) {
+    margin-top: rem(50);
+  }
 }
