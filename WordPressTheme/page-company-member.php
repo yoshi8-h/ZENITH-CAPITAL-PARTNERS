@@ -127,10 +127,6 @@
                   <div class="main-member__role">取締役</div>
                   <div class="main-member__name">平林　静香</div>
                 </div>
-                <!-- <div class="main-member__license">
-                  <div class="main-member__license-title">保有資格 ： </div>
-                  <div class="main-member__license-items">宅地建物 取引士・社会保険労務士</div>
-                </div> -->
               </div>
               <table class="main-member__table table02">
                 <thead class="table02__head">

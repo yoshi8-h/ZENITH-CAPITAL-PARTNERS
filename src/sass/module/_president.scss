@@ -3,6 +3,10 @@
 
 .president {
   padding-left: rem(25);
+
+  @include mq(md) {
+    padding-left: 0;
+  }
 }
 
 .president__top {
@@ -10,6 +14,12 @@
   justify-content: space-between;
   align-items: center;
   gap: rem(150);
+
+  @include mq(md) {
+    flex-direction: column;
+    justify-content: center;
+    gap: rem(15);
+  }
 }
 
 .president__img {
@@ -17,6 +27,11 @@
   max-width: rem(600);
   width: 50%;
   object-fit: cover;
+
+  @include mq(md) {
+    width: 100%;
+    margin-inline: auto;
+  }
 }
 
 .president__img img {
@@ -28,6 +43,10 @@
 
 .president__body {
   width: 35.5%;
+
+  @include mq(md) {
+    width: 100%;
+  }
 }
 
 .president__name {
@@ -36,6 +55,11 @@
   color: #262626;
   padding-left: rem(14);
   position: relative;
+
+  @include mq(md) {
+    font-size: rem(16);
+    padding-left: rem(12);
+  }
 }
 
 .president__name::before {  // 手前の青い縦ライン
@@ -47,6 +71,10 @@
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+
+  @include mq(md) {
+    width: rem(4);
+  }
 }
 
 .president__license {
@@ -56,20 +84,39 @@
   justify-content: flex-start;
   align-items: flex-start;
   gap: rem(2);
+
+  @include mq(md) {
+    margin-top: rem(10);
+    padding-left: 0;
+    gap: 0;
+  }
 }
 
 .president__license-title {
   font-size: rem(17);
   font-weight: $semiBold;
   color: #4d4d4d;
+
+  @include mq(md) {
+    font-size: rem(14);
+    flex-shrink: 0;
+  }
 }
 
 .president__license-items {
   font-size: rem(17);
   font-weight: $normal;
   color: #4d4d4d;
+
+  @include mq(md) {
+    font-size: rem(14);
+  }
 }
 
 .president__career-table {
   margin-top: rem(40);
+
+  @include mq(md) {
+    margin-top: rem(1);
+  }
 }

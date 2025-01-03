@@ -131,4 +131,8 @@
 
 .content8.content8--low .content8__body {
   margin-top: rem(45);
+
+  @include mq(md) {
+    margin-top: 0;
+  }
 }

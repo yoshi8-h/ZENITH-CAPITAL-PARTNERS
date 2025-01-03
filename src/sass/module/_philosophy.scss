@@ -13,7 +13,9 @@
 }
 
 .philosophy__inner {
-
+  @include mq(md) {
+    max-width: rem(600);
+  }
 }
 
 .philosophy__title {

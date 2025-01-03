@@ -10,7 +10,9 @@
 }
 
 .overview__inner {
-
+  @include mq(md) {
+    max-width: rem(600);
+  }
 }
 
 .overview__title {

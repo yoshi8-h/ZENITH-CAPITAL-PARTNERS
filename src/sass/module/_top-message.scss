@@ -10,9 +10,9 @@
 }
 
 .top-message__inner {
-  // @include mq(md) {
-  //   max-width: rem(600);
-  // }
+  @include mq(md) {
+    max-width: rem(600);
+  }
 }
 
 .top-message__title {

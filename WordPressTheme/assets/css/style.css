@@ -1959,7 +1959,7 @@ a {
 	bottom: 0;
 	content: "";
 	display: block;
-	height: 4px;
+	height: 0.25rem;
 	left: 0;
 	position: absolute;
 	width: 100%;
@@ -4206,6 +4206,10 @@ html {
 	width: 100%;
 }
 
+.content8.content8--low .content8__body {
+	margin-top: 0;
+}
+
 .contents__item {
 	padding-bottom: 1.25rem;
 	padding-left: 0.625rem;
@@ -4614,6 +4618,45 @@ html {
 	margin-top: 1.25rem;
 }
 
+.main-member__info {
+	flex-direction: column;
+	gap: 0.5rem;
+	justify-content: center;
+	padding-bottom: 0.5rem;
+}
+
+.main-member__info::after {
+	background: linear-gradient(to right, #569adf 18%, #dbe0e6 18%);
+	height: 0.1875rem;
+}
+
+.main-member__title {
+	width: 100%;
+}
+
+.main-member__role {
+	font-size: 1rem;
+}
+
+.main-member__name {
+	font-size: 1rem;
+}
+
+.main-member__license {
+	gap: 0;
+	justify-content: flex-start;
+	width: 100%;
+}
+
+.main-member__license-title {
+	flex-shrink: 0;
+	font-size: 0.875rem;
+}
+
+.main-member__license-items {
+	font-size: 0.875rem;
+}
+
 .management-policy__inner {
 	max-width: 37.5rem;
 }
@@ -4668,8 +4711,12 @@ html {
 	padding-bottom: 3.75rem;
 }
 
+.member__inner {
+	max-width: 37.5rem;
+}
+
 .member__contents {
-	margin-top: 2.5rem;
+	margin-top: 1.875rem;
 }
 
 .member__members {
@@ -4814,6 +4861,10 @@ html {
 	padding-bottom: 5rem;
 }
 
+.overview__inner {
+	max-width: 37.5rem;
+}
+
 .overview__contents-item:nth-of-type(n + 2) {
 	margin-top: 3.125rem;
 }
@@ -4821,6 +4872,10 @@ html {
 .philosophy {
 	padding-bottom: 4.375rem;
 	padding-top: 4.375rem;
+}
+
+.philosophy__inner {
+	max-width: 37.5rem;
 }
 
 .philosophy__wrap {
@@ -4979,6 +5034,54 @@ html {
 
 .posts__no-posts {
 	font-size: 0.875rem;
+}
+
+.president {
+	padding-left: 0;
+}
+
+.president__top {
+	flex-direction: column;
+	gap: 0.9375rem;
+	justify-content: center;
+}
+
+.president__img {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+.president__body {
+	width: 100%;
+}
+
+.president__name {
+	font-size: 1rem;
+	padding-left: 0.75rem;
+}
+
+.president__name::before {
+	width: 0.25rem;
+}
+
+.president__license {
+	gap: 0;
+	margin-top: 0.625rem;
+	padding-left: 0;
+}
+
+.president__license-title {
+	flex-shrink: 0;
+	font-size: 0.875rem;
+}
+
+.president__license-items {
+	font-size: 0.875rem;
+}
+
+.president__career-table {
+	margin-top: 0.0625rem;
 }
 
 .privacy {
@@ -5346,6 +5449,10 @@ html {
 
 .top-message {
 	padding-bottom: 3.75rem;
+}
+
+.top-message__inner {
+	max-width: 37.5rem;
 }
 
 .top-message__contents {

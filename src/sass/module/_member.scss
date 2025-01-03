@@ -10,7 +10,9 @@
 }
 
 .member__inner {
-
+  @include mq(md) {
+    max-width: rem(600);
+  }
 }
 
 .member__title {
@@ -21,7 +23,7 @@
   margin-top: rem(50);
 
   @include mq(md) {
-    margin-top: rem(40);
+    margin-top: rem(30);
   }
 }
 
