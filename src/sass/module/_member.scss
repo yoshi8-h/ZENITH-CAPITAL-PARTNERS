@@ -1,0 +1,50 @@
+@use "global" as *;
+
+
+.member {
+  padding-bottom: rem(90);
+
+  @include mq(md) {
+    padding-bottom: rem(60);
+  }
+}
+
+.member__inner {
+
+}
+
+.member__title {
+
+}
+
+.member__contents {
+  margin-top: rem(50);
+
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.member__president {
+
+}
+
+.member__members {
+  margin-top: rem(70);
+
+  @include mq(md) {
+    margin-top: rem(55);
+  }
+}
+
+.member__member {
+
+}
+
+.member__member:nth-of-type(n + 2) {
+  margin-top: rem(70);
+
+  @include mq(md) {
+    margin-top: rem(55);
+  }
+}
