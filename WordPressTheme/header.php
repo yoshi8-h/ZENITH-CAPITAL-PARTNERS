@@ -37,10 +37,10 @@
           <!-- サブメニュー (会社案内) -->
           <div class="header__sub-menu sub-menu is-company">
             <div class="sub-menu__items">
-              <a href="" class="sub-menu__item">トップメッセージ</a>
-              <a href="" class="sub-menu__item">企業理念</a>
-              <a href="" class="sub-menu__item">会社概要</a>
-              <a href="" class="sub-menu__item">主要メンバー紹介</a>
+              <a href="<?php echo esc_url(get_permalink(get_page_by_path('company'))); ?>#top-message" class="sub-menu__item">トップメッセージ</a>
+              <a href="<?php echo esc_url(get_permalink(get_page_by_path('company'))); ?>#philosophy" class="sub-menu__item">企業理念</a>
+              <a href="<?php echo esc_url(get_permalink(get_page_by_path('company'))); ?>#overview" class="sub-menu__item">会社概要</a>
+              <a href="<?php echo esc_url(get_permalink(get_page_by_path('company-member'))); ?>" class="sub-menu__item">主要メンバー紹介</a>
             </div>
           </div>
         </div>
