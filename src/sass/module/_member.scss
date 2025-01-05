@@ -27,11 +27,25 @@
   }
 }
 
-.member__president {
+.member__president {  // 社長のセクションが下に来る事はないだろうが、念の為に指定。
+  margin-top: rem(50);
 
+  @include mq(md) {
+    margin-top: rem(30);
+  }
 }
 
-.member__members {
+// .member__members {
+//   margin-top: rem(70);
+//   padding-left: rem(25);
+
+//   @include mq(md) {
+//     margin-top: rem(55);
+//     padding-left: 0;
+//   }
+// }
+
+.member__member {
   margin-top: rem(70);
   padding-left: rem(25);
 
@@ -39,10 +53,6 @@
     margin-top: rem(55);
     padding-left: 0;
   }
-}
-
-.member__member {
-
 }
 
 .member__member:nth-of-type(n + 2) {

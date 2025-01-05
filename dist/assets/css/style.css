@@ -2100,7 +2100,11 @@ a {
 	margin-top: 3.125rem;
 }
 
-.member__members {
+.member__president {
+	margin-top: 3.125rem;
+}
+
+.member__member {
 	margin-top: 4.375rem;
 	padding-left: 1.5625rem;
 }
@@ -4719,7 +4723,11 @@ html {
 	margin-top: 1.875rem;
 }
 
-.member__members {
+.member__president {
+	margin-top: 1.875rem;
+}
+
+.member__member {
 	margin-top: 3.4375rem;
 	padding-left: 0;
 }
