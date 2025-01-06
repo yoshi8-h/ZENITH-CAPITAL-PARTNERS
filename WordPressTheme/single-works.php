@@ -58,6 +58,24 @@
                 </div>
               </div>
 
+              <!-- 画像パターン③ (画像 縦1枚、横2枚) -->
+              <div class="works-contents__images-area images03">
+                <div class="images03__contents">
+                  <div class="images03__contents-item contents03">
+                    <div class="contents03__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/works-img04.webp" alt=""></div>
+                    <p class="contents03__text">屋上ペントハウス外観　after</p>
+                  </div>
+                  <div class="images03__contents-item contents03">
+                    <div class="contents03__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/works-img03.webp" alt=""></div>
+                    <p class="contents03__text">屋上ペントハウス外観　after</p>
+                  </div>
+                  <div class="images03__contents-item contents03">
+                    <div class="contents03__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/works-img03.webp" alt=""></div>
+                    <p class="contents03__text">屋上ペントハウス外観　after</p>
+                  </div>
+                </div>
+              </div>
+
               <!-- 詳細情報 (表 & タイトル) -->
               <div class="works-contents__info info02">
                 <div class="info02__title">詳細情報</div>
