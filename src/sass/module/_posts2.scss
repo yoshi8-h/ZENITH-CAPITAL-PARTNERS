@@ -1,0 +1,23 @@
+@use "global" as *;
+
+
+.posts2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: rem(22);
+  row-gap: rem(55);
+  align-items: flex-start;  // 上揃えに。
+
+  @include mq(md) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: rem(12);
+    row-gap: rem(30);
+    place-items: center;
+  }
+}
+
+.posts2__item {
+  @include mq(md) {
+    height: 100%;
+  }
+}

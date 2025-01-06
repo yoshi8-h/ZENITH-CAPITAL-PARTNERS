@@ -65,7 +65,7 @@
               <p class="list__item-text">〒100-0006 <br class="u-mobile">千代田区有楽町一丁目9番4号 蚕糸会館7階　<br class="u-mobile">ゼニス・キャピタル・パートナーズ株式会社 管理部</p>
               <div class="list__item-info">
                 <div class="list__item-info-item">電話　：　03-5222-4310　（平日9時～17時）</div>
-                <div class="list__item-info-item">メール　：　xxxx@xxxx.co.jp</div>
+                <div class="list__item-info-item">メール　：　info@zcp.co.jp</div>
               </div>
             </li>
             <li class="list__item">

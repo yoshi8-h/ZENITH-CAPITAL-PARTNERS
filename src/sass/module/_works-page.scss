@@ -1,0 +1,28 @@
+@use "global" as *;
+
+
+.works-page {
+  padding-bottom: rem(110);
+
+  @include mq(md) {
+    padding-bottom: rem(65);
+  }
+}
+
+.works-page__inner {
+  @include mq(md) {
+    max-width: rem(600);
+  }
+}
+
+.works-page__posts {
+
+}
+
+.works-page__pagenavi {
+  margin-top: rem(40);
+
+  @include mq(md) {
+    margin-top: rem(30);
+  }
+}

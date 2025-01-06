@@ -1,0 +1,22 @@
+@use "global" as *;
+
+
+.categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem(10);
+
+  @include mq(md) {
+    flex-direction: column;
+    gap: rem(6);
+  }
+}
+
+.categories__item {
+  min-width: rem(160);
+
+  @include mq(md) {
+    min-width: rem(150);
+  }
+}
