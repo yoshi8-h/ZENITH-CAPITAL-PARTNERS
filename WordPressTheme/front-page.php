@@ -86,35 +86,35 @@
         <p class="solution__text">当社の事業内容をご確認いただけます。</p>
         <div class="solution__contents">
           <div class="solution__contents-item content">
-            <a href="" class="content__link">
+            <button type="button" class="content__button">
               <div class="content__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/solution-content01.webp" alt=""></div>
               <div class="content__plus-icon"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/content-plus-icon.webp" alt="+"></div>
               <div class="content__overlay">
                 <p class="content__overlay-text">不動産の投資分析から、仕入れ、資金調達のアレンジ、資産価値最大化を実現する運営管理、出口戦略（売却）の立案まで、投資家や利益最大化のための一貫したサービスを提供します。</p>
-                <div class="content__overlay-btn">
+                <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category1" class="content__overlay-btn">
                   <span class="content__overlay-btn-text">MORE</span>
                   <span class="content__overlay-btn-arrow">></span>
-                </div>
+                </a>
               </div>
-            </a>
+            </button>
             <div class="content__title">アセットマネジメント</div>
           </div>
           <div class="solution__contents-item content">
-            <a href="" class="content__link">
+            <button type="button" class="content__button">
               <div class="content__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/solution-content02.webp" alt=""></div>
               <div class="content__plus-icon"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/content-plus-icon.webp" alt="+"></div>
               <div class="content__overlay">
                 <p class="content__overlay-text">事業承継に伴う事業用不動産の取り扱い、不動産の有効活用、複雑な権利関係の調整等不動産に関するお悩みの解決をサポートします。</p>
-                <div class="content__overlay-btn">
+                <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category2" class="content__overlay-btn">
                   <span class="content__overlay-btn-text">MORE</span>
                   <span class="content__overlay-btn-arrow">></span>
-                </div>
+                </a>
               </div>
-            </a>
+            </button>
             <div class="content__title">不動産コンサルティング</div>
           </div>
           <div class="solution__contents-item content">
-            <a href="" class="content__link">
+            <button type="button" class="content__button">
               <div class="content__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/solution-content03.webp" alt=""></div>
               <div class="content__plus-icon"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/content-plus-icon.webp" alt="+"></div>
               <div class="content__overlay">
@@ -122,31 +122,31 @@
                   建物の遵法性や入居テナントの問題等の要因で本来の価値が発揮されていない不動産に自己勘定で投資する事業です。<br
                   >価値を改善することで不動産の収益力を高め安定的な収益を確保することを目指します。
                 </p>
-                <div class="content__overlay-btn">
+                <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category3" class="content__overlay-btn">
                   <span class="content__overlay-btn-text">MORE</span>
                   <span class="content__overlay-btn-arrow">></span>
-                </div>
+                </a>
               </div>
-            </a>
+            </button>
             <div class="content__title">自己投資</div>
           </div>
           <div class="solution__contents-item content">
-            <a href="" class="content__link">
+            <button type="button" class="content__button">
               <div class="content__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/solution-content03.webp" alt=""></div>
               <div class="content__plus-icon"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/content-plus-icon.webp" alt="+"></div>
               <div class="content__overlay">
                 <p class="content__overlay-text">不動産の有効活用、リーシング戦略の一環として、オーナーから不動産を借上げ、自らテナントとして事業運営し不動産の価値最大化を目指します。</p>
-                <div class="content__overlay-btn">
+                <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category4" class="content__overlay-btn">
                   <span class="content__overlay-btn-text">MORE</span>
                   <span class="content__overlay-btn-arrow">></span>
-                </div>
+                </a>
               </div>
-            </a>
+            </button>
             <div class="content__title">テナント事業</div>
           </div>
         </div>
         <div class="solution__btn-wrap">
-          <a href="" class="solution__btn btn2">
+          <a href="<?php echo esc_url(get_permalink(get_page_by_path('business'))); ?>" class="solution__btn btn2">
             <div class="btn2__text">事業案内</div>
             <div class="btn2__arrow"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/btn2-arrow-white.webp" alt="→"></div>
           </a>
@@ -169,10 +169,10 @@
               <div class="content2__overlay-bg"></div>
               <div class="content2__overlay-category">アセットマネジメント</div>
               <p class="content2__overlay-text">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</p>
-              <div class="content2__overlay-btn">
-                <a href="" class="content2__overlay-btn-text">MORE</a>
+              <a href="" class="content2__overlay-btn">
+                <span class="content2__overlay-btn-text">MORE</span>
                 <span class="content2__overlay-btn-arrow">></span>
-              </div>
+              </a>
             </div>
           </button>
           <button type="button" class="project__contents-item content2 js-fadeInUp">
@@ -181,10 +181,10 @@
               <div class="content2__overlay-bg"></div>
               <div class="content2__overlay-category">アセットマネジメント</div>
               <p class="content2__overlay-text">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</p>
-              <div class="content2__overlay-btn">
-                <a href="" class="content2__overlay-btn-text">MORE</a>
+              <a href="" class="content2__overlay-btn">
+                <span class="content2__overlay-btn-text">MORE</span>
                 <span class="content2__overlay-btn-arrow">></span>
-              </div>
+              </a>
             </div>
           </button>
           <button type="button" class="project__contents-item content2 js-fadeInUp">
@@ -193,10 +193,10 @@
               <div class="content2__overlay-bg"></div>
               <div class="content2__overlay-category">アセットマネジメント</div>
               <p class="content2__overlay-text">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</p>
-              <div class="content2__overlay-btn">
-                <a href="" class="content2__overlay-btn-text">MORE</a>
+              <a href="" class="content2__overlay-btn">
+                <span class="content2__overlay-btn-text">MORE</span>
                 <span class="content2__overlay-btn-arrow">></span>
-              </div>
+              </a>
             </div>
           </button>
           <button type="button" class="project__contents-item content2 js-fadeInUp">
@@ -205,10 +205,10 @@
               <div class="content2__overlay-bg"></div>
               <div class="content2__overlay-category">アセットマネジメント</div>
               <p class="content2__overlay-text">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</p>
-              <div class="content2__overlay-btn">
-                <a href="" class="content2__overlay-btn-text">MORE</a>
+              <a href="" class="content2__overlay-btn">
+                <span class="content2__overlay-btn-text">MORE</span>
                 <span class="content2__overlay-btn-arrow">></span>
-              </div>
+              </a>
             </div>
           </button>
           <button type="button" class="project__contents-item content2 js-fadeInUp">
@@ -217,10 +217,10 @@
               <div class="content2__overlay-bg"></div>
               <div class="content2__overlay-category">アセットマネジメント</div>
               <p class="content2__overlay-text">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</p>
-              <div class="content2__overlay-btn">
-                <a href="" class="content2__overlay-btn-text">MORE</a>
+              <a href="" class="content2__overlay-btn">
+                <span class="content2__overlay-btn-text">MORE</span>
                 <span class="content2__overlay-btn-arrow">></span>
-              </div>
+              </a>
             </div>
           </button>
           <button type="button" class="project__contents-item content2 js-fadeInUp">
@@ -229,10 +229,10 @@
               <div class="content2__overlay-bg"></div>
               <div class="content2__overlay-category">アセットマネジメント</div>
               <p class="content2__overlay-text">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</p>
-              <div class="content2__overlay-btn">
-                <a href="" class="content2__overlay-btn-text">MORE</a>
+              <a href="" class="content2__overlay-btn">
+                <span class="content2__overlay-btn-text">MORE</span>
                 <span class="content2__overlay-btn-arrow">></span>
-              </div>
+              </a>
             </div>
           </button>
         </div>

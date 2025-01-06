@@ -147,7 +147,35 @@ jQuery(".js-accordion").on("click", function (e) {
 });
 
 /* -------------------------------------------------------------------------------- */
-/* オーバーレイのSP時の動作を制御 (TOPページ & 実績一覧ページ) */
+/* オーバーレイのSP時の動作を制御 (TOPページの事業案内) */
+// オーバーレイを、SP時はhoverで表示ではなく、クリックした場合に表示させ、もう一度クリックすると元に戻る仕様に。
+document.addEventListener("DOMContentLoaded", function () {
+  var contentElements = document.querySelectorAll(".content__button");
+  contentElements.forEach(function (content) {
+    var overlay = content.querySelector(".content__overlay");
+
+    // 初期状態
+    var isOverlayActive = false;
+
+    // contentのクリック時
+    content.addEventListener("click", function () {
+      if (!isOverlayActive) {
+        content.classList.add("is-active"); // オーバーレイを表示するクラスを付与
+        isOverlayActive = true;
+      }
+    });
+
+    // オーバーレイのクリック時
+    overlay.addEventListener("click", function (event) {
+      event.stopPropagation(); // 親要素のクリックイベントを無効化
+      content.classList.remove("is-active"); // オーバーレイを隠す
+      isOverlayActive = false;
+    });
+  });
+});
+
+/* -------------------------------------------------------------------------------- */
+/* オーバーレイのSP時の動作を制御 (TOPページの実績 & 実績一覧ページ) */
 // オーバーレイを、SP時はhoverで表示ではなく、クリックした場合に表示させ、もう一度クリックすると元に戻る仕様に。
 document.addEventListener("DOMContentLoaded", function () {
   var content2Elements = document.querySelectorAll(".content2");

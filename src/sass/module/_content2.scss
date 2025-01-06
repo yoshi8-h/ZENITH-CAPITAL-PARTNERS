@@ -6,7 +6,7 @@
   padding: 0;  // buttonタグにデフォルトで当たるpaddingをリセット
   position: relative;
   overflow: hidden;
-  cursor: default;
+  cursor: default;  // ボタンのhover時のカーソルをポインターにしないように指定。(PC時は押しても意味ないから。)
 }
 
 .content2:hover .content2__overlay {  // hover
@@ -91,6 +91,7 @@
 }
 
 .content2__overlay-text {
+  text-align: left;
   margin-top: rem(30);
   color: $color-white;
   font-size: rem(16);
@@ -115,6 +116,7 @@
   justify-content: center;
   align-items: center;
   gap: rem(10);
+  transition: opacity 0.2s ease-out;
 
   font-size: rem(16);
   color: #e6f1f7;
@@ -126,12 +128,12 @@
   }
 }
 
-.content2__overlay-btn-text {
-  transition: opacity 0.2s ease-out;
+.content2__overlay-btn:hover {  // hover
+  opacity: 0.4;
 }
 
-.content2__overlay-btn-text:hover {  // hover
-  opacity: 0.4;
+.content2__overlay-btn-text {
+
 }
 
 .content2__overlay-btn-arrow {

@@ -651,20 +651,22 @@ a {
 	position: relative;
 }
 
-.content__link {
+.content__button {
 	-o-object-fit: cover;
 	aspect-ratio: 285/400;
+	cursor: default;
 	display: block;
 	height: inherit;
 	max-width: 17.8125rem;
 	object-fit: cover;
 	overflow: hidden;
+	padding: 0;
 	position: relative;
 	width: inherit;
 	width: 100%;
 }
 
-.content__link:hover .content__overlay {
+.content__button:hover .content__overlay {
 	transform: translateY(0);
 }
 
@@ -731,6 +733,7 @@ a {
 	color: #e6f1f7;
 	font-size: 1rem;
 	font-weight: 400;
+	text-align: left;
 }
 
 .content__overlay-btn {
@@ -743,8 +746,13 @@ a {
 	justify-content: center;
 	margin-left: auto;
 	margin-top: 1.875rem;
+	transition: opacity 0.2s ease-out;
 	width: -moz-fit-content;
 	width: fit-content;
+}
+
+.content__overlay-btn:hover {
+	opacity: 0.4;
 }
 
 .content2 {
@@ -828,6 +836,7 @@ a {
 	font-weight: 400;
 	margin-top: 1.875rem;
 	position: relative;
+	text-align: left;
 	z-index: 10;
 }
 
@@ -842,16 +851,13 @@ a {
 	margin-left: auto;
 	margin-top: 1.25rem;
 	position: relative;
+	transition: opacity 0.2s ease-out;
 	width: -moz-fit-content;
 	width: fit-content;
 	z-index: 10;
 }
 
-.content2__overlay-btn-text {
-	transition: opacity 0.2s ease-out;
-}
-
-.content2__overlay-btn-text:hover {
+.content2__overlay-btn:hover {
 	opacity: 0.4;
 }
 
@@ -3997,9 +4003,17 @@ html {
 	min-width: 16.875rem;
 }
 
-.content__link {
+.content__button {
 	aspect-ratio: 161/225;
 	max-width: 10.0625rem;
+}
+
+.content__button:hover .content__overlay {
+	transform: translateY(100%);
+}
+
+.content__button.is-active .content__overlay {
+	transform: translateY(0);
 }
 
 .content__plus-icon {
