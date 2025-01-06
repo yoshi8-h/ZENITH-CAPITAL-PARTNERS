@@ -1,0 +1,36 @@
+@use "global" as *;
+
+
+.info02 {
+
+}
+
+.info02__title {
+  font-size: rem(22);
+  font-weight: $medium;
+  padding-left: rem(15);
+  position: relative;
+
+  @include mq(md) {
+    font-size: rem(20);
+    padding-left: rem(12);
+  }
+}
+.info02__title::before {  // 左側の青い縦線
+  content: "";
+  width: rem(5);
+  height: 100%;
+  background: $color-accent1;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.info02__table {
+  margin-top: rem(20);
+
+  @include mq(md) {
+    margin-top: rem(15);
+  }
+}
