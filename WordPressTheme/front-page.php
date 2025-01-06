@@ -52,7 +52,7 @@
             <div class="management-policy__content-body js-fadeInLeft">
               <div class="management-policy__content-title u-desktop">理論と実践に基づいたソリューションを提供します。</div>
               <p class="management-policy__content-text">不動産鑑定士業をバックグラウンドに持つ当社は、理論的な根拠と実証的なデータを駆使して不動産の価値最大化を目指します。</p>
-              <a href="" class="management-policy__content-btn btn1">
+              <a href="<?php echo esc_url(get_permalink(get_page_by_path('business'))); ?>#solution-policy__content-01" class="management-policy__content-btn btn1">
                 <span class="btn1__text">MORE</span>
                 <span class="btn1__arrow">></span>
               </a>
@@ -65,7 +65,7 @@
             <div class="management-policy__content-body js-fadeInRight">
               <div class="management-policy__content-title u-desktop">信頼関係を大切にします。</div>
               <p class="management-policy__content-text">地主・投資家・金融機関とは、成功事例を積み重ねることで信頼関係を、不動産をご利用されるユーザー様とは、快適な環境を提供することで信頼関係を構築します。</p>
-              <a href="" class="management-policy__content-btn btn1">
+              <a href="<?php echo esc_url(get_permalink(get_page_by_path('business'))); ?>#solution-policy__content-02" class="management-policy__content-btn btn1">
                 <span class="btn1__text">MORE</span>
                 <span class="btn1__arrow">></span>
               </a>
@@ -265,7 +265,7 @@
               >一方で、故郷を離れて上京してからはコンクリートやアスファルトに囲まれた生活が当たり前になり、最初の頃は合理性や機能性ばかりが優先された場所に窮屈さや戸惑いを感じていました。
             </p>
             <div class="message__btn-wrap">
-              <a href="" class="message__btn btn2">
+              <a href="<?php echo esc_url(get_permalink(get_page_by_path('company'))); ?>#top-message" class="message__btn btn2">
                 <div class="btn2__text">トップメッセージ</div>
                 <div class="btn2__arrow"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/btn2-arrow-white.webp" alt="→"></div>
               </a>
@@ -350,7 +350,7 @@
           ?>
         </div>
         <div class="news__btn-wrap">
-          <a href="" class="news__btn btn2">
+          <a href="<?php echo esc_url(get_permalink(get_page_by_path('news'))); ?>" class="news__btn btn2">
             <div class="btn2__text">ニュース一覧</div>
             <div class="btn2__arrow"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/btn2-arrow-white.webp" alt="→"></div>
           </a>

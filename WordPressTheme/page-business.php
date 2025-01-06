@@ -27,7 +27,7 @@
           >そして人と人の繋がりを大切にして、不動産価値の持続的な成長を実現するソリューションをご提供します。
         </p>
         <div class="solution-policy__contents">
-          <div class="solution-policy__content content3">
+          <div id="solution-policy__content-01" class="solution-policy__content content3">
             <div class="content3__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/content3-img-01.webp" alt=""></div>
             <div class="content3__contents">
               <div class="content3__title">
@@ -43,7 +43,7 @@
               </ul>
             </div>
           </div>
-          <div class="solution-policy__content content3">
+          <div id="solution-policy__content-02" class="solution-policy__content content3">
             <div class="content3__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/content3-img-02.webp" alt=""></div>
             <div class="content3__contents">
               <div class="content3__title">
