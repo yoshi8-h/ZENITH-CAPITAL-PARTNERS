@@ -162,82 +162,52 @@
           <div class="section-title__en">PROJECT</div>
         </h2>
         <p class="project__text">これまでの当社の実績をご覧いただけます。</p>
-        <div class="project__contents">
-          <button type="button" class="project__contents-item content2 js-fadeInUp">
-            <div class="content2__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/project-content2-01.webp" alt=""></div>
-            <div class="content2__overlay">
-              <div class="content2__overlay-bg"></div>
-              <div class="content2__overlay-category">アセットマネジメント</div>
-              <p class="content2__overlay-text">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</p>
-              <a href="" class="content2__overlay-btn">
-                <span class="content2__overlay-btn-text">MORE</span>
-                <span class="content2__overlay-btn-arrow">></span>
-              </a>
-            </div>
-          </button>
-          <button type="button" class="project__contents-item content2 js-fadeInUp">
-            <div class="content2__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/project-content2-01.webp" alt=""></div>
-            <div class="content2__overlay">
-              <div class="content2__overlay-bg"></div>
-              <div class="content2__overlay-category">アセットマネジメント</div>
-              <p class="content2__overlay-text">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</p>
-              <a href="" class="content2__overlay-btn">
-                <span class="content2__overlay-btn-text">MORE</span>
-                <span class="content2__overlay-btn-arrow">></span>
-              </a>
-            </div>
-          </button>
-          <button type="button" class="project__contents-item content2 js-fadeInUp">
-            <div class="content2__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/project-content2-01.webp" alt=""></div>
-            <div class="content2__overlay">
-              <div class="content2__overlay-bg"></div>
-              <div class="content2__overlay-category">アセットマネジメント</div>
-              <p class="content2__overlay-text">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</p>
-              <a href="" class="content2__overlay-btn">
-                <span class="content2__overlay-btn-text">MORE</span>
-                <span class="content2__overlay-btn-arrow">></span>
-              </a>
-            </div>
-          </button>
-          <button type="button" class="project__contents-item content2 js-fadeInUp">
-            <div class="content2__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/project-content2-01.webp" alt=""></div>
-            <div class="content2__overlay">
-              <div class="content2__overlay-bg"></div>
-              <div class="content2__overlay-category">アセットマネジメント</div>
-              <p class="content2__overlay-text">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</p>
-              <a href="" class="content2__overlay-btn">
-                <span class="content2__overlay-btn-text">MORE</span>
-                <span class="content2__overlay-btn-arrow">></span>
-              </a>
-            </div>
-          </button>
-          <button type="button" class="project__contents-item content2 js-fadeInUp">
-            <div class="content2__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/project-content2-01.webp" alt=""></div>
-            <div class="content2__overlay">
-              <div class="content2__overlay-bg"></div>
-              <div class="content2__overlay-category">アセットマネジメント</div>
-              <p class="content2__overlay-text">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</p>
-              <a href="" class="content2__overlay-btn">
-                <span class="content2__overlay-btn-text">MORE</span>
-                <span class="content2__overlay-btn-arrow">></span>
-              </a>
-            </div>
-          </button>
-          <button type="button" class="project__contents-item content2 js-fadeInUp">
-            <div class="content2__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/project-content2-01.webp" alt=""></div>
-            <div class="content2__overlay">
-              <div class="content2__overlay-bg"></div>
-              <div class="content2__overlay-category">アセットマネジメント</div>
-              <p class="content2__overlay-text">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</p>
-              <a href="" class="content2__overlay-btn">
-                <span class="content2__overlay-btn-text">MORE</span>
-                <span class="content2__overlay-btn-arrow">></span>
-              </a>
-            </div>
-          </button>
-        </div>
+
+        <?php
+        // カスタムタクソノミー『works_toppage』のターム『pick-up』を選んでいる投稿のみ、TOPページに最大6記事表示。
+        $args = [
+            'post_type'      => 'works', // カスタム投稿タイプ
+            'posts_per_page' => 6,       // 最大6件
+            'tax_query'      => [
+                [
+                    'taxonomy' => 'works_toppage', // カスタムタクソノミー
+                    'field'    => 'slug',          // タームスラッグで指定
+                    'terms'    => 'pick-up',       // 表示するターム
+                ],
+            ],
+        ];
+        $query = new WP_Query($args);
+
+        if ($query->have_posts()) : ?>
+          <div class="project__contents">
+            <?php while ($query->have_posts()) : $query->the_post(); ?>
+            <button type="button" class="project__contents-item content2 js-fadeInUp">
+              <div class="content2__bg">
+                <?php if (has_post_thumbnail()) : ?>
+                  <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像">
+                <?php else : ?>
+                  <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/noimg.png" alt="no-image">
+                <?php endif; ?>
+              </div>
+              <div class="content2__overlay">
+                <div class="content2__overlay-bg"></div>
+                <div class="content2__overlay-category"><?php the_title(); ?></div>
+                <p class="content2__overlay-text">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</p>
+                <a href="<?php the_permalink(); ?>" class="content2__overlay-btn">
+                  <span class="content2__overlay-btn-text">MORE</span>
+                  <span class="content2__overlay-btn-arrow">></span>
+                </a>
+              </div>
+            </button>
+            <?php endwhile; ?>
+          </div>
+        <?php else : ?>
+          <p class="project__contents-no-post">現在、表示する実績がありません。</p>
+        <?php endif;
+          wp_reset_postdata(); // クエリをリセット
+        ?>
         <div class="project__btn-wrap">
-          <a href="" class="project__btn btn2">
+          <a href="<?php echo esc_url(get_post_type_archive_link('works')); ?>" class="project__btn btn2">
             <div class="btn2__text">業務実績</div>
             <div class="btn2__arrow"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/btn2-arrow-white.webp" alt="→"></div>
           </a>

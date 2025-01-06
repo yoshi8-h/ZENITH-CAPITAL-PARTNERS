@@ -57,6 +57,17 @@
   width: 100%;
 }
 
+.project__contents-no-post {  // 投稿(実績)がない場合に表示する文章
+  margin-top: rem(40);
+  text-align: center;
+  font-size: rem(16);
+
+  @include mq(md) {
+    margin-top: rem(20);
+    font-size: rem(14);
+  }
+}
+
 .project__btn-wrap {
   margin-top: rem(45);
   width: fit-content;

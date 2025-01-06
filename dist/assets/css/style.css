@@ -2751,6 +2751,12 @@ a {
 	width: 100%;
 }
 
+.project__contents-no-post {
+	font-size: 1rem;
+	margin-top: 2.5rem;
+	text-align: center;
+}
+
 .project__btn-wrap {
 	margin-left: auto;
 	margin-right: auto;
@@ -5290,6 +5296,11 @@ html {
 	margin-top: 1.25rem;
 	place-items: center;
 	row-gap: 0.75rem;
+}
+
+.project__contents-no-post {
+	font-size: 0.875rem;
+	margin-top: 1.25rem;
 }
 
 .project__btn-wrap {

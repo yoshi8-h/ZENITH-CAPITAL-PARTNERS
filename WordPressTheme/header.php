@@ -30,7 +30,7 @@
           </div>
         </div>
         <div class="header__nav-item">
-          <a href="<?php echo get_post_type_archive_link('works'); ?>" class="header__link">実績紹介</a>
+          <a href="<?php echo esc_url(get_post_type_archive_link('works')); ?>" class="header__link">実績紹介</a>
         </div>
         <div class="header__nav-item">
           <a href="<?php echo esc_url(get_permalink(get_page_by_path('company'))); ?>" class="header__link">会社案内</a>
@@ -82,7 +82,7 @@
           </div>
         </div>
         <div class="nav__item">
-          <a href="<?php echo esc_url(get_permalink(get_page_by_path('works'))); ?>" class="nav__link">実績紹介</a>
+          <a href="<?php echo esc_url(get_post_type_archive_link('works')); ?>" class="nav__link">実績紹介</a>
         </div>
         <div class="nav__item toggle">
           <button type="button" class="toggle__head js-accordion">
