@@ -191,8 +191,13 @@
               </div>
               <div class="content2__overlay">
                 <div class="content2__overlay-bg"></div>
-                <div class="content2__overlay-category"><?php the_title(); ?></div>
-                <p class="content2__overlay-text">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</p>
+                <div class="content2__overlay-category">所在・種別(文字制限必要)</div>
+                <p class="content2__overlay-text">
+                  <?php
+                    $content = strip_tags(get_the_content()); // HTMLタグを除去
+                    echo mb_substr($content, 0, 33) . '...'; // 33文字まで切り取り、省略記号を付加
+                  ?>
+                </p>
                 <a href="<?php the_permalink(); ?>" class="content2__overlay-btn">
                   <span class="content2__overlay-btn-text">MORE</span>
                   <span class="content2__overlay-btn-arrow">></span>
