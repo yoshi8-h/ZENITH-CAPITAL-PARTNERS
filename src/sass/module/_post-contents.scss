@@ -25,9 +25,9 @@
   border-bottom: 1px solid #2c2c2c;
 
   @include mq(md) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: flex-start;
     gap: rem(10);
   }
 }
@@ -37,6 +37,10 @@
   justify-content: center;
   align-items: center;
   gap: rem(12);
+
+  @include mq(md) {
+    gap: rem(10);
+  }
 }
 
 .post-contents__category {
@@ -86,10 +90,18 @@
   color: #353f48;
   transition: opacity 0.2s ease-out;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   @include mq(md) {
     font-size: rem(13);
     // margin-left: auto;
   }
+}
+
+.post-contents__list-link-sp {
+
 }
 
 .post-contents__list-link:hover {

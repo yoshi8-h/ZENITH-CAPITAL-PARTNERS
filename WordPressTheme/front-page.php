@@ -163,78 +163,78 @@
         </h2>
         <p class="project__text">これまでの当社の実績をご覧いただけます。</p>
         <div class="project__contents">
-          <a href="" class="project__contents-item content2 js-fadeInUp">
+          <button type="button" class="project__contents-item content2 js-fadeInUp">
             <div class="content2__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/project-content2-01.webp" alt=""></div>
             <div class="content2__overlay">
               <div class="content2__overlay-bg"></div>
               <div class="content2__overlay-category">アセットマネジメント</div>
               <p class="content2__overlay-text">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</p>
               <div class="content2__overlay-btn">
-                <span class="content2__overlay-btn-text">MORE</span>
+                <a href="" class="content2__overlay-btn-text">MORE</a>
                 <span class="content2__overlay-btn-arrow">></span>
               </div>
             </div>
-          </a>
-          <a href="" class="project__contents-item content2 js-fadeInUp">
+          </button>
+          <button type="button" class="project__contents-item content2 js-fadeInUp">
             <div class="content2__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/project-content2-01.webp" alt=""></div>
             <div class="content2__overlay">
-            <div class="content2__overlay-bg"></div>
+              <div class="content2__overlay-bg"></div>
               <div class="content2__overlay-category">アセットマネジメント</div>
               <p class="content2__overlay-text">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</p>
               <div class="content2__overlay-btn">
-                <span class="content2__overlay-btn-text">MORE</span>
+                <a href="" class="content2__overlay-btn-text">MORE</a>
                 <span class="content2__overlay-btn-arrow">></span>
               </div>
             </div>
-          </a>
-          <a href="" class="project__contents-item content2 js-fadeInUp">
+          </button>
+          <button type="button" class="project__contents-item content2 js-fadeInUp">
             <div class="content2__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/project-content2-01.webp" alt=""></div>
             <div class="content2__overlay">
-            <div class="content2__overlay-bg"></div>
+              <div class="content2__overlay-bg"></div>
               <div class="content2__overlay-category">アセットマネジメント</div>
               <p class="content2__overlay-text">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</p>
               <div class="content2__overlay-btn">
-                <span class="content2__overlay-btn-text">MORE</span>
+                <a href="" class="content2__overlay-btn-text">MORE</a>
                 <span class="content2__overlay-btn-arrow">></span>
               </div>
             </div>
-          </a>
-          <a href="" class="project__contents-item content2 js-fadeInUp">
+          </button>
+          <button type="button" class="project__contents-item content2 js-fadeInUp">
             <div class="content2__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/project-content2-01.webp" alt=""></div>
             <div class="content2__overlay">
-            <div class="content2__overlay-bg"></div>
+              <div class="content2__overlay-bg"></div>
               <div class="content2__overlay-category">アセットマネジメント</div>
               <p class="content2__overlay-text">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</p>
               <div class="content2__overlay-btn">
-                <span class="content2__overlay-btn-text">MORE</span>
+                <a href="" class="content2__overlay-btn-text">MORE</a>
                 <span class="content2__overlay-btn-arrow">></span>
               </div>
             </div>
-          </a>
-          <a href="" class="project__contents-item content2 js-fadeInUp">
+          </button>
+          <button type="button" class="project__contents-item content2 js-fadeInUp">
             <div class="content2__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/project-content2-01.webp" alt=""></div>
             <div class="content2__overlay">
-            <div class="content2__overlay-bg"></div>
+              <div class="content2__overlay-bg"></div>
               <div class="content2__overlay-category">アセットマネジメント</div>
               <p class="content2__overlay-text">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</p>
               <div class="content2__overlay-btn">
-                <span class="content2__overlay-btn-text">MORE</span>
+                <a href="" class="content2__overlay-btn-text">MORE</a>
                 <span class="content2__overlay-btn-arrow">></span>
               </div>
             </div>
-          </a>
-          <a href="" class="project__contents-item content2 js-fadeInUp">
+          </button>
+          <button type="button" class="project__contents-item content2 js-fadeInUp">
             <div class="content2__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/project-content2-01.webp" alt=""></div>
             <div class="content2__overlay">
-            <div class="content2__overlay-bg"></div>
+              <div class="content2__overlay-bg"></div>
               <div class="content2__overlay-category">アセットマネジメント</div>
               <p class="content2__overlay-text">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</p>
               <div class="content2__overlay-btn">
-                <span class="content2__overlay-btn-text">MORE</span>
+                <a href="" class="content2__overlay-btn-text">MORE</a>
                 <span class="content2__overlay-btn-arrow">></span>
               </div>
             </div>
-          </a>
+          </button>
         </div>
         <div class="project__btn-wrap">
           <a href="" class="project__btn btn2">

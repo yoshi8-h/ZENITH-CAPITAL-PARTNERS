@@ -43,7 +43,7 @@
   padding-left: rem(28);
   padding-right: rem(12);  // 最低限を指定
   font-size: rem(17);
-  font-weight: $medium;
+  font-weight: $normal;
   line-height: 2.0;
 
   @include mq(md) {

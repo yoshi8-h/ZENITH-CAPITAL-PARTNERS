@@ -7,13 +7,14 @@
 
 .content5__warp {
   background: $color-white;
-  padding-block: rem(34);
+  padding-block: rem(45);
   padding-inline: rem(50);
   border: rem(15) solid #e9ecf1;
 
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  // align-items: center;
+  align-items: stretch; // 子要素を親要素の高さに合わせる
   // gap: rem(110);
 
   @include mq(md) {
@@ -23,15 +24,21 @@
 
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
   }
 }
 
 .content5__left {
   width: 50%;
+  display: flex;
+  align-items: center;
 
   @include mq(md) {
     width: 100%;
   }
+}
+
+.content5__left-wrap {
 }
 
 .content5__title {
@@ -39,6 +46,7 @@
   justify-content: flex-start;
   align-items: flex-end;
   gap: rem(8);
+  line-height: 1.0;
 }
 
 .content5__title-number {
@@ -65,13 +73,14 @@
 }
 
 .content5__text {
-  margin-top: rem(6);
+  margin-top: rem(32);
   color: $color-font-base-1;
   font-size: rem(17);
   font-weight: $normal;
   line-height: 2.0;
 
   @include mq(md) {
+    margin-top: rem(10);
     font-size: rem(14);
     line-height: 1.7;
   }
@@ -80,6 +89,8 @@
 .content5__list {
   width: 41%;
   position: relative;
+  display: flex;
+  align-items: center;
 
   @include mq(md) {
     margin-top: rem(30);
@@ -104,6 +115,9 @@
     left: 50%;
     transform: translate(-50%, 0);
   }
+}
+
+.content5__list-wrap {
 }
 
 .content5__list-item {

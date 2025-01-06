@@ -4,6 +4,18 @@ jQuery(function ($) {// この中であればWordpressでも「$」が使用可�
 });
 
 /* -------------------------------------------------------------------------------- */
+/* 現在選択されているページ(currentページ)の、header内のグローバルメニュー項目の文字色を変更 (『.is-current』クラスを付与) */
+document.addEventListener("DOMContentLoaded", function () {
+  var currentUrl = window.location.href;
+  var menuLinks = document.querySelectorAll(".header__nav-item a");
+  menuLinks.forEach(function (link) {
+    if (link.href === currentUrl) {
+      link.classList.add("is-current");
+    }
+  });
+});
+
+/* -------------------------------------------------------------------------------- */
 /* headerの下にborder-bottomを追加 (少しでもスクロールした場合に) */
 document.addEventListener('DOMContentLoaded', function () {
   var header = document.querySelector('.header');
@@ -132,6 +144,34 @@ jQuery(".js-accordion").on("click", function (e) {
     jQuery(this).parent().addClass("is-open");
     jQuery(this).next().slideDown();
   }
+});
+
+/* -------------------------------------------------------------------------------- */
+/* オーバーレイのSP時の動作を制御 (TOPページ & 実績一覧ページ) */
+// オーバーレイを、SP時はhoverで表示ではなく、クリックした場合に表示させ、もう一度クリックすると元に戻る仕様に。
+document.addEventListener("DOMContentLoaded", function () {
+  var content2Elements = document.querySelectorAll(".content2");
+  content2Elements.forEach(function (content2) {
+    var overlay = content2.querySelector(".content2__overlay");
+
+    // 初期状態
+    var isOverlayActive = false;
+
+    // content2のクリック時
+    content2.addEventListener("click", function () {
+      if (!isOverlayActive) {
+        content2.classList.add("is-active"); // オーバーレイを表示するクラスを付与
+        isOverlayActive = true;
+      }
+    });
+
+    // オーバーレイのクリック時
+    overlay.addEventListener("click", function (event) {
+      event.stopPropagation(); // 親要素のクリックイベントを無効化
+      content2.classList.remove("is-active"); // オーバーレイを隠す
+      isOverlayActive = false;
+    });
+  });
 });
 
 /* -------------------------------------------------------------------------------- */

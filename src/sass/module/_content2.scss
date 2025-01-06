@@ -2,16 +2,25 @@
 
 
 .content2 {
+  display: block;
+  padding: 0;  // buttonタグにデフォルトで当たるpaddingをリセット
   position: relative;
   overflow: hidden;
+  cursor: default;
 }
 
 .content2:hover .content2__overlay {  // hover
   transform: translateY(0);
 
-  // @include mq(md) {
-  //   transform: translateY(100%);
-  // }
+  @include mq(md) {
+    transform: translateY(100%);
+  }
+}
+
+.content2.is-active .content2__overlay {  // SP時は、『.content2』をクリックした際に『.content2__overlay』が表示される仕様に。(JSで制御)
+  @include mq(md) {
+    transform: translateY(0); // オーバーレイを表示
+  }
 }
 
 .content2__bg {
@@ -118,7 +127,11 @@
 }
 
 .content2__overlay-btn-text {
+  transition: opacity 0.2s ease-out;
+}
 
+.content2__overlay-btn-text:hover {  // hover
+  opacity: 0.4;
 }
 
 .content2__overlay-btn-arrow {

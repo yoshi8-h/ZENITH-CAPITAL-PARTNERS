@@ -32,7 +32,9 @@
             <div class="content3__contents">
               <div class="content3__title">
                 <div class="content3__title-number">01.</div>
-                <div class="content3__title-text is-01">理論と実践に基づいたソリューションを提供します。</div>
+                <div class="content3__title-text-wrap">
+                  <div class="content3__title-text is-01">理論と実践に基づいたソリューションを提供します。</div>
+                </div>
               </div>
               <ul class="content3__list">
                 <li class="content3__list-item list-item">不動産鑑定士業をバックグラウンドに持つ当社は、理論的な根拠と実証的なデータを駆使して不動産の価値最大化を目指します。</li>
@@ -46,7 +48,9 @@
             <div class="content3__contents">
               <div class="content3__title">
                 <div class="content3__title-number">02.</div>
-                <div class="content3__title-text is-02">信頼関係を大切にします。</div>
+                <div class="content3__title-text-wrap">
+                  <div class="content3__title-text is-02">信頼関係を大切にします。</div>
+                </div>
               </div>
               <ul class="content3__list">
                 <li class="content3__list-item list-item">地主、投資家、金融機関とは、成功事例を積み重ねることで信頼関係を構築します。</li>

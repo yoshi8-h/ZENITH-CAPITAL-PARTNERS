@@ -23,6 +23,7 @@
   font-weight: $medium;
 
   @include mq(md) {
+    text-align: left;
     margin-top: rem(25);
     font-size: rem(15);
     line-height: 1.6;

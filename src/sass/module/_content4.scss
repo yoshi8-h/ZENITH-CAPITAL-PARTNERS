@@ -53,6 +53,7 @@
   padding-top: rem(60);
   padding-bottom: rem(40);  // 最低限を指定
   padding-inline: rem(70);
+  box-shadow: rem(5) rem(6) 0 rgba(230, 233, 239, 0.6);  // 影 box-shadow: [横方向のズレ] [縦方向のズレ] [ぼかし具合] [色];
 
   margin-left: auto;
   z-index: 30;
@@ -63,6 +64,7 @@
     padding-top: rem(25);
     padding-bottom: rem(20);
     padding-inline: rem(25);
+    box-shadow: rem(3) rem(4) 0 rgba(230, 233, 239, 0.6);
   }
 }
 

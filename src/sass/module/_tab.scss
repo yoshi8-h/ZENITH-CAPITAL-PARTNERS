@@ -21,8 +21,7 @@
 
 .tab:hover {  // hover
   cursor: pointer;
-  background: #000;
-  color: $color-white;
+  opacity: 0.4;
 }
 
 .tab.is-selected {  // 選択中のタブは背景色と文字色を変更、かつ、クリックできるように見せないように。

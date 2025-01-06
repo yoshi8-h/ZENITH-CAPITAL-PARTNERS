@@ -119,6 +119,10 @@
   transition: color 0.2s ease-out;
 }
 
+.header__link.is-current {  // 現在のページ(currentページ)の場合に、グローバルメニューの文字色を変更。JSで『.is-current』を付与して制御
+  color: $color-accent3;
+}
+
 .header__link:hover {  // hover
   color: $color-accent3;
 }
