@@ -27,10 +27,24 @@
           </div>
           <div class="works-contents__contents-wrap">
             <h1 class="works-contents__title"><?php the_title(); ?></h1>
-            <div class="works-contents__categories">
-              <div class="works-contents__category">アセットマネジメント</div>
-              <div class="works-contents__category">不動産コンサルティング</div>
-            </div>
+
+            <?php
+            // 現在の投稿IDを取得
+            $post_id = get_the_ID();
+            // カスタムタクソノミー 'works_category' のタームを取得
+            $terms = get_the_terms($post_id, 'works_category');
+            // タームが存在するかチェック
+            if ($terms && !is_wp_error($terms)) :
+                // タームの数を最大2つに制限
+                $limited_terms = array_slice($terms, 0, 2);
+            ?>
+              <div class="works-contents__categories">
+                <?php foreach ($limited_terms as $term) : ?>
+                    <div class="works-contents__category"><?php echo esc_html($term->name); ?></div>
+                <?php endforeach; ?>
+              </div>
+            <?php endif; ?>
+
             <div class="works-contents__content">
               <?php the_content(); ?>
 

@@ -26,15 +26,48 @@
           <?php
           // 表示する投稿数をPCとSPで切り替え
           $post_limit = wp_is_mobile() ? 14 : 15;  // SPの場合は14件、PCの場合は15件表示
+
+          // 現在のページ番号を取得（クエリパラメータ 'paged' の値を取得、未指定の場合は1）
+          $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+
           // カスタムクエリを設定
           $args = array(
               'post_type'      => 'works', // カスタム投稿タイプ「works」の場合
               'posts_per_page' => $post_limit, // 投稿数を制限
+              'paged'          => $paged,           // ページネーション対応
           );
           $query = new WP_Query($args);
 
+          // 文字数制限関数
+          function trim_text($text, $limit_pc, $limit_sp) {
+            $limit = wp_is_mobile() ? $limit_sp : $limit_pc; // PC/SPで切り替え
+            if (mb_strlen($text, 'UTF-8') > $limit) {
+                return mb_substr($text, 0, $limit, 'UTF-8') . '...'; // 省略
+            }
+            return $text;
+          }
+
           if ($query->have_posts()) :
-            while ($query->have_posts()) : $query->the_post(); ?>
+            while ($query->have_posts()) : $query->the_post();
+              // カスタムブロック(プラグインGCB)からデータ取得
+              // $worksPlace = block_value('worksPlace');
+              // $worksProposal = block_value('worksProposal');
+
+              // カスタムフィールドを直接取得
+$worksPlace = get_post_meta(get_the_ID(), 'worksPlace', true);
+$worksProposal = get_post_meta(get_the_ID(), 'worksProposal', true);
+
+              var_dump($worksPlace);
+var_dump($worksProposal);
+
+
+
+
+              // 各項目のトリミング処理
+              $trimmed_worksPlace = trim_text($worksPlace, 15, 11);
+              $trimmed_worksProposal = trim_text($worksProposal, 31, 31);
+          ?>
+
               <div class="posts2__item post2 js-fadeInUp">
                 <button type="button" class="post2__content content2">
                   <div class="content2__bg">
@@ -46,8 +79,10 @@
                   </div>
                   <div class="content2__overlay">
                     <div class="content2__overlay-bg"></div>
-                    <div class="content2__overlay-category">アセットマネジメント</div>
-                    <p class="content2__overlay-text">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</p>
+                    <!-- 所在・種別 -->
+                    <div class="content2__overlay-category"><?php echo $trimmed_worksPlace; ?></div>
+                    <!-- 業務内容（提案内容） -->
+                    <p class="content2__overlay-text"><?php echo $trimmed_worksProposal; ?></p>
                     <a href="<?php the_permalink(); ?>" class="content2__overlay-btn">
                       <span class="content2__overlay-btn-text">MORE</span>
                       <span class="content2__overlay-btn-arrow">></span>
@@ -80,7 +115,12 @@
         </div>
         <!-- ページネーション -->
         <div class="works-page__pagenavi">
-          <?php get_template_part('parts/wp-pagenavi'); ?>  <!-- 拡張子「.php」は不要。相対パスではないので先頭に「./」不要。 -->
+          <?php
+            // WP-PageNaviプラグインによるページネーション
+            if (function_exists('wp_pagenavi')) {
+                wp_pagenavi(array('query' => $query)); // クエリを指定
+            }
+          ?>
         </div>
       </div>
     </section>
