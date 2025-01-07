@@ -17,7 +17,7 @@
 
   @include mq(md) {
     grid-template-columns: 157fr 157fr;
-    grid-auto-rows: 232fr 105fr;
+    grid-auto-rows: 350fr 105fr;
     column-gap: rem(10);
     row-gap: rem(10);
   }
@@ -38,6 +38,7 @@
   @include mq(md) {
     grid-column: 1 / 3; /* 1列目から2列目にまたがる */
     grid-row: 1; /* 1行目に配置 */
+    margin-inline: auto;
   }
 }
 

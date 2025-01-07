@@ -1,0 +1,30 @@
+@use "global" as *;
+
+
+@use "global" as *;
+
+
+.images04 {
+
+}
+
+.images04__contents {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: rem(29);
+  row-gap: rem(30);  // 念の為に指定
+  align-items: flex-start;  // 上揃えに。
+
+  @include mq(md) {
+    column-gap: rem(10);
+    align-items: stretch;
+  }
+}
+
+.images04__contents-item {
+  max-width: rem(585);
+
+  @include mq(md) {
+    max-width: auto;
+  }
+}

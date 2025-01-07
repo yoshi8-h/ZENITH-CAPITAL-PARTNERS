@@ -1,0 +1,19 @@
+@use "global" as *;
+
+
+.images05 {
+
+}
+
+.images05__contents {
+
+}
+
+.images05__contents-item {
+  max-width: rem(585);
+  margin-inline: auto;
+
+  @include mq(md) {
+    max-width: auto;
+  }
+}
