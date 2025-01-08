@@ -15,6 +15,7 @@
 ?>
 
 <?php if ($hasLeftImage && $hasRightImage): // 両方の画像が設定されている場合のみ表示 ?>
+  <!-- 画像パターン② (画像 横2枚) -->
   <div class="works-contents__images-area images02">
     <div class="images02__contents">
       <!-- 左側画像とテキスト -->

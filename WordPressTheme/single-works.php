@@ -48,31 +48,6 @@
             <div class="works-contents__content">
               <?php the_content(); ?>
 
-              <!-- 画像パターン④ (画像 縦2枚) -->
-              <div class="works-contents__images-area images04">
-                <div class="images04__contents">
-                  <div class="images04__contents-item contents04">
-                    <div class="contents04__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/works-img04.webp" alt=""></div>
-                    <p class="contents04__text">屋上ペントハウス外観　after</p>
-                  </div>
-                  <div class="images04__contents-item contents04">
-                    <div class="contents04__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/works-img04.webp" alt=""></div>
-                    <p class="contents04__text">屋上ペントハウス外観　after</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- 画像パターン⑤ (画像 縦1枚) -->
-              <div class="works-contents__images-area images05">
-                <div class="images05__contents">
-                  <div class="images05__contents-item contents05">
-                    <div class="contents05__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/works-img04.webp" alt=""></div>
-                    <p class="contents05__text">屋上ペントハウス外観　after</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
               <?php
                 // ACFのフィールド値を取得し、いずれかが入力されているか確認
                 $works_tables = [
@@ -135,6 +110,7 @@
                   <div class="btn2__text">実績一覧に戻る</div>
                   <div class="btn2__arrow"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/btn2-arrow-white.webp" alt="→"></div>
                 </a>
+              </div>
             </div>
 
           </div>
