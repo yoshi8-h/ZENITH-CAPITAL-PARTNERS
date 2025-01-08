@@ -1,5 +1,4 @@
 <?php
-
   // 各値を取得
   $worksPlace     = block_value('worksPlace');
   $worksScale     = block_value('worksScale');
@@ -62,6 +61,3 @@
     </table>
   </div>
 <?php endif; ?>
-
-
-

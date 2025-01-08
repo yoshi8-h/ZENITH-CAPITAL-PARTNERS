@@ -178,9 +178,26 @@
         ];
         $query = new WP_Query($args);
 
+        // 文字数制限関数
+        function trim_text($text, $limit_pc, $limit_sp) {
+          $limit = wp_is_mobile() ? $limit_sp : $limit_pc; // PCとSPで切り替え
+          if (mb_strlen($text, 'UTF-8') > $limit) {
+            return mb_substr($text, 0, $limit, 'UTF-8') . '...';
+          }
+          return $text;
+        }
+
         if ($query->have_posts()) : ?>
           <div class="project__contents">
-            <?php while ($query->have_posts()) : $query->the_post(); ?>
+            <?php while ($query->have_posts()) : $query->the_post();
+              // ACFカスタムフィールド値の取得
+              $works_table_1 = get_field('works-table_1'); // 所在・種別
+              $works_table_3 = get_field('works-table_3'); // 業務内容（提案内容）
+
+              // トリミング処理
+              $trimmed_table_1 = $works_table_1 ? trim_text($works_table_1, 15, 11) : null;
+              $trimmed_table_3 = $works_table_3 ? trim_text($works_table_3, 31, 31) : null;
+            ?>
             <button type="button" class="project__contents-item content2 js-fadeInUp">
               <div class="content2__bg">
                 <?php if (has_post_thumbnail()) : ?>
@@ -191,13 +208,14 @@
               </div>
               <div class="content2__overlay">
                 <div class="content2__overlay-bg"></div>
-                <div class="content2__overlay-category">所在・種別(文字制限必要)</div>
-                <p class="content2__overlay-text">
-                  <?php
-                    $content = strip_tags(get_the_content()); // HTMLタグを除去
-                    echo mb_substr($content, 0, 33) . '...'; // 33文字まで切り取り、省略記号を付加
-                  ?>
-                </p>
+                <!-- 所在・種別 -->
+                <?php if ($trimmed_table_1): ?>
+                  <div class="content2__overlay-category"><?php echo $trimmed_table_1; ?></div>
+                <?php endif; ?>
+                <!-- 業務内容（提案内容） -->
+                <?php if ($trimmed_table_3): ?>
+                  <p class="content2__overlay-text"><?php echo $trimmed_table_3; ?></p>
+                <?php endif; ?>
                 <a href="<?php the_permalink(); ?>" class="content2__overlay-btn">
                   <span class="content2__overlay-btn-text">MORE</span>
                   <span class="content2__overlay-btn-arrow">></span>

@@ -48,16 +48,6 @@
             <div class="works-contents__content">
               <?php the_content(); ?>
 
-              <!-- 画像パターン① (画像 横1枚) -->
-              <div class="works-contents__images-area images01">
-                <div class="images01__contents">
-                  <div class="images01__contents-item contents01">
-                    <div class="contents01__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/works-img01.webp" alt=""></div>
-                    <p class="contents01__text">屋上ペントハウス外観　after</p>
-                  </div>
-                </div>
-              </div>
-
               <!-- 画像パターン② (画像 横2枚) -->
               <div class="works-contents__images-area images02">
                 <div class="images02__contents">
@@ -141,31 +131,31 @@
                       <?php if ($works_tables[0]): ?>
                         <tr class="table__row">
                           <td class="table__cell-head">所在・種別</td>
-                          <td class="table__cell-body"><?php echo esc_html($works_tables[0]); ?></td>
+                          <td class="table__cell-body"><?php echo $works_tables[0]; ?></td>
                         </tr>
                       <?php endif; ?>
                       <?php if ($works_tables[1]): ?>
                         <tr class="table__row">
                           <td class="table__cell-head">規模</td>
-                          <td class="table__cell-body"><?php echo esc_html($works_tables[1]); ?></td>
+                          <td class="table__cell-body"><?php echo $works_tables[1]; ?></td>
                         </tr>
                       <?php endif; ?>
                       <?php if ($works_tables[2]): ?>
                         <tr class="table__row">
                           <td class="table__cell-head">業務内容（提案内容）</td>
-                          <td class="table__cell-body"><?php echo esc_html($works_tables[2]); ?></td>
+                          <td class="table__cell-body"><?php echo $works_tables[2]; ?></td>
                         </tr>
                       <?php endif; ?>
                       <?php if ($works_tables[3]): ?>
                         <tr class="table__row">
                           <td class="table__cell-head">業務実施内容</td>
-                          <td class="table__cell-body"><?php echo esc_html($works_tables[3]); ?></td>
+                          <td class="table__cell-body"><?php echo $works_tables[3]; ?></td>
                         </tr>
                       <?php endif; ?>
                       <?php if ($works_tables[4]): ?>
                         <tr class="table__row">
                           <td class="table__cell-head">効果・結果</td>
-                          <td class="table__cell-body"><?php echo esc_html($works_tables[4]); ?></td>
+                          <td class="table__cell-body"><?php echo $works_tables[4]; ?></td>
                         </tr>
                       <?php endif; ?>
                     </tbody>
