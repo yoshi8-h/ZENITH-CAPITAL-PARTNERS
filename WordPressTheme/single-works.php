@@ -113,55 +113,72 @@
                   </div>
                 </div>
               </div>
-
-              <!-- 詳細情報 (表 & タイトル) -->
-              <div class="works-contents__info info02">
-                <div class="info02__title">詳細情報</div>
-                <table class="info02__table table">
-                  <thead class="table__head">
-                    <tr>
-                      <th class="table__header">項目</th>
-                      <th class="table__header-body">内容</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="table__row">
-                      <td class="table__cell-head">所在・種別</td>
-                      <td class="table__cell-body">木場ビル</td>
-                    </tr>
-                    <tr class="table__row">
-                      <td class="table__cell-head">規模</td>
-                      <td class="table__cell-body">築24年の7階建て都内オフィスビル兼住居（最上階元オーナー部屋）</td>
-                    </tr>
-                    <tr class="table__row">
-                      <td class="table__cell-head">業務内容（提案内容）</td>
-                      <td class="table__cell-body">住居部分をスタジオ利用向けのオフィスとして用途変更し、リースアップ</td>
-                    </tr>
-                    <tr class="table__row">
-                      <td class="table__cell-head">業務実施内容</td>
-                      <td class="table__cell-body">
-                        ・物件の周辺環境及びテナントの需要について調査を実施しました。<br
-                        >・撮影用のスペースとして、デザイン性を重視した改装を実施しました。<br
-                        >・コストを最小限に抑えた改装工事を実施しました。<br
-                        >・工事内容確認、費用負担の調整、原状回復内容の取り決め、全体スケジュール調整などのマネジメントを実施しました。<br
-                        >・本物件の将来性を理解された投資家や銀行からの資金調達の調整を実施しました。
-                      </td>
-                    </tr>
-                    <tr class="table__row">
-                      <td class="table__cell-head">効果・結果</td>
-                      <td class="table__cell-body">想定通り撮影スタジオとしてのテナント誘致に成功し、収益力が大幅にアップしたオフィスビルへと変貌致しました。</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
             </div>
-            <div class="works-contents__btn-wrap">
-              <a href="<?php echo esc_url(get_post_type_archive_link('works')); ?>" class="works-contents__btn btn2">
-                <div class="btn2__text">実績一覧に戻る</div>
-                <div class="btn2__arrow"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/btn2-arrow-white.webp" alt="→"></div>
-              </a>
+
+              <?php
+                // ACFのフィールド値を取得し、いずれかが入力されているか確認
+                $works_tables = [
+                    get_field('works-table_1'),
+                    get_field('works-table_2'),
+                    get_field('works-table_3'),
+                    get_field('works-table_4'),
+                    get_field('works-table_5'),
+                ];
+                // すべてのフィールドが空の場合は『info02』自体を表示しない
+                if (array_filter($works_tables)):
+              ?>
+                <!-- 詳細情報 (表 & タイトル) -->
+                <div class="works-contents__info info02">
+                  <div class="info02__title">詳細情報</div>
+                  <table class="info02__table table">
+                    <thead class="table__head">
+                      <tr>
+                        <th class="table__header">項目</th>
+                        <th class="table__header-body">内容</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php if ($works_tables[0]): ?>
+                        <tr class="table__row">
+                          <td class="table__cell-head">所在・種別</td>
+                          <td class="table__cell-body"><?php echo esc_html($works_tables[0]); ?></td>
+                        </tr>
+                      <?php endif; ?>
+                      <?php if ($works_tables[1]): ?>
+                        <tr class="table__row">
+                          <td class="table__cell-head">規模</td>
+                          <td class="table__cell-body"><?php echo esc_html($works_tables[1]); ?></td>
+                        </tr>
+                      <?php endif; ?>
+                      <?php if ($works_tables[2]): ?>
+                        <tr class="table__row">
+                          <td class="table__cell-head">業務内容（提案内容）</td>
+                          <td class="table__cell-body"><?php echo esc_html($works_tables[2]); ?></td>
+                        </tr>
+                      <?php endif; ?>
+                      <?php if ($works_tables[3]): ?>
+                        <tr class="table__row">
+                          <td class="table__cell-head">業務実施内容</td>
+                          <td class="table__cell-body"><?php echo esc_html($works_tables[3]); ?></td>
+                        </tr>
+                      <?php endif; ?>
+                      <?php if ($works_tables[4]): ?>
+                        <tr class="table__row">
+                          <td class="table__cell-head">効果・結果</td>
+                          <td class="table__cell-body"><?php echo esc_html($works_tables[4]); ?></td>
+                        </tr>
+                      <?php endif; ?>
+                    </tbody>
+                  </table>
+                </div>
+              <?php endif; ?>
+              <div class="works-contents__btn-wrap">
+                <a href="<?php echo esc_url(get_post_type_archive_link('works')); ?>" class="works-contents__btn btn2 btn2--2">
+                  <div class="btn2__text">実績一覧に戻る</div>
+                  <div class="btn2__arrow"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/btn2-arrow-white.webp" alt="→"></div>
+                </a>
             </div>
+
           </div>
         </div>
       </div>

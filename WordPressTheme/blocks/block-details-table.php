@@ -65,35 +65,3 @@
 
 
 
-<?php
-
-// カスタム投稿メタにデータを保存
-add_action('save_post', function($post_id) {
-  // 投稿タイプが 'works' の場合のみ実行
-  if (get_post_type($post_id) === 'works') {
-      // 投稿のコンテンツを取得
-      $post_content = get_post_field('post_content', $post_id);
-
-      // ブロックデータを解析
-      $blocks = parse_blocks($post_content);
-
-      // デバッグ用: ブロックデータを出力
-      var_dump($blocks); // ブロックの中身を確認する
-      exit; // スクリプトを停止してデバッグ結果を確認
-
-      // 必要なデータを抽出
-      foreach ($blocks as $block) {
-          if ($block['blockName'] === 'acf/block-details-table') { // GCBのブロックスラッグを指定
-              $worksPlace = $block['attrs']['worksPlace'] ?? '';
-              $worksProposal = $block['attrs']['worksProposal'] ?? '';
-
-              // データを保存
-              update_post_meta($post_id, 'worksPlace', $worksPlace);
-              update_post_meta($post_id, 'worksProposal', $worksProposal);
-          }
-      }
-  }
-});
-
-?>
-

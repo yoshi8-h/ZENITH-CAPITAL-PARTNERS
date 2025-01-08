@@ -49,23 +49,14 @@
 
           if ($query->have_posts()) :
             while ($query->have_posts()) : $query->the_post();
-              // カスタムブロック(プラグインGCB)からデータ取得
-              // $worksPlace = block_value('worksPlace');
-              // $worksProposal = block_value('worksProposal');
 
-              // カスタムフィールドを直接取得
-$worksPlace = get_post_meta(get_the_ID(), 'worksPlace', true);
-$worksProposal = get_post_meta(get_the_ID(), 'worksProposal', true);
+            // ACFカスタムフィールド値の取得
+            $works_table_1 = get_field('works-table_1'); // 所在・種別
+            $works_table_3 = get_field('works-table_3'); // 業務内容（提案内容）
 
-              var_dump($worksPlace);
-var_dump($worksProposal);
-
-
-
-
-              // 各項目のトリミング処理
-              $trimmed_worksPlace = trim_text($worksPlace, 15, 11);
-              $trimmed_worksProposal = trim_text($worksProposal, 31, 31);
+            // トリミング処理
+            $trimmed_table_1 = $works_table_1 ? trim_text($works_table_1, 15, 11) : null;
+            $trimmed_table_3 = $works_table_3 ? trim_text($works_table_3, 31, 31) : null;
           ?>
 
               <div class="posts2__item post2 js-fadeInUp">
@@ -80,9 +71,13 @@ var_dump($worksProposal);
                   <div class="content2__overlay">
                     <div class="content2__overlay-bg"></div>
                     <!-- 所在・種別 -->
-                    <div class="content2__overlay-category"><?php echo $trimmed_worksPlace; ?></div>
+                    <?php if ($trimmed_table_1): ?>
+                      <div class="content2__overlay-category"><?php echo $trimmed_table_1; ?></div>
+                    <?php endif; ?>
                     <!-- 業務内容（提案内容） -->
-                    <p class="content2__overlay-text"><?php echo $trimmed_worksProposal; ?></p>
+                    <?php if ($trimmed_table_3): ?>
+                      <p class="content2__overlay-text"><?php echo $trimmed_table_3; ?></p>
+                    <?php endif; ?>
                     <a href="<?php the_permalink(); ?>" class="content2__overlay-btn">
                       <span class="content2__overlay-btn-text">MORE</span>
                       <span class="content2__overlay-btn-arrow">></span>
