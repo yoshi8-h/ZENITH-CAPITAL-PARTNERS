@@ -48,38 +48,6 @@
             <div class="works-contents__content">
               <?php the_content(); ?>
 
-              <!-- 画像パターン② (画像 横2枚) -->
-              <div class="works-contents__images-area images02">
-                <div class="images02__contents">
-                  <div class="images02__contents-item contents02">
-                    <div class="contents02__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/works-img02.webp" alt=""></div>
-                    <p class="contents02__text">屋上ペントハウス外観　after</p>
-                  </div>
-                  <div class="images02__contents-item contents02">
-                    <div class="contents02__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/works-img03.webp" alt=""></div>
-                    <p class="contents02__text">屋上ペントハウス外観　after</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- 画像パターン③ (画像 縦1枚、横2枚) -->
-              <div class="works-contents__images-area images03">
-                <div class="images03__contents">
-                  <div class="images03__contents-item contents03">
-                    <div class="contents03__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/works-img04.webp" alt=""></div>
-                    <p class="contents03__text">屋上ペントハウス外観　after</p>
-                  </div>
-                  <div class="images03__contents-item contents03">
-                    <div class="contents03__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/works-img03.webp" alt=""></div>
-                    <p class="contents03__text">屋上ペントハウス外観　after</p>
-                  </div>
-                  <div class="images03__contents-item contents03">
-                    <div class="contents03__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/works-img03.webp" alt=""></div>
-                    <p class="contents03__text">屋上ペントハウス外観　after</p>
-                  </div>
-                </div>
-              </div>
-
               <!-- 画像パターン④ (画像 縦2枚) -->
               <div class="works-contents__images-area images04">
                 <div class="images04__contents">
