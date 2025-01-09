@@ -50,3 +50,16 @@
 .anchors__item:hover {  // hover
   opacity: 0.6;
 }
+
+
+
+
+// =======================================
+// モディファイア
+// =======================================
+// .anchors--no-sp  (SP時は非表示にする場合)
+.anchors--no-sp {
+  @include mq(md) {
+    display: none;
+  }
+}

@@ -47,70 +47,70 @@
 
             <div class="works-contents__content">
               <?php the_content(); ?>
+            </div>
 
-              <?php
-                // ACFのフィールド値を取得し、いずれかが入力されているか確認
-                $works_tables = [
-                    get_field('works-table_1'),
-                    get_field('works-table_2'),
-                    get_field('works-table_3'),
-                    get_field('works-table_4'),
-                    get_field('works-table_5'),
-                ];
-                // すべてのフィールドが空の場合は『info02』自体を表示しない
-                if (array_filter($works_tables)):
-              ?>
-                <!-- 詳細情報 (表 & タイトル) -->
-                <div class="works-contents__info info02">
-                  <div class="info02__title">詳細情報</div>
-                  <table class="info02__table table">
-                    <thead class="table__head">
-                      <tr>
-                        <th class="table__header">項目</th>
-                        <th class="table__header-body">内容</th>
+            <?php
+              // ACFのフィールド値を取得し、いずれかが入力されているか確認
+              $works_tables = [
+                  get_field('works-table_1'),
+                  get_field('works-table_2'),
+                  get_field('works-table_3'),
+                  get_field('works-table_4'),
+                  get_field('works-table_5'),
+              ];
+              // すべてのフィールドが空の場合は『info02』自体を表示しない
+              if (array_filter($works_tables)):
+            ?>
+              <!-- 詳細情報 (表 & タイトル) -->
+              <div class="works-contents__info info02">
+                <div class="info02__title">詳細情報</div>
+                <table class="info02__table table">
+                  <thead class="table__head">
+                    <tr>
+                      <th class="table__header">項目</th>
+                      <th class="table__header-body">内容</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php if ($works_tables[0]): ?>
+                      <tr class="table__row">
+                        <td class="table__cell-head">所在・種別</td>
+                        <td class="table__cell-body"><?php echo $works_tables[0]; ?></td>
                       </tr>
-                    </thead>
-                    <tbody>
-                      <?php if ($works_tables[0]): ?>
-                        <tr class="table__row">
-                          <td class="table__cell-head">所在・種別</td>
-                          <td class="table__cell-body"><?php echo $works_tables[0]; ?></td>
-                        </tr>
-                      <?php endif; ?>
-                      <?php if ($works_tables[1]): ?>
-                        <tr class="table__row">
-                          <td class="table__cell-head">規模</td>
-                          <td class="table__cell-body"><?php echo $works_tables[1]; ?></td>
-                        </tr>
-                      <?php endif; ?>
-                      <?php if ($works_tables[2]): ?>
-                        <tr class="table__row">
-                          <td class="table__cell-head">業務内容（提案内容）</td>
-                          <td class="table__cell-body"><?php echo $works_tables[2]; ?></td>
-                        </tr>
-                      <?php endif; ?>
-                      <?php if ($works_tables[3]): ?>
-                        <tr class="table__row">
-                          <td class="table__cell-head">業務実施内容</td>
-                          <td class="table__cell-body"><?php echo $works_tables[3]; ?></td>
-                        </tr>
-                      <?php endif; ?>
-                      <?php if ($works_tables[4]): ?>
-                        <tr class="table__row">
-                          <td class="table__cell-head">効果・結果</td>
-                          <td class="table__cell-body"><?php echo $works_tables[4]; ?></td>
-                        </tr>
-                      <?php endif; ?>
-                    </tbody>
-                  </table>
-                </div>
-              <?php endif; ?>
-              <div class="works-contents__btn-wrap">
-                <a href="<?php echo esc_url(get_post_type_archive_link('works')); ?>" class="works-contents__btn btn2 btn2--2">
-                  <div class="btn2__text">実績一覧に戻る</div>
-                  <div class="btn2__arrow"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/btn2-arrow-white.webp" alt="→"></div>
-                </a>
+                    <?php endif; ?>
+                    <?php if ($works_tables[1]): ?>
+                      <tr class="table__row">
+                        <td class="table__cell-head">規模</td>
+                        <td class="table__cell-body"><?php echo $works_tables[1]; ?></td>
+                      </tr>
+                    <?php endif; ?>
+                    <?php if ($works_tables[2]): ?>
+                      <tr class="table__row">
+                        <td class="table__cell-head">業務内容（提案内容）</td>
+                        <td class="table__cell-body"><?php echo $works_tables[2]; ?></td>
+                      </tr>
+                    <?php endif; ?>
+                    <?php if ($works_tables[3]): ?>
+                      <tr class="table__row">
+                        <td class="table__cell-head">業務実施内容</td>
+                        <td class="table__cell-body"><?php echo $works_tables[3]; ?></td>
+                      </tr>
+                    <?php endif; ?>
+                    <?php if ($works_tables[4]): ?>
+                      <tr class="table__row">
+                        <td class="table__cell-head">効果・結果</td>
+                        <td class="table__cell-body"><?php echo $works_tables[4]; ?></td>
+                      </tr>
+                    <?php endif; ?>
+                  </tbody>
+                </table>
               </div>
+            <?php endif; ?>
+            <div class="works-contents__btn-wrap">
+              <a href="<?php echo esc_url(get_post_type_archive_link('works')); ?>" class="works-contents__btn btn2 btn2--2">
+                <div class="btn2__text">実績一覧に戻る</div>
+                <div class="btn2__arrow"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/btn2-arrow-white.webp" alt="→"></div>
+              </a>
             </div>
 
           </div>

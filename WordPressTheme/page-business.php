@@ -76,7 +76,7 @@
                 <p class="content4__text">
                   不動産の投資分析から、仕入れ、資金調達のアレンジ、資産価値最大化を実現する運営管理、出口戦略（売却）の立案まで、投資家の利益最大化のための一貫したサービスを提供します。
                 </p>
-                <a href="" class="content4__btn btn1">
+                <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category1" class="content4__btn btn1">
                   <span class="btn1__text">MORE</span>
                   <span class="btn1__arrow">></span>
                 </a>
@@ -91,7 +91,7 @@
                 <p class="content4__text">
                   事業承継に伴う事業用不動産の取り扱い、不動産の有効活用、複雑な権利関係の調整等不動産に関するお悩みの解決をサポートします。
                 </p>
-                <a href="" class="content4__btn btn1">
+                <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category2" class="content4__btn btn1">
                   <span class="btn1__text">MORE</span>
                   <span class="btn1__arrow">></span>
                 </a>
@@ -106,7 +106,7 @@
                 <p class="content4__text">
                   建物の遵法性や入居テナントの問題等の要因で本来の価値が発揮されていない不動産に自己勘定で投資する事業です。価値を改善することで不動産の収益力を高め安定的な収益を確保することを目指します。
                 </p>
-                <a href="" class="content4__btn btn1">
+                <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category3" class="content4__btn btn1">
                   <span class="btn1__text">MORE</span>
                   <span class="btn1__arrow">></span>
                 </a>
@@ -121,7 +121,7 @@
                 <p class="content4__text">
                   不動産の有効活用、リーシング戦略の一環として、オーナーから不動産を借上げ、自らテナントとして事業運営し不動産の価値最大化を目指します。
                 </p>
-                <a href="" class="content4__btn btn1">
+                <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category4" class="content4__btn btn1">
                   <span class="btn1__text">MORE</span>
                   <span class="btn1__arrow">></span>
                 </a>

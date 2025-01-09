@@ -77,7 +77,7 @@
               <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category1" class="toggle__nav-link">アセットマネジメント</a>
               <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category2" class="toggle__nav-link">不動産コンサルティング</a>
               <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category3" class="toggle__nav-link">自己投資</a>
-              <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category4" class="toggle__nav-link">主要メンバー紹介</a>
+              <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category4" class="toggle__nav-link">テナント事業</a>
             </div>
           </div>
         </div>
@@ -91,10 +91,10 @@
           </button>
           <div class="toggle__body">
             <div class="toggle__nav">
-              <a href="<?php echo esc_url(get_permalink(get_page_by_path('company'))); ?>" class="toggle__nav-link">トップメッセージ</a>
-              <a href="<?php echo esc_url(get_permalink(get_page_by_path('company'))); ?>" class="toggle__nav-link">企業理念</a>
-              <a href="<?php echo esc_url(get_permalink(get_page_by_path('company'))); ?>" class="toggle__nav-link">会社概要</a>
-              <a href="<?php echo esc_url(get_permalink(get_page_by_path('company'))); ?>" class="toggle__nav-link">主要メンバー紹介</a>
+              <a href="<?php echo esc_url(get_permalink(get_page_by_path('company'))); ?>#top-message" class="toggle__nav-link">トップメッセージ</a>
+              <a href="<?php echo esc_url(get_permalink(get_page_by_path('company'))); ?>#philosophy" class="toggle__nav-link">企業理念</a>
+              <a href="<?php echo esc_url(get_permalink(get_page_by_path('company'))); ?>#overview" class="toggle__nav-link">会社概要</a>
+              <a href="<?php echo esc_url(get_permalink(get_page_by_path('company-member'))); ?>" class="toggle__nav-link">主要メンバー紹介</a>
             </div>
           </div>
         </div>

@@ -30,7 +30,7 @@
       <div class="top-text__bg u-desktop"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/top-text-bg-arrow.webp" alt=""></div>
       <div class="top-text__bg-sp u-mobile"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/top-text-bg-arrow-sp.webp" alt=""></div>
       <div class="top-text__inner inner">
-        <h2 class="top-text__title">人と不動産の「うつくしい」関係を具現化する<br class="u-mobile">「不動産ソリューションカンパニー」</h2>
+        <h2 class="top-text__title">人と不動産の「うつくしい」関係を具現化する「不動産ソリューションカンパニー」</h2>
         <p class="top-text__text">
           「ゼニス・キャピタル・パートナーズ株式会社」は、<br class="u-mobile">不動産投資理論と実践に基づく経験、<br
           >そして人と人の繋がりを大切にして、不動産価値の持続的な成長を実現するソリューションを<br class="u-mobile">ご提供いたします。
@@ -47,7 +47,7 @@
         </h2>
         <div class="management-policy__contents">
           <div class="management-policy__content">
-          <div class="management-policy__content-title-sp u-mobile">理論と実践に基づいたソリューションを提供します。</div>
+          <div class="management-policy__content-title-sp u-mobile js-fadeInLeft">理論と実践に基づいたソリューションを提供します。</div>
             <div class="management-policy__content-img js-fadeInRight"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/management-policy__content-img01.webp" alt=""></div>
             <div class="management-policy__content-body js-fadeInLeft">
               <div class="management-policy__content-title u-desktop">理論と実践に基づいたソリューションを提供します。</div>
@@ -60,7 +60,7 @@
             </div>
           </div>
           <div class="management-policy__content">
-          <div class="management-policy__content-title-sp u-mobile">信頼関係を大切にします。</div>
+          <div class="management-policy__content-title-sp u-mobile js-fadeInRight">信頼関係を大切にします。</div>
             <div class="management-policy__content-img js-fadeInLeft"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/management-policy__content-img02.webp" alt=""></div>
             <div class="management-policy__content-body js-fadeInRight">
               <div class="management-policy__content-title u-desktop">信頼関係を大切にします。</div>
@@ -158,7 +158,7 @@
     <section class="project l-project">
       <div class="project__inner inner">
         <h2 class="project__title section-title">
-          <div class="section-title__ja">業務実績</div>
+          <div class="section-title__ja">実績紹介</div>
           <div class="section-title__en">PROJECT</div>
         </h2>
         <p class="project__text">これまでの当社の実績をご覧いただけます。</p>
@@ -231,7 +231,7 @@
         ?>
         <div class="project__btn-wrap">
           <a href="<?php echo esc_url(get_post_type_archive_link('works')); ?>" class="project__btn btn2">
-            <div class="btn2__text">業務実績</div>
+            <div class="btn2__text">実績一覧</div>
             <div class="btn2__arrow"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/btn2-arrow-white.webp" alt="→"></div>
           </a>
         </div>

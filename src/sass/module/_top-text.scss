@@ -61,7 +61,10 @@
   text-align: center;
 
   @include mq(md) {
-    font-size: rem(15);
+    // font-size: rem(15);
+    font-size: rem(18);
+    line-height: 1.67;
+    font-weight: $semiBold;
   }
 }
 

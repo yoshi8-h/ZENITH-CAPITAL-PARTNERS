@@ -316,11 +316,11 @@
                     <li class="info__list-item">住所　：　〒272-0835　千葉県市川市中国分2丁目16-11</li>
                     <li class="info__list-item">電話番号　：　047-375-0077</li>
                     <li class="info__list-item">営業時間　：　9:00～12:30　　15:00～20:00</li>
-                    <li class="info__list-item"><a href="https://www.honetsugi-group.com/honetsugi/page/13/" target="_blank" class="info__list-item-link">ほねつぎ市川はりきゅう接骨院　公式サイト</a></li>
+                    <li class="info__list-item"><a href="https://www.honetsugi-group.com/honetsugi/kanto/chiba/%E3%81%BB%E3%81%AD%E3%81%A4%E3%81%8E%E5%B8%82%E5%B7%9D%E3%81%AF%E3%82%8A%E3%81%8D%E3%82%85%E3%81%86%E6%8E%A5%E9%AA%A8%E9%99%A2-2/" target="_blank" class="info__list-item-link">ほねつぎ市川はりきゅう接骨院　公式サイト</a></li>
                     <li class="info__list-item-sp">住所：〒272-0835 千葉県市川市中国分2丁目16-11</li>
                     <li class="info__list-item-sp">電話番号：047-375-0077</li>
                     <li class="info__list-item-sp">営業時間：9:00～12:30　15:00～20:00</li>
-                    <li class="info__list-item-sp"><a href="https://www.honetsugi-group.com/honetsugi/page/13/" target="_blank" class="info__list-item-link">ほねつぎ市川はりきゅう接骨院　公式サイト</a></li>
+                    <li class="info__list-item-sp"><a href="https://www.honetsugi-group.com/honetsugi/kanto/chiba/%E3%81%BB%E3%81%AD%E3%81%A4%E3%81%8E%E5%B8%82%E5%B7%9D%E3%81%AF%E3%82%8A%E3%81%8D%E3%82%85%E3%81%86%E6%8E%A5%E9%AA%A8%E9%99%A2-2/" target="_blank" class="info__list-item-link">ほねつぎ市川はりきゅう接骨院　公式サイト</a></li>
                   </ul>
                 </div>
               </div>

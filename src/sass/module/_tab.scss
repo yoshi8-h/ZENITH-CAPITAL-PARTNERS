@@ -29,3 +29,7 @@
   background: #000;
   color: $color-white;
 }
+
+.tab.is-selected:hover {  // 選択中のタブはhoverのopacity指定を外す。
+  opacity: 1;
+}

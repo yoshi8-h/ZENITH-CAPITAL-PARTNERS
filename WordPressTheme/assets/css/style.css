@@ -2849,8 +2849,9 @@ a {
 	color: #202020;
 	font-size: 1rem;
 	font-weight: 400;
-	line-height: 1.75;
+	line-height: 2;
 	text-decoration: underline;
+	text-decoration-color: rgba(0, 0, 0, 0.5); /* RGBAを使って不透明度を指定 */
 	transition: opacity 0.2s ease-out;
 	width: 100%;
 }
@@ -3326,6 +3327,10 @@ a {
 	cursor: default;
 }
 
+.tab.is-selected:hover {
+	opacity: 1;
+}
+
 .table {
 	background-color: #ffffff;
 	border-collapse: collapse;
@@ -3562,6 +3567,7 @@ a {
 	color: #2e3f54;
 	display: block;
 	font-size: 0.9375rem;
+	font-weight: 500;
 	padding-bottom: 0.875rem;
 	padding-left: 2.125rem;
 	padding-right: 0.625rem;
@@ -4304,6 +4310,10 @@ html {
 .anchors__item:last-of-type {
 	border-bottom: 1px solid #b6bcc8;
 	border-right: none;
+}
+
+.anchors--no-sp {
+	display: none;
 }
 
 .antisocial {
@@ -5544,6 +5554,7 @@ html {
 	color: #2e3f54;
 	display: block;
 	font-size: 1.0625rem;
+	font-weight: 500;
 	padding-bottom: 1.125rem;
 	padding-left: 1.625rem;
 	padding-right: 1.125rem;
@@ -6194,6 +6205,7 @@ html {
 
 .toggle__head-text {
 	font-size: 1.0625rem;
+	font-weight: 500;
 	transition: color 0.2s ease-out;
 }
 
@@ -6283,7 +6295,9 @@ html {
 }
 
 .top-text__title {
-	font-size: 0.9375rem;
+	font-size: 1.125rem;
+	font-weight: 600;
+	line-height: 1.67;
 }
 
 .top-text__text {

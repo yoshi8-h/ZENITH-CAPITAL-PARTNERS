@@ -93,11 +93,12 @@
 
 .post__link-text {
   text-decoration: underline;  // 下線を表示
+  text-decoration-color: rgba(0, 0, 0, 0.5); /* RGBAを使って不透明度を指定 */
   width: 100%;
   font-size: rem(16);
   font-weight: $normal;
   color: #202020;
-  line-height: 1.75;
+  line-height: 2.0;
   transition: opacity 0.2s ease-out;
 
   @include mq(md) {

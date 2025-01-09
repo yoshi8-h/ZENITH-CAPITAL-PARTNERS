@@ -42,6 +42,7 @@
 .toggle__head-text {
   @include mq(md) {
     font-size: rem(17);
+    font-weight: $medium;
     transition: color 0.2s ease-out;
   }
 }
@@ -101,6 +102,7 @@
   width: 100%;
   color: #2e3f54;
   font-size: rem(15);
+  font-weight: $medium;
   padding-block: rem(14);
   padding-left: rem(34);
   padding-right: rem(10);

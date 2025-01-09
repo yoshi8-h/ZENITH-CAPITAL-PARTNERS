@@ -5,13 +5,24 @@ jQuery(function ($) {// この中であればWordpressでも「$」が使用可�
 
 /* -------------------------------------------------------------------------------- */
 /* 現在選択されているページ(currentページ)の、header内のグローバルメニュー項目の文字色を変更 (『.is-current』クラスを付与) */
+// サブメニューのリンク(少しURLが違う)を選択した場合でも、そのサブメニューに対応するheader内のグローバルメニュー項目の文字色を変更 (『.is-current』クラスを付与)
 document.addEventListener("DOMContentLoaded", function () {
-  var currentUrl = window.location.href;
-  var menuLinks = document.querySelectorAll(".header__nav-item a");
-  menuLinks.forEach(function (link) {
-    if (link.href === currentUrl) {
-      link.classList.add("is-current");
-    }
+  var currentUrl = window.location.href; // 現在のURLを取得
+  var navItems = document.querySelectorAll(".header__nav-item"); // 各メニュー項目を取得
+
+  navItems.forEach(function (item) {
+    // 子リンクをすべて取得
+    var subLinks = item.querySelectorAll("a");
+    subLinks.forEach(function (link) {
+      // 現在のURLと一致するリンクがある場合
+      if (currentUrl.startsWith(link.href)) {
+        // 親メニュー項目（.header__nav-item）の最初のリンクに .is-current を付与
+        var parentLink = item.querySelector(".header__link");
+        if (parentLink) {
+          parentLink.classList.add("is-current");
+        }
+      }
+    });
   });
 });
 
