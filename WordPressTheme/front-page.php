@@ -14,7 +14,7 @@
                 loop：動画をループさせる
                 controls：コントロールバーを表示する
             -->
-          <source src="<?php echo get_theme_file_uri(); ?>/assets/images/common/fv-video-dammy.mp4" type="video/mp4">
+          <source src="<?php echo get_theme_file_uri(); ?>/assets/images/common/fv-video.mp4" type="video/mp4">
           <p class="fv__video-alternative-text">動画を再生できるブラウザ環境ではありません。</p>
         </video>
         <p class="fv__text">
