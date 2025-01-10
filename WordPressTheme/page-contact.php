@@ -294,6 +294,21 @@
               </form>
             </div>
           </div>
+
+          <!-- 送信完了画面 -->
+          <div class="contact-page__form-section-wrap">
+            <div class="contact-page__form-title title05">お問い合わせ完了</div>
+            <div class="contact-page__form-wrap">
+              <p class="contact-page__complete-text">
+                お問い合わせありがとうございました。<br
+                >お問い合わせ内容確認後、担当者からご連絡をさせて頂きます。
+              </p>
+              <div class="contact-page__complete-btn-wrap">
+                <a href="<?php echo esc_url(home_url('/')); ?>" class="contact-page__complete-btn">トップ画面に戻る　＞</a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

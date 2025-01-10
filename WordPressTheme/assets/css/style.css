@@ -684,6 +684,28 @@ a {
 	padding-top: 3rem;
 }
 
+.contact-page__complete-text {
+	color: #1e1e1e;
+	font-size: 1.0625rem;
+	font-weight: 400;
+	line-height: 2;
+}
+
+.contact-page__complete-btn-wrap {
+	margin-top: 2.8125rem;
+}
+
+.contact-page__complete-btn {
+	color: #569adf;
+	font-size: 1.0625rem;
+	font-weight: 500;
+	transition: opacity 0.2s ease-out;
+}
+
+.contact-page__complete-btn:hover {
+	opacity: 0.4;
+}
+
 .contact {
 	background: url(../images/common/contact-bg.webp) no-repeat center center/cover;
 	padding-bottom: 4.375rem;
@@ -4846,6 +4868,19 @@ html {
 	padding-left: 0.9375rem;
 	padding-right: 0.9375rem;
 	padding-top: 1.875rem;
+}
+
+.contact-page__complete-text {
+	font-size: 0.875rem;
+	line-height: 1.75;
+}
+
+.contact-page__complete-btn-wrap {
+	margin-top: 1.5625rem;
+}
+
+.contact-page__complete-btn {
+	font-size: 0.875rem;
 }
 
 .contact {
