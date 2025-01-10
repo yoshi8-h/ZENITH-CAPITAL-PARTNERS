@@ -562,6 +562,40 @@ a {
 	transform: translateX(-0.3125rem);
 }
 
+.btn2.btn2--return .btn2__arrow {
+	position: relative;
+}
+
+.btn2.btn2--return .btn2__arrow::before {
+	background: url(../images/common/btn2-arrow-white-return.webp) no-repeat center center/contain;
+	content: "";
+	display: inline-block;
+	height: 0.67875rem;
+	transition: transform 0.2s ease-out;
+	width: 5.3125rem;
+}
+
+.btn2.btn2--confirm:hover {
+	opacity: 0.6;
+}
+
+.btn2.btn2--confirm:hover .btn2__arrow {
+	transform: translateX(0.3125rem);
+}
+
+.btn2.btn2--confirm .btn2__arrow {
+	position: relative;
+}
+
+.btn2.btn2--confirm .btn2__arrow::before {
+	background: url(../images/common/btn2-arrow-white.webp) no-repeat center center/contain;
+	content: "";
+	display: inline-block;
+	height: 0.67875rem;
+	transition: transform 0.2s ease-out;
+	width: 5.3125rem;
+}
+
 .btn3 {
 	background: #fcbc2d;
 	border-radius: 1.25rem 0 1.25rem 0;
@@ -1700,6 +1734,10 @@ a {
 	padding-top: 0.9375rem;
 }
 
+.field__head.is-textarea.is-confirm-area {
+	padding-top: 0;
+}
+
 .field__label {
 	align-items: center;
 	display: flex;
@@ -1886,8 +1924,43 @@ a {
 	width: fit-content;
 }
 
+.form__sendbtn-wrap {
+	position: relative;
+}
+
+.form__sendbtn-wrap:hover::after {
+	transform: translate(0.3125rem, -50%);
+}
+
+.form__sendbtn-wrap::after {
+	background: url(../images/common/btn2-arrow-white.webp) no-repeat center center/contain;
+	content: "";
+	display: inline-block;
+	height: 0.67875rem;
+	position: absolute;
+	right: 3.75rem;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: transform 0.2s ease-out;
+	width: 5.3125rem;
+}
+
 .form__sendbtn {
+	align-items: center;
+	background: #3e4c61;
+	border-radius: 1.25rem 0 1.25rem 0;
+	color: #fff;
+	display: inline-flex;
+	font-size: 1.0625rem;
+	font-weight: 500;
+	gap: 1.5625rem;
+	justify-content: center;
 	min-width: 19.6875rem;
+	padding-bottom: 0.9375rem;
+	padding-left: 4.375rem;
+	padding-top: 0.9375rem;
+	text-align: left;
+	transition: background 0.2s ease-out;
 	width: -moz-fit-content;
 	width: fit-content;
 }
@@ -4787,6 +4860,14 @@ html {
 	gap: 1.125rem;
 }
 
+.btn2.btn2--return .btn2__arrow::before {
+	right: 2.1875rem;
+}
+
+.btn2.btn2--confirm .btn2__arrow::before {
+	right: 2.1875rem;
+}
+
 .business {
 	padding-bottom: 5rem;
 	padding-top: 3.75rem;
@@ -5501,8 +5582,13 @@ html {
 	min-width: 15.625rem;
 }
 
+.form__sendbtn-wrap::after {
+	right: 2.1875rem;
+}
+
 .form__sendbtn {
 	min-width: 15.625rem;
+	padding-left: 2.1875rem;
 }
 
 .fv {

@@ -37,6 +37,10 @@
   }
 }
 
+.field__head.is-textarea.is-confirm-area {  // 確認画面の場合
+  padding-top: 0;
+}
+
 .field__label {
   display: flex;
   justify-content: flex-start;

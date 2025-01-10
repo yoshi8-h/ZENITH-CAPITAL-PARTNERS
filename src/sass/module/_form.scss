@@ -103,12 +103,55 @@
 }
 
 // 送信ボタン (確認画面の方に配置する)
+.form__sendbtn-wrap {  // <input>タグには、擬似要素は付与できないため、wrapできる要素で囲む。
+  position: relative;
+}
+
+.form__sendbtn-wrap:hover::after {  // hover
+  transform: translate(rem(5), -50%);
+}
+
+.form__sendbtn-wrap::after {  // 矢印『→』
+  display: inline-block;
+  content: "";
+  width: rem(85);
+  height: rem(10.86);
+  background: url(../images/common/btn2-arrow-white.webp) no-repeat center center / contain;
+  position: absolute;
+  top: 50%;
+  right: rem(60);
+  transform: translateY(-50%);
+  transition: transform 0.2s ease-out;
+
+  @include mq(md) {
+    right: rem(35);
+  }
+}
+
 .form__sendbtn {
+  text-align: left;
+  padding-left: rem(70);  // 文字の位置調整
   min-width: rem(315);
   width: fit-content;
 
+  display: inline-flex;
+  border-radius: rem(20) 0 rem(20) 0;
+  padding-top: rem(15);
+  padding-bottom: rem(15);
+  // padding-inline: rem(15);  // 最低限を指定
+  background: #3e4c61;
+  justify-content: center;
+  align-items: center;
+  gap: rem(25);
+  transition: background 0.2s ease-out;
+
+  font-size: rem(17);
+  font-weight: $medium;
+  color: $color-white;
+
   @include mq(md) {
     min-width: rem(250);
+    padding-left: rem(35);
   }
 }
 

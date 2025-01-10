@@ -88,3 +88,52 @@
 .btn2.btn2--return:hover .btn2__arrow {  // hover
   transform: translateX(rem(-5));
 }
+
+.btn2.btn2--return .btn2__arrow {
+  position: relative;
+}
+
+.btn2.btn2--return .btn2__arrow::before {  // 矢印『←』
+  display: inline-block;
+  content: "";
+  width: rem(85);
+  height: rem(10.86);
+  background: url(../images/common/btn2-arrow-white-return.webp) no-repeat center center / contain;
+  transition: transform 0.2s ease-out;
+
+  @include mq(md) {
+    right: rem(35);
+  }
+}
+
+
+
+// btn2--confirm (確認ボタン(入力画面に配置してあるボタン))
+.btn2.btn2--confirm {
+
+}
+
+.btn2.btn2--confirm:hover {  // hover
+  opacity: 0.6;
+}
+
+.btn2.btn2--confirm:hover .btn2__arrow {  // hover
+  transform: translateX(rem(5));
+}
+
+.btn2.btn2--confirm .btn2__arrow {
+  position: relative;
+}
+
+.btn2.btn2--confirm .btn2__arrow::before {  // 矢印『←』
+  display: inline-block;
+  content: "";
+  width: rem(85);
+  height: rem(10.86);
+  background: url(../images/common/btn2-arrow-white.webp) no-repeat center center / contain;
+  transition: transform 0.2s ease-out;
+
+  @include mq(md) {
+    right: rem(35);
+  }
+}
