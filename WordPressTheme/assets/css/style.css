@@ -550,6 +550,18 @@ a {
 	width: 100%;
 }
 
+.btn2.btn2--return {
+	background: #a4adbc;
+}
+
+.btn2.btn2--return:hover {
+	opacity: 0.6;
+}
+
+.btn2.btn2--return:hover .btn2__arrow {
+	transform: translateX(-0.3125rem);
+}
+
 .btn3 {
 	background: #fcbc2d;
 	border-radius: 1.25rem 0 1.25rem 0;
@@ -1668,6 +1680,14 @@ a {
 	line-height: normal;
 }
 
+.field__label-text-limit {
+	color: #e96777;
+	font-size: 1.0625rem;
+	font-weight: 500;
+	line-height: normal;
+	padding-left: 1.25rem;
+}
+
 .field__label-require {
 	background: #f17887;
 	border-radius: 0.625rem;
@@ -1791,7 +1811,7 @@ a {
 	justify-content: center;
 }
 
-.form__sendbtn-wrap {
+.form__confirmbtn-wrap {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 2.5rem;
@@ -1799,8 +1819,43 @@ a {
 	width: fit-content;
 }
 
+.form__confirmbtn {
+	min-width: 19.6875rem;
+}
+
+.form__confirm-text {
+	color: #40444a;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.875;
+	margin-top: 1.5625rem;
+}
+
+.form__confirm-text-alert {
+	color: #e04c5f;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.875;
+}
+
+.form__confirm-buttons {
+	align-items: center;
+	display: flex;
+	gap: 2.5rem;
+	justify-content: center;
+	margin-top: 2.5rem;
+}
+
+.form__returnbtn {
+	min-width: 19.6875rem;
+	width: -moz-fit-content;
+	width: fit-content;
+}
+
 .form__sendbtn {
 	min-width: 19.6875rem;
+	width: -moz-fit-content;
+	width: fit-content;
 }
 
 .wpcf7-spinner {
@@ -5308,6 +5363,12 @@ html {
 	font-size: 0.875rem;
 }
 
+.field__label-text-limit {
+	flex-shrink: 0;
+	font-size: 0.8125rem;
+	padding-left: 0.625rem;
+}
+
 .field__label-require {
 	flex-shrink: 0;
 	font-size: 0.75rem;
@@ -5363,8 +5424,34 @@ html {
 	font-weight: 400;
 }
 
-.form__sendbtn-wrap {
+.form__confirmbtn-wrap {
 	margin-top: 1.875rem;
+}
+
+.form__confirmbtn {
+	min-width: 15.625rem;
+}
+
+.form__confirm-text {
+	font-size: 0.8125rem;
+	line-height: 1.6;
+	margin-top: 0.9375rem;
+}
+
+.form__confirm-text-alert {
+	font-size: 0.8125rem;
+	line-height: 1.6;
+}
+
+.form__confirm-buttons {
+	align-items: center;
+	flex-direction: column;
+	gap: 0.9375rem;
+	margin-top: 1.25rem;
+}
+
+.form__returnbtn {
+	min-width: 15.625rem;
 }
 
 .form__sendbtn {

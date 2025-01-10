@@ -73,3 +73,18 @@
 //     line-height: 1.5;
 //   }
 // }
+
+
+
+// btn2--return (戻るボタン)
+.btn2.btn2--return {
+  background: #a4adbc;
+}
+
+.btn2.btn2--return:hover {  // hover
+  opacity: 0.6;
+}
+
+.btn2.btn2--return:hover .btn2__arrow {  // hover
+  transform: translateX(rem(-5));
+}

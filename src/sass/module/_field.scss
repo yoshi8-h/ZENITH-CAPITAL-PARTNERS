@@ -60,6 +60,20 @@
   }
 }
 
+.field__label-text-limit {  // 文字数制限の文言
+  padding-left: rem(20);
+  font-size: rem(17);
+  font-weight: $medium;
+  line-height: normal;
+  color: #e96777;
+
+  @include mq(md) {
+    padding-left: rem(10);
+    flex-shrink: 0;
+    font-size: rem(13);
+  }
+}
+
 .field__label-require {  // 『必須』のラベル
   display: inline-block;
   color: #FFF;
