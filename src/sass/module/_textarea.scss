@@ -1,0 +1,35 @@
+@use "global" as *;
+
+
+.textarea {
+  border: rem(1) solid #c2cbdb;
+  color: $color-font-base-2;
+  font-size: rem(17);
+  font-weight: $normal;
+  line-height: normal;
+  padding-block: rem(13);
+  padding-inline: rem(21);
+  transition: background 0.2s ease-out;
+
+  @include mq(md) {
+    padding-block: rem(10);
+    padding-inline: rem(6);
+    font-size: rem(14);
+  }
+}
+
+.textarea::placeholder {  // プレイスホルダーのCSS指定 (placeholder)
+  color: #c4c4c4;
+  font-size: rem(17);
+  font-weight: $normal;
+  line-height: normal;
+
+  @include mq(md) {
+    font-size: rem(14);
+  }
+}
+
+.textarea:hover,
+.textarea:focus {  //『入力時』＝『focus時』
+  // background: rgba(64, 224, 208, 0.1); /* ターコイズブルー + 透明度30％ */
+}

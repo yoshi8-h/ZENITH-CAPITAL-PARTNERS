@@ -1,0 +1,25 @@
+@use "global" as *;
+
+
+.select {
+  border: rem(1) solid #c2cbdb;
+  color: $color-font-base-2;
+  font-size: rem(17);
+  font-weight: $normal;
+  line-height: normal;
+  padding-block: rem(13);
+  padding-inline: rem(21);
+
+  transition: background 0.2s ease-out;
+
+  @include mq(md) {
+    padding-block: rem(10);
+    padding-inline: rem(6);
+    font-size: rem(14);
+  }
+}
+
+.select:hover,
+.select:focus {  //『入力時』＝『focus時』
+  // background: rgba(64, 224, 208, 0.1); /* ターコイズブルー + 透明度30％ */
+}

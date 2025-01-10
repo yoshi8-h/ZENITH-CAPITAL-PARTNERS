@@ -1,0 +1,147 @@
+@use "global" as *;
+
+
+.field {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-block: rem(20);
+  border-bottom: 1px solid #adb0b1;
+
+  @include mq(md) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: rem(10);
+  }
+}
+
+.field:first-of-type {
+  padding-top: 0;
+}
+
+.field__head {
+
+  @include mq(md) {
+    flex-grow: 1;
+  }
+}
+
+.field__head.is-textarea {
+  padding-top: rem(15);
+
+  @include mq(md) {
+    padding-top: 0;
+  }
+}
+
+.field__label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: rem(15);
+
+  @include mq(md) {
+    gap: rem(8);
+  }
+}
+
+.field__label-text {
+  font-size: rem(17);
+  font-weight: $medium;
+  line-height: normal;
+  color: $color-font-base-1;
+
+  @include mq(md) {
+    flex-shrink: 0;
+    font-size: rem(14);
+  }
+}
+
+.field__label-require {  // 『必須』のラベル
+  display: inline-block;
+  color: #FFF;
+  font-size: rem(14);
+  font-weight: $semiBold;
+  line-height: normal;
+  padding-block: rem(2);
+  padding-inline: rem(6);
+  background: #f17887;
+  border-radius: rem(10);
+  text-align: center;
+
+  @include mq(md) {
+    flex-shrink: 0;
+    padding-block: rem(1);
+    font-size: rem(12);
+  }
+}
+
+.field__label-any {  // 『任意』のラベル
+  display: inline-block;
+  color: #FFF;
+  font-size: rem(14);
+  font-weight: $semiBold;
+  line-height: normal;
+  padding-block: rem(2);
+  padding-inline: rem(6);
+  background: #aabac0;
+  border-radius: rem(10);
+  text-align: center;
+
+  @include mq(md) {
+    flex-shrink: 0;
+    padding-block: rem(1);
+    font-size: rem(12);
+  }
+}
+
+.field__item {
+  width: 63.6%;
+
+  @include mq(md) {
+    flex-grow: 1;
+    width: 100%;
+  }
+}
+
+.field__item input {
+  width: 100%;
+}
+
+.field__select-wrap {
+  position: relative;
+  width: 63.6%;
+
+  @include mq(md) {
+    flex-grow: 1;
+    width: 100%;
+  }
+}
+
+.field__select-wrap::after {  // セレクトボックスの右端の下矢印アイコン
+  // content: "";
+  // background: url(../images/common/selectbox-arrow.svg) no-repeat center center / contain;
+  // width: rem(12);
+  // height: rem(12);
+  // position: absolute;
+  // top: 50%;
+  // right: rem(8);
+  // transform: translateY(-50%);
+}
+
+.field__select {
+  width: 100%;
+}
+
+.field.is-textarea {
+  align-items: flex-start;
+}
+
+.field__textarea {
+  width: 100%;
+  border: rem(1) solid $color-accent1;
+  background: #FFF;
+}

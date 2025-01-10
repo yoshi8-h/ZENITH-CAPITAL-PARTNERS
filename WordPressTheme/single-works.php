@@ -107,7 +107,7 @@
               </div>
             <?php endif; ?>
             <div class="works-contents__btn-wrap">
-              <a href="<?php echo esc_url(get_post_type_archive_link('works')); ?>" class="works-contents__btn btn2 btn2--2">
+              <a href="<?php echo esc_url(get_post_type_archive_link('works')); ?>" class="works-contents__btn btn2">
                 <div class="btn2__text">実績一覧に戻る</div>
                 <div class="btn2__arrow"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/btn2-arrow-white.webp" alt="→"></div>
               </a>

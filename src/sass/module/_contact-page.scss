@@ -1,0 +1,46 @@
+@use "global" as *;
+
+
+.contact-page {
+
+}
+
+.contact-page__inner {
+
+}
+
+.contact-page__wrap {
+
+}
+
+
+// 『Form ページ』
+.contact-page__form-section-wrap {
+  padding-bottom: rem(110);
+
+  @include mq(md) {
+    padding-bottom: rem(65);
+  }
+}
+
+.contact-page__form-title {
+
+}
+
+.contact-page__form-wrap {
+  margin-top: rem(22);
+  border: 1px solid #adb0b1;
+  padding-top: rem(48);
+  padding-bottom: rem(50);
+  padding-inline: rem(50);
+
+  @include mq(md) {
+    padding-top: rem(30);
+    padding-bottom: rem(40);
+    padding-inline: rem(15);
+  }
+}
+
+.contact-page__form {
+
+}
