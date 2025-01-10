@@ -706,6 +706,19 @@ a {
 	opacity: 0.4;
 }
 
+/* 『確認画面』と『完了画面』を非表示 */
+
+.contact-page__confirm-area,
+.contact-page__thanks-area {
+	display: none;
+}
+
+/* WordPressデフォルトの「サンクスメッセージ」を非表示 */
+
+.wpcf7-response-output {
+	display: none;
+}
+
 .contact {
 	background: url(../images/common/contact-bg.webp) no-repeat center center/cover;
 	padding-bottom: 4.375rem;
