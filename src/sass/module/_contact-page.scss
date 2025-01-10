@@ -87,9 +87,9 @@
 
 
 // ========================================
-/* 『確認画面』と『完了画面』を非表示 */
-.contact-page__confirm-area,
-.contact-page__thanks-area {
+/* 『確認画面』を非表示 */
+// 『完了画面』は、JSで『ページ遷移』させて表示する事にしたため、消してはいけない。
+.contact-page__confirm-area {
   display: none;
 }
 

@@ -706,10 +706,9 @@ a {
 	opacity: 0.4;
 }
 
-/* 『確認画面』と『完了画面』を非表示 */
+/* 『確認画面』を非表示 */
 
-.contact-page__confirm-area,
-.contact-page__thanks-area {
+.contact-page__confirm-area {
 	display: none;
 }
 
@@ -2548,7 +2547,7 @@ a {
 	display: flex;
 	gap: 1rem;
 	justify-content: flex-start;
-	width: 27.5%;
+	width: 34%;
 }
 
 .main-member__role {
@@ -2569,7 +2568,7 @@ a {
 	gap: 0.0625rem;
 	justify-content: flex-end;
 	text-align: left;
-	width: 72.5%;
+	width: 66%;
 }
 
 .main-member__license-title {

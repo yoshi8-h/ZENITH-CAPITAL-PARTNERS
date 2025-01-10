@@ -45,6 +45,23 @@ function my_setup() {
 add_action("after_setup_theme", "my_setup");
 
 
+/* ================================================================ */
+/* プラグイン『Contact Form 7』の自動整形機能を無効化 */
+// 『Contact Form 7』を使ってフォームを実装すると、自動整形機能が勝手に働き、勝手に変な所に<p>タグや<br>タグが入り、CSSに影響を及ぼすので、それを無効化するための記述。
+function wpcf7_autop_return_false() {
+  return false;
+}
+add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
+
+
+
+
+
+
+
+
+
+
 
 
 
