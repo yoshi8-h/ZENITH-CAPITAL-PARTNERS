@@ -293,355 +293,57 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /* -------------------------------------------------------------------------------- */
 /* お問い合わせページの、プラグイン無しで『確認画面』→『完了画面』に遷移させる方法 */
-
-/* thanksページへの遷移以外はほぼ上手くっているコード */
-// document.addEventListener('DOMContentLoaded', () => {
-//   // 入力内容を格納するための変数
-//   let val;
-//   // 入力フィールドのタイプを格納するための変数
-//   let type;
-//   // ラジオボタンの選択値を格納するための変数
-//   let radio;
-//   // チェックボックスの選択値を格納するための変数
-//   let check;
-
-//   // ラジオボタンの初期値を取得し、確認画面に反映させる
-//   const radioButtons = document.querySelectorAll('[type="radio"]:checked');
-//   radioButtons.forEach(button => {
-//       // ラジオボタンの選択値を取得
-//       radio = button.value;
-//       // ラジオボタンの親要素からidを取得
-//       const id = button.closest('[id]').id;
-//       // 取得したidをクラス名に追加し、確認画面の値を設定
-//       document.querySelector(`.confirm_${id}`).textContent = radio;
-//   });
-
-//   // 入力フィールドの内容が変更された場合の処理
-//   const formInputs = document.querySelectorAll('.field input, .field select, .field textarea');
-//   formInputs.forEach(input => {
-//       input.addEventListener('change', function () {
-//           // 入力内容を取得
-//           val = this.value;
-//           // 入力フィールドのタイプを取得
-//           type = this.getAttribute("type");
-//           // ラジオボタンの場合の処理
-//           if (type === "radio") {
-//               // ラジオボタンの選択値を取得
-//               radio = this.value;
-//               // ラジオボタンの親要素からidを取得
-//               const id = this.closest("[id]").id;
-//               // 取得したidをクラス名に追加し、確認画面の値を設定
-//               document.querySelector(`.confirm_${id}`).textContent = radio;
-//           }// チェックボックスの場合の処理
-//           else if (type === "checkbox") {
-//               // チェックボックスの選択値を取得
-//               check = this.value;
-//               // チェックボックスの親要素からidを取得
-//               const id = this.closest("[id]").id;
-//               // 取得したidをクラス名に追加し、確認画面の値を設定
-//               document.querySelector(`.confirm_${id}`).textContent += check + " / ";
-//           }// その他の場合の処理
-//           else {
-//               // 入力フィールドのidを取得
-//               const id = this.id;
-//               // 取得したidをクラス名に追加し、確認画面の値を設定
-//               document.querySelector(`.confirm_${id}`).textContent = val;
-//           }
-//       });
-//   });
-
-//   // 確認ボタンをクリックした場合の処理
-//   const confirmButton = document.querySelector(".form__confirmbtn");
-//   confirmButton.addEventListener('click', () => {
-//       document.querySelector(".contact-page__form-area").style.display = 'none';
-//       document.querySelector(".contact-page__confirm-area").style.display = 'block';
-//       window.scrollTo(0, document.querySelector('#navi').getBoundingClientRect().top);
-//   });
-
-//   // 戻るボタンをクリックした場合の処理
-//   const backButton = document.querySelector(".form__returnbtn");
-//   backButton.addEventListener('click', () => {
-//       document.querySelector(".contact-page__form-area").style.display = 'block';
-//       document.querySelector(".contact-page__confirm-area").style.display = 'none';
-//       window.scrollTo(0, document.querySelector('#navi').getBoundingClientRect().top);
-//   });
-
-//   // 必須項目が変更された場合の処理
-//   const requiredInputs = document.querySelectorAll('[aria-required="true"]');
-//   requiredInputs.forEach(input => {
-//       input.addEventListener('input', () => {
-//           // フラグ
-//           let flag = true;
-//           // 必須項目をループで確認
-//           requiredInputs.forEach(requiredInput => {
-//               if (requiredInput.value === "") {
-//                   flag = false;
-//               }
-//           });
-//           // フラグに基づいて確認ボタンを有効化/無効化
-//           confirmButton.disabled = !flag;
-//       });
-//   });
-
-//   // 送信ボタンをクリックした場合の処理
-//   document.addEventListener('wpcf7mailsent', (event) => {
-//       location = 'https://〇〇.com/thanks/';
-//   }, false);
-// });
-
-
-
-
-
-/* 送信時に、thanksページに飛ばす(リダイレクトする)のではなく、『thanksエリア』を表示するコード */
-// document.addEventListener('DOMContentLoaded', () => {
-//   // 入力内容を格納するための変数
-//   let val;
-//   let type;
-//   let radio;
-//   let check;
-
-//   // ラジオボタンの初期値を取得し、確認画面に反映させる
-//   const radioButtons = document.querySelectorAll('[type="radio"]:checked');
-//   radioButtons.forEach(button => {
-//     radio = button.value;
-//     const id = button.closest('[id]').id;
-//     document.querySelector(`.confirm_${id}`).textContent = radio;
-//   });
-
-//   // 入力フィールドの内容が変更された場合の処理
-//   const formInputs = document.querySelectorAll('.field input, .field select, .field textarea');
-//   formInputs.forEach(input => {
-//     input.addEventListener('change', function () {
-//       val = this.value;
-//       type = this.getAttribute("type");
-
-//       if (type === "radio") {
-//         radio = this.value;
-//         const id = this.closest("[id]").id;
-//         document.querySelector(`.confirm_${id}`).textContent = radio;
-//       } else if (type === "checkbox") {
-//         check = this.value;
-//         const id = this.closest("[id]").id;
-//         document.querySelector(`.confirm_${id}`).textContent += check + " / ";
-//       } else {
-//         const id = this.id;
-//         document.querySelector(`.confirm_${id}`).textContent = val;
-//       }
-//     });
-//   });
-
-//   // 確認ボタンをクリックした場合の処理
-//   const confirmButton = document.querySelector(".form__confirmbtn");
-//   confirmButton.addEventListener('click', () => {
-//     document.querySelector(".contact-page__form-area").style.display = 'none';
-//     document.querySelector(".contact-page__confirm-area").style.display = 'block';
-//     window.scrollTo(0, document.querySelector('#navi').getBoundingClientRect().top);
-//   });
-
-//   // 戻るボタンをクリックした場合の処理
-//   const backButton = document.querySelector(".form__returnbtn");
-//   backButton.addEventListener('click', () => {
-//     document.querySelector(".contact-page__form-area").style.display = 'block';
-//     document.querySelector(".contact-page__confirm-area").style.display = 'none';
-//     window.scrollTo(0, document.querySelector('#navi').getBoundingClientRect().top);
-//   });
-
-//   // 必須項目が変更された場合の処理
-//   const requiredInputs = document.querySelectorAll('[aria-required="true"]');
-//   requiredInputs.forEach(input => {
-//     input.addEventListener('input', () => {
-//       let flag = true;
-//       requiredInputs.forEach(requiredInput => {
-//         if (requiredInput.value === "") {
-//           flag = false;
-//         }
-//       });
-//       confirmButton.disabled = !flag;
-//     });
-//   });
-
-//   // 送信ボタンをクリックした場合の処理（送信完了後の処理）
-//   document.addEventListener('wpcf7mailsent', (event) => {
-//     // 確認画面を非表示にして、完了画面を表示
-//     document.querySelector(".contact-page__confirm-area").style.display = 'none';
-//     document.querySelector(".contact-page__thanks-area").style.display = 'block';
-//     window.scrollTo(0, 0); // ページトップにスクロール
-//   }, false);
-// });
-
-
-
-
-
-/* 送信時に、thanksページに飛ばす(リダイレクトする)コード */
+// 送信時に、thanksページに飛ばす(リダイレクトする)コード
 document.addEventListener('DOMContentLoaded', () => {
-  // 入力内容を格納するための変数
-  let val;
-  let type;
-  let radio;
-  let check;
-
-  // ラジオボタンの初期値を取得し、確認画面に反映させる
-  const radioButtons = document.querySelectorAll('[type="radio"]:checked');
-  radioButtons.forEach(button => {
-    radio = button.value;
-    const id = button.closest('[id]').id;
-    document.querySelector(`.confirm_${id}`).textContent = radio;
-  });
-
-  // 入力フィールドの内容が変更された場合の処理
-  const formInputs = document.querySelectorAll('.field input, .field select, .field textarea');
-  formInputs.forEach(input => {
-    input.addEventListener('change', function () {
-      val = this.value;
-      type = this.getAttribute("type");
-
-      if (type === "radio") {
-        radio = this.value;
-        const id = this.closest("[id]").id;
-        document.querySelector(`.confirm_${id}`).textContent = radio;
-      } else if (type === "checkbox") {
-        check = this.value;
-        const id = this.closest("[id]").id;
-        document.querySelector(`.confirm_${id}`).textContent += check + " / ";
-      } else {
-        const id = this.id;
-        document.querySelector(`.confirm_${id}`).textContent = val;
-      }
-    });
-  });
-
-  // 確認ボタンをクリックした場合の処理
+  // 確認画面用の要素
   const confirmButton = document.querySelector(".form__confirmbtn");
-  confirmButton.addEventListener('click', () => {
-    document.querySelector(".contact-page__form-area").style.display = 'none';
-    document.querySelector(".contact-page__confirm-area").style.display = 'block';
-    window.scrollTo(0, document.querySelector('#navi').getBoundingClientRect().top);
-  });
-
-  // 戻るボタンをクリックした場合の処理
   const backButton = document.querySelector(".form__returnbtn");
-  backButton.addEventListener('click', () => {
-    document.querySelector(".contact-page__form-area").style.display = 'block';
-    document.querySelector(".contact-page__confirm-area").style.display = 'none';
-    window.scrollTo(0, document.querySelector('#navi').getBoundingClientRect().top);
-  });
+  const formInputs = document.querySelectorAll('.js-form-input');
+  const formArea = document.querySelector(".contact-page__form-area");
+  const confirmArea = document.querySelector(".contact-page__confirm-area");
 
   // 必須項目が変更された場合の処理
-  const requiredInputs = document.querySelectorAll('[aria-required="true"]');
-  requiredInputs.forEach(input => {
-    input.addEventListener('input', () => {
-      let flag = true;
-      requiredInputs.forEach(requiredInput => {
-        if (requiredInput.value === "") {
-          flag = false;
-        }
-      });
-      confirmButton.disabled = !flag;
+  const updateConfirmButtonState = () => {
+    let allValid = true;
+    formInputs.forEach(input => {
+      if (input.hasAttribute('aria-required') && input.value.trim() === "") {
+        allValid = false;
+      }
     });
+    confirmButton.disabled = !allValid;
+  };
+
+  formInputs.forEach(input => {
+    input.addEventListener('input', updateConfirmButtonState);
   });
 
-  // 送信ボタンをクリックした場合の処理
+  // 確認画面に遷移
+  confirmButton.addEventListener('click', () => {
+    formInputs.forEach(input => {
+      const targetClass = `.confirm_${input.id}`;
+      const confirmField = document.querySelector(targetClass);
+      if (confirmField) {
+        confirmField.textContent = input.value.trim();
+      }
+    });
+
+    formArea.style.display = 'none';
+    confirmArea.style.display = 'block';
+    window.scrollTo(0, 0);
+  });
+
+  // 入力画面に戻る
+  backButton.addEventListener('click', () => {
+    formArea.style.display = 'block';
+    confirmArea.style.display = 'none';
+    window.scrollTo(0, 0);
+  });
+
+  // 送信ボタンをクリックした場合のリダイレクト処理
   document.addEventListener('wpcf7mailsent', (event) => {
-    // thanks スラッグの固定ページにリダイレクト
     location.href = `${window.location.origin}/thanks/`;
   }, false);
 });
-
-
-
-
-/* 送信時に、thanksページに飛ばす(リダイレクトする)コード */
-// バリデーションが上手くいっていないコード。
-// テキストエリアの文字数が2000文字以内であることを確認し、超過している場合は『警告』を出し、確認ボタンを無効化。
-// 「メールアドレス」と「確認用メールアドレス」の値が一致していない場合は、確認ボタンを無効化。
-// document.addEventListener('DOMContentLoaded', () => {
-//   const formInputs = document.querySelectorAll('.field input, .field select, .field textarea');
-//   const confirmButton = document.querySelector(".form__confirmbtn");
-//   const emailInput = document.getElementById("your-email");
-//   const emailConfirmInput = document.getElementById("your-email-confirm");
-//   const messageInput = document.getElementById("your-message");
-
-//   // バリデーション関数
-//   const validateForm = () => {
-//     let isValid = true;
-
-//     // 必須項目チェック
-//     const requiredInputs = document.querySelectorAll('[aria-required="true"]');
-//     requiredInputs.forEach(input => {
-//       if (!input.value.trim()) {
-//         isValid = false;
-//         console.log(`必須項目未入力: ${input.id}`);
-//       }
-//     });
-
-//     // メール一致チェック
-//     if (emailInput.value.trim() !== emailConfirmInput.value.trim()) {
-//       isValid = false;
-//       console.log("メールアドレスが一致していません");
-//     }
-
-//     // テキストエリア文字数チェック
-//     const messageLength = messageInput.value.trim().length;
-//     if (messageLength > 2000) {
-//       isValid = false;
-//       console.log(`文字数超過: ${messageLength}文字`);
-//       const errorElem = messageInput.nextElementSibling;
-//       if (errorElem) {
-//         errorElem.textContent = "お問い合わせ内容は2000文字以内で入力してください。";
-//       }
-//     } else {
-//       const errorElem = messageInput.nextElementSibling;
-//       if (errorElem) {
-//         errorElem.textContent = "";
-//       }
-//     }
-
-//     // 確認ボタンの状態を更新
-//     confirmButton.disabled = !isValid;
-//   };
-
-//   // 入力フィールド変更時にバリデーション実行
-//   formInputs.forEach(input => {
-//     input.addEventListener('input', validateForm);
-//   });
-
-//   // 確認ボタンをクリックした場合の処理
-//   confirmButton.addEventListener('click', () => {
-//     document.querySelector(".contact-page__form-area").style.display = 'none';
-//     document.querySelector(".contact-page__confirm-area").style.display = 'block';
-//     window.scrollTo(0, 0);
-//   });
-
-//   // 戻るボタンをクリックした場合の処理
-//   const backButton = document.querySelector(".form__returnbtn");
-//   backButton.addEventListener('click', () => {
-//     document.querySelector(".contact-page__form-area").style.display = 'block';
-//     document.querySelector(".contact-page__confirm-area").style.display = 'none';
-//     window.scrollTo(0, 0);
-//   });
-
-//   // 送信ボタンをクリックした場合の処理
-//   document.addEventListener('wpcf7mailsent', () => {
-//     location.href = `${window.location.origin}/thanks/`;
-//   }, false);
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
