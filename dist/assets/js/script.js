@@ -290,30 +290,104 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /* -------------------------------------------------------------------------------- */
 /* お問い合わせページの、プラグイン無しで『確認画面』→『完了画面』に遷移させる方法 */
-// 送信時に、thanksページに飛ばす(リダイレクトする)コード
+// 送信時に、thanksページに飛ばす(リダイレクトする)コード (文字制限とメールアドレス確認のバリデーション無し)
+// document.addEventListener('DOMContentLoaded', () => {
+//   // 確認画面用の要素
+//   const confirmButton = document.querySelector(".form__confirmbtn");
+//   const backButton = document.querySelector(".form__returnbtn");
+//   const formInputs = document.querySelectorAll('.js-form-input');
+//   const formArea = document.querySelector(".contact-page__form-area");
+//   const confirmArea = document.querySelector(".contact-page__confirm-area");
+
+//   // 必須項目が変更された場合の処理
+//   const updateConfirmButtonState = () => {
+//     let allValid = true;
+//     formInputs.forEach(input => {
+//       if (input.hasAttribute('aria-required') && input.value.trim() === "") {
+//         allValid = false;
+//       }
+//     });
+//     confirmButton.disabled = !allValid;
+//   };
+
+//   formInputs.forEach(input => {
+//     input.addEventListener('input', updateConfirmButtonState);
+//   });
+
+//   // 確認画面に遷移
+//   confirmButton.addEventListener('click', () => {
+//     formInputs.forEach(input => {
+//       const targetClass = `.confirm_${input.id}`;
+//       const confirmField = document.querySelector(targetClass);
+//       if (confirmField) {
+//         confirmField.textContent = input.value.trim();
+//       }
+//     });
+
+//     formArea.style.display = 'none';
+//     confirmArea.style.display = 'block';
+//     window.scrollTo(0, 0);
+//   });
+
+//   // 入力画面に戻る
+//   backButton.addEventListener('click', () => {
+//     formArea.style.display = 'block';
+//     confirmArea.style.display = 'none';
+//     window.scrollTo(0, 0);
+//   });
+
+//   // 送信ボタンをクリックした場合のリダイレクト処理
+//   document.addEventListener('wpcf7mailsent', (event) => {
+//     location.href = `${window.location.origin}/thanks/`;
+//   }, false);
+// });
+
+/* お問い合わせページの、プラグイン無しで『確認画面』→『完了画面』に遷移させる方法 */
+// 送信時に、thanksページに飛ばす(リダイレクトする)コード (文字制限とメールアドレス確認のバリデーション有り)
+// テキストエリアは、2000文字までしか入力できない。 (正確には、判定のズレで、1970程度になる)
+// メールアドレスと確認用メールアドレスが一致しないとき、確認ボタンが無効になる。
 document.addEventListener('DOMContentLoaded', function () {
-  // 確認画面用の要素
+  // 要素の取得
   var confirmButton = document.querySelector(".form__confirmbtn");
   var backButton = document.querySelector(".form__returnbtn");
   var formInputs = document.querySelectorAll('.js-form-input');
   var formArea = document.querySelector(".contact-page__form-area");
   var confirmArea = document.querySelector(".contact-page__confirm-area");
+  var emailInput = document.getElementById('your-email'); // メールアドレス
+  var emailConfirmInput = document.getElementById('your-email-confirm'); // 確認用メールアドレス
+  var textareaInput = document.querySelector('.field__textarea'); // テキストエリア
 
-  // 必須項目が変更された場合の処理
+  // 必須項目が有効か確認する関数
   var updateConfirmButtonState = function updateConfirmButtonState() {
     var allValid = true;
+
+    // 必須項目の入力チェック
     formInputs.forEach(function (input) {
       if (input.hasAttribute('aria-required') && input.value.trim() === "") {
         allValid = false;
       }
     });
+
+    // メールアドレスの一致チェック
+    if (emailInput.value.trim() !== emailConfirmInput.value.trim()) {
+      allValid = false;
+    }
+
+    // テキストエリアの文字数チェック（2000文字以内）
+    if (textareaInput && textareaInput.value.length > 2000) {
+      allValid = false;
+    }
+
+    // 確認ボタンの状態を更新
     confirmButton.disabled = !allValid;
   };
+
+  // 各入力フィールドの変更イベントにリスナーを追加
   formInputs.forEach(function (input) {
     input.addEventListener('input', updateConfirmButtonState);
   });
 
-  // 確認画面に遷移
+  // 確認画面に遷移する処理
   confirmButton.addEventListener('click', function () {
     formInputs.forEach(function (input) {
       var targetClass = ".confirm_".concat(input.id);
@@ -327,18 +401,23 @@ document.addEventListener('DOMContentLoaded', function () {
     window.scrollTo(0, 0);
   });
 
-  // 入力画面に戻る
+  // 入力画面に戻る処理
   backButton.addEventListener('click', function () {
     formArea.style.display = 'block';
     confirmArea.style.display = 'none';
     window.scrollTo(0, 0);
   });
 
-  // 送信ボタンをクリックした場合のリダイレクト処理
+  // 送信後のリダイレクト処理
   document.addEventListener('wpcf7mailsent', function (event) {
     location.href = "".concat(window.location.origin, "/thanks/");
   }, false);
+
+  // 初期化処理（確認ボタンの状態をチェック）
+  updateConfirmButtonState();
 });
+
+/* -------------------------------------------------------------------------------- */
 
 /* ================================================================================ */
 /*  アニメーション  */
