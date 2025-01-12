@@ -348,14 +348,15 @@ document.addEventListener('DOMContentLoaded', function () {
 // メールアドレスと確認用メールアドレスが一致しないとき、確認ボタンが無効になる。
 document.addEventListener('DOMContentLoaded', function () {
   // 要素の取得
-  var confirmButton = document.querySelector(".form__confirmbtn");
-  var backButton = document.querySelector(".form__returnbtn");
-  var formInputs = document.querySelectorAll('.js-form-input');
-  var formArea = document.querySelector(".contact-page__form-area");
-  var confirmArea = document.querySelector(".contact-page__confirm-area");
+  var confirmButton = document.querySelector(".form__confirmbtn"); // 確認ボタン
+  var backButton = document.querySelector(".form__returnbtn"); // 戻るボタン
+  var formInputs = document.querySelectorAll('.js-form-input'); // 入力フィールド
+  var formArea = document.querySelector(".contact-page__form-area"); // 入力画面
+  var confirmArea = document.querySelector(".contact-page__confirm-area"); // 確認画面
   var emailInput = document.getElementById('your-email'); // メールアドレス
   var emailConfirmInput = document.getElementById('your-email-confirm'); // 確認用メールアドレス
   var textareaInput = document.querySelector('.field__textarea'); // テキストエリア
+  var sendButton = document.querySelector('.form__sendbtn'); // 送信ボタン
 
   // 必須項目が有効か確認する関数
   var updateConfirmButtonState = function updateConfirmButtonState() {
@@ -399,6 +400,12 @@ document.addEventListener('DOMContentLoaded', function () {
     formArea.style.display = 'none';
     confirmArea.style.display = 'block';
     window.scrollTo(0, 0);
+
+    // 確認画面の「戻る」ボタンの矢印が消える問題への対応
+    var arrow = backButton.querySelector('.btn2__arrow');
+    if (arrow) {
+      arrow.style.display = 'block';
+    }
   });
 
   // 入力画面に戻る処理
@@ -406,6 +413,14 @@ document.addEventListener('DOMContentLoaded', function () {
     formArea.style.display = 'block';
     confirmArea.style.display = 'none';
     window.scrollTo(0, 0);
+  });
+
+  // 送信ボタンの動作修正
+  sendButton.addEventListener('click', function () {
+    // Contact Form 7の送信イベントが正しく動作することを確認
+    if (typeof wpcf7 !== 'undefined' && typeof wpcf7.initForm !== 'undefined') {
+      wpcf7.initForm(document.querySelector('.wpcf7-form'));
+    }
   });
 
   // 送信後のリダイレクト処理
@@ -416,7 +431,6 @@ document.addEventListener('DOMContentLoaded', function () {
   // 初期化処理（確認ボタンの状態をチェック）
   updateConfirmButtonState();
 });
-
 /* -------------------------------------------------------------------------------- */
 
 /* ================================================================================ */

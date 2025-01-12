@@ -65,7 +65,7 @@
             <div class="management-policy__content-body js-fadeInRight">
               <div class="management-policy__content-title u-desktop">信頼関係を大切にします。</div>
               <p class="management-policy__content-text">地主・投資家・金融機関とは、成功事例を積み重ねることで信頼関係を、不動産をご利用されるユーザー様とは、快適な環境を提供することで信頼関係を構築します。</p>
-              <a href="<?php echo esc_url(get_permalink(get_page_by_path('business'))); ?>#solution-policy__content-02" class="management-policy__content-btn btn1">
+              <a href="<?php echo esc_url(get_permalink(get_page_by_path('business'))); ?>#solution-policy__content-01" class="management-policy__content-btn btn1">
                 <span class="btn1__text">MORE</span>
                 <span class="btn1__arrow">></span>
               </a>
