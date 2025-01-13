@@ -26,6 +26,21 @@
   object-fit: cover;
 
   @include mq(md) {
+    display: none;
+  }
+}
+
+.fv__video-sp {  // SP時の動画
+  display: none;
+
+  @include mq(md) {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    max-height: rem(810);
+
+    aspect-ratio: 1440 / 810;
+    object-fit: cover;
     min-height: auto;
   }
 }
@@ -34,56 +49,60 @@
   font-size: rem(20);
   text-align: center;
   color: $color-font-base-1;
+
+  @include mq(md) {
+    font-size: rem(18);
+  }
 }
 
 .fv__text {  // 非表示。
   display: none;  // (文字は、動画内に埋め込む方法に仕様変更のため、文字は非表示に。)
 
-  font-size: rem(30);
-  text-align: center;
-  color: $color-white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 100;
-  white-space: nowrap;
+  // font-size: rem(30);
+  // text-align: center;
+  // color: $color-white;
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  // z-index: 100;
+  // white-space: nowrap;
 
-  @include mq(md) {
-    font-size: rem(16);
-  }
+  // @include mq(md) {
+  //   font-size: rem(16);
+  // }
 }
 
 .fv__text-bg {  // 背景の黒い影のオーバーレイ
   display: none;  // 仕様変更で消す事に。
 
-  aspect-ratio: 1168 / 133;
-  max-width: rem(1168);
-  min-height: rem(133);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
+  // aspect-ratio: 1168 / 133;
+  // max-width: rem(1168);
+  // min-height: rem(133);
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  // z-index: 1;
 
-  @include mq(md) {
-    aspect-ratio: 170 / 61;
-    max-width: rem(345);
-  }
+  // @include mq(md) {
+  //   aspect-ratio: 170 / 61;
+  //   max-width: rem(345);
+  // }
 }
 
 .fv__text-bg img {  // 背景の黒い影のオーバーレイ
-  aspect-ratio: 1168 / 133;
-  max-width: rem(1168);
-  min-height: rem(133);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  // aspect-ratio: 1168 / 133;
+  // max-width: rem(1168);
+  // min-height: rem(133);
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
 
-  @include mq(md) {
-    max-width: rem(345);
-  }
+  // @include mq(md) {
+  //   max-width: rem(345);
+  // }
 }
 
 // .fv__text::after {  // 背景の黒い影のオーバーレイ
@@ -102,9 +121,4 @@
 //     // display: none;
 //     max-width: rem(345);
 //   }
-// }
-
-
-// * {
-//   outline: 2px solid blue;
 // }
