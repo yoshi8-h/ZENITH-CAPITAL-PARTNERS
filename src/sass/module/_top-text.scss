@@ -2,10 +2,11 @@
 
 
 .top-text {
-  padding-top: rem(75);
-  padding-bottom: rem(150);
+  padding-top: rem(65);
+  padding-bottom: rem(160);
   // background: url(../images/common/top-text-bg-arrow.webp) no-repeat center center / cover;
   position: relative;
+  overflow: hidden;
 
   @include mq(md) {
     padding-top: rem(18);
@@ -14,36 +15,72 @@
 }
 
 .top-text__bg {  // 背景画像の三角形
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // z-index: -1;
+
+  width: 3000px;
+  height: rem(390);
+
+  // max-width: 1700px;
+  margin-inline: auto;
+
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  max-height: rem(390);
+  background: #f4f6fa;
+
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: -1;
 }
 
-.top-text__bg img {  // 背景画像の三角形
-  width: 100%;
-  object-fit: cover;
+.top-text__bg img {  // 背景画像の三角形：画像ではなく『background』で実装する事にしたため、非表示に。一応コードは残している。
+  // width: 100%;
+  // object-fit: cover;
+  display: none;
 }
 
-.top-text__bg-sp {  // 背景画像の三角形
+
+.top-text__bg-sp {  // 背景画像の三角形 (SP時)
   display: none;
 
+  @include mq(sm) {
+    min-height: rem(250);
+  }
+
   @include mq(md) {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    // max-height: rem(218);
+    // z-index: -1;
+
+    width: 1440px;
+    height: rem(200);
+    max-height: rem(210);
+
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    background: #f4f6fa;
+
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: -1;
-    // max-height: rem(218);
   }
 }
 
-.top-text__bg-sp img {  // 背景画像の三角形
+.top-text__bg-sp img {  // 背景画像の三角形 (SP時)：画像ではなく『background』で実装する事にしたため、非表示に。一応コードは残している。
   @include mq(md) {
-    width: 100%;
-    object-fit: cover;
-    // max-height: rem(260);
+    display: none;
+
+    // width: 100%;
+    // object-fit: cover;
   }
 }
 

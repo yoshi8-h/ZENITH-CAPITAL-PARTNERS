@@ -2,7 +2,8 @@
 
 
 .management-policy {
-
+  position: relative;
+  z-index: 10;
 }
 
 .management-policy__inner {
