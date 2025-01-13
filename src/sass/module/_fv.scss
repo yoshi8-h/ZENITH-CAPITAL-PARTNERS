@@ -36,7 +36,9 @@
   color: $color-font-base-1;
 }
 
-.fv__text {
+.fv__text {  // 非表示。
+  display: none;  // (文字は、動画内に埋め込む方法に仕様変更のため、文字は非表示に。)
+
   font-size: rem(30);
   text-align: center;
   color: $color-white;

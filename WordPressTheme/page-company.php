@@ -37,7 +37,7 @@
         <div class="top-message__contents">
           <div class="top-message__img-area">
             <picture class="top-message__img">
-              <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/top-message-president.webp">
+              <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/top-message-president.png">
               <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/top-message-president-sp.webp" alt="平田社長の写真">
             </picture>
             <p class="top-message__img-text">

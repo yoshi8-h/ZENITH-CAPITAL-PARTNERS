@@ -512,7 +512,7 @@ a {
 .btn2 {
 	align-items: center;
 	background: #3e4c61;
-	border-radius: 1.25rem 0 1.25rem 0;
+	border-radius: 1.5625rem 0 1.5625rem 0;
 	display: inline-flex;
 	gap: 1.5625rem;
 	justify-content: center;
@@ -1997,6 +1997,7 @@ a {
 
 .fv__text {
 	color: #fff;
+	display: none;
 	font-size: 1.875rem;
 	left: 50%;
 	position: absolute;
@@ -4872,11 +4873,25 @@ html {
 	gap: 1.125rem;
 }
 
+.btn2__text {
+	font-size: 0.875rem;
+}
+
+.btn2__arrow {
+	max-width: 4.375rem;
+}
+
+.btn2__arrow img {
+	max-width: 4.375rem;
+}
+
 .btn2.btn2--return .btn2__arrow::before {
+	max-width: 4.375rem;
 	right: 2.1875rem;
 }
 
 .btn2.btn2--confirm .btn2__arrow::before {
+	max-width: 4.375rem;
 	right: 2.1875rem;
 }
 
@@ -5002,7 +5017,7 @@ html {
 }
 
 .contact__btn {
-	min-width: 16.875rem;
+	min-width: 15rem;
 }
 
 .content__button {
@@ -5453,7 +5468,7 @@ html {
 }
 
 .cta__btn {
-	min-width: 15.625rem;
+	min-width: 14.375rem;
 }
 
 .drawer-menu {
@@ -5569,7 +5584,7 @@ html {
 }
 
 .form__confirmbtn {
-	min-width: 15.625rem;
+	min-width: 14.375rem;
 }
 
 .form__confirm-text {
@@ -5591,15 +5606,17 @@ html {
 }
 
 .form__returnbtn {
-	min-width: 15.625rem;
+	min-width: 13.75rem;
 }
 
 .form__sendbtn-wrap::after {
+	max-width: 4.375rem;
 	right: 2.1875rem;
 }
 
 .form__sendbtn {
-	min-width: 15.625rem;
+	font-size: 0.875rem;
+	min-width: 13.75rem;
 	padding-left: 2.1875rem;
 }
 
@@ -6065,7 +6082,7 @@ html {
 }
 
 .message__btn {
-	min-width: 15.625rem;
+	min-width: 13.75rem;
 }
 
 .nav {
@@ -6147,7 +6164,7 @@ html {
 }
 
 .news__btn {
-	min-width: 15.625rem;
+	min-width: 13.75rem;
 }
 
 .overview {
@@ -6444,7 +6461,7 @@ html {
 }
 
 .project__btn {
-	min-width: 15.625rem;
+	min-width: 13.75rem;
 }
 
 .recruit {
@@ -6588,7 +6605,7 @@ html {
 }
 
 .solution__btn {
-	min-width: 15.625rem;
+	min-width: 13.75rem;
 }
 
 .sub-fv {
@@ -6915,7 +6932,7 @@ html {
 }
 
 .works-contents__btn {
-	min-width: 15.625rem;
+	min-width: 14.375rem;
 }
 
 .works-contents__content {
