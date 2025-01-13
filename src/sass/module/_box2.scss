@@ -75,6 +75,17 @@
   }
 }
 
+.box2__list-item-link {
+  color: #2c81d8;
+  text-decoration: underline;  // 下線
+  text-decoration-color: #2c81d8;
+  transition: opacity 0.2s ease-out;
+}
+
+.box2__list-item-link:hover {  // hover
+  opacity: 0.4;
+}
+
 .box2__list-item-sp {  // SPのみ表示形式
   display: none;
 
@@ -82,6 +93,17 @@
     display: block;
     font-size: rem(14);
   }
+}
+
+.box2__list-item-link-sp {
+  color: #2c81d8;
+  text-decoration: underline;  // 下線
+  text-decoration-color: #2c81d8;
+  transition: opacity 0.2s ease-out;
+}
+
+.box2__list-item-link-sp:hover {  // hover
+  opacity: 0.4;
 }
 
 .box2__list-item::before {  // 手前の『●』

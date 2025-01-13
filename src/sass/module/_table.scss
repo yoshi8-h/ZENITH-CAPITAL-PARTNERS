@@ -54,3 +54,40 @@
     line-height: 1.7;
   }
 }
+
+.table__cell-body-link {
+  color: #2c81d8;
+  text-decoration: underline;  // 下線
+  text-decoration-color: #2c81d8;
+
+  font-size: rem(17);
+  font-weight: $normal;
+  line-height: 2.0;
+  transition: opacity 0.2s ease-out;
+
+  @include mq(md) {
+    font-size: rem(14);
+    line-height: 1.7;
+  }
+}
+
+.table__cell-body-link:hover {  // hover
+  opacity: 0.4;
+}
+
+
+
+
+// =======================================
+// モディファイア
+// =======================================
+// table--sp-wide (SP時は、項目部分の幅を広げる) (実績詳細ページの表)
+.table--sp-wide {
+
+}
+
+.table--sp-wide .table__cell-head {  // 項目名
+  @include mq(md) {
+    width: 30%;
+  }
+}

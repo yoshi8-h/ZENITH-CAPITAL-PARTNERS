@@ -2,9 +2,9 @@
 
 
 .l-works-contents {
-  margin-top: rem(70);
+  margin-top: rem(35);
 
   @include mq(md) {
-    margin-top: rem(40);
+    margin-top: rem(25);
   }
 }

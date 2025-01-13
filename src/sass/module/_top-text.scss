@@ -8,9 +8,13 @@
   position: relative;
   overflow: hidden;
 
+  @include mq(xs) {
+    padding-bottom: rem(25);
+  }
+
   @include mq(md) {
-    padding-top: rem(18);
-    padding-bottom: rem(32);
+    padding-top: rem(25);
+    padding-bottom: rem(76);
   }
 }
 
@@ -115,6 +119,7 @@
   line-height: 2.0;
 
   @include mq(md) {
+    text-align: left;
     margin-top: rem(15);
     font-size: rem(13.5);
   }

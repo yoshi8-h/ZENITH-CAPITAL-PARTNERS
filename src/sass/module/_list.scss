@@ -98,6 +98,17 @@
   }
 }
 
+.list__item-info-item-link {
+  color: #2c81d8;
+  text-decoration: underline;  // 下線
+  text-decoration-color: #2c81d8;
+  transition: opacity 0.2s ease-out;
+}
+
+.list__item-info-item-link:hover {  // hover
+  opacity: 0.4;
+}
+
 .list__item-info-item::before {  // 手前の『●』
   content: "";
   width: rem(10);

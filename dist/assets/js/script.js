@@ -57,69 +57,147 @@ window.addEventListener("scroll", function () {
 // 「#」だけのリンク (TOPに戻るボタン)の時は、headerの高さを考慮せず、ページ先頭へ遷移するように。
 // 別ページに遷移して、かつそのページの指定のリンク先に遷移する場合は、headerの高さを考慮して遷移
 // 他ページ(全く別のサイト)に遷移する際は、処理をスキップ
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const header = document.querySelector(".header"); // ヘッダー要素
+//   const headerHeight = header ? header.offsetHeight : 0; // ヘッダー高さを取得
+
+//   const adjustScrollForHash = () => {
+//     const hash = window.location.hash; // 現在のURLのハッシュ部分を取得
+//     if (hash) {
+//       const targetElement = document.querySelector(hash); // ハッシュから要素を取得
+//       if (targetElement) {
+//         const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+//         // スムーススクロールで位置を調整
+//         window.scrollTo({
+//           top: targetPosition,
+//           behavior: "smooth",
+//         });
+//       }
+//     }
+//   };
+
+//   // 初期ロード時にURLハッシュを確認してスクロール位置を調整
+//   adjustScrollForHash();
+
+//   // ページ内リンクのクリックイベントを設定
+//   const anchorLinks = document.querySelectorAll('a[href^="#"], a[href*="#"]');
+//   anchorLinks.forEach(link => {
+//     link.addEventListener("click", (e) => {
+//       const href = link.getAttribute("href");
+
+//       // 他のページに遷移する場合の対策
+//       if (href.includes("#") && href.startsWith(location.origin)) {
+//         return; // 他のページへのリンクはここでは処理しない
+//       }
+
+//       // 現在のページ内のリンクを処理
+//       if (href.startsWith("#")) {
+//         e.preventDefault(); // デフォルト動作を無効化
+
+//         const targetId = href.slice(1);
+//         const targetElement = document.getElementById(targetId);
+
+//         if (targetElement) {
+//           const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+//           // スムーススクロール
+//           window.scrollTo({
+//             top: targetPosition,
+//             behavior: "smooth",
+//           });
+//         } else if (href === "#") {
+//           // TOPに戻るリンク
+//           e.preventDefault(); // デフォルト動作を無効化
+//           window.scrollTo({
+//             top: 0,
+//             behavior: "smooth",
+//           });
+//         }
+//       }
+//     });
+//   });
+
+//   // ページ遷移後にハッシュ位置を調整
+//   window.addEventListener("load", () => {
+//     adjustScrollForHash();
+//   });
+// });
+
 document.addEventListener("DOMContentLoaded", function () {
+  var headerHeight = 0;
   var header = document.querySelector(".header"); // ヘッダー要素
-  var headerHeight = header ? header.offsetHeight : 0; // ヘッダー高さを取得
+  var topButton = document.querySelector('.js-top-btn'); // TOPへ戻るボタン
+  var anchorLinks = document.querySelectorAll('a[href^="#"], a[href*="#"]'); // アンカーリンク
 
-  var adjustScrollForHash = function adjustScrollForHash() {
-    var hash = window.location.hash; // 現在のURLのハッシュ部分を取得
-    if (hash) {
-      var targetElement = document.querySelector(hash); // ハッシュから要素を取得
-      if (targetElement) {
-        var targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
+  /**
+   * ヘッダーの高さを更新する関数
+   */
+  var updateHeaderHeight = function updateHeaderHeight() {
+    headerHeight = header ? header.offsetHeight : 0;
+  };
 
-        // スムーススクロールで位置を調整
-        window.scrollTo({
-          top: targetPosition,
-          behavior: "smooth"
-        });
-      }
+  /**
+   * ターゲット要素へスクロールする
+   * @param {HTMLElement} target スクロール対象の要素
+   * @param {boolean} considerHeader ヘッダー高さを考慮するかどうか
+   */
+  var smoothScroll = function smoothScroll(target) {
+    var considerHeader = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+    var offset = target.getBoundingClientRect().top + window.scrollY - (considerHeader ? headerHeight : 0);
+    window.scrollTo({
+      top: offset,
+      behavior: "smooth"
+    });
+  };
+
+  /**
+   * ハッシュから要素を取得しスクロール
+   * @param {string} hash ハッシュ（例: "#section1"）
+   * @param {boolean} considerHeader ヘッダー高さを考慮するかどうか
+   */
+  var handleHashScroll = function handleHashScroll(hash) {
+    var considerHeader = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+    var targetElement = document.querySelector(hash);
+    if (targetElement) {
+      smoothScroll(targetElement, considerHeader);
     }
   };
 
-  // 初期ロード時にURLハッシュを確認してスクロール位置を調整
-  adjustScrollForHash();
+  // ウィンドウサイズ変更時にヘッダーの高さを更新
+  window.addEventListener("resize", updateHeaderHeight);
+  updateHeaderHeight(); // 初回実行
 
-  // ページ内リンクのクリックイベントを設定
-  var anchorLinks = document.querySelectorAll('a[href^="#"], a[href*="#"]');
+  // ページ内リンクのクリックイベント
   anchorLinks.forEach(function (link) {
     link.addEventListener("click", function (e) {
       var href = link.getAttribute("href");
 
-      // 他のページに遷移する場合の対策
-      if (href.includes("#") && href.startsWith(location.origin)) {
-        return; // 他のページへのリンクはここでは処理しない
+      // TOPへ戻るボタンの処理
+      if (link === topButton) {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+        return;
       }
 
-      // 現在のページ内のリンクを処理
+      // アンカーリンクの処理
       if (href.startsWith("#")) {
         e.preventDefault(); // デフォルト動作を無効化
-
-        var targetId = href.slice(1);
-        var targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          var targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
-
-          // スムーススクロール
-          window.scrollTo({
-            top: targetPosition,
-            behavior: "smooth"
-          });
-        } else if (href === "#") {
-          // TOPに戻るリンク
-          e.preventDefault(); // デフォルト動作を無効化
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-          });
-        }
+        handleHashScroll(href); // ヘッダーの高さを考慮してスクロール
       }
     });
   });
 
-  // ページ遷移後にハッシュ位置を調整
+  // 初期ロード時のアンカーリンク位置調整
   window.addEventListener("load", function () {
-    adjustScrollForHash();
+    var hash = window.location.hash; // URLのハッシュを取得
+    if (hash) {
+      handleHashScroll(hash); // ヘッダーの高さを考慮してスクロール
+    }
   });
 });
 
@@ -128,20 +206,53 @@ document.addEventListener("DOMContentLoaded", function () {
 // クリックされた時に『is-clicked』クラスを付け外ししてボタンを変形・ドロワーメニューを表示/非表示
 // 「html,body」に『is-fixed』クラスを付け外ししてドロワーが開いてる時はスクロールを無効に
 // ドロワーメニュー外にオーバーレイを表示して背景を暗くする。(別途HTMLを追加済み)
-document.querySelector('.js-header__btn').addEventListener('click', function (e) {
-  e.preventDefault();
+// ドロワーメニュー内のリンクが押された時は、必ずドロワーメニューを閉じるように。
 
-  // 要素を取得
-  var headerBtn = document.querySelector('.js-header__btn'); // ハンバーガーメニューのボタン
+// document.querySelector('.js-header__btn').addEventListener('click', function (e) {
+//   e.preventDefault();
+
+//   // 要素を取得
+//   const headerBtn = document.querySelector('.js-header__btn'); // ハンバーガーメニューのボタン
+//   const drawerMenu = document.querySelector('.js-drawer-menu'); // ドロワーメニュー
+//   const drawerOverlay = document.querySelector('.js-drawer-overlay'); // 背景オーバーレイ
+
+//   // 各クラスのトグル処理
+//   headerBtn.classList.toggle('is-clicked'); // ボタンの状態をトグル
+//   drawerMenu.classList.toggle('is-clicked'); // ドロワーメニューの開閉をトグル
+//   drawerOverlay.classList.toggle('is-active'); // 背景オーバーレイの表示/非表示をトグル
+//   document.documentElement.classList.toggle('is-fixed'); // htmlタグのスクロール固定
+//   document.body.classList.toggle('is-fixed'); // bodyタグのスクロール固定
+// });
+
+document.addEventListener("DOMContentLoaded", function () {
+  var headerBtn = document.querySelector('.js-header__btn'); // ハンバーガーメニューボタン
   var drawerMenu = document.querySelector('.js-drawer-menu'); // ドロワーメニュー
   var drawerOverlay = document.querySelector('.js-drawer-overlay'); // 背景オーバーレイ
+  var drawerLinks = document.querySelectorAll('.nav__link, .toggle__nav-link'); // ドロワーメニュー内のリンク
 
-  // 各クラスのトグル処理
-  headerBtn.classList.toggle('is-clicked'); // ボタンの状態をトグル
-  drawerMenu.classList.toggle('is-clicked'); // ドロワーメニューの開閉をトグル
-  drawerOverlay.classList.toggle('is-active'); // 背景オーバーレイの表示/非表示をトグル
-  document.documentElement.classList.toggle('is-fixed'); // htmlタグのスクロール固定
-  document.body.classList.toggle('is-fixed'); // bodyタグのスクロール固定
+  // ドロワーメニューの開閉トグル処理
+  headerBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    // 各クラスのトグル処理
+    headerBtn.classList.toggle('is-clicked');
+    drawerMenu.classList.toggle('is-clicked');
+    drawerOverlay.classList.toggle('is-active');
+    document.documentElement.classList.toggle('is-fixed');
+    document.body.classList.toggle('is-fixed');
+  });
+
+  // ドロワーメニュー内のリンクをクリックした際の処理
+  drawerLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+      // メニューを閉じる処理
+      headerBtn.classList.remove('is-clicked');
+      drawerMenu.classList.remove('is-clicked');
+      drawerOverlay.classList.remove('is-active');
+      document.documentElement.classList.remove('is-fixed');
+      document.body.classList.remove('is-fixed');
+    });
+  });
 });
 
 /* -------------------------------------------------------------------------------- */

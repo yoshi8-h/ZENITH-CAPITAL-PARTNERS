@@ -21,7 +21,8 @@
   object-fit: cover;
 
   @include mq(md) {
-    width: 70%;
+    // width: 70%;
+    display: none;
   }
 }
 
@@ -113,6 +114,32 @@
   }
 }
 
+.content3__img-sp {  // SP時の画像は順番が違うため、別で用意。
+  display: none;
+
+  @include mq(md) {
+    display: block;
+    margin-top: rem(20);
+    width: 70%;
+    margin-inline: auto;
+    aspect-ratio: 345 / 370;
+    max-width: rem(345);
+    object-fit: cover;
+  }
+}
+
+.content3__img-sp img {  // SP時の画像は順番が違うため、別で用意。
+  display: none;
+
+  @include mq(md) {
+    display: block;
+    width: 100%;
+    aspect-ratio: 345 / 370;
+    max-width: rem(345);
+    object-fit: cover;
+  }
+}
+
 .content3__list {
   margin-top: rem(30);
   padding-left: rem(15);
@@ -123,7 +150,7 @@
   gap: rem(24);
 
   @include mq(md) {
-    margin-top: rem(22);
+    margin-top: rem(15);
     padding-left: 0;
     gap: rem(10);
   }

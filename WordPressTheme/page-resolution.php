@@ -26,9 +26,9 @@
             <div class="box2__body">
               <ul class="box2__list is-row">
                 <li class="box2__list-item u-desktop">電話　：　03-5222-4310　（平日9時～17時）</li>
-                <li class="box2__list-item u-desktop">メール　：　info@zcp.co.jp</li>
+                <li class="box2__list-item u-desktop">メール　：　<a href="mailto:info@zcp.co.jp" class="box2__list-item-link">info@zcp.co.jp</a></li>
                 <li class="box2__list-item-sp">電話：03-5222-4310（平日9時～17時）</li>
-                <li class="box2__list-item-sp">メール：info@zcp.co.jp</li>
+                <li class="box2__list-item-sp">メール：<a href="mailto:info@zcp.co.jp" class="box2__list-item-link-sp">info@zcp.co.jp</a></li>
               </ul>
             </div>
           </div>

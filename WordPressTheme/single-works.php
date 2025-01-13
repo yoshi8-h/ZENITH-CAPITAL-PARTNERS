@@ -64,7 +64,7 @@
               <!-- 詳細情報 (表 & タイトル) -->
               <div class="works-contents__info info02">
                 <div class="info02__title">詳細情報</div>
-                <table class="info02__table table">
+                <table class="info02__table table table--sp-wide">
                   <thead class="table__head">
                     <tr>
                       <th class="table__header">項目</th>

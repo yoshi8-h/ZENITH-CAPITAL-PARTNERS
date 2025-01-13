@@ -33,7 +33,7 @@ $mediaquerys: (
     lg: 1023,
     md: 767,
     sm: 600,
-    xs: 400,
+    xs: 375,
   );
   $mediaquerys: (
     xs: "screen and (max-width: #{map-get($breakpoints,'xs')}px)",
