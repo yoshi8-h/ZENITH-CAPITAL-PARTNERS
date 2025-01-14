@@ -19,7 +19,7 @@
     </div>
 
     <!-- タブ -->
-    <div class="tabs l-tabs js-fadeInUp">
+    <div class="tabs u-desktop l-tabs js-fadeInUp">
       <div class="tabs__item tab is-selected" data-category="category1">アセットマネジメント</div>
       <div class="tabs__item tab" data-category="category2">不動産コンサルティング</div>
       <div class="tabs__item tab" data-category="category3">自己投資</div>
