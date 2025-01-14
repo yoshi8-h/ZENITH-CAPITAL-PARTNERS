@@ -22,11 +22,13 @@
     <section class="works-contents l-works-contents">
       <div class="works-contents__inner inner">
         <div class="works-contents__wrap">
-          <div class="works-contents__top">
+          <div class="works-contents__top js-fadeInUp">
             <a href="<?php echo esc_url(get_post_type_archive_link('works')); ?>" class="works-contents__list-link">業務実績一覧に戻る　→</a>
           </div>
           <div class="works-contents__contents-wrap">
-            <h1 class="works-contents__title"><?php the_title(); ?></h1>
+            <h1 class="works-contents__title js-fadeInUp">
+              <?php the_title(); ?>
+            </h1>
 
             <?php
             // 現在の投稿IDを取得
@@ -38,7 +40,7 @@
                 // タームの数を最大2つに制限
                 $limited_terms = array_slice($terms, 0, 2);
             ?>
-              <div class="works-contents__categories">
+              <div class="works-contents__categories js-fadeInUp">
                 <?php foreach ($limited_terms as $term) : ?>
                     <div class="works-contents__category"><?php echo esc_html($term->name); ?></div>
                 <?php endforeach; ?>
@@ -62,7 +64,7 @@
               if (array_filter($works_tables)):
             ?>
               <!-- 詳細情報 (表 & タイトル) -->
-              <div class="works-contents__info info02">
+              <div class="works-contents__info info02 js-fadeInUp">
                 <div class="info02__title">詳細情報</div>
                 <table class="info02__table table table--sp-wide">
                   <thead class="table__head">
@@ -106,7 +108,7 @@
                 </table>
               </div>
             <?php endif; ?>
-            <div class="works-contents__btn-wrap">
+            <div class="works-contents__btn-wrap js-fadeInUp">
               <a href="<?php echo esc_url(get_post_type_archive_link('works')); ?>" class="works-contents__btn btn2">
                 <div class="btn2__text">実績一覧に戻る</div>
                 <div class="btn2__arrow"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/btn2-arrow-white.webp" alt="→"></div>
@@ -119,7 +121,7 @@
     </section>
 
     <!-- CTA -->
-    <div class="cta l-cta">
+    <div class="cta l-cta js-fadeInUp">
       <div class="cta__inner inner">
         <div class="cta__wrap">
           <p class="cta__text">不動産の売却をご検討の方は、<br class="u-mobile">こちらからご相談下さい。</p>

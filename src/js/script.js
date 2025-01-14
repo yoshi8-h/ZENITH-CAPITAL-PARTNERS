@@ -580,9 +580,9 @@ document.addEventListener('DOMContentLoaded', function() {
   fadeInUps.forEach(item => {
     let isTopElement = item.classList.contains("is-top-element");  // クラスも同時に持っているか判定
 
-    gsap.fromTo(item, {y:20, autoAlpha:0}, {y:0, autoAlpha:1, scrollTrigger:{
+    gsap.fromTo(item, {y:35, autoAlpha:0}, {y:0, autoAlpha:1, scrollTrigger:{
         trigger: item,
-        start: isTopElement ? 'top 50%' : 'top 70%',  // 『is-top-element』クラスも同時に付与されている要素のみ、発火位置を下め(50%)に調整。→ページの先頭付近にある要素は、scrollTriggerでスクロールしてアニメーションが発火する位置を、元から超えているため、画面リロード時に、すでにアニメーションが発火された状態になってしまっているため、それを防ぐ方法。
+        start: isTopElement ? 'top 50%' : 'top 65%',  // 『is-top-element』クラスも同時に付与されている要素のみ、発火位置を下め(50%)に調整。→ページの先頭付近にある要素は、scrollTriggerでスクロールしてアニメーションが発火する位置を、元から超えているため、画面リロード時に、すでにアニメーションが発火された状態になってしまっているため、それを防ぐ方法。
         // markers:{
         //   startColor: "green",
         // },
@@ -648,12 +648,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
+/* １つの要素をフワッと下から出現 */
+// 早めに表示されるように設定。(画面下側の要素が、下までスクロールしないと表示されなくなってしまうため。)
+// ニュース一覧の投稿記事の部分。
 document.addEventListener('DOMContentLoaded', function() {
   const fadeInUps = document.querySelectorAll(".js-fadeInUpFirst");  // ページ内の、このアニメーションをさせたい全ての要素を取得
 
   fadeInUps.forEach(item => {
-    gsap.fromTo(item, {y:20, autoAlpha:0}, {y:0, autoAlpha:1, scrollTrigger:{
+    gsap.fromTo(item, {y:30, autoAlpha:0}, {y:0, autoAlpha:1, scrollTrigger:{
         trigger: item,
         start:'top 90%',  // 『is-top-element』クラスも同時に付与されている要素のみ、発火位置を下め(50%)に調整。→ページの先頭付近にある要素は、scrollTriggerでスクロールしてアニメーションが発火する位置を、元から超えているため、画面リロード時に、すでにアニメーションが発火された状態になってしまっているため、それを防ぐ方法。
         // markers:{
@@ -664,5 +666,31 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 });
+
+
+/* -------------------------------------------------------------------------------- */
+/* 複数枚のカードを時差でフワッと下から出現 (左から順番に時差で) */
+document.addEventListener('DOMContentLoaded', function() {
+
+  // ページ内の全てのカードコンテナ(複数枚カードのコンテナ。PC時にトリガーとなる要素)を取得
+  const cardContainers = document.querySelectorAll(".js-cards-fadeInUp-trigger");
+
+  cardContainers.forEach(container => {
+    const cards = container.querySelectorAll(".js-card-fadeInUp");  // そのコンテナ内のカードを全て取得
+    gsap.fromTo(cards, {y:35, autoAlpha:0}, {y:0, autoAlpha:1, stagger:.14, scrollTrigger:{
+        trigger: container,
+        start: 'top 70%',
+        // markers:{
+        //   startColor: "green",
+        // },
+      }
+    });
+  });
+
+});
+
+
+
+
 
 

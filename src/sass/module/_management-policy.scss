@@ -4,6 +4,7 @@
 .management-policy {
   position: relative;
   z-index: 10;
+  overflow: hidden;  // アニメーションが左右から出るため、それによる横スクロールを防ぐ
 }
 
 .management-policy__inner {

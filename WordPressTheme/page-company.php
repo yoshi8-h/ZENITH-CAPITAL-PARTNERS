@@ -21,7 +21,7 @@
     <!-- アンカーリンク群 -->
     <div class="anchors anchors--no-sp l-anchors">
       <div class="anchors__inner inner">
-        <div class="anchors__wrap">
+        <div class="anchors__wrap js-fadeInUp">
           <a href="#top-message" class="anchors__item">トップメッセージ</a>
           <a href="#philosophy" class="anchors__item">企業理念</a>
           <a href="#overview" class="anchors__item">会社概要</a>
@@ -33,9 +33,9 @@
     <!-- top-message セクション (トップメッセージ) -->
     <section id="top-message" class="top-message l-top-message">
       <div class="top-message__inner inner">
-        <div class="top-message__title title02">トップメッセージ</div>
+        <div class="top-message__title title02 js-fadeInUp">トップメッセージ</div>
         <div class="top-message__contents">
-          <div class="top-message__img-area">
+          <div class="top-message__img-area js-fadeInUp">
             <picture class="top-message__img">
               <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/top-message-president.png">
               <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/top-message-president-sp.webp" alt="平田社長の写真">
@@ -45,7 +45,7 @@
               >人と不動産のうつくしい関係<br class="u-mobile">を追及し続ける。
             </p>
           </div>
-          <div class="top-message__messages">
+          <div class="top-message__messages js-fadeInUp">
             <p class="top-message__message">
               私が生まれ育った田舎では、どこにいても山や森の濃い土や草木の匂いがしていた記憶があります。当時の実家のまわりには高い建物も少なく、たくさんの自然に囲まれてシンプルだけど豊かな暮らしを気に入っていました。一方で、故郷を離れて上京してからは、コンクリートやアスファルトに囲まれた生活が当たり前になり、最初の頃は合性や機能性ばかりが優先された場所に窮屈さや戸惑いを感じていました。<br
               >しかし、都市にもその土地に根差す歴史や風習の名残り、そしてそれらに惹かれて暮らす人たちの生活模様を見るにつけ、都市生活にも魅力を感じるようになりました。
@@ -61,7 +61,7 @@
               >私たちは地道にこのようなプロセスを辿ることにより不動産価値の持続的な成長を目指します。
             </p>
           </div>
-          <div class="top-message__president-name"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/president-name.webp" alt="代表取締役社長　平田徹也"></div>
+          <div class="top-message__president-name js-fadeInUp"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/president-name.webp" alt="代表取締役社長　平田徹也"></div>
         </div>
       </div>
     </section>
@@ -69,11 +69,11 @@
     <!-- philosophy セクション (企業理念) -->
     <section id="philosophy" class="philosophy l-philosophy">
       <div class="philosophy__inner inner">
-        <div class="philosophy__title title02">企業理念</div>
+        <div class="philosophy__title title02 js-fadeInUp">企業理念</div>
         <div class="philosophy__wrap">
-          <div class="philosophy__contents-title">人と不動産の「うつくしい」関係<br class="u-mobile">を具現化する「不動産ソリューションカンパニー」</div>
+          <div class="philosophy__contents-title js-fadeInUp">人と不動産の「うつくしい」関係<br class="u-mobile">を具現化する「不動産ソリューションカンパニー」</div>
           <div class="philosophy__contents">
-            <div class="philosophy__contents-item content8">
+            <div class="philosophy__contents-item content8 js-fadeInUp">
               <div class="content8__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/philosophy-img01.webp" alt=""></div>
               <div class="content8__body">
                 <div class="content8__title">その土地の「記憶」がいつまでも受け継げられていること。</div>
@@ -84,7 +84,7 @@
                 </p>
               </div>
             </div>
-            <div class="philosophy__contents-item content8 content8--reverse">
+            <div class="philosophy__contents-item content8 content8--reverse js-fadeInUp">
               <div class="content8__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/philosophy-img02.webp" alt=""></div>
               <div class="content8__body">
                 <div class="content8__title">そこに暮らし、集う人たちの「経験価値」がその不動産の価値となる。</div>
@@ -96,7 +96,7 @@
                 </p>
               </div>
             </div>
-            <div class="philosophy__contents-item content8 content8--low">
+            <div class="philosophy__contents-item content8 content8--low js-fadeInUp">
               <div class="content8__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/philosophy-img03.webp" alt=""></div>
               <div class="content8__body">
                 <div class="content8__title">理論に裏打ちされた豊富な経験が、人と不動産の「持続的な関係性」を可能にする。</div>
@@ -115,13 +115,13 @@
     <!-- overview セクション (会社概要) -->
     <section id="overview" class="overview l-overview">
       <div class="overview__inner inner">
-        <div class="overview__title title02">会社概要</div>
+        <div class="overview__title title02 js-fadeInUp">会社概要</div>
         <div class="overview__contents">
           <!-- 会社概要 (company-overview) -->
           <div class="overview__contents-item content9">
             <div class="content9__overview company-overview">
-              <div class="company-overview__title title03 title03--2">会社概要</div>
-              <table class="company-overview__table table">
+              <div class="company-overview__title title03 title03--2 js-fadeInUp">会社概要</div>
+              <table class="company-overview__table table js-fadeInUp">
                 <thead class="table__head">
                   <tr>
                     <th class="table__header">項目</th>
@@ -182,8 +182,8 @@
           <!-- 沿革 (history) -->
           <div class="overview__contents-item content9">
             <div class="content9__history history">
-              <div class="history__title title03 title03--2">沿革</div>
-              <table class="history__table table02">
+              <div class="history__title title03 title03--2 js-fadeInUp">沿革</div>
+              <table class="history__table table02 js-fadeInUp">
                 <thead class="table02__head">
                   <tr>
                     <th class="table02__header">項目</th>
@@ -214,12 +214,12 @@
           <!-- アクセス (access) -->
           <div class="overview__contents-item content9">
             <div class="content9__access access">
-              <div class="access__title title03 title03--2">アクセス</div>
+              <div class="access__title title03 title03--2 js-fadeInUp">アクセス</div>
               <div class="access__body">
-                <div class="access__map">
+                <div class="access__map js-fadeInUp">
                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.0767484967796!2d139.75840027652384!3d35.67511217258926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bf024155555%3A0xf8dba96f3e55b4fd!2z44K844OL44K5772l44Kt44Oj44OU44K_44Or772l44OR44O844OI44OK44O844K644ix!5e0!3m2!1sja!2sjp!4v1735877037010!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <ul class="access__list">
+                <ul class="access__list js-fadeInUp">
                   <li class="access__list-item list-item">ＪＲ線・地下鉄有楽町線　「有楽町」駅より徒歩2分</li>
                   <li class="access__list-item list-item">地下鉄日比谷線・千代田線・都営三田線　<br>「日比谷」駅より徒歩2分</li>
                   <li class="access__list-item list-item">地下鉄丸ノ内線　「銀座」駅より徒歩5分</li>

@@ -53,7 +53,7 @@
     <!-- management-policy セクション -->
     <section class="management-policy l-management-policy">
       <div class="management-policy__inner inner">
-        <h2 class="management-policy__title section-title">
+        <h2 class="management-policy__title section-title js-fadeInUp">
           <div class="section-title__ja">当社の不動産運用方針</div>
           <div class="section-title__en">MANAGEMENT POLICY</div>
         </h2>
@@ -91,13 +91,13 @@
     <!-- solution セクション -->
     <section class="solution l-solution">
       <div class="solution__inner inner">
-        <h2 class="solution__title section-title">
+        <h2 class="solution__title section-title js-fadeInUp">
           <div class="section-title__ja">事業案内</div>
           <div class="section-title__en">SOLUTION</div>
         </h2>
-        <p class="solution__text">当社の事業内容をご確認いただけます。</p>
-        <div class="solution__contents">
-          <div class="solution__contents-item content">
+        <p class="solution__text js-fadeInUp">当社の事業内容をご確認いただけます。</p>
+        <div class="solution__contents js-cards-fadeInUp-trigger">
+          <div class="solution__contents-item content js-card-fadeInUp">
             <button type="button" class="content__button">
               <div class="content__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/solution-content01.webp" alt=""></div>
               <div class="content__plus-icon"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/content-plus-icon.webp" alt="+"></div>
@@ -111,7 +111,7 @@
             </button>
             <div class="content__title">アセットマネジメント</div>
           </div>
-          <div class="solution__contents-item content">
+          <div class="solution__contents-item content js-card-fadeInUp">
             <button type="button" class="content__button">
               <div class="content__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/solution-content02.webp" alt=""></div>
               <div class="content__plus-icon"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/content-plus-icon.webp" alt="+"></div>
@@ -125,7 +125,7 @@
             </button>
             <div class="content__title">不動産コンサルティング</div>
           </div>
-          <div class="solution__contents-item content">
+          <div class="solution__contents-item content js-card-fadeInUp">
             <button type="button" class="content__button">
               <div class="content__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/solution-content03.webp" alt=""></div>
               <div class="content__plus-icon"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/content-plus-icon.webp" alt="+"></div>
@@ -142,7 +142,7 @@
             </button>
             <div class="content__title">自己投資</div>
           </div>
-          <div class="solution__contents-item content">
+          <div class="solution__contents-item content js-card-fadeInUp">
             <button type="button" class="content__button">
               <div class="content__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/solution-content03.webp" alt=""></div>
               <div class="content__plus-icon"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/content-plus-icon.webp" alt="+"></div>
@@ -157,7 +157,7 @@
             <div class="content__title">テナント事業</div>
           </div>
         </div>
-        <div class="solution__btn-wrap">
+        <div class="solution__btn-wrap js-fadeInUp">
           <a href="<?php echo esc_url(get_permalink(get_page_by_path('business'))); ?>" class="solution__btn btn2">
             <div class="btn2__text">事業案内</div>
             <div class="btn2__arrow"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/btn2-arrow-white.webp" alt="→"></div>
@@ -169,11 +169,11 @@
     <!-- project セクション -->
     <section class="project l-project">
       <div class="project__inner inner">
-        <h2 class="project__title section-title">
+        <h2 class="project__title section-title js-fadeInUp">
           <div class="section-title__ja">実績紹介</div>
           <div class="section-title__en">PROJECT</div>
         </h2>
-        <p class="project__text">これまでの当社の実績をご覧いただけます。</p>
+        <p class="project__text js-fadeInUp">これまでの当社の実績をご覧いただけます。</p>
 
         <?php
         // カスタムタクソノミー『works_toppage』のターム『pick-up』を選んでいる投稿のみ、TOPページに最大6記事表示。
@@ -241,7 +241,7 @@
         <?php endif;
           wp_reset_postdata(); // クエリをリセット
         ?>
-        <div class="project__btn-wrap">
+        <div class="project__btn-wrap js-fadeInUp">
           <a href="<?php echo esc_url(get_post_type_archive_link('works')); ?>" class="project__btn btn2">
             <div class="btn2__text">実績一覧</div>
             <div class="btn2__arrow"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/btn2-arrow-white.webp" alt="→"></div>
@@ -251,25 +251,25 @@
     </section>
 
     <!-- message セクション -->
-    <section class="message l-message js-fadeInUp">
+    <section class="message l-message">
       <div class="message__inner inner">
-        <h2 class="message__title section-title">
+        <h2 class="message__title section-title js-fadeInUp">
           <div class="section-title__ja">トップメッセージ</div>
           <div class="section-title__en">TOP MESSAGE</div>
         </h2>
         <div class="message__contents">
-          <div class="message__img-area">
+          <div class="message__img-area js-fadeInUp">
             <div class="message__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/front-page-message-president.webp" alt="平田社長の写真"></div>
             <div class="message__name">代表取締役社長　平田徹也</div>
           </div>
-          <div class="message__text-area">
+          <div class="message__text-area js-fadeInUp">
             <div class="message__text-title">不動産ソリューションのプロフェッショナルとして、人と不動産のうつくしい係を追及し続ける。</div>
             <p class="message__text">
               私が生まれ育った田舎では、どこにいても山や森の濃い土や草木の匂いがしていた記憶があります。<br
               >当時の実家のまわりには高い建物も少なく、たくさんの自然に囲まれてシンプルだけど豊かな暮らしを気に入っていました。<br
               >一方で、故郷を離れて上京してからはコンクリートやアスファルトに囲まれた生活が当たり前になり、最初の頃は合理性や機能性ばかりが優先された場所に窮屈さや戸惑いを感じていました。
             </p>
-            <div class="message__btn-wrap">
+            <div class="message__btn-wrap js-fadeInUp">
               <a href="<?php echo esc_url(get_permalink(get_page_by_path('company'))); ?>#top-message" class="message__btn btn2">
                 <div class="btn2__text">トップメッセージ</div>
                 <div class="btn2__arrow"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/btn2-arrow-white.webp" alt="→"></div>
@@ -283,7 +283,7 @@
     <!-- news セクション -->
     <section class="news l-news">
       <div class="news__inner inner">
-        <h2 class="news__title section-title">
+        <h2 class="news__title section-title js-fadeInUp">
           <div class="section-title__ja">ニュース・トピックス</div>
           <div class="section-title__en">NEWS / TOPICS</div>
         </h2>
@@ -328,7 +328,7 @@
                 $category_name = 'カテゴリなし';
               }
           ?>
-          <div class="posts__item post">
+          <div class="posts__item post js-fadeInUp">
             <div class="post__meta">
               <div class="post__category <?php echo esc_attr($category_class); ?>">
                 <?php echo esc_html($category_name); ?>
@@ -354,7 +354,7 @@
           wp_reset_postdata(); // クエリをリセット
           ?>
         </div>
-        <div class="news__btn-wrap">
+        <div class="news__btn-wrap js-fadeInUp">
           <a href="<?php echo esc_url(get_permalink(get_page_by_path('news'))); ?>" class="news__btn btn2">
             <div class="btn2__text">ニュース一覧</div>
             <div class="btn2__arrow"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/btn2-arrow-white.webp" alt="→"></div>
@@ -366,12 +366,12 @@
     <!-- contact セクション -->
     <section class="contact l-contact">
       <div class="contact__inner inner">
-        <h2 class="contact__title section-title">
+        <h2 class="contact__title section-title js-fadeInUp">
           <div class="section-title__ja">お問い合わせ</div>
           <div class="section-title__en">CONTACT</div>
         </h2>
-        <p class="contact__text">当社へのお問い合わせ・ご質問は、<br class="u-mobile">お問い合わせフォームよりお気軽にお問い合わせください。</p>
-        <div class="contact__btn-wrap">
+        <p class="contact__text js-fadeInUp">当社へのお問い合わせ・ご質問は、<br class="u-mobile">お問い合わせフォームよりお気軽にお問い合わせください。</p>
+        <div class="contact__btn-wrap js-fadeInUp">
           <a href="<?php echo esc_url(get_permalink(get_page_by_path('contact'))); ?>" class="contact__btn btn3">お問い合わせフォーム</a>
         </div>
       </div>

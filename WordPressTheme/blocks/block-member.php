@@ -24,7 +24,7 @@ for ($i = 1; $i <= 10; $i++) {
 ?>
 
 
-<div class="member__member main-member">
+<div class="member__member main-member js-fadeInUp">
   <div class="main-member__info">
     <div class="main-member__title">
       <?php if ($memberRole): ?>

@@ -26,8 +26,8 @@
           <!-- 送信完了画面 -->
           <div class="contact-page__thanks-area">
             <div class="contact-page__form-section-wrap">
-              <div class="contact-page__form-title title05">お問い合わせ完了</div>
-              <div class="contact-page__form-wrap">
+              <div class="contact-page__form-title title05 js-fadeInUp">お問い合わせ完了</div>
+              <div class="contact-page__form-wrap js-fadeInUp">
                 <p class="contact-page__complete-text">
                   お問い合わせありがとうございました。<br
                   >お問い合わせ内容確認後、担当者からご連絡をさせて頂きます。

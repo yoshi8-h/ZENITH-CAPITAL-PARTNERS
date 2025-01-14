@@ -2679,6 +2679,7 @@ a {
 }
 
 .management-policy {
+	overflow: hidden;
 	position: relative;
 	z-index: 10;
 }

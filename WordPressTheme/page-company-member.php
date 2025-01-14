@@ -21,7 +21,7 @@
     <!-- アンカーリンク群 -->
     <div class="anchors l-anchors">
       <div class="anchors__inner inner">
-        <div class="anchors__wrap">
+        <div class="anchors__wrap js-fadeInUp">
           <a href="<?php echo esc_url(get_permalink(get_page_by_path('company'))); ?>#top-message" class="anchors__item">トップメッセージ</a>
           <a href="<?php echo esc_url(get_permalink(get_page_by_path('company'))); ?>#philosophy" class="anchors__item">企業理念</a>
           <a href="<?php echo esc_url(get_permalink(get_page_by_path('company'))); ?>#overview" class="anchors__item">会社概要</a>
@@ -33,7 +33,7 @@
     <!-- member セクション (主要メンバー紹介) -->
     <section class="member l-member">
       <div class="member__inner inner">
-        <div class="member__title title02">主要メンバー紹介</div>
+        <div class="member__title title02 js-fadeInUp">主要メンバー紹介</div>
         <div class="member__contents">
 
           <!-- 管理画面内の内容を表示 -->

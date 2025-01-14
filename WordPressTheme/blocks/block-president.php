@@ -39,9 +39,9 @@ for ($i = 1; $i <= 10; $i++) {
 <div class="member__president president">
   <div class="president__top">
     <?php if ($photoUrl): ?>
-      <div class="president__img"><img src="<?php echo esc_url($photoUrl); ?>" alt="平田社長の写真"></div>
+      <div class="president__img js-fadeInUp"><img src="<?php echo esc_url($photoUrl); ?>" alt="平田社長の写真"></div>
     <?php endif; ?>
-    <div class="president__body">
+    <div class="president__body js-fadeInUp">
       <?php if ($presidentRoleAndName): ?>
         <div class="president__name"><?php echo esc_html($presidentRoleAndName); ?></div>
       <?php endif; ?>
@@ -55,7 +55,7 @@ for ($i = 1; $i <= 10; $i++) {
   </div>
   <!-- 経歴表 -->
   <?php if (!empty($careerData)): ?>
-    <table class="president__career-table table02">
+    <table class="president__career-table table02 js-fadeInUp">
       <thead class="table02__head">
         <tr>
           <th class="table02__header">項目</th>
