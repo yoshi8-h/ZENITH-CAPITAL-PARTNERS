@@ -614,7 +614,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const fadeInRights = document.querySelectorAll(".js-fadeInRight");  // ページ内の、このアニメーションをさせたい全ての要素を取得
 
   fadeInRights.forEach(item => {
-    gsap.fromTo(item, {x:-30, autoAlpha:0}, {x:0, autoAlpha:1, scrollTrigger:{
+    gsap.fromTo(item, {x:-40, autoAlpha:0}, {x:0, autoAlpha:1, scrollTrigger:{
         trigger: item,
         start: 'top 70%',
         // markers:{
@@ -634,7 +634,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const fadeInLefts = document.querySelectorAll(".js-fadeInLeft");  // ページ内の、このアニメーションをさせたい全ての要素を取得
 
   fadeInLefts.forEach(item => {
-    gsap.fromTo(item, {x:30, autoAlpha:0}, {x:0, autoAlpha:1, scrollTrigger:{
+    gsap.fromTo(item, {x:40, autoAlpha:0}, {x:0, autoAlpha:1, scrollTrigger:{
         trigger: item,
         start: 'top 70%',
         // markers:{
@@ -646,8 +646,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-
-
+/* -------------------------------------------------------------------------------- */
 /* １つの要素をフワッと下から出現 */
 // 早めに表示されるように設定。(画面下側の要素が、下までスクロールしないと表示されなくなってしまうため。)
 // ニュース一覧の投稿記事の部分。
@@ -658,6 +657,82 @@ document.addEventListener('DOMContentLoaded', function() {
     gsap.fromTo(item, {y:30, autoAlpha:0}, {y:0, autoAlpha:1, scrollTrigger:{
         trigger: item,
         start:'top 90%',  // 『is-top-element』クラスも同時に付与されている要素のみ、発火位置を下め(50%)に調整。→ページの先頭付近にある要素は、scrollTriggerでスクロールしてアニメーションが発火する位置を、元から超えているため、画面リロード時に、すでにアニメーションが発火された状態になってしまっているため、それを防ぐ方法。
+        // markers:{
+        //   startColor: "green",
+        // },
+      }
+    });
+  });
+
+});
+
+
+/* -------------------------------------------------------------------------------- */
+// 上記の、左右上下からのフワッと表示を、このサイト用に、タイミングを整えたりしたアニメーション
+// (スクロールトリガーの発火位置だけ少しずつ変えている)
+/* １つの要素をフワッと左から右に出現 (早めに表示) */
+document.addEventListener('DOMContentLoaded', function() {
+  const fadeInRights = document.querySelectorAll(".js-fadeInRight-fast");  // ページ内の、このアニメーションをさせたい全ての要素を取得
+
+  fadeInRights.forEach(item => {
+    gsap.fromTo(item, {x:-40, autoAlpha:0}, {x:0, autoAlpha:1, scrollTrigger:{
+        trigger: item,
+        start: 'top 70%',
+        // markers:{
+        //   startColor: "green",
+        // },
+        end: 'top 20%',   // アニメーション終了タイミングを設定
+        toggleActions: 'play none none none', // アニメーションの挙動制御
+      }
+    });
+  });
+
+});
+
+/* １つの要素をフワッと左から右に出現 (遅れて表示) */
+document.addEventListener('DOMContentLoaded', function() {
+  const fadeInRights = document.querySelectorAll(".js-fadeInRight-delay");  // ページ内の、このアニメーションをさせたい全ての要素を取得
+
+  fadeInRights.forEach(item => {
+    gsap.fromTo(item, {x:-40, autoAlpha:0}, {x:0, autoAlpha:1, scrollTrigger:{
+        trigger: item,
+        start: 'top 55%',
+        // markers:{
+        //   startColor: "green",
+        // },
+        end: 'top 20%',   // アニメーション終了タイミングを設定
+        toggleActions: 'play none none none', // アニメーションの挙動制御
+      }
+    });
+  });
+
+});
+
+/* １つの要素をフワッと右から左に出現 (早めに表示) */
+document.addEventListener('DOMContentLoaded', function() {
+  const fadeInLefts = document.querySelectorAll(".js-fadeInLeft-fast");  // ページ内の、このアニメーションをさせたい全ての要素を取得
+
+  fadeInLefts.forEach(item => {
+    gsap.fromTo(item, {x:40, autoAlpha:0}, {x:0, autoAlpha:1, scrollTrigger:{
+        trigger: item,
+        start: 'top 70%',
+        // markers:{
+        //   startColor: "green",
+        // },
+      }
+    });
+  });
+
+});
+
+/* １つの要素をフワッと右から左に出現 (遅れて表示) */
+document.addEventListener('DOMContentLoaded', function() {
+  const fadeInLefts = document.querySelectorAll(".js-fadeInLeft-delay");  // ページ内の、このアニメーションをさせたい全ての要素を取得
+
+  fadeInLefts.forEach(item => {
+    gsap.fromTo(item, {x:40, autoAlpha:0}, {x:0, autoAlpha:1, scrollTrigger:{
+        trigger: item,
+        start: 'top 55%',
         // markers:{
         //   startColor: "green",
         // },

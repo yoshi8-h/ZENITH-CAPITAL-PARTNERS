@@ -60,8 +60,8 @@
         <div class="management-policy__contents">
           <div class="management-policy__content">
             <div class="management-policy__content-title-sp u-mobile js-fadeInLeft">理論と実践に基づいたソリューションを提供します。</div>
-            <div class="management-policy__content-img js-fadeInRight"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/management-policy__content-img01.webp" alt=""></div>
-            <div class="management-policy__content-body js-fadeInLeft">
+            <div class="management-policy__content-img js-fadeInRight-fast"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/management-policy__content-img01.webp" alt=""></div>
+            <div class="management-policy__content-body js-fadeInLeft-delay">
               <div class="management-policy__content-title u-desktop">理論と実践に基づいたソリューションを提供します。</div>
               <p class="management-policy__content-text">不動産鑑定士業をバックグラウンドに持つ当社は、理論的な根拠と実証的なデータを駆使して不動産の価値最大化を目指します。</p>
               <a href="<?php echo esc_url(get_permalink(get_page_by_path('business'))); ?>#solution-policy__content-01" class="management-policy__content-btn btn1">
@@ -73,8 +73,8 @@
           </div>
           <div class="management-policy__content">
             <div class="management-policy__content-title-sp u-mobile js-fadeInRight">信頼関係を大切にします。</div>
-            <div class="management-policy__content-img js-fadeInLeft"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/management-policy__content-img02.webp" alt=""></div>
-            <div class="management-policy__content-body js-fadeInRight">
+            <div class="management-policy__content-img js-fadeInLeft-fast"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/management-policy__content-img02.webp" alt=""></div>
+            <div class="management-policy__content-body js-fadeInRight-delay">
               <div class="management-policy__content-title u-desktop">信頼関係を大切にします。</div>
               <p class="management-policy__content-text">地主・投資家・金融機関とは、成功事例を積み重ねることで信頼関係を、不動産をご利用されるユーザー様とは、快適な環境を提供することで信頼関係を構築します。</p>
               <a href="<?php echo esc_url(get_permalink(get_page_by_path('business'))); ?>#solution-policy__content-01" class="management-policy__content-btn btn1">
@@ -371,7 +371,7 @@
           <div class="section-title__en">CONTACT</div>
         </h2>
         <p class="contact__text js-fadeInUp">当社へのお問い合わせ・ご質問は、<br class="u-mobile">お問い合わせフォームよりお気軽にお問い合わせください。</p>
-        <div class="contact__btn-wrap js-fadeInUp">
+        <div class="contact__btn-wrap js-fadeInUpFirst">
           <a href="<?php echo esc_url(get_permalink(get_page_by_path('contact'))); ?>" class="contact__btn btn3">お問い合わせフォーム</a>
         </div>
       </div>

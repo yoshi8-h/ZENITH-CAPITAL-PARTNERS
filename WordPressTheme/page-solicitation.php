@@ -20,11 +20,11 @@
     <section class="solicitation l-solicitation">
       <div class="solicitation__inner inner">
         <div class="solicitation__wrap">
-          <p class="solicitation__first-text"> 当社は、以下の方針に基づき、金融商品の適正な勧誘を行います。</p>
+          <p class="solicitation__first-text js-fadeInUp"> 当社は、以下の方針に基づき、金融商品の適正な勧誘を行います。</p>
           <ol class="solicitation__list list2">
-            <li class="list2__item">1.　お客様の知識、経験、財産の状況及び契約の目的を配慮した適切な勧誘を行うとともに、お客様に適切な投資判断を行っていただくために、商品・契約内容など重要な事項について十分な説明を行うことに努めます。</li>
-            <li class="list2__item">2.　お客様の不都合な時間帯や場所、方法での勧誘は行いません。</li>
-            <li class="list2__item">3.　適切な勧誘を行うために、社内体制の整備及び研修の充実に努めます。</li>
+            <li class="list2__item js-fadeInUp">1.　お客様の知識、経験、財産の状況及び契約の目的を配慮した適切な勧誘を行うとともに、お客様に適切な投資判断を行っていただくために、商品・契約内容など重要な事項について十分な説明を行うことに努めます。</li>
+            <li class="list2__item js-fadeInUp">2.　お客様の不都合な時間帯や場所、方法での勧誘は行いません。</li>
+            <li class="list2__item js-fadeInUp">3.　適切な勧誘を行うために、社内体制の整備及び研修の充実に努めます。</li>
           </ol>
         </div>
       </div>
