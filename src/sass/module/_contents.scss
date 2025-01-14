@@ -236,15 +236,21 @@
   width: 43.5%;
 
   @include mq(md) {
-    // flex-direction: row;
-    margin-top: rem(95);
+    // margin-top: rem(95);
+    // width: 100%;
+    // gap: rem(95);
+
+    margin-top: rem(100);
+    flex-direction: row;
+    gap: rem(10);
     width: 100%;
-    gap: rem(95);
   }
 }
 
 .contents__item-boxes-item {
-
+  @include mq(md) {
+    // width: 100%;
+  }
 }
 
 

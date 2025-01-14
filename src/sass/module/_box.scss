@@ -15,7 +15,8 @@
   position: relative;
 
   @include mq(md) {
-    padding-block: rem(20);
+    padding-top: rem(20);
+    padding-bottom: rem(12);
     padding-inline: rem(15);
     border: rem(8) solid #efece7;
     flex-direction: column;
@@ -109,23 +110,42 @@
 }
 
 
+.box__arrow-sp {  // SP時のboxの上の下向き矢印『↓』
+  display: none;
+
+  @include mq(md) {
+    // right: auto;
+    // bottom: calc(100% + rem(18));
+    // left: 50%;
+    // transform: translateX(-50%);
+
+    display: block;
+    aspect-ratio: 140 / 67;
+    width: clamp(120px, calc(140px / 375px * 100vw), 160px);
+    object-fit: contain;
+    position: absolute;
+    top: rem(-90);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
 .box__arrow-text-sp {
   display: none;
 
   @include mq(md) {
-    text-align: center;
     display: block;
-    font-size: rem(16);
+    text-align: center;
+    font-size: rem(12);
     font-weight: $semiBold;
     color: $color-white;
     line-height: 1.4;
 
-    padding-block: rem(8);
-    padding-inline: rem(20);
-    background: #999181;
-
     position: absolute;
-    bottom: calc(100% + rem(20));
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - rem(5)));
   }
 }
 

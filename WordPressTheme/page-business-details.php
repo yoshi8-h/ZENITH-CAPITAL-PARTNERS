@@ -184,7 +184,10 @@
                       <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/box__arrow-01.webp" alt="→">
                       <div class="box__arrow-text">建設事業を<br>事業譲渡</div>
                     </div>
-                    <div class="box__arrow-text-sp u-mobile">建設事業を<br>事業譲渡</div>
+                    <div class="box__arrow-sp">
+                      <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/box__arrow-01-sp.webp" alt="→">
+                      <div class="box__arrow-text-sp">建設事業を<br>事業譲渡</div>
+                    </div>
                     <div class="box__icon"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/contents__item-icon-03.webp" alt="ビルのアイコン"></div>
                     <div class="box__body">
                       <div class="box__title">B社</div>
@@ -198,7 +201,10 @@
                       <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/box__arrow-02.webp" alt="→">
                       <div class="box__arrow-text">A社の<br>株式を譲渡</div>
                     </div>
-                    <div class="box__arrow-text-sp is-second u-mobile">A社の<br>株式を譲渡</div>
+                    <div class="box__arrow-sp">
+                      <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/box__arrow-02-sp.webp" alt="→">
+                      <div class="box__arrow-text-sp">A社の<br>株式を譲渡</div>
+                    </div>
                     <div class="box__icon"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/contents__item-icon-04.webp" alt="ビルのアイコン"></div>
                     <div class="box__body">
                       <div class="box__title">C社</div>
