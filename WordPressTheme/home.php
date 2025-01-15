@@ -63,10 +63,7 @@
                   <time class="post__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d'); ?></time>
                 </div>
                 <a href="<?php the_permalink(); ?>" class="post__link-text">
-                  <?php
-                    $content = strip_tags(get_the_content()); // HTMLタグを除去
-                    echo mb_substr($content, 0, 120) . '...'; // 120文字まで切り取り、省略記号を付加
-                  ?>
+                  <?php the_title(); ?>
                 </a>
               </div>
             <?php endwhile; ?>

@@ -60,7 +60,7 @@
         <div class="management-policy__contents">
           <div class="management-policy__content">
             <div class="management-policy__content-title-sp u-mobile js-fadeInLeft">理論と実践に基づいたソリューションを提供します。</div>
-            <div class="management-policy__content-img js-fadeInRight-fast"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/management-policy__content-img01.webp" alt=""></div>
+            <div class="management-policy__content-img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/management-policy__content-img01.webp" alt=""></div>
             <div class="management-policy__content-body js-fadeInLeft-delay">
               <div class="management-policy__content-title u-desktop">理論と実践に基づいたソリューションを提供します。</div>
               <p class="management-policy__content-text">不動産鑑定士業をバックグラウンドに持つ当社は、理論的な根拠と実証的なデータを駆使して不動産の価値最大化を目指します。</p>
@@ -73,7 +73,7 @@
           </div>
           <div class="management-policy__content">
             <div class="management-policy__content-title-sp u-mobile js-fadeInRight">信頼関係を大切にします。</div>
-            <div class="management-policy__content-img js-fadeInLeft-fast"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/management-policy__content-img02.webp" alt=""></div>
+            <div class="management-policy__content-img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/management-policy__content-img02.webp" alt=""></div>
             <div class="management-policy__content-body js-fadeInRight-delay">
               <div class="management-policy__content-title u-desktop">信頼関係を大切にします。</div>
               <p class="management-policy__content-text">地主・投資家・金融機関とは、成功事例を積み重ねることで信頼関係を、不動産をご利用されるユーザー様とは、快適な環境を提供することで信頼関係を構築します。</p>
@@ -336,11 +336,7 @@
               <time class="post__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d'); ?></time>
             </div>
             <a href="<?php the_permalink(); ?>" class="post__link-text">
-              <?php
-                // 投稿の内容を取得して短縮
-                $content = strip_tags(get_the_content());
-                echo mb_substr($content, 0, 120) . '...';
-              ?>
+              <?php the_title(); ?>
             </a>
           </div>
           <?php

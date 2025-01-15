@@ -5380,6 +5380,7 @@ html {
 	font-size: 1rem;
 	line-height: 1.7;
 	padding-bottom: 0.5rem;
+	letter-spacing: -0.01em;
 }
 
 .content8__title::after {
@@ -5390,6 +5391,7 @@ html {
 	font-size: 0.875rem;
 	line-height: 1.7;
 	margin-top: 1.125rem;
+	letter-spacing: -0.01em;
 }
 
 .content8.content8--reverse {
@@ -6992,7 +6994,7 @@ html {
 }
 
 .top-text {
-	padding-bottom: 4.75rem;
+	padding-bottom: 8.75rem;
 	padding-top: 1.5625rem;
 }
 
@@ -7224,7 +7226,7 @@ html {
 @media screen and (max-width: 600px) {
 
 .top-text__bg-sp {
-	min-height: 15.625rem;
+	min-height: 20rem;
 }
 
 }
@@ -7240,7 +7242,7 @@ html {
 @media screen and (max-width: 375px) {
 
 .top-text {
-	padding-bottom: 1.5625rem;
+	padding-bottom: 5.3125rem;
 }
 
 }

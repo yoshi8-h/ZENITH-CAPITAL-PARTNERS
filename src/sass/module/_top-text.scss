@@ -11,12 +11,12 @@
   z-index: -1;
 
   @include mq(xs) {
-    padding-bottom: rem(25);
+    padding-bottom: rem(85);
   }
 
   @include mq(md) {
     padding-top: rem(25);
-    padding-bottom: rem(76);
+    padding-bottom: rem(140);
   }
 }
 
@@ -27,15 +27,15 @@
   // right: 0;
   // z-index: -1;
 
-  width: 3000px;
-  height: rem(390);
-
   // max-width: 1700px;
-  margin-inline: auto;
 
   clip-path: polygon(50% 100%, 0 0, 100% 0);
+  width: 3000px;
+  height: rem(390);
   max-height: rem(390);
   background: #f4f6fa;
+
+  margin-inline: auto;
 
   position: absolute;
   top: 0;
@@ -55,7 +55,7 @@
   display: none;
 
   @include mq(sm) {
-    min-height: rem(250);
+    min-height: rem(320);
   }
 
   @include mq(md) {

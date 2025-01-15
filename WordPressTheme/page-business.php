@@ -40,7 +40,7 @@
               <ul class="content3__list js-fadeInUp">
                 <li class="content3__list-item list-item">不動産鑑定士業をバックグラウンドに持つ当社は、理論的な根拠と実証的なデータを駆使して不動産の価値最大化を目指します。</li>
                 <li class="content3__list-item list-item">机上の空論ではなく、数多くのコンサルティングや投資実績から得られた豊富な経験を基に実践的なアプローチを採用します。</li>
-                <li class="content3__list-item list-item">理論と実践の積み重ねから得られた治験により、不動産の問題に関する多角的かつ実現可能なソリューションを提供します。</li>
+                <li class="content3__list-item list-item">理論と実践の積み重ねから得られた知見により、不動産の問題に関する多角的かつ実現可能なソリューションを提供します。</li>
               </ul>
             </div>
           </div>

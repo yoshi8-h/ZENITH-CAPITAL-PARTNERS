@@ -19,7 +19,7 @@
     </div>
 
     <!-- アンカーリンク群 -->
-    <div class="anchors l-anchors">
+    <div class="anchors anchors--no-sp l-anchors">
       <div class="anchors__inner inner">
         <div class="anchors__wrap js-fadeInUp">
           <a href="<?php echo esc_url(get_permalink(get_page_by_path('company'))); ?>#top-message" class="anchors__item">トップメッセージ</a>
