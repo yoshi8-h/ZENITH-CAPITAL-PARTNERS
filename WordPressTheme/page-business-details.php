@@ -20,10 +20,10 @@
 
     <!-- タブ -->
     <div class="tabs u-desktop l-tabs js-fadeInUp">
-      <div class="tabs__item tab is-selected" data-category="category1">アセットマネジメント</div>
-      <div class="tabs__item tab" data-category="category2">不動産コンサルティング</div>
-      <div class="tabs__item tab" data-category="category3">自己投資</div>
-      <div class="tabs__item tab" data-category="category4">テナント事業</div>
+      <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category1" class="tabs__item tab is-selected" data-category="category1">アセットマネジメント</a>
+      <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category2" class="tabs__item tab" data-category="category2">不動産コンサルティング</a>
+      <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category3" class="tabs__item tab" data-category="category3">自己投資</a>
+      <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category4" class="tabs__item tab" data-category="category4">テナント事業</a>
     </div>
 
     <!-- asset セクション (アセットマネジメント) -->
@@ -33,6 +33,7 @@
         <p class="asset__message js-fadeInUp">不動産の投資分析から、仕入れ、資金調達のアレンジ、資産価値最大化を実現する運営管理、出口戦略(売却)の立案まで、投資家の利益最大化のための一貫したサービスを提供します。</p>
         <div class="asset__contents">
           <div class="asset__contents__item content5 js-fadeInUp">
+            <div class="asset__contents-bar"></div>
             <div class="content5__warp">
               <div class="content5__left">
                 <div class="content5__left-wrap">
@@ -60,6 +61,7 @@
             </div>
           </div>
           <div class="asset__contents__item content5 js-fadeInUp">
+            <div class="asset__contents-bar"></div>
             <div class="content5__warp">
               <div class="content5__left">
                 <div class="content5__left-wrap">

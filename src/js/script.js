@@ -336,6 +336,9 @@ document.addEventListener("DOMContentLoaded", () => {
 // クリックされたタブ(選択されているタブ)に『.is-selected』クラスを付与して選択中のタブのスタイルのみ変更。
 // クリックされたタブ(選択されているタブ)の『data-category』属性の値と同じ『data-category』属性の値を持つコンテンツのみ表示。
 // サブメニューなどのリンクからタブに飛んだ時に、そのタブが選択状態にされた形で『事業紹介ページ(タブ切り替えページ)』に遷移する。
+
+// 以下のコードで完璧に実装できていたが、タブを切り替えた際に、切り替えた先のタブ内のコンテンツにはアニメーションが発生しなかったため、JSの制御ではなく、タブ自体をaタグにする事で対応し、アニメーションが全てのタブの中身に対して機能するように変更した。
+
 document.addEventListener('DOMContentLoaded', function() {
   const tabButtons = document.querySelectorAll('.tab');
   const tabContents = document.querySelectorAll('.js-tab-content');
@@ -628,7 +631,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-
 /* １つの要素をフワッと右から左に出現 */
 document.addEventListener('DOMContentLoaded', function() {
   const fadeInLefts = document.querySelectorAll(".js-fadeInLeft");  // ページ内の、このアニメーションをさせたい全ての要素を取得
@@ -645,6 +647,27 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 });
+
+/* -------------------------------------------------------------------------------- */
+// 元から位置制御に『transform』を使っている要素のためだけの指定 (アセットマネジメントの、真ん中のグレーの棒)
+document.addEventListener('DOMContentLoaded', function() {
+  const fadeInUps = document.querySelectorAll(".js-fadeInUp-translate");  // ページ内の、このアニメーションをさせたい全ての要素を取得
+
+  fadeInUps.forEach(item => {
+    let isTopElement = item.classList.contains("is-top-element");  // クラスも同時に持っているか判定
+
+    gsap.fromTo(item, {y:35, autoAlpha:0}, {y:0, autoAlpha:1, scrollTrigger:{
+        trigger: item,
+        start: isTopElement ? 'top 50%' : 'top 65%',  // 『is-top-element』クラスも同時に付与されている要素のみ、発火位置を下め(50%)に調整。→ページの先頭付近にある要素は、scrollTriggerでスクロールしてアニメーションが発火する位置を、元から超えているため、画面リロード時に、すでにアニメーションが発火された状態になってしまっているため、それを防ぐ方法。
+        // markers:{
+        //   startColor: "green",
+        // },
+      }
+    });
+  });
+
+});
+
 
 /* -------------------------------------------------------------------------------- */
 /* １つの要素をフワッと下から出現 */

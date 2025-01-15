@@ -42,15 +42,31 @@
   }
 }
 
-.asset__contents::after {  // 中身のグレーの棒線
-  content: "";
+// .asset__contents::after {  // 中身のグレーの棒線
+//   content: "";
+//   width: rem(60);
+//   height: 90%;
+//   background-color: #a9aebb;
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   z-index: -1;
+
+//   @include mq(md) {
+//     width: rem(40);
+//   }
+// }
+
+.asset__contents-bar {  // 中身のグレーの棒線 (アニメーションを実装するために、擬似要素ではなく普通の要素で表示する仕様に変更)
   width: rem(60);
   height: 90%;
   background-color: #a9aebb;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  // transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   z-index: -1;
 
   @include mq(md) {

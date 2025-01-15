@@ -144,7 +144,7 @@
           </div>
           <div class="solution__contents-item content js-card-fadeInUp">
             <button type="button" class="content__button">
-              <div class="content__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/solution-content03.webp" alt=""></div>
+              <div class="content__bg"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/solution-content04.webp" alt=""></div>
               <div class="content__plus-icon"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/content-plus-icon.webp" alt="+"></div>
               <div class="content__overlay">
                 <p class="content__overlay-text">不動産の有効活用、リーシング戦略の一環として、オーナーから不動産を借上げ、自らテナントとして事業運営し不動産の価値最大化を目指します。</p>

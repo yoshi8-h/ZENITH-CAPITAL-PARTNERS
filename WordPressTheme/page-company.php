@@ -73,9 +73,9 @@
         <div class="philosophy__wrap">
           <div class="philosophy__contents-title js-fadeInUp">人と不動産の「うつくしい」関係<br class="u-mobile">を具現化する「不動産ソリューションカンパニー」</div>
           <div class="philosophy__contents">
-            <div class="philosophy__contents-item content8 js-fadeInUp">
+            <div class="philosophy__contents-item content8">
               <div class="content8__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/philosophy-img01.webp" alt=""></div>
-              <div class="content8__body">
+              <div class="content8__body js-fadeInLeft">
                 <div class="content8__title">その土地の「記憶」がいつまでも受け継げられていること。</div>
                 <p class="content8__text">
                   不動産は、その土地にふさわしいものでなければいけない、と私たちは考えています。最近では日本全国で同じような不動産を多く見かけますが、その土地にとってふさわしい不動産とは、それぞれの土地固有の匂いや空気感、そして歴史など、土地の「記憶」を大切にしながら作られたものです。<br
@@ -86,7 +86,7 @@
             </div>
             <div class="philosophy__contents-item content8 content8--reverse js-fadeInUp">
               <div class="content8__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/philosophy-img02.webp" alt=""></div>
-              <div class="content8__body">
+              <div class="content8__body js-fadeInRight">
                 <div class="content8__title">そこに暮らし、集う人たちの「経験価値」がその不動産の価値となる。</div>
                 <p class="content8__text">
                   もう一つ大切なことは、不動産の価値は感動や喜び、安らぎ、繋がり、触れ合いといった「経験価値」によってはじめて生まれてくるものだということです。<br
@@ -98,7 +98,7 @@
             </div>
             <div class="philosophy__contents-item content8 content8--low js-fadeInUp">
               <div class="content8__img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/philosophy-img03.webp" alt=""></div>
-              <div class="content8__body">
+              <div class="content8__body js-fadeInLeft">
                 <div class="content8__title">理論に裏打ちされた豊富な経験が、人と不動産の「持続的な関係性」を可能にする。</div>
                 <p class="content8__text">
                   不動産が人々の社会生活や日々の営みを支える場である以上、そこには想定外のトラブルや行き違いが生じることもあります。<br

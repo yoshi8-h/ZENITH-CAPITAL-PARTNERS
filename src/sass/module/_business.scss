@@ -6,6 +6,8 @@
   padding-top: rem(70);
   padding-bottom: rem(120);
 
+  overflow: hidden;  // 左右から表示されるアニメーションがあるため、横スクロールを起こさないように指定。
+
   @include mq(md) {
     padding-top: rem(60);
     padding-bottom: rem(80);

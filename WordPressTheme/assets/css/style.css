@@ -335,14 +335,13 @@ a {
 	position: relative;
 }
 
-.asset__contents::after {
+.asset__contents-bar {
 	background-color: #a9aebb;
-	content: "";
 	height: 90%;
 	left: 50%;
 	position: absolute;
 	top: 50%;
-	transform: translate(-50%, -50%);
+	transform: translateX(-50%);
 	width: 3.75rem;
 	z-index: -1;
 }
@@ -645,6 +644,7 @@ a {
 
 .business {
 	background: #f4f6fa;
+	overflow: hidden;
 	padding-bottom: 7.5rem;
 	padding-top: 4.375rem;
 }
@@ -1120,7 +1120,6 @@ a {
 	object-fit: cover;
 	position: absolute;
 	width: 100%;
-	z-index: 10;
 }
 
 .content4__img img {
@@ -1134,15 +1133,41 @@ a {
 .content4__body {
 	aspect-ratio: 635/243;
 	background: #fff;
-	box-shadow: 0.3125rem 0.375rem 0 rgba(230, 233, 239, 0.6);
 	margin-left: auto;
 	max-width: 39.6875rem;
 	padding-bottom: 2.5rem;
 	padding-left: 4.375rem;
 	padding-right: 4.375rem;
 	padding-top: 3.75rem;
+	position: relative;
 	width: 100%;
 	z-index: 30;
+}
+
+.content4__shadow-left {
+	aspect-ratio: 635/243;
+	background: rgba(230, 233, 239, 0.6);
+	bottom: -0.375rem;
+	height: 100%;
+	left: 0.3125rem;
+	max-width: 39.6875rem;
+	mix-blend-mode: multiply;
+	position: absolute;
+	width: 100%;
+	z-index: 10;
+}
+
+.content4__shadow-right {
+	aspect-ratio: 635/243;
+	background: rgba(230, 233, 239, 0.6);
+	bottom: -0.375rem;
+	height: 100%;
+	max-width: 39.6875rem;
+	mix-blend-mode: multiply;
+	position: absolute;
+	right: -0.3125rem;
+	width: 100%;
+	z-index: 10;
 }
 
 .content4__title {
@@ -1179,6 +1204,10 @@ a {
 .content4--reverse .content4__img {
 	left: auto;
 	right: 0;
+}
+
+.content5 {
+	position: relative;
 }
 
 .content5__warp {
@@ -4160,6 +4189,7 @@ a {
 	padding-bottom: 10rem;
 	padding-top: 4.0625rem;
 	position: relative;
+	z-index: -1;
 }
 
 .top-text__bg {
@@ -4798,7 +4828,7 @@ html {
 	margin-top: 1.875rem;
 }
 
-.asset__contents::after {
+.asset__contents-bar {
 	width: 2.5rem;
 }
 
@@ -5222,12 +5252,23 @@ html {
 
 .content4__body {
 	aspect-ratio: auto;
-	box-shadow: 0.1875rem 0.25rem 0 rgba(230, 233, 239, 0.6);
 	max-width: none;
 	padding-bottom: 1.25rem;
 	padding-left: 1.5625rem;
 	padding-right: 1.5625rem;
 	padding-top: 1.5625rem;
+}
+
+.content4__shadow-left {
+	bottom: -0.25rem;
+	display: none;
+	left: 0.1875rem;
+}
+
+.content4__shadow-right {
+	bottom: -0.25rem;
+	display: none;
+	right: -0.1875rem;
 }
 
 .content4__title {
