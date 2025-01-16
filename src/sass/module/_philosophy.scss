@@ -5,6 +5,7 @@
   background: $color-background-base-1;
   padding-top: rem(90);
   padding-bottom: rem(100);
+  overflow: hidden;
 
   @include mq(md) {
     padding-top: rem(70);

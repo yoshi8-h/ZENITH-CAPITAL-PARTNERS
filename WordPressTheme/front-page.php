@@ -263,7 +263,7 @@
             <div class="message__name">代表取締役社長　平田徹也</div>
           </div>
           <div class="message__text-area js-fadeInUp">
-            <div class="message__text-title">不動産ソリューションのプロフェッショナルとして、人と不動産のうつくしい係を追及し続ける。</div>
+            <div class="message__text-title">不動産ソリューションのプロフェッショナルとして、人と不動産のうつくしい関係を追及し続ける。</div>
             <p class="message__text">
               私が生まれ育った田舎では、どこにいても山や森の濃い土や草木の匂いがしていた記憶があります。<br
               >当時の実家のまわりには高い建物も少なく、たくさんの自然に囲まれてシンプルだけど豊かな暮らしを気に入っていました。<br

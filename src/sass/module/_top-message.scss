@@ -68,6 +68,7 @@
   transform: translateY(-50%);
 
   @include mq(md) {
+    text-align: left;
     font-size: rem(18);
     position: static;
     margin-top: rem(15);

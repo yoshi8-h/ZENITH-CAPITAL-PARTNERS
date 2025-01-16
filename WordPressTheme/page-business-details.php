@@ -128,7 +128,7 @@
           <div class="content6__title title03">事業承継</div>
           <p class="content6__text">
             昨今、中小企業における事業の承継対策が社会問題となっております。<br
-            >事業承継の中で、事業用不動産の取り扱いが課題となるケースがありますが、経営者様や、弁護士、税理士等の他士業の方から当社あてに問い合わを頂くことが増えてきました。<br
+            >事業承継の中で、事業用不動産の取り扱いが課題となるケースがありますが、経営者様や、弁護士、税理士等の他士業の方から当社あてに問い合わせを頂くことが増えてきました。<br
             >当社におきましては、これまで培ってきた経験を基に、事業用不動産の適正時価の把握、権利関係の把握や整理、有効活用の提案等で事業承継をサポートさせて頂きます。また、弁護士、税理士、司法書士、社会保険労務士等の他の専門家と連携しておりますので事業承継に関するお悩みをトータルにサポートさせて頂くことも可能です。
           </p>
         </div>
@@ -223,7 +223,7 @@
                   <ul class="contents__role-list">
                     <li class="contents__role-list-item list-item list-item--red">税理士等他の専門家と連携し事業譲渡のスキーム策定、実行</li>
                     <li class="contents__role-list-item list-item list-item--red">A社の土地の権利関係の整理及び適正価格の評価</li>
-                    <li class="contents__role-list-item list-item list-item--red">C社に対する土地の有効活用の提案</li>
+                    <li class="contents__role-list-item list-item list-item--red">C社に対する土地の有効活用</li>
                   </ul>
                 </div>
               </div>
@@ -232,12 +232,12 @@
         </div>
         <ul class="consulting__list-01 js-fadeInUp">
           <li class="consulting__list-01-item list-item list-item--2">単純に土地を売却した場合は、譲渡益1億円に対して約30%の法人税がA社に課される。</li>
-          <li class="consulting__list-01-item list-item list-item--2">土地を売却し終えた会社を清算する場合、残余財産のうち払込資本を超える部分は、株主個人に最大55%の所得税が課される。</li>
+          <li class="consulting__list-01-item list-item list-item--2">土地を売却し終えた会社を清算する場合、残余財産のうち払込資本を超える部分は、株主個人に最大55%の所得税・住民税が課される。</li>
         </ul>
         <div class="consulting__list-02-wrap js-fadeInUp">
           <div class="consulting__list-02-title">【  不動産M＆Aを活用した場合の節税メリット  】</div>
           <ul class="consulting__list-02">
-            <li class="consulting__list-02-item list-item list-item--red-2">単純に土地を売却した場合は、譲渡益1億円に対して約30%の法人税がA社に課される。</li>
+            <li class="consulting__list-02-item list-item list-item--red-2">単純に土地を売却した場合は、株主個人の税負担が株式譲渡益の約20%の税金で済む。</li>
           </ul>
         </div>
         <div class="consulting__content content6 js-fadeInUp">
@@ -260,21 +260,20 @@
       <div class="investment__inner inner">
         <div class="investment__title title02 js-fadeInUp">自己投資</div>
         <p class="investment__message js-fadeInUp">
-          建物の遵法性や入居テナントの問題等の要因で本来の価値が発揮されていない不動産に自己勘定で投資する事業です。<br
-          >価値を改善することで不動産の収益力を高め安定的な収益を確保することを目指します。
+          様々な問題を抱え、本来の価値が発揮されず有効活用されていない不動産に自己勘定で投資する事業です。問題を解決し、収益力を高めることで安定的な運用を目指します。
         </p>
         <div class="investment__contents">
           <div class="investment__content content6 js-fadeInUp">
             <div class="content6__title title03">自らも積極的に投資</div>
             <p class="content6__text">
-              自社単独もしくは他社様との共同投資により、直接的な不動産投資を行います。積み上げてきた経験と知見を自社も実践することで業務領域を拡大しております。
+              自社単独、または他社との共同投資を通じて、直接的な不動産投資を行っております。これまでに培ってきた経験と知見を自社でも活用しながら、業務領域の拡大に取り組んでおります。
             </p>
           </div>
           <div class="investment__content content6 js-fadeInUp">
             <div class="content6__title title03">積極的なリスクテイク</div>
             <p class="content6__text">
-              市場には優良物件ばかりでなく建物の遵法性違反や入居テナントの属性のため売却や金融機関からの資金調達が困難な不動産が多数存在します。<br
-              >当社は、管理可能なリスクは積極的に取ることで不動産投資の機会を拡大しております。
+              市場には、優良物件だけでなく、建物の遵法性に問題があるものや、入居テナントの属性によって売却や金融機関からの資金調達が困難な不動産も多数存在します。<br
+              >当社は、適切な調査や対策によって問題解決が可能なものについては、積極的にリスクを引き受けることで、不動産投資の機会を拡大しております。
             </p>
           </div>
           <div class="investment__content content6 js-fadeInUp">
@@ -311,7 +310,7 @@
                     </div>
                   </div>
                   <p class="content7__message">
-                    千葉県市川駅から3km離れた住宅街に所在するコンビニエンスストア跡地を再利用して、「はりきゅう接骨院」として事業展開しております。<br
+                    千葉県の市川駅から3km離れた住宅街に所在するコンビニエンスストア跡地を再利用して、「はりきゅう接骨院」として事業展開しております。<br
                     >肩こり、腰痛でお悩みの方は年々増えており、多くの地域住民の方々にご来院頂いております。<br
                     >当院では、柔道整復師や鍼灸師といった国家資格保有者が、体に関する運動的なアプローチを駆使して患者様の治療に取り組んでおります。体の健康と美容は密接に関係していることがわかっております。<br
                     >当院では美容鍼や韓国の富裕層のみが通うエグゼティブサロンのメソッドを導入しており、健康から美容までトータルなお悩みを解決できる治療院に進化を続けております。<br

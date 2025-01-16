@@ -2940,6 +2940,7 @@ a {
 
 .philosophy {
 	background: #f4f6fa;
+	overflow: hidden;
 	padding-bottom: 6.25rem;
 	padding-top: 5.625rem;
 }
@@ -4627,6 +4628,22 @@ a {
 	width: 1rem; /* 矢印の太さ */
 }
 
+@media screen and (min-width: 376px) and (max-width: 391px) {
+
+.l-management-policy {
+	margin-top: -1.875rem;
+}
+
+}
+
+@media screen and (min-width: 392px) and (max-width: 466px) {
+
+.l-management-policy {
+	margin-top: 0;
+}
+
+}
+
 @media screen and (max-width: 1440px) {
 
 .header__nav {
@@ -5380,7 +5397,6 @@ html {
 	font-size: 1rem;
 	line-height: 1.7;
 	padding-bottom: 0.5rem;
-	letter-spacing: -0.01em;
 }
 
 .content8__title::after {
@@ -5391,7 +5407,6 @@ html {
 	font-size: 0.875rem;
 	line-height: 1.7;
 	margin-top: 1.125rem;
-	letter-spacing: -0.01em;
 }
 
 .content8.content8--reverse {
@@ -6967,6 +6982,7 @@ html {
 	margin-top: 0.9375rem;
 	position: static;
 	right: auto;
+	text-align: left;
 	top: auto;
 	transform: none;
 }

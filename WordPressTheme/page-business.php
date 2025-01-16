@@ -56,8 +56,8 @@
               <div class="content3__img-sp u-mobile js-fadeInUp"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/content3-img-02.webp" alt=""></div>
               <ul class="content3__list js-fadeInUp">
                 <li class="content3__list-item list-item">地主、投資家、金融機関とは、成功事例を積み重ねることで信頼関係を構築します。</li>
-                <li class="content3__list-item list-item">プロパティーマネージメント会社、ホテル運営会社、ビルマネジメント会社とは、チームワークを大切にすることで信頼関係を構築します。</li>
-                <li class="content3__list-item list-item">不動産をご利用されるユーザー様とは、快適な環境を提供することで信頼関係を構築します</li>
+                <li class="content3__list-item list-item">プロパティマネジメント会社、ホテル運営会社、ビルマネジメント会社とは、チームワークを大切にすることで信頼関係を構築します。</li>
+                <li class="content3__list-item list-item">不動産をご利用されるユーザー様とは、快適な環境を提供することで信頼関係を構築します。</li>
               </ul>
             </div>
           </div>
