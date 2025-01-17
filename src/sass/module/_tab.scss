@@ -28,6 +28,7 @@
   cursor: default;
   background: #000;
   color: $color-white;
+  pointer-events: none;  // aタグが発動しないように指定。
 }
 
 .tab.is-selected:hover {  // 選択中のタブはhoverのopacity指定を外す。

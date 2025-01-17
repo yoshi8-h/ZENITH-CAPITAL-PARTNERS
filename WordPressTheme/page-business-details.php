@@ -19,20 +19,20 @@
     </div>
 
     <!-- タブ -->
-    <div class="tabs u-desktop l-tabs js-fadeInUp">
-      <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category1" class="tabs__item tab is-selected" data-category="category1">アセットマネジメント</a>
-      <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category2" class="tabs__item tab" data-category="category2">不動産コンサルティング</a>
-      <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category3" class="tabs__item tab" data-category="category3">自己投資</a>
-      <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category4" class="tabs__item tab" data-category="category4">テナント事業</a>
+    <div class="tabs u-desktop l-tabs js-fadeInUp-trigger">
+      <button class="tabs__item tab is-selected" data-category="category1" role="tab" aria-controls="content-category1">アセットマネジメント</button>
+      <button class="tabs__item tab" data-category="category2" role="tab" aria-controls="content-category2">不動産コンサルティング</button>
+      <button class="tabs__item tab" data-category="category3" role="tab" aria-controls="content-category3">自己投資</button>
+      <button class="tabs__item tab" data-category="category4" role="tab" aria-controls="content-category4">テナント事業</button>
     </div>
 
     <!-- asset セクション (アセットマネジメント) -->
     <section class="asset l-asset js-tab-content" data-category="category1">
       <div class="asset__inner inner">
-        <div class="asset__title title02 js-fadeInUp">アセットマネジメント</div>
-        <p class="asset__message js-fadeInUp">不動産の投資分析から、仕入れ、資金調達のアレンジ、資産価値最大化を実現する運営管理、出口戦略(売却)の立案まで、投資家の利益最大化のための一貫したサービスを提供します。</p>
+        <div class="asset__title title02 js-fadeInUp-trigger">アセットマネジメント</div>
+        <p class="asset__message js-fadeInUp-trigger">不動産の投資分析から、仕入れ、資金調達のアレンジ、資産価値最大化を実現する運営管理、出口戦略(売却)の立案まで、投資家の利益最大化のための一貫したサービスを提供します。</p>
         <div class="asset__contents">
-          <div class="asset__contents__item content5 js-fadeInUp">
+          <div class="asset__contents__item content5 js-fadeInUp-trigger">
             <div class="asset__contents-bar"></div>
             <div class="content5__warp">
               <div class="content5__left">
@@ -60,7 +60,7 @@
               </ul>
             </div>
           </div>
-          <div class="asset__contents__item content5 js-fadeInUp">
+          <div class="asset__contents__item content5 js-fadeInUp-trigger">
             <div class="asset__contents-bar"></div>
             <div class="content5__warp">
               <div class="content5__left">
@@ -89,7 +89,7 @@
               </ul>
             </div>
           </div>
-          <div class="asset__contents__item content5 js-fadeInUp">
+          <div class="asset__contents__item content5 js-fadeInUp-trigger">
             <div class="content5__warp">
               <div class="content5__left">
                 <div class="content5__left-wrap">
@@ -115,16 +115,16 @@
             </div>
           </div>
         </div>
-        <p class="asset__attention-text js-fadeInUpFirst">※個別案件ごとにお客様と調整のうえ、必要に応じて業務項目を追加・削除等いたします。</p>
+        <p class="asset__attention-text js-fadeInUp-triggerFirst">※個別案件ごとにお客様と調整のうえ、必要に応じて業務項目を追加・削除等いたします。</p>
       </div>
     </section>
 
     <!-- consulting セクション (不動産コンサルティング) -->
     <section class="consulting l-consulting js-tab-content" data-category="category2">
       <div class="consulting__inner inner">
-        <div class="consulting__title title02 js-fadeInUp">不動産コンサルティング</div>
-        <p class="consulting__message js-fadeInUp">事業承継に伴う事業用不動産の取り扱い、不動産の有効活用、複雑な権利関係の調整等不動産に関するお悩みの解決をサポートします。</p>
-        <div class="consulting__content content6 js-fadeInUp">
+        <div class="consulting__title title02 js-fadeInUp-trigger">不動産コンサルティング</div>
+        <p class="consulting__message js-fadeInUp-trigger">事業承継に伴う事業用不動産の取り扱い、不動産の有効活用、複雑な権利関係の調整等不動産に関するお悩みの解決をサポートします。</p>
+        <div class="consulting__content content6 js-fadeInUp-trigger">
           <div class="content6__title title03">事業承継</div>
           <p class="content6__text">
             昨今、中小企業における事業の承継対策が社会問題となっております。<br
@@ -133,9 +133,9 @@
           </p>
         </div>
         <div class="consulting__main">
-          <div class="consulting__main-title js-fadeInUp">【事業承継における不動産Ｍ＆Ａの活用例】</div>
+          <div class="consulting__main-title js-fadeInUp-trigger">【事業承継における不動産Ｍ＆Ａの活用例】</div>
           <div class="consulting__main-contents contents">
-            <div class="contents__item js-fadeInUp">
+            <div class="contents__item js-fadeInUp-trigger">
               <div class="contents__item-wrap">
                 <div class="contents__item-box is-left">
                   <div class="contents__item-title">A社（建設業）</div>
@@ -165,8 +165,8 @@
                 </div>
               </div>
             </div>
-            <div class="contents__divider-arrow js-fadeInUp"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/contents__divider-arrow.webp" alt="↓"></div>
-            <div class="contents__item js-fadeInUp">
+            <div class="contents__divider-arrow js-fadeInUp-trigger"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/contents__divider-arrow.webp" alt="↓"></div>
+            <div class="contents__item js-fadeInUp-trigger">
               <div class="contents__item-wrap">
                 <div class="contents__item-box is-left">
                   <div class="contents__item-title">A社（建設業）</div>
@@ -230,23 +230,23 @@
             </div>
           </div>
         </div>
-        <ul class="consulting__list-01 js-fadeInUp">
+        <ul class="consulting__list-01 js-fadeInUp-trigger">
           <li class="consulting__list-01-item list-item list-item--2">単純に土地を売却した場合は、譲渡益1億円に対して約30%の法人税がA社に課される。</li>
           <li class="consulting__list-01-item list-item list-item--2">土地を売却し終えた会社を清算する場合、残余財産のうち払込資本を超える部分は、株主個人に最大55%の所得税・住民税が課される。</li>
         </ul>
-        <div class="consulting__list-02-wrap js-fadeInUp">
+        <div class="consulting__list-02-wrap js-fadeInUp-trigger">
           <div class="consulting__list-02-title">【  不動産M＆Aを活用した場合の節税メリット  】</div>
           <ul class="consulting__list-02">
             <li class="consulting__list-02-item list-item list-item--red-2">単純に土地を売却した場合は、株主個人の税負担が株式譲渡益の約20%の税金で済む。</li>
           </ul>
         </div>
-        <div class="consulting__content content6 js-fadeInUp">
+        <div class="consulting__content content6 js-fadeInUp-trigger">
           <div class="content6__title title03">有効活用の提案</div>
           <p class="content6__text">
             総合的な観点から不動産のポテンシャルを分析することにより、その不動産の持つ本来の価値を見出し、有効活用の提案や契約内容の見直し等、保有不動産の資産価値最大化をサポートします。
           </p>
         </div>
-        <div class="consulting__content content6 js-fadeInUp">
+        <div class="consulting__content content6 js-fadeInUp-trigger">
           <div class="content6__title title03">権利関係の調整</div>
           <p class="content6__text">
             不動産には人間関係が複雑に絡み合い当事者同士では解決できない問題が多く存在します。借地権者様に対する底地を買い取った上での隣接所有者への売買の提案、底地権者と交渉し借地権と底地をあわせての売買の提案等、専門的な観点から最適な解決方法を提案します。
@@ -258,25 +258,25 @@
     <!-- investment セクション (自己投資) -->
     <section class="investment l-investment js-tab-content" data-category="category3">
       <div class="investment__inner inner">
-        <div class="investment__title title02 js-fadeInUp">自己投資</div>
-        <p class="investment__message js-fadeInUp">
+        <div class="investment__title title02 js-fadeInUp-trigger">自己投資</div>
+        <p class="investment__message js-fadeInUp-trigger">
           様々な問題を抱え、本来の価値が発揮されず有効活用されていない不動産に自己勘定で投資する事業です。問題を解決し、収益力を高めることで安定的な運用を目指します。
         </p>
         <div class="investment__contents">
-          <div class="investment__content content6 js-fadeInUp">
+          <div class="investment__content content6 js-fadeInUp-trigger">
             <div class="content6__title title03">自らも積極的に投資</div>
             <p class="content6__text">
               自社単独、または他社との共同投資を通じて、直接的な不動産投資を行っております。これまでに培ってきた経験と知見を自社でも活用しながら、業務領域の拡大に取り組んでおります。
             </p>
           </div>
-          <div class="investment__content content6 js-fadeInUp">
+          <div class="investment__content content6 js-fadeInUp-trigger">
             <div class="content6__title title03">積極的なリスクテイク</div>
             <p class="content6__text">
               市場には、優良物件だけでなく、建物の遵法性に問題があるものや、入居テナントの属性によって売却や金融機関からの資金調達が困難な不動産も多数存在します。<br
               >当社は、適切な調査や対策によって問題解決が可能なものについては、積極的にリスクを引き受けることで、不動産投資の機会を拡大しております。
             </p>
           </div>
-          <div class="investment__content content6 js-fadeInUp">
+          <div class="investment__content content6 js-fadeInUp-trigger">
             <div class="content6__title title03">最終的には顧客サービスへと還元</div>
             <p class="content6__text">
               自己投資を通じて得られた問題解決の経験は、アセットマネジメント・不動産コンサルティングの事業で活用し、最終的には地主や投資家の立場をより理解したサービスへと還元します。
@@ -289,13 +289,13 @@
     <!-- tenant セクション (テナント事業) -->
     <section class="tenant l-tenant js-tab-content" data-category="category4">
       <div class="tenant__inner inner">
-        <div class="tenant__title title02 js-fadeInUp">テナント事業</div>
-        <p class="tenant__message js-fadeInUp">
+        <div class="tenant__title title02 js-fadeInUp-trigger">テナント事業</div>
+        <p class="tenant__message js-fadeInUp-trigger">
           不動産の有効活用、リーシング戦略の一環として、オーナーから不動産を借上げ、自らテナントとして事業運営し不動産の価値最大化を目指します。
         </p>
-        <div class="tenant__contents-title title03 js-fadeInUp">自社運営テナントの紹介</div>
+        <div class="tenant__contents-title title03 js-fadeInUp-trigger">自社運営テナントの紹介</div>
         <div class="tenant__contents">
-          <div class="tenant__content content7 js-fadeInUp">
+          <div class="tenant__content content7 js-fadeInUp-trigger">
             <div class="content7__wrap">
               <div class="content7__title title04">ほねつぎ市川はりきゅう接骨院</div>
               <div class="content7__body">
@@ -333,7 +333,7 @@
               </div>
             </div>
           </div>
-          <div class="tenant__content content7 js-fadeInUp">
+          <div class="tenant__content content7 js-fadeInUp-trigger">
             <div class="content7__wrap">
               <div class="content7__title title04">タイトーFステーション 盛岡南店</div>
               <div class="content7__body">

@@ -2,9 +2,11 @@
 
 
 .top-message {
+  padding-top: rem(40);
   padding-bottom: rem(90);
 
   @include mq(md) {
+    padding-top: rem(30);
     padding-bottom: rem(60);
   }
 }

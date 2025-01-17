@@ -129,79 +129,169 @@ window.addEventListener("scroll", function () {
 // });
 
 
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   let headerHeight = 0;
+//   const header = document.querySelector(".header"); // ヘッダー要素
+//   const topButton = document.querySelector('.js-top-btn'); // TOPへ戻るボタン
+//   const anchorLinks = document.querySelectorAll('a[href^="#"], a[href*="#"]'); // アンカーリンク
+
+//   /**
+//    * ヘッダーの高さを更新する関数
+//    */
+//   const updateHeaderHeight = () => {
+//     headerHeight = header ? header.offsetHeight : 0;
+//   };
+
+//   /**
+//    * ターゲット要素へスクロールする
+//    * @param {HTMLElement} target スクロール対象の要素
+//    * @param {boolean} considerHeader ヘッダー高さを考慮するかどうか
+//    */
+//   const smoothScroll = (target, considerHeader = true) => {
+//     const offset = target.getBoundingClientRect().top + window.scrollY - (considerHeader ? headerHeight : 0);
+
+//     window.scrollTo({
+//       top: offset,
+//       behavior: "smooth",
+//     });
+//   };
+
+//   /**
+//    * ハッシュから要素を取得しスクロール
+//    * @param {string} hash ハッシュ（例: "#section1"）
+//    * @param {boolean} considerHeader ヘッダー高さを考慮するかどうか
+//    */
+//   const handleHashScroll = (hash, considerHeader = true) => {
+//     const targetElement = document.querySelector(hash);
+//     if (targetElement) {
+//       smoothScroll(targetElement, considerHeader);
+//     }
+//   };
+
+//   // ウィンドウサイズ変更時にヘッダーの高さを更新
+//   window.addEventListener("resize", updateHeaderHeight);
+//   updateHeaderHeight(); // 初回実行
+
+//   // ページ内リンクのクリックイベント
+//   anchorLinks.forEach(link => {
+//     link.addEventListener("click", (e) => {
+//       const href = link.getAttribute("href");
+
+//       // TOPへ戻るボタンの処理
+//       if (link === topButton) {
+//         e.preventDefault();
+//         window.scrollTo({ top: 0, behavior: "smooth" });
+//         return;
+//       }
+
+//       // アンカーリンクの処理
+//       if (href.startsWith("#")) {
+//         e.preventDefault(); // デフォルト動作を無効化
+//         handleHashScroll(href); // ヘッダーの高さを考慮してスクロール
+//       }
+//     });
+//   });
+
+//   // 初期ロード時のアンカーリンク位置調整
+//   window.addEventListener("load", () => {
+//     const hash = window.location.hash; // URLのハッシュを取得
+//     if (hash) {
+//       handleHashScroll(hash); // ヘッダーの高さを考慮してスクロール
+//     }
+//   });
+// });
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
-  let headerHeight = 0;
+  let headerHeight = 0; // ヘッダーの高さを格納する変数
   const header = document.querySelector(".header"); // ヘッダー要素
-  const topButton = document.querySelector('.js-top-btn'); // TOPへ戻るボタン
-  const anchorLinks = document.querySelectorAll('a[href^="#"], a[href*="#"]'); // アンカーリンク
+  const anchorLinks = document.querySelectorAll('a[href*="#"]'); // ハッシュリンクを含むすべてのアンカーリンク
 
   /**
    * ヘッダーの高さを更新する関数
    */
   const updateHeaderHeight = () => {
-    headerHeight = header ? header.offsetHeight : 0;
+    headerHeight = header ? header.offsetHeight : 0; // ヘッダーの高さを取得
   };
 
   /**
-   * ターゲット要素へスクロールする
-   * @param {HTMLElement} target スクロール対象の要素
-   * @param {boolean} considerHeader ヘッダー高さを考慮するかどうか
+   * 指定したハッシュにスクロールする関数
+   * @param {string} hash ハッシュ部分（例: "#philosophy"）
+   * @param {boolean} [delay] 遅延スクロールを行う場合は true
    */
-  const smoothScroll = (target, considerHeader = true) => {
-    const offset = target.getBoundingClientRect().top + window.scrollY - (considerHeader ? headerHeight : 0);
+  const scrollToHash = (hash, delay = false) => {
+    if (!hash) return; // ハッシュが無い場合は処理しない
 
-    window.scrollTo({
-      top: offset,
-      behavior: "smooth",
-    });
-  };
+    const targetElement = document.querySelector(hash); // ハッシュに対応する要素を取得
+    if (!targetElement) return; // 要素が存在しない場合は何もしない
 
-  /**
-   * ハッシュから要素を取得しスクロール
-   * @param {string} hash ハッシュ（例: "#section1"）
-   * @param {boolean} considerHeader ヘッダー高さを考慮するかどうか
-   */
-  const handleHashScroll = (hash, considerHeader = true) => {
-    const targetElement = document.querySelector(hash);
-    if (targetElement) {
-      smoothScroll(targetElement, considerHeader);
+    // ヘッダーの高さを再取得（最新の高さを反映）
+    updateHeaderHeight();
+
+    const scrollAction = () => {
+      const offset = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+      // スムーススクロールを実行
+      window.scrollTo({
+        top: offset,
+        behavior: "smooth",
+      });
+    };
+
+    if (delay) {
+      // 遅延スクロールを行う場合
+      setTimeout(scrollAction, 100); // 0.1秒遅らせて実行
+    } else {
+      scrollAction(); // 即座にスクロールを実行
     }
   };
 
-  // ウィンドウサイズ変更時にヘッダーの高さを更新
-  window.addEventListener("resize", updateHeaderHeight);
-  updateHeaderHeight(); // 初回実行
-
-  // ページ内リンクのクリックイベント
-  anchorLinks.forEach(link => {
+  /**
+   * アンカーリンクのクリックイベントを登録
+   */
+  anchorLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
-      const href = link.getAttribute("href");
+      const href = link.getAttribute("href"); // リンクの href 属性を取得
+      if (href.includes("#")) {
+        const hash = href.split("#")[1] ? `#${href.split("#")[1]}` : null;
 
-      // TOPへ戻るボタンの処理
-      if (link === topButton) {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: "smooth" });
-        return;
-      }
+        // 現在のページURL（ハッシュを除く）
+        const currentPageUrl = window.location.origin + window.location.pathname;
+        // リンク先のURL（ハッシュを除く）
+        const linkPageUrl = href.split("#")[0];
 
-      // アンカーリンクの処理
-      if (href.startsWith("#")) {
-        e.preventDefault(); // デフォルト動作を無効化
-        handleHashScroll(href); // ヘッダーの高さを考慮してスクロール
+        if (linkPageUrl === "" || linkPageUrl === currentPageUrl) {
+          // 同じページ内リンクの場合
+          e.preventDefault(); // デフォルト動作を無効化
+          scrollToHash(hash); // 即座にスクロール処理を実行
+        } else {
+          // 他のページへのリンクの場合は何もしない（デフォルト動作で遷移）
+          return;
+        }
       }
     });
   });
 
-  // 初期ロード時のアンカーリンク位置調整
+  /**
+   * 初期ロード時のハッシュスクロール処理
+   */
   window.addEventListener("load", () => {
-    const hash = window.location.hash; // URLのハッシュを取得
+    const hash = window.location.hash; // URLに含まれるハッシュを取得
     if (hash) {
-      handleHashScroll(hash); // ヘッダーの高さを考慮してスクロール
+      scrollToHash(hash, true); // 初期ロード時は遅延スクロールを実行
     }
   });
+
+  // ヘッダーの高さを更新（リサイズ時も対応）
+  const resizeObserver = new ResizeObserver(updateHeaderHeight);
+  if (header) {
+    resizeObserver.observe(header); // ヘッダー要素のサイズを監視
+  }
+  updateHeaderHeight(); // 初回実行
 });
-
-
 
 
 /* -------------------------------------------------------------------------------- */
@@ -336,12 +426,10 @@ document.addEventListener("DOMContentLoaded", () => {
 // クリックされたタブ(選択されているタブ)に『.is-selected』クラスを付与して選択中のタブのスタイルのみ変更。
 // クリックされたタブ(選択されているタブ)の『data-category』属性の値と同じ『data-category』属性の値を持つコンテンツのみ表示。
 // サブメニューなどのリンクからタブに飛んだ時に、そのタブが選択状態にされた形で『事業紹介ページ(タブ切り替えページ)』に遷移する。
-
-// 以下のコードで完璧に実装できていたが、タブを切り替えた際に、切り替えた先のタブ内のコンテンツにはアニメーションが発生しなかったため、JSの制御ではなく、タブ自体をaタグにする事で対応し、アニメーションが全てのタブの中身に対して機能するように変更した。
-
-document.addEventListener('DOMContentLoaded', function() {
-  const tabButtons = document.querySelectorAll('.tab');
-  const tabContents = document.querySelectorAll('.js-tab-content');
+// タブを切り替えた際に、そのタブに対応するコンテンツが表示され、かつ、きちんとGSAPアニメーションも発火するように実装。(タブを<a>タグにするとアニメーションが発火するようにはできるが、タブを切り替えた際にページ遷移となり、コンテンツが表示される前に、一瞬コンテンツがdisplay:block;になるまでにタイムラグがあり、footerがチラッと最上部にくっついて表示されてしまうのを防ぐ記述！)
+document.addEventListener('DOMContentLoaded', function () {
+  const tabButtons = document.querySelectorAll('.tab'); // タブボタン
+  const tabContents = document.querySelectorAll('.js-tab-content'); // タブコンテンツ
 
   // URLからクエリパラメータ（category）を取得
   const params = new URLSearchParams(window.location.search);
@@ -356,7 +444,9 @@ document.addEventListener('DOMContentLoaded', function() {
     activeCategory = initialTab.getAttribute('data-category');
   } else {
     // URLにcategoryパラメータがある場合、そのcategoryに対応するタブを探す
-    initialTab = Array.from(tabButtons).find(tab => tab.getAttribute('data-category') === activeCategory);
+    initialTab = Array.from(tabButtons).find(
+      (tab) => tab.getAttribute('data-category') === activeCategory
+    );
     if (!initialTab) {
       // 不正なcategoryの場合はデフォルトで最初のタブを表示
       initialTab = tabButtons[0];
@@ -365,45 +455,80 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // --- 初期タブの選択をURLパラメータに基づいて行う ---
-  tabButtons.forEach(tab => {
-    // URLパラメータと一致するタブにのみ 'is-selected' クラスを付与
-    if (tab.getAttribute('data-category') === activeCategory) {
-      tab.classList.add('is-selected');
-    } else {
-      tab.classList.remove('is-selected');  // 他のタブは選択を解除
-    }
-  });
+  function setInitialTab() {
+    tabButtons.forEach((tab) => {
+      // URLパラメータと一致するタブにのみ 'is-selected' クラスを付与
+      if (tab.getAttribute('data-category') === activeCategory) {
+        tab.classList.add('is-selected');
+      } else {
+        tab.classList.remove('is-selected'); // 他のタブは選択を解除
+      }
+    });
 
-  // 対応するコンテンツの表示設定
-  tabContents.forEach(content => {
-    if (content.getAttribute('data-category') === activeCategory) {
-      content.classList.add('active');  // 対応するコンテンツを表示
-    } else {
-      content.classList.remove('active');  // 他のコンテンツは非表示
-    }
-  });
+    tabContents.forEach((content) => {
+      if (content.getAttribute('data-category') === activeCategory) {
+        content.classList.add('active'); // 対応するコンテンツを表示
+        triggerAnimation(content); // 初期状態でアニメーションを発火
+      } else {
+        content.classList.remove('active'); // 他のコンテンツは非表示
+      }
+    });
+  }
 
-  // タブクリック時の処理
-  tabButtons.forEach(button => {
-    button.addEventListener('click', function() {
+  setInitialTab(); // 初期状態を設定
+
+  // --- タブクリック時の処理 ---
+  tabButtons.forEach((button) => {
+    button.addEventListener('click', function () {
       const category = this.getAttribute('data-category');
 
       // すべてのタブから選択クラスを削除
-      tabButtons.forEach(btn => btn.classList.remove('is-selected'));
+      tabButtons.forEach((btn) => btn.classList.remove('is-selected'));
 
       // クリックされたタブに選択クラスを追加
       this.classList.add('is-selected');
 
       // すべてのコンテンツを非表示にする
-      tabContents.forEach(content => content.classList.remove('active'));
+      tabContents.forEach((content) => {
+        content.classList.remove('active');
+      });
 
-      // 対応するカテゴリーのコンテンツを表示
-      document.querySelectorAll(`.js-tab-content[data-category="${category}"]`).forEach(content => {
-        content.classList.add('active');
+      // 対応するカテゴリーのコンテンツを表示し、アニメーションを発火
+      const targetContents = document.querySelectorAll(
+        `.js-tab-content[data-category="${category}"]`
+      );
+      targetContents.forEach((content) => {
+        content.classList.add('active'); // 表示
+        triggerAnimation(content); // アニメーションを発火
       });
     });
   });
+
+  // --- アニメーションをトリガーする関数 ---
+  function triggerAnimation(targetContent) {
+    // 対象のコンテンツ内の '.js-fadeInUp-trigger' 要素を取得
+    const fadeInTriggers = targetContent.querySelectorAll('.js-fadeInUp-trigger');
+
+    // 'GSAP' を再適用してアニメーションを発火
+    fadeInTriggers.forEach((item) => {
+      let isTopElement = item.classList.contains('is-top-element'); // is-top-element判定
+
+      gsap.fromTo(
+        item,
+        { y: 35, autoAlpha: 0 }, // 初期値
+        {
+          y: 0,
+          autoAlpha: 1,
+          scrollTrigger: {
+            trigger: item,
+            start: isTopElement ? 'top 50%' : 'top 65%' // 発火位置を調整
+          }
+        }
+      );
+    });
+  }
 });
+
 
 /* -------------------------------------------------------------------------------- */
 /* お問い合わせページの、プラグイン無しで『確認画面』→『完了画面』に遷移させる方法 */
@@ -551,6 +676,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 初期化処理（確認ボタンの状態をチェック）
   updateConfirmButtonState();
 });
+
 /* -------------------------------------------------------------------------------- */
 
 

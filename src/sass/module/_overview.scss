@@ -2,9 +2,11 @@
 
 
 .overview {
+  padding-top: rem(90);
   padding-bottom: rem(110);
 
   @include mq(md) {
+    padding-top: rem(60);
     padding-bottom: rem(80);
   }
 }

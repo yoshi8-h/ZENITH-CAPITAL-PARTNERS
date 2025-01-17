@@ -199,10 +199,6 @@ a {
 	margin-top: 3.75rem;
 }
 
-.l-overview {
-	margin-top: 5.625rem;
-}
-
 .l-post-contents {
 	margin-top: 3.125rem;
 }
@@ -240,7 +236,7 @@ a {
 }
 
 .l-top-message {
-	margin-top: 3.125rem;
+	margin-top: 0.625rem;
 }
 
 .l-works-contents {
@@ -2928,6 +2924,7 @@ a {
 
 .overview {
 	padding-bottom: 6.875rem;
+	padding-top: 5.625rem;
 }
 
 .overview__contents {
@@ -3730,6 +3727,7 @@ a {
 	background: #000;
 	color: #fff;
 	cursor: default;
+	pointer-events: none;
 }
 
 .tab.is-selected:hover {
@@ -4114,6 +4112,7 @@ a {
 
 .top-message {
 	padding-bottom: 5.625rem;
+	padding-top: 2.5rem;
 }
 
 .top-message__contents {
@@ -4718,10 +4717,6 @@ html {
 	margin-top: 2.5rem;
 }
 
-.l-overview {
-	margin-top: 3.75rem;
-}
-
 .l-post-contents {
 	margin-top: 2.5rem;
 }
@@ -4759,7 +4754,7 @@ html {
 }
 
 .l-top-message {
-	margin-top: 2.5rem;
+	margin-top: 0.625rem;
 }
 
 .l-works-contents {
@@ -6301,6 +6296,7 @@ html {
 
 .overview {
 	padding-bottom: 5rem;
+	padding-top: 3.75rem;
 }
 
 .overview__inner {
@@ -6955,6 +6951,7 @@ html {
 
 .top-message {
 	padding-bottom: 3.75rem;
+	padding-top: 1.875rem;
 }
 
 .top-message__inner {
