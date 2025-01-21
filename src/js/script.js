@@ -61,72 +61,72 @@ window.addEventListener("scroll", function () {
 // 別ページに遷移して、かつそのページの指定のリンク先に遷移する場合は、headerの高さを考慮して遷移
 // 他ページ(全く別のサイト)に遷移する際は、処理をスキップ
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const header = document.querySelector(".header"); // ヘッダー要素
-//   const headerHeight = header ? header.offsetHeight : 0; // ヘッダー高さを取得
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".header"); // ヘッダー要素
+  const headerHeight = header ? header.offsetHeight : 0; // ヘッダー高さを取得
 
-//   const adjustScrollForHash = () => {
-//     const hash = window.location.hash; // 現在のURLのハッシュ部分を取得
-//     if (hash) {
-//       const targetElement = document.querySelector(hash); // ハッシュから要素を取得
-//       if (targetElement) {
-//         const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
+  const adjustScrollForHash = () => {
+    const hash = window.location.hash; // 現在のURLのハッシュ部分を取得
+    if (hash) {
+      const targetElement = document.querySelector(hash); // ハッシュから要素を取得
+      if (targetElement) {
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
 
-//         // スムーススクロールで位置を調整
-//         window.scrollTo({
-//           top: targetPosition,
-//           behavior: "smooth",
-//         });
-//       }
-//     }
-//   };
+        // スムーススクロールで位置を調整
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        });
+      }
+    }
+  };
 
-//   // 初期ロード時にURLハッシュを確認してスクロール位置を調整
-//   adjustScrollForHash();
+  // 初期ロード時にURLハッシュを確認してスクロール位置を調整
+  adjustScrollForHash();
 
-//   // ページ内リンクのクリックイベントを設定
-//   const anchorLinks = document.querySelectorAll('a[href^="#"], a[href*="#"]');
-//   anchorLinks.forEach(link => {
-//     link.addEventListener("click", (e) => {
-//       const href = link.getAttribute("href");
+  // ページ内リンクのクリックイベントを設定
+  const anchorLinks = document.querySelectorAll('a[href^="#"], a[href*="#"]');
+  anchorLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+      const href = link.getAttribute("href");
 
-//       // 他のページに遷移する場合の対策
-//       if (href.includes("#") && href.startsWith(location.origin)) {
-//         return; // 他のページへのリンクはここでは処理しない
-//       }
+      // 他のページに遷移する場合の対策
+      if (href.includes("#") && href.startsWith(location.origin)) {
+        return; // 他のページへのリンクはここでは処理しない
+      }
 
-//       // 現在のページ内のリンクを処理
-//       if (href.startsWith("#")) {
-//         e.preventDefault(); // デフォルト動作を無効化
+      // 現在のページ内のリンクを処理
+      if (href.startsWith("#")) {
+        e.preventDefault(); // デフォルト動作を無効化
 
-//         const targetId = href.slice(1);
-//         const targetElement = document.getElementById(targetId);
+        const targetId = href.slice(1);
+        const targetElement = document.getElementById(targetId);
 
-//         if (targetElement) {
-//           const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
+        if (targetElement) {
+          const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
 
-//           // スムーススクロール
-//           window.scrollTo({
-//             top: targetPosition,
-//             behavior: "smooth",
-//           });
-//         } else if (href === "#") {
-//           // TOPに戻るリンク
-//           e.preventDefault(); // デフォルト動作を無効化
-//           window.scrollTo({
-//             top: 0,
-//             behavior: "smooth",
-//           });
-//         }
-//       }
-//     });
-//   });
+          // スムーススクロール
+          window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth",
+          });
+        } else if (href === "#") {
+          // TOPに戻るリンク
+          e.preventDefault(); // デフォルト動作を無効化
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }
+      }
+    });
+  });
 
-//   // ページ遷移後にハッシュ位置を調整
-//   window.addEventListener("load", () => {
-//     adjustScrollForHash();
-//   });
-// });
+  // ページ遷移後にハッシュ位置を調整
+  window.addEventListener("load", () => {
+    adjustScrollForHash();
+  });
+});
 
 
 
@@ -205,93 +205,93 @@ window.addEventListener("scroll", function () {
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  let headerHeight = 0; // ヘッダーの高さを格納する変数
-  const header = document.querySelector(".header"); // ヘッダー要素
-  const anchorLinks = document.querySelectorAll('a[href*="#"]'); // ハッシュリンクを含むすべてのアンカーリンク
+// document.addEventListener("DOMContentLoaded", () => {
+//   let headerHeight = 0; // ヘッダーの高さを格納する変数
+//   const header = document.querySelector(".header"); // ヘッダー要素
+//   const anchorLinks = document.querySelectorAll('a[href*="#"]'); // ハッシュリンクを含むすべてのアンカーリンク
 
-  /**
-   * ヘッダーの高さを更新する関数
-   */
-  const updateHeaderHeight = () => {
-    headerHeight = header ? header.offsetHeight : 0; // ヘッダーの高さを取得
-  };
+//   /**
+//    * ヘッダーの高さを更新する関数
+//    */
+//   const updateHeaderHeight = () => {
+//     headerHeight = header ? header.offsetHeight : 0; // ヘッダーの高さを取得
+//   };
 
-  /**
-   * 指定したハッシュにスクロールする関数
-   * @param {string} hash ハッシュ部分（例: "#philosophy"）
-   * @param {boolean} [delay] 遅延スクロールを行う場合は true
-   */
-  const scrollToHash = (hash, delay = false) => {
-    if (!hash) return; // ハッシュが無い場合は処理しない
+//   /**
+//    * 指定したハッシュにスクロールする関数
+//    * @param {string} hash ハッシュ部分（例: "#philosophy"）
+//    * @param {boolean} [delay] 遅延スクロールを行う場合は true
+//    */
+//   const scrollToHash = (hash, delay = false) => {
+//     if (!hash) return; // ハッシュが無い場合は処理しない
 
-    const targetElement = document.querySelector(hash); // ハッシュに対応する要素を取得
-    if (!targetElement) return; // 要素が存在しない場合は何もしない
+//     const targetElement = document.querySelector(hash); // ハッシュに対応する要素を取得
+//     if (!targetElement) return; // 要素が存在しない場合は何もしない
 
-    // ヘッダーの高さを再取得（最新の高さを反映）
-    updateHeaderHeight();
+//     // ヘッダーの高さを再取得（最新の高さを反映）
+//     updateHeaderHeight();
 
-    const scrollAction = () => {
-      const offset = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
+//     const scrollAction = () => {
+//       const offset = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
 
-      // スムーススクロールを実行
-      window.scrollTo({
-        top: offset,
-        behavior: "smooth",
-      });
-    };
+//       // スムーススクロールを実行
+//       window.scrollTo({
+//         top: offset,
+//         behavior: "smooth",
+//       });
+//     };
 
-    if (delay) {
-      // 遅延スクロールを行う場合
-      setTimeout(scrollAction, 100); // 0.1秒遅らせて実行
-    } else {
-      scrollAction(); // 即座にスクロールを実行
-    }
-  };
+//     if (delay) {
+//       // 遅延スクロールを行う場合
+//       setTimeout(scrollAction, 100); // 0.1秒遅らせて実行
+//     } else {
+//       scrollAction(); // 即座にスクロールを実行
+//     }
+//   };
 
-  /**
-   * アンカーリンクのクリックイベントを登録
-   */
-  anchorLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
-      const href = link.getAttribute("href"); // リンクの href 属性を取得
-      if (href.includes("#")) {
-        const hash = href.split("#")[1] ? `#${href.split("#")[1]}` : null;
+//   /**
+//    * アンカーリンクのクリックイベントを登録
+//    */
+//   anchorLinks.forEach((link) => {
+//     link.addEventListener("click", (e) => {
+//       const href = link.getAttribute("href"); // リンクの href 属性を取得
+//       if (href.includes("#")) {
+//         const hash = href.split("#")[1] ? `#${href.split("#")[1]}` : null;
 
-        // 現在のページURL（ハッシュを除く）
-        const currentPageUrl = window.location.origin + window.location.pathname;
-        // リンク先のURL（ハッシュを除く）
-        const linkPageUrl = href.split("#")[0];
+//         // 現在のページURL（ハッシュを除く）
+//         const currentPageUrl = window.location.origin + window.location.pathname;
+//         // リンク先のURL（ハッシュを除く）
+//         const linkPageUrl = href.split("#")[0];
 
-        if (linkPageUrl === "" || linkPageUrl === currentPageUrl) {
-          // 同じページ内リンクの場合
-          e.preventDefault(); // デフォルト動作を無効化
-          scrollToHash(hash); // 即座にスクロール処理を実行
-        } else {
-          // 他のページへのリンクの場合は何もしない（デフォルト動作で遷移）
-          return;
-        }
-      }
-    });
-  });
+//         if (linkPageUrl === "" || linkPageUrl === currentPageUrl) {
+//           // 同じページ内リンクの場合
+//           e.preventDefault(); // デフォルト動作を無効化
+//           scrollToHash(hash); // 即座にスクロール処理を実行
+//         } else {
+//           // 他のページへのリンクの場合は何もしない（デフォルト動作で遷移）
+//           return;
+//         }
+//       }
+//     });
+//   });
 
-  /**
-   * 初期ロード時のハッシュスクロール処理
-   */
-  window.addEventListener("load", () => {
-    const hash = window.location.hash; // URLに含まれるハッシュを取得
-    if (hash) {
-      scrollToHash(hash, true); // 初期ロード時は遅延スクロールを実行
-    }
-  });
+//   /**
+//    * 初期ロード時のハッシュスクロール処理
+//    */
+//   window.addEventListener("load", () => {
+//     const hash = window.location.hash; // URLに含まれるハッシュを取得
+//     if (hash) {
+//       scrollToHash(hash, true); // 初期ロード時は遅延スクロールを実行
+//     }
+//   });
 
-  // ヘッダーの高さを更新（リサイズ時も対応）
-  const resizeObserver = new ResizeObserver(updateHeaderHeight);
-  if (header) {
-    resizeObserver.observe(header); // ヘッダー要素のサイズを監視
-  }
-  updateHeaderHeight(); // 初回実行
-});
+//   // ヘッダーの高さを更新（リサイズ時も対応）
+//   const resizeObserver = new ResizeObserver(updateHeaderHeight);
+//   if (header) {
+//     resizeObserver.observe(header); // ヘッダー要素のサイズを監視
+//   }
+//   updateHeaderHeight(); // 初回実行
+// });
 
 
 /* -------------------------------------------------------------------------------- */

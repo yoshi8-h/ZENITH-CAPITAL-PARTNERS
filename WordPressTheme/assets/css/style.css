@@ -2012,10 +2012,12 @@ a {
 	border-radius: 1.25rem 0 1.25rem 0;
 	color: #fff;
 	display: inline-flex;
+	display: flex;
 	font-size: 1.0625rem;
 	font-weight: 500;
 	gap: 1.5625rem;
 	justify-content: center;
+	justify-content: flex-start;
 	min-width: 19.6875rem;
 	padding-bottom: 0.9375rem;
 	padding-left: 4.375rem;

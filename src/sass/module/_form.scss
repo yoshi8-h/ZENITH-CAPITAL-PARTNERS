@@ -150,6 +150,9 @@
   font-weight: $medium;
   color: $color-white;
 
+  display: flex;  // ※<input>タグは、「type属性」が『button、submit、reset』の場合は、『text-align: left;』が適用されない場合があるため、文字を左揃えにするために『display: flex;』と『justify-content: flex-start;』で対応。
+  justify-content: flex-start;
+
   @include mq(md) {
     min-width: rem(220);
     padding-left: rem(35);

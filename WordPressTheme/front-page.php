@@ -60,7 +60,7 @@
         <div class="management-policy__contents">
           <div class="management-policy__content">
             <div class="management-policy__content-title-sp u-mobile js-fadeInLeft">理論と実践に基づいたソリューションを提供します。</div>
-            <div class="management-policy__content-img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/management-policy__content-img01.webp" alt=""></div>
+            <div class="management-policy__content-img js-fadeInRight-fast"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/management-policy__content-img01.webp" alt=""></div>
             <div class="management-policy__content-body js-fadeInLeft-delay">
               <div class="management-policy__content-title u-desktop">理論と実践に基づいたソリューションを提供します。</div>
               <p class="management-policy__content-text">不動産鑑定士業をバックグラウンドに持つ当社は、理論的な根拠と実証的なデータを駆使して不動産の価値最大化を目指します。</p>
@@ -72,8 +72,8 @@
             </div>
           </div>
           <div class="management-policy__content">
-            <div class="management-policy__content-title-sp u-mobile js-fadeInRight">信頼関係を大切にします。</div>
-            <div class="management-policy__content-img"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/management-policy__content-img02.webp" alt=""></div>
+            <div class="management-policy__content-title-sp u-mobile js-fadeInRight-delay">信頼関係を大切にします。</div>
+            <div class="management-policy__content-img js-fadeInLeft-fast"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/management-policy__content-img02.webp" alt=""></div>
             <div class="management-policy__content-body js-fadeInRight-delay">
               <div class="management-policy__content-title u-desktop">信頼関係を大切にします。</div>
               <p class="management-policy__content-text">地主・投資家・金融機関とは、成功事例を積み重ねることで信頼関係を、不動産をご利用されるユーザー様とは、快適な環境を提供することで信頼関係を構築します。</p>
@@ -131,8 +131,8 @@
               <div class="content__plus-icon"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/content-plus-icon.webp" alt="+"></div>
               <div class="content__overlay">
                 <p class="content__overlay-text">
-                  建物の遵法性や入居テナントの問題等の要因で本来の価値が発揮されていない不動産に自己勘定で投資する事業です。<br
-                  >価値を改善することで不動産の収益力を高め安定的な収益を確保することを目指します。
+                  様々な問題を抱え、本来の価値が発揮されず有効活用されていない不動産に自己勘定で投資する事業です。<br
+                  >問題を解決し、収益力を高めることで安定的な運用を目指します。
                 </p>
                 <a href="<?php echo esc_url(get_permalink(get_page_by_path('business-details'))); ?>?category=category3" class="content__overlay-btn">
                   <span class="content__overlay-btn-text">MORE</span>

@@ -49,6 +49,10 @@
     row-gap: rem(30);
     place-items: center;
   }
+
+  @supports (-webkit-touch-callout: none) {  /* Safari専用のスタイル */
+    row-gap: rem(46);
+  }
 }
 
 .solution__contents-item {
@@ -69,6 +73,10 @@
 
   @include mq(md) {
     margin-top: rem(30);
+  }
+
+  @supports (-webkit-touch-callout: none) {  /* Safari専用のスタイル */
+    margin-top: rem(46);
   }
 }
 
