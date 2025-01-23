@@ -57,7 +57,6 @@ window.addEventListener("scroll", function () {
 // 「#」だけのリンク (TOPに戻るボタン)の時は、headerの高さを考慮せず、ページ先頭へ遷移するように。
 // 別ページに遷移して、かつそのページの指定のリンク先に遷移する場合は、headerの高さを考慮して遷移
 // 他ページ(全く別のサイト)に遷移する際は、処理をスキップ
-
 document.addEventListener("DOMContentLoaded", function () {
   var header = document.querySelector(".header"); // ヘッダー要素
   var headerHeight = header ? header.offsetHeight : 0; // ヘッダー高さを取得
@@ -87,16 +86,15 @@ document.addEventListener("DOMContentLoaded", function () {
     link.addEventListener("click", function (e) {
       var href = link.getAttribute("href");
 
-      // 他のページに遷移する場合の対策
-      if (href.includes("#") && href.startsWith(location.origin)) {
-        return; // 他のページへのリンクはここでは処理しない
-      }
-
       // 現在のページ内のリンクを処理
-      if (href.startsWith("#")) {
+      if (href.startsWith("#") || href.includes("/company/")) {
         e.preventDefault(); // デフォルト動作を無効化
-
-        var targetId = href.slice(1);
+        var targetId = null;
+        if (href.startsWith("#")) {
+          targetId = href.slice(1);
+        } else {
+          targetId = href.split("#")[1];
+        }
         var targetElement = document.getElementById(targetId);
         if (targetElement) {
           var targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
@@ -113,6 +111,8 @@ document.addEventListener("DOMContentLoaded", function () {
             top: 0,
             behavior: "smooth"
           });
+        } else {
+          window.location.href = e.target.href; // デフォルト動作を再現
         }
       }
     });
@@ -123,166 +123,6 @@ document.addEventListener("DOMContentLoaded", function () {
     adjustScrollForHash();
   });
 });
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   let headerHeight = 0;
-//   const header = document.querySelector(".header"); // ヘッダー要素
-//   const topButton = document.querySelector('.js-top-btn'); // TOPへ戻るボタン
-//   const anchorLinks = document.querySelectorAll('a[href^="#"], a[href*="#"]'); // アンカーリンク
-
-//   /**
-//    * ヘッダーの高さを更新する関数
-//    */
-//   const updateHeaderHeight = () => {
-//     headerHeight = header ? header.offsetHeight : 0;
-//   };
-
-//   /**
-//    * ターゲット要素へスクロールする
-//    * @param {HTMLElement} target スクロール対象の要素
-//    * @param {boolean} considerHeader ヘッダー高さを考慮するかどうか
-//    */
-//   const smoothScroll = (target, considerHeader = true) => {
-//     const offset = target.getBoundingClientRect().top + window.scrollY - (considerHeader ? headerHeight : 0);
-
-//     window.scrollTo({
-//       top: offset,
-//       behavior: "smooth",
-//     });
-//   };
-
-//   /**
-//    * ハッシュから要素を取得しスクロール
-//    * @param {string} hash ハッシュ（例: "#section1"）
-//    * @param {boolean} considerHeader ヘッダー高さを考慮するかどうか
-//    */
-//   const handleHashScroll = (hash, considerHeader = true) => {
-//     const targetElement = document.querySelector(hash);
-//     if (targetElement) {
-//       smoothScroll(targetElement, considerHeader);
-//     }
-//   };
-
-//   // ウィンドウサイズ変更時にヘッダーの高さを更新
-//   window.addEventListener("resize", updateHeaderHeight);
-//   updateHeaderHeight(); // 初回実行
-
-//   // ページ内リンクのクリックイベント
-//   anchorLinks.forEach(link => {
-//     link.addEventListener("click", (e) => {
-//       const href = link.getAttribute("href");
-
-//       // TOPへ戻るボタンの処理
-//       if (link === topButton) {
-//         e.preventDefault();
-//         window.scrollTo({ top: 0, behavior: "smooth" });
-//         return;
-//       }
-
-//       // アンカーリンクの処理
-//       if (href.startsWith("#")) {
-//         e.preventDefault(); // デフォルト動作を無効化
-//         handleHashScroll(href); // ヘッダーの高さを考慮してスクロール
-//       }
-//     });
-//   });
-
-//   // 初期ロード時のアンカーリンク位置調整
-//   window.addEventListener("load", () => {
-//     const hash = window.location.hash; // URLのハッシュを取得
-//     if (hash) {
-//       handleHashScroll(hash); // ヘッダーの高さを考慮してスクロール
-//     }
-//   });
-// });
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   let headerHeight = 0; // ヘッダーの高さを格納する変数
-//   const header = document.querySelector(".header"); // ヘッダー要素
-//   const anchorLinks = document.querySelectorAll('a[href*="#"]'); // ハッシュリンクを含むすべてのアンカーリンク
-
-//   /**
-//    * ヘッダーの高さを更新する関数
-//    */
-//   const updateHeaderHeight = () => {
-//     headerHeight = header ? header.offsetHeight : 0; // ヘッダーの高さを取得
-//   };
-
-//   /**
-//    * 指定したハッシュにスクロールする関数
-//    * @param {string} hash ハッシュ部分（例: "#philosophy"）
-//    * @param {boolean} [delay] 遅延スクロールを行う場合は true
-//    */
-//   const scrollToHash = (hash, delay = false) => {
-//     if (!hash) return; // ハッシュが無い場合は処理しない
-
-//     const targetElement = document.querySelector(hash); // ハッシュに対応する要素を取得
-//     if (!targetElement) return; // 要素が存在しない場合は何もしない
-
-//     // ヘッダーの高さを再取得（最新の高さを反映）
-//     updateHeaderHeight();
-
-//     const scrollAction = () => {
-//       const offset = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
-
-//       // スムーススクロールを実行
-//       window.scrollTo({
-//         top: offset,
-//         behavior: "smooth",
-//       });
-//     };
-
-//     if (delay) {
-//       // 遅延スクロールを行う場合
-//       setTimeout(scrollAction, 100); // 0.1秒遅らせて実行
-//     } else {
-//       scrollAction(); // 即座にスクロールを実行
-//     }
-//   };
-
-//   /**
-//    * アンカーリンクのクリックイベントを登録
-//    */
-//   anchorLinks.forEach((link) => {
-//     link.addEventListener("click", (e) => {
-//       const href = link.getAttribute("href"); // リンクの href 属性を取得
-//       if (href.includes("#")) {
-//         const hash = href.split("#")[1] ? `#${href.split("#")[1]}` : null;
-
-//         // 現在のページURL（ハッシュを除く）
-//         const currentPageUrl = window.location.origin + window.location.pathname;
-//         // リンク先のURL（ハッシュを除く）
-//         const linkPageUrl = href.split("#")[0];
-
-//         if (linkPageUrl === "" || linkPageUrl === currentPageUrl) {
-//           // 同じページ内リンクの場合
-//           e.preventDefault(); // デフォルト動作を無効化
-//           scrollToHash(hash); // 即座にスクロール処理を実行
-//         } else {
-//           // 他のページへのリンクの場合は何もしない（デフォルト動作で遷移）
-//           return;
-//         }
-//       }
-//     });
-//   });
-
-//   /**
-//    * 初期ロード時のハッシュスクロール処理
-//    */
-//   window.addEventListener("load", () => {
-//     const hash = window.location.hash; // URLに含まれるハッシュを取得
-//     if (hash) {
-//       scrollToHash(hash, true); // 初期ロード時は遅延スクロールを実行
-//     }
-//   });
-
-//   // ヘッダーの高さを更新（リサイズ時も対応）
-//   const resizeObserver = new ResizeObserver(updateHeaderHeight);
-//   if (header) {
-//     resizeObserver.observe(header); // ヘッダー要素のサイズを監視
-//   }
-//   updateHeaderHeight(); // 初回実行
-// });
 
 /* -------------------------------------------------------------------------------- */
 /* ハンバーガーメニュー(ドロワーメニュー) */
@@ -516,6 +356,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /* -------------------------------------------------------------------------------- */
 /* お問い合わせページの、プラグイン無しで『確認画面』→『完了画面』に遷移させる方法 */
+
 // 送信時に、thanksページに飛ばす(リダイレクトする)コード (文字制限とメールアドレス確認のバリデーション無し)
 // document.addEventListener('DOMContentLoaded', () => {
 //   // 確認画面用の要素
@@ -568,10 +409,130 @@ document.addEventListener('DOMContentLoaded', function () {
 //   }, false);
 // });
 
+// ※今回の実装では違うが、管理画面内のForm自体に記入するHTMLの確認ボタンに『disabled』属性を付与して、入力必須項目が入力されていない場合は、確認ボタンをそもそも押せないようにする実装。
+// (今回は使わない)
+// document.addEventListener('DOMContentLoaded', () => {
+//   // 要素の取得
+//   const confirmButton = document.querySelector(".form__confirmbtn"); // 確認ボタン
+//   const backButton = document.querySelector(".form__returnbtn"); // 戻るボタン
+//   const formInputs = document.querySelectorAll('.js-form-input'); // 入力フィールド
+//   const formArea = document.querySelector(".contact-page__form-area"); // 入力画面
+//   const confirmArea = document.querySelector(".contact-page__confirm-area"); // 確認画面
+//   const emailInput = document.getElementById('your-email'); // メールアドレス
+//   const emailConfirmInput = document.getElementById('your-email-confirm'); // 確認用メールアドレス
+//   const textareaInput = document.querySelector('.field__textarea'); // テキストエリア
+//   const sendButton = document.querySelector('.form__sendbtn'); // 送信ボタン
+
+//   // 必須項目のエラーメッセージを表示する関数
+//   const showError = (input, message) => {
+//     const errorTip = input.nextElementSibling; // エラーメッセージの要素
+//     if (errorTip && errorTip.classList.contains('wpcf7-not-valid-tip')) {
+//       errorTip.textContent = message; // エラーメッセージを設定
+//     }
+//   };
+
+//   // 必須項目のエラーメッセージをクリアする関数
+//   const clearError = (input) => {
+//     const errorTip = input.nextElementSibling; // エラーメッセージの要素
+//     if (errorTip && errorTip.classList.contains('wpcf7-not-valid-tip')) {
+//       errorTip.textContent = ""; // エラーメッセージをクリア
+//     }
+//   };
+
+//   // 必須項目が有効か確認する関数
+//   const validateInputs = () => {
+//     let allValid = true;
+
+//     // 全ての入力フィールドをチェック
+//     formInputs.forEach(input => {
+//       // 初期化（エラーメッセージを消す）
+//       clearError(input);
+
+//       // 必須項目が空の場合エラー
+//       if (input.hasAttribute('aria-required') && input.value.trim() === "") {
+//         allValid = false;
+//         showError(input, "未入力です。");
+//       }
+//     });
+
+//     // メールアドレスの一致チェック
+//     if (emailInput.value.trim() !== emailConfirmInput.value.trim()) {
+//       allValid = false;
+//       showError(emailConfirmInput, "メールアドレスが一致しません。");
+//     }
+
+//     // テキストエリアの文字数チェック（2000文字以内）
+//     if (textareaInput && textareaInput.value.length > 2000) {
+//       allValid = false;
+//       showError(textareaInput, "文字数が2000文字を超えています。");
+//     }
+
+//     return allValid; // 全て有効ならtrueを返す
+//   };
+
+//   // 確認ボタンのクリックイベント
+//   confirmButton.addEventListener('click', () => {
+//     // バリデーション実行
+//     const isValid = validateInputs();
+
+//     if (isValid) {
+//       // 入力値を確認画面に表示
+//       formInputs.forEach(input => {
+//         const targetClass = `.confirm_${input.id}`;
+//         const confirmField = document.querySelector(targetClass);
+//         if (confirmField) {
+//           confirmField.textContent = input.value.trim();
+//         }
+//       });
+
+//       // 画面を切り替え
+//       formArea.style.display = 'none';
+//       confirmArea.style.display = 'block';
+//       window.scrollTo(0, 0);
+//     } else {
+//       // エラーメッセージを表示し、確認画面への遷移を防止
+//       alert("入力内容に不備があります。修正してください。");
+//     }
+//   });
+
+//   // 入力フィールドの変更イベントにリスナーを追加
+//   formInputs.forEach(input => {
+//     input.addEventListener('input', () => {
+//       // リアルタイムでバリデーションを実行し、確認ボタンの状態を更新
+//       validateInputs();
+//       confirmButton.disabled = !validateInputs();
+//     });
+//   });
+
+//   // 入力画面に戻る処理
+//   backButton.addEventListener('click', () => {
+//     formArea.style.display = 'block';
+//     confirmArea.style.display = 'none';
+//     window.scrollTo(0, 0);
+//   });
+
+//   // 送信ボタンの動作修正
+//   sendButton.addEventListener('click', () => {
+//     // Contact Form 7の送信イベントが正しく動作することを確認
+//     if (typeof wpcf7 !== 'undefined' && typeof wpcf7.initForm !== 'undefined') {
+//       wpcf7.initForm(document.querySelector('.wpcf7-form'));
+//     }
+//   });
+
+//   // 送信後のリダイレクト処理
+//   document.addEventListener('wpcf7mailsent', (event) => {
+//     location.href = `${window.location.origin}/thanks/`;
+//   }, false);
+
+//   // 初期化処理（確認ボタンの状態をチェック）
+//   validateInputs();
+// });
+
 /* お問い合わせページの、プラグイン無しで『確認画面』→『完了画面』に遷移させる方法 */
-// 送信時に、thanksページに飛ばす(リダイレクトする)コード (文字制限とメールアドレス確認のバリデーション有り)
-// テキストエリアは、2000文字までしか入力できない。 (正確には、判定のズレで、1970程度になる)
-// メールアドレスと確認用メールアドレスが一致しないとき、確認ボタンが無効になる。
+// 送信時に、thanksページに飛ばす(リダイレクトする)コード (テキストエリアの文字数制限とメールアドレス一致確認のバリデーション有り)
+// テキストエリアは、2000文字までしか入力出来ないようにバリデーション。
+// メールアドレスと確認用メールアドレスが一致しないとき、エラーメッセージを表示。
+// 『確認ボタン』を押した際に、入力されていない必須項目があれば、その必須項目の下にエラーメッセージを表示。
 document.addEventListener('DOMContentLoaded', function () {
   // 要素の取得
   var confirmButton = document.querySelector(".form__confirmbtn"); // 確認ボタン
@@ -581,81 +542,105 @@ document.addEventListener('DOMContentLoaded', function () {
   var confirmArea = document.querySelector(".contact-page__confirm-area"); // 確認画面
   var emailInput = document.getElementById('your-email'); // メールアドレス
   var emailConfirmInput = document.getElementById('your-email-confirm'); // 確認用メールアドレス
-  var textareaInput = document.querySelector('.field__textarea'); // テキストエリア
-  var sendButton = document.querySelector('.form__sendbtn'); // 送信ボタン
+  var textareaInput = document.getElementById('your-message'); // テキストエリア
 
-  // 必須項目が有効か確認する関数
-  var updateConfirmButtonState = function updateConfirmButtonState() {
+  /**
+   * 必須項目のエラーメッセージを表示する関数
+   */
+  var showError = function showError(input, message) {
+    var errorTip = input.parentNode.querySelector('.wpcf7-not-valid-tip');
+    if (!errorTip) {
+      // エラーメッセージがまだ生成されていない場合は作成
+      errorTip = document.createElement('span');
+      errorTip.className = 'wpcf7-not-valid-tip';
+      input.parentNode.appendChild(errorTip);
+    }
+    errorTip.style.display = 'block';
+    errorTip.textContent = message;
+  };
+
+  /**
+   * 必須項目のエラーメッセージをクリアする関数
+   */
+  var clearError = function clearError(input) {
+    var errorTip = input.parentNode.querySelector('.wpcf7-not-valid-tip');
+    if (errorTip) {
+      errorTip.style.display = 'none';
+      errorTip.textContent = '';
+    }
+  };
+
+  /**
+   * 必須項目が有効か確認する関数
+   */
+  var validateInputs = function validateInputs() {
     var allValid = true;
 
-    // 必須項目の入力チェック
+    // 全ての入力フィールドをチェック
     formInputs.forEach(function (input) {
+      // 初期化（エラーメッセージを消す）
+      clearError(input);
+
+      // 必須項目が空の場合はエラーメッセージを表示
       if (input.hasAttribute('aria-required') && input.value.trim() === "") {
         allValid = false;
+        showError(input, "入力してください。");
       }
     });
 
     // メールアドレスの一致チェック
     if (emailInput.value.trim() !== emailConfirmInput.value.trim()) {
       allValid = false;
+      showError(emailConfirmInput, "メールアドレスが一致しません。");
     }
 
     // テキストエリアの文字数チェック（2000文字以内）
     if (textareaInput && textareaInput.value.length > 2000) {
       allValid = false;
+      showError(textareaInput, "文字数が2000文字を超えています。");
     }
-
-    // 確認ボタンの状態を更新
-    confirmButton.disabled = !allValid;
+    return allValid; // 全て有効ならtrueを返す
   };
 
-  // 各入力フィールドの変更イベントにリスナーを追加
-  formInputs.forEach(function (input) {
-    input.addEventListener('input', updateConfirmButtonState);
-  });
-
-  // 確認画面に遷移する処理
+  /**
+   * 確認ボタンのクリックイベント
+   */
   confirmButton.addEventListener('click', function () {
-    formInputs.forEach(function (input) {
-      var targetClass = ".confirm_".concat(input.id);
-      var confirmField = document.querySelector(targetClass);
-      if (confirmField) {
-        confirmField.textContent = input.value.trim();
-      }
-    });
-    formArea.style.display = 'none';
-    confirmArea.style.display = 'block';
-    window.scrollTo(0, 0);
+    // バリデーション実行
+    var isValid = validateInputs();
+    if (isValid) {
+      // 入力値を確認画面に表示
+      formInputs.forEach(function (input) {
+        var targetClass = ".confirm_".concat(input.id);
+        var confirmField = document.querySelector(targetClass);
+        if (confirmField) {
+          confirmField.textContent = input.value.trim();
+        }
+      });
 
-    // 確認画面の「戻る」ボタンの矢印が消える問題への対応
-    var arrow = backButton.querySelector('.btn2__arrow');
-    if (arrow) {
-      arrow.style.display = 'block';
+      // 画面を切り替え
+      formArea.style.display = 'none';
+      confirmArea.style.display = 'block';
+      window.scrollTo(0, 0);
     }
   });
 
-  // 入力画面に戻る処理
+  /**
+   * 入力画面に戻る処理
+   */
   backButton.addEventListener('click', function () {
     formArea.style.display = 'block';
     confirmArea.style.display = 'none';
     window.scrollTo(0, 0);
   });
 
-  // 送信ボタンの動作修正
-  sendButton.addEventListener('click', function () {
-    // Contact Form 7の送信イベントが正しく動作することを確認
-    if (typeof wpcf7 !== 'undefined' && typeof wpcf7.initForm !== 'undefined') {
-      wpcf7.initForm(document.querySelector('.wpcf7-form'));
-    }
-  });
-
-  // 送信後のリダイレクト処理
+  /**
+   * 送信後のリダイレクト処理
+   */
   document.addEventListener('wpcf7mailsent', function (event) {
+    // thanks ページに遷移
     location.href = "".concat(window.location.origin, "/thanks/");
   }, false);
-
-  // 初期化処理（確認ボタンの状態をチェック）
-  updateConfirmButtonState();
 });
 
 /* -------------------------------------------------------------------------------- */

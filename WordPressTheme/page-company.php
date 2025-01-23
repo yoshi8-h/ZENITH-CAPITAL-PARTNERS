@@ -6,7 +6,7 @@
       <div class="sub-fv__inner">
         <picture class="sub-fv__bg">
           <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/sub-fv_bg-company.webp">
-          <img src="[path]/assets/images/common/sub-fv_bg-company-sp.webp" alt="">
+          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/sub-fv_bg-company-sp.webp" alt="">
         </picture>
         <div class="sub-fv__contents">
           <h2 class="sub-fv__title title">

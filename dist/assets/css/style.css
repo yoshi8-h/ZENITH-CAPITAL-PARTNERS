@@ -3575,7 +3575,6 @@ a {
 }
 
 .solution__contents-item {
-	aspect-ratio: 285/400;
 	max-width: 17.8125rem;
 	width: 100%;
 }
@@ -6727,7 +6726,6 @@ html {
 }
 
 .solution__contents-item {
-	aspect-ratio: 161/225;
 	max-width: 10.0625rem;
 }
 

@@ -56,12 +56,10 @@
 }
 
 .solution__contents-item {
-  aspect-ratio: 285 / 400;
   max-width: rem(285);
   width: 100%;
 
   @include mq(md) {
-    aspect-ratio: 161 / 225;
     max-width: rem(161);
   }
 }
