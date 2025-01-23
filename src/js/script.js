@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
             behavior: "smooth",
           });
         } else {
-          window.location.href = e.target.href; // デフォルト動作を再現
+          window.location.href = e.currentTarget.href; // デフォルト動作を再現『currentTarget』にする必要あり。
         }
       }
     });

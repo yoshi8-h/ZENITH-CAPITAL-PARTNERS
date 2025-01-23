@@ -138,9 +138,21 @@ add_shortcode('link', 'generate_page_link_shortcode');
 
 
 
+/* ================================================================ */
+// 管理バーを非表示に (構築時だけ)
+// add_filter('show_admin_bar', '__return_false');
 
-// 管理バーを非表示に (今だけ)
-add_filter('show_admin_bar', '__return_false');
-
+/* ================================================================ */
+/* 管理バーが有効な場合に、headerのマージンを調整 */
+function adjust_header_for_admin_bar() {
+  if (is_admin_bar_showing()) {
+      echo '<style>
+          .header {
+              margin-top: 32px; /* 管理バーの高さ分調整 */
+          }
+      </style>';
+  }
+}
+add_action('wp_head', 'adjust_header_for_admin_bar');
 
 
