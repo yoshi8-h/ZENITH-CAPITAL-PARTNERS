@@ -705,6 +705,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
+/* １つの要素をフワッと下から出現 (ページ下部の要素にのみ適用) */
+// ページ最下部辺りにある要素の場合、画面の高さが高い画面で見てしまうと、スクロールトリガーの発火位置に要素が届かなくて、表示されない時がある。それを防ぐためだけに、発火位置を上げるためだけのアニメーション。
+document.addEventListener('DOMContentLoaded', function() {
+  const fadeInUpsBottom = document.querySelectorAll(".js-fadeInUp-bottom");  // ページ内の、このアニメーションをさせたい全ての要素を取得
+
+  fadeInUpsBottom.forEach(item => {
+    gsap.fromTo(item, {y:35, autoAlpha:0}, {y:0, autoAlpha:1, scrollTrigger:{
+        trigger: item,
+        start: 'top 80%',  // 『is-top-element』クラスも同時に付与されている要素のみ、発火位置を下め(50%)に調整。→ページの先頭付近にある要素は、scrollTriggerでスクロールしてアニメーションが発火する位置を、元から超えているため、画面リロード時に、すでにアニメーションが発火された状態になってしまっているため、それを防ぐ方法。
+        // markers:{
+        //   startColor: "green",
+        // },
+      }
+    });
+  });
+
+});
+
 /* １つの要素をフワッと上から下に出現 */
 document.addEventListener('DOMContentLoaded', function() {
   const fadeInUps = document.querySelectorAll(".js-fadeInDown");  // ページ内の、このアニメーションをさせたい全ての要素を取得

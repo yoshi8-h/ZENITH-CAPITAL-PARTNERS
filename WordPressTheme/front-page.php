@@ -366,7 +366,7 @@
           <div class="section-title__ja">お問い合わせ</div>
           <div class="section-title__en">CONTACT</div>
         </h2>
-        <p class="contact__text js-fadeInUp">当社へのお問い合わせ・ご質問は、<br class="u-mobile">お問い合わせフォームよりお気軽にお問い合わせください。</p>
+        <p class="contact__text js-fadeInUp-bottom">当社へのお問い合わせ・ご質問は、<br class="u-mobile">お問い合わせフォームよりお気軽にお問い合わせください。</p>
         <div class="contact__btn-wrap js-fadeInUpFirst">
           <a href="<?php echo esc_url(get_permalink(get_page_by_path('contact'))); ?>" class="contact__btn btn3">お問い合わせフォーム</a>
         </div>
